@@ -1,0 +1,53 @@
+<!-- Summary Section -->
+<div id="summary-section"
+     page-link
+     page-break >
+
+  <script type="text/ng-template" id="summaryPopover.html">
+    <button ng-click="$ctrl.removeSection('summary')">
+      Hide Section
+    </button>
+  </script>
+
+  <div class="section-heading"
+       ng-click="$ctrl.popoverOpen(true, sectionItem.section)"
+       ng-mouseenter="$ctrl.popoverOpen('alt', sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)"
+       popover-trigger="none"
+       popover-is-open="$ctrl.optionsOpen.summary"
+       uib-popover-template="$ctrl.sectionOptions()">
+        <textarea class="editable section-heading-edit"
+                  ng-class="[$ctrl.primaryColor, $ctrl.headingFont]"
+                  placeholder="Summary"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.labels.summary">
+        </textarea>
+  </div>
+
+  <div class="summary">
+    <div class="summary-item">
+      <div class="summary-content">
+        <div class="summary-details">
+                <textarea class="editable summary-details-edit"
+                          ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                          placeholder="A bit about your achievement"
+                          maxlength="500"
+                          spellcheck="false"
+                          autocomplete="off"
+                          rows="1"
+                          ng-change="$ctrl.dirtyValue(true)"
+                          ng-model="$ctrl.templateData.basics[0].summary"
+                          msd-elastic>
+                </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Summary Section end -->

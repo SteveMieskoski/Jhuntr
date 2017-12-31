@@ -1,0 +1,39 @@
+
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@mixin font-only($font-family, $file-path) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype');
+  }
+}
+
+@mixin font-only-structured($font-family, $base-name, $sub-name) {
+  $root-path: '../../../fonts/All_Fonts/';
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$root-path}#{$base-name}-#{$sub-name}.eot');
+    src: url('#{$root-path}#{$base-name}-#{$sub-name}.eot?#iefix') format('embedded-opentype'),
+    url('#{$root-path}#{$base-name}-#{$sub-name}.woff') format('woff'),
+    url('#{$root-path}#{$base-name}-#{$sub-name}.ttf') format('truetype');
+  }
+}
+
+
+//$dancingBasePath: 'hinted-DancingScriptOT';
+//$garamondBasePath: '../fonts/hinted_eb_garamond/';
+

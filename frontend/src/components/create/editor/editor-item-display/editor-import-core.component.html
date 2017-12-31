@@ -1,0 +1,73 @@
+<div class="row">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="col-md-6">
+  <div ng-repeat="(key, value) in $ctrl.holdingList" >
+
+    <div ng-if="key !== 'attachments'">
+
+    <h3>{{$ctrl.sectionLabel[key]}}</h3>
+    <div ng-repeat="item in value track by $index">
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.selectedList[key][$index] = !$ctrl.selectedList[key][$index]"
+              ng-if="!$ctrl.selectedList[key][$index]">
+        &nbsp;&nbsp;select&nbsp;&nbsp;&nbsp;&nbsp;
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.selectedList[key][$index] = !$ctrl.selectedList[key][$index]"
+              ng-if="$ctrl.selectedList[key][$index]">
+        un-select
+      </button>
+      <button ng-click="$ctrl.viewContent(key, item)"
+              uib-popover-template="importFromCorePopover.html">View Details
+      </button>
+        <span ng-class="{'text-muted': !item.show ,'text-primary': item.show, 'core-input-basics': item.firstname}"
+             ng-if="item[$ctrl.itemLabelFields[key]].length > 0">
+          {{item[$ctrl.itemLabelFields[key]]}}
+        </span>
+        <span ng-class="{'text-muted': !item.show ,'text-primary': item.show, 'core-input-basics': item.firstname}"
+             ng-if="item[$ctrl.itemLabelFields[key]].length <= 1">
+          Unlabeled
+        </span>
+      <span>
+          <i ng-if="$ctrl.selectedList[key][$index]" class="fa fa-check">
+          </i>
+        </span>
+      </div>
+
+    </div>
+
+    <!-- selectedList.attachments -->
+
+    <!-- <div ng-repeat="item in value">
+       {{item}}
+     </div>-->
+  </div>
+    <h3>Picture</h3>
+</div>
+
+  <div  class="col-md-6">
+    <div ng-if="$ctrl.showDetails">
+      <div ng-repeat="(key, value) in $ctrl.popoverContent track by $index">
+        <div ng-if="key !== 'details' && key !== 'Icon'">
+          {{key}} | {{value}}
+        </div>
+        <div ng-if="key == 'Details'">
+          <div ng-repeat="items in $ctrl.popoverContent['Details'] track by $id(items)">
+            'Detail' | {{items.detail}}
+          </div>
+        </div>
+        <div ng-if="key == 'Icon'">
+          Icon | <i class="fa" ng-class="value"></i>
+        </div>
+      </div>
+    </div>
+    {{$ctrl.popoverContent['details'] }}
+  </div>
+  <!-- {{$ctrl.existingData}}-->
+</div>
+<div>
+  <button ng-click="$ctrl.triggerFromCore()">Import Selected</button>
+</div>

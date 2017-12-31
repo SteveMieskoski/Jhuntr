@@ -1,0 +1,99 @@
+<!-- Education Section -->
+<div id="education-section">
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{#labels.education}}{{labels.education}}{{/labels.education}}
+      {{^labels.education}}Education{{/labels.education}}
+    </div>
+  </div>
+
+  <div class="program-details">
+    {{#education}}
+      {{# if show}}
+        <div class="school-item">
+
+          <div class="school-item-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+            {{#if area}}{{area}}{{else}}Degree and Field of Study{{/if}}
+          </div>
+          <div class="edu-container">
+            <div class="container-one">
+              <div class="study-item">
+                <div class="study-item-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                  {{#if institution}}{{institution}}{{else}}University{{/if}}
+                </div>
+              </div>
+              <div class="study-dates">
+                <i class="fa {{design.style_options.calendar_icon}} date-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+                <div class="study-dates-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                  {{#if startDate}}{{startDate}}{{/if}}
+                </div>
+              </div>
+            </div>
+            <div class="container-two">
+              <div class="ranking-container">
+                {{#if gpa_show}}
+                  <h4>Worth</h4>
+                  <div class="ranking-item-one {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                    {{#if gpa}}{{gpa}}{{else}}9.99{{/if}}
+                    {{!-- {{#gpa}}{{gpa}}{{/gpa}}
+                     {{^gpa}}9.99{{/gpa}} --}}
+                  </div>
+                  <div class="separator">
+                    /
+                  </div>
+                  <div class="ranking-item-two">
+                    {{#if gpaScale}}{{gpaScale}}{{else}}6.00{{/if}}
+                  </div>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    {{/education}}
+
+    {{^education}}
+      <div class="school-item">
+
+        <div class="school-item-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+          Placeholder Content
+        </div>
+        <div class="edu-container">
+          <div class="container-one">
+            <div class="study-item">
+              <div class="study-item-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                University
+              </div>
+            </div>
+            <div class="study-dates">
+              <i class="fa fa-calendar date-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              <div class="study-dates-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                startDate — endDate
+              </div>
+            </div>
+          </div>
+          <div class="container-two">
+            <div class="ranking-container">
+              {{#if gpa_show}}
+                <h4>Worth</h4>
+                <div class="ranking-item-one {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                  9.99
+                  {{!-- {{#gpa}}{{gpa}}{{/gpa}}
+                   {{^gpa}}9.99{{/gpa}} --}}
+                </div>
+                <div class="separator">
+                  /
+                </div>
+                <div class="ranking-item-two">
+                  6.00
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/education}}
+
+  </div>
+
+</div>   <!-- Education Section End-->

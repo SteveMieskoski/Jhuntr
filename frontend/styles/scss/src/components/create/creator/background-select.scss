@@ -1,0 +1,28 @@
+
+.background-label{
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.honey-background-select{
+  height: 220px;
+  width: 170px;
+  background-image: url(/styles/backgrounds/bkgrnd.design.png);
+  background-color: black;
+  background-size: contain;
+}
+
+.curve-background-select{
+  height: 220px;
+  width: 170px;
+  background-image: url(/styles/backgrounds/background-curve.svg);
+  background-color: black;
+  background-size: contain;
+}
+
+.no-background-select{
+  height: 220px;
+  width: 170px;
+  background-color: white;
+}

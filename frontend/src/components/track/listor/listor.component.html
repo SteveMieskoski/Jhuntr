@@ -1,0 +1,37 @@
+
+
+<div class="page-trans" ng-if="$ctrl.emptyList">
+  <div class="listing-info-note">
+   <!-- Welcome!-->
+    <section  style="margin-top: 65px;">
+      <postlist></postlist>
+    </section>
+  </div>
+</div>
+<div style="margin-top: 65px; background-color: black; width: 100%; height: 50px;">
+  <button class="btn btn-primary  btn-sm" style="margin-left: 20px;" ng-click="$ctrl.showSummary()">Summary</button>
+  <button class="btn btn-primary  btn-sm" ng-click="$ctrl.showMap()">Map</button>
+  <button class="btn btn-primary  btn-sm" ng-click="$ctrl.showTargets()">Targets</button>
+ <!-- <button ui-sref="taskscomplete">List Tasks</button>-->
+</div>
+<section ng-if="$ctrl.show === 'summary'" style="width: 100%;">
+  <postlist post-list-updated="$ctrl.postDataUpdated(value)"></postlist>
+</section>
+<div ng-if="$ctrl.show === 'map'">
+  <google-maps  companies-list="$ctrl.postListing" select-map="'allTargets'" ></google-maps>
+</div>
+<div ng-if="!$ctrl.emptyList && $ctrl.show === 'targets'">
+  <grid-display post-listing="$ctrl.gridData" ></grid-display>
+</div>
+
+
+<!--
+
+Architects_Daughter
+The_Girl_Next_Door
+Reenie_Beanie
+Nothing_You_Could_Do
+
+
+
+-->

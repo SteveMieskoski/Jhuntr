@@ -1,0 +1,37 @@
+<!--Passions (placeholding for technology section)-->
+<div id="technologies-section">
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{!--{{#labels.interests}}{{labels.interests}}{{/labels.interests}}
+                {{^labels.interests}}Passions{{/labels.interests}} --}}
+      {{#if labels.technologies}}{{labels.technologies}}{{else}}Technology{{/if}}
+    </div>
+  </div>
+
+  <div class="technologies">
+    {{#technologies}}
+      {{# if show}}
+        <div class="technology-item">
+          <div class="technology-label">
+            <div class=" technology-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}" >
+              {{#if name}}{{name}}{{else}}Technology{{/if}}
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    {{/technologies}}
+    <!-- Below is Placeholders for added but empty section -->
+    {{^technologies}}
+      <div class="technology-item">
+        <div class="technology-label">
+          <div class=" technology-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}" >
+            Technology
+          </div>
+        </div>
+      </div>
+    {{/technologies}}
+  </div>
+</div>
+
+<!-- Passions -->
+

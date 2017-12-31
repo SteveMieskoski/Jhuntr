@@ -1,0 +1,83 @@
+<!--Languages Section-->
+<div id="language-section">
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{#labels.languages}}{{labels.languages}}{{/labels.languages}}
+      {{^labels.languages}}Languages{{/labels.languages}}
+    </div>
+
+  </div>
+
+  <div class="languages">
+    {{#each languages}}
+      {{# if show}}
+    <div class="language-item">
+
+          <div class="language-details">
+
+            <div class="language-name">
+              <div class=" language-name-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+                {{#name}}{{name}}{{/name}}
+                {{^name}}Language{{/name}}
+              </div>
+
+            </div>
+
+            <div class="fluency-level">
+              <div class="language-name-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                {{#fluencyLevel}}{{fluencyLevel}}{{/fluencyLevel}}
+                {{^fluencyLevel}}Beginner{{/fluencyLevel}}
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="fluency-display">
+            <div class="fluency-display-container">
+              {{#if level_one}}
+                <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{else}}
+                <i class="fa fa-circle-o fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{/if}}
+
+              {{#if level_two}}
+                <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{else}}
+                <i class="fa fa-circle-o fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{/if}}
+
+              {{#if level_three}}
+                <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{else}}
+                <i class="fa fa-circle-o fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{/if}}
+
+              {{#if level_four}}
+                <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{else}}
+                <i class="fa fa-circle-o fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{/if}}
+
+              {{#if level_five}}
+                <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{else}}
+                <i class="fa fa-circle-o fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              {{/if}}
+             <!-- <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              <i class="fa fa-circle fluency-icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>-->
+            </div>
+
+
+          </div>
+
+
+    </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</div>
+<!-- Languages Section end -->

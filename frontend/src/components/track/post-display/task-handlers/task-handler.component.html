@@ -1,0 +1,45 @@
+<button ng-click="$ctrl.addPostTask(); $ctrl.newTaskForm = true;">New Task</button>
+<!--<div ng-if="$ctrl.newTaskForm && !$ctrl.taskEdit" class="form-group">
+  <br>
+  <label for="LabelText">Label:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+    <input type="text" class="form-control" id="LabelText" ng-model="$ctrl.newPostTask.label" ng-keypress="$ctrl.savePostTaskEnter($event)"/>
+  </div>
+  <label for="DueText">Due:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+    <input type="text" class="form-control" id="DueText" ng-model="$ctrl.newPostTask.due" ng-keypress="$ctrl.savePostTaskEnter($event)"/>
+  </div>
+  <label for="DetailsText">Details:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+    <input type="text" class="form-control" id="DetailsText" ng-model="$ctrl.newPostTask.details" ng-keypress="$ctrl.savePostTaskEnter($event)"/>
+  </div>
+  <button ng-click="$ctrl.savePostTask()">Save</button>
+</div>
+<div ng-if="$ctrl.taskEdit" class="form-group">
+  <br>
+  <label for="editText">Label:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+    <input type="text" class="form-control" id="editText" ng-model="$ctrl.editingCopy.label" ng-keypress="$ctrl.saveTaskEdit($event, $ctrl.editingCopy)"/>
+  </div>
+  <button class="pull-left" ng-click="$ctrl.editTask(null, false)">Cancel</button>
+  <button class="pull-right" ng-click="$ctrl.saveTaskEdit(null, $ctrl.editingCopy)">Save</button>
+</div>-->
+
+<div ng-repeat="task in $ctrl.postData.tasks" class="row">
+  <div class="col-md-2">
+    <button ng-if="!$ctrl.taskEdit" ng-click="$ctrl.editTask(task, $index)">Edit</button>
+
+  </div>
+  <div class="col-md-5">
+    <p><span>Label:</span>{{task.label}} <br> <span>Due:</span>{{task.due}} <br> <span>Details:</span>{{task.details}}</p>
+
+  </div>
+  <div class="col-md-5">
+    <button ng-if="!task.complete" ng-click="$ctrl.updateTaskState($index, false)">Complete</button>
+    <button  ng-if="task.complete" ng-click="$ctrl.updateTaskState($index, true)">In-Complete</button>
+  </div>
+</div>

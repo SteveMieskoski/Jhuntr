@@ -1,0 +1,32 @@
+<div ng-include="$ctrl.popupTemplates"></div>
+<div ng-include="$ctrl.itemPopupTemplates"></div>
+<div class="editor-container frow">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="editor-top-container fcol-full">
+  </div>
+  <div class="editor-sides-container fcol-full ">
+    <!--<div class="frow start-fcol between-fcol">-->
+    <div class="frow between-fcol">
+
+      <div class="editor-left-container">
+        <editor-left></editor-left>
+      </div>
+      <div class=" editor-right-container ">
+        <editor-right post-content="$ctrl.postData"></editor-right>
+        <div class="slider-close slider-slide slider-container-demo"
+             ng-class="{'slider-close': $ctrl.moveSlider, 'slider-open': !$ctrl.moveSlider}">
+          <button ng-click="$ctrl.sliderOperation()">Close</button>
+          <option-slider display-section="$ctrl.sliderDisplaySection">
+
+          </option-slider>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

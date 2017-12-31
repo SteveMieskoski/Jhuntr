@@ -1,0 +1,43 @@
+@import '../../../../common/base-styles.main';
+
+
+.hide-text{
+  &:before{
+    content: 'none'
+  }
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.grid-item {
+  width: 25%;
+}
+
+.grid-item--width2 {
+  width: 50%;
+}
+
+.add-extra-pages{
+  height: $fullHeight*2
+}
+
+
+.creator-outline {
+  @media (max-width: 767px) {
+    //zoom: 0.60;
+  }
+  @media (min-width: 768px) {
+    width: $fullWidth;
+  }
+
+  background-color: white !important;
+
+  -webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 2px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+}

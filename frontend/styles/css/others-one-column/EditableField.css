@@ -1,0 +1,92 @@
+.editable-field {
+  padding: 0;
+  border: 0;
+  resize: none;
+  width: 100%;
+  outline: none;
+  margin: 0;
+  box-shadow: none;
+  display: block;
+  min-height: 10px;
+  background: transparent;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  text-size-adjust: none;
+  position: relative;
+  z-index: 1; }
+
+.editable-field-wrapper {
+  position: relative;
+  flex-grow: 1; }
+
+.editable-field-wrapper-inline {
+  display: inline-block; }
+
+.editable-field-highlights-inline {
+  padding: 3px 0; }
+
+.editable-field-highlights {
+  position: absolute !important;
+  color: transparent !important;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; }
+  .editable-field-highlights mark {
+    border-radius: 2px;
+    background-color: #f8a9ac;
+    color: transparent;
+    padding: 0 2px;
+    margin-left: -2px;
+    margin-right: -2px; }
+
+input.editable-field {
+  overflow-x: initial !important; }
+
+a.editable-field {
+  word-wrap: break-word;
+  word-break: break-all; }
+
+.editable-field input {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+.editable-field::placeholder, .editable-field input::placeholder, .date-range-label {
+  color: #808080 !important;
+  opacity: 1 !important; }
+
+.editable-field-xs {
+  font-size: 11px; }
+
+.editable-field-sm {
+  font-size: 13px; }
+
+.editable-field-muted {
+  color: #333; }
+
+.item-object .with-icon-container .with-icon.btn-link.btn-resume-data {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto; }
+
+.resume-layout-condensed .editable-field {
+  line-height: 1.35; }
+
+.resume-layout-condensed .item-object .with-icon-container .with-icon .icon {
+  font-size: 11px;
+  margin-right: 5px;
+  transform: translateY(2px); }
+
+.resume-layout-condensed .item-object .with-icon-container .with-icon .editable-field {
+  line-height: normal; }
+
+.resume-layout-condensed .with-icon.btn-link.btn-resume-data {
+  color: #808080; }
+
+.resume-layout-condensed .with-icon .editable-field {
+  color: #808080; }
+  .resume-layout-condensed .with-icon .editable-field input {
+    min-width: 100%; }

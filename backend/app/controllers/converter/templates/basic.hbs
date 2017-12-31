@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+  <title>{{#basics}}{{firstname}}{{/basics}}</title>
+
+  <style>
+
+    body {
+      background: #fff;
+      font: 15px Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+      margin: 50px 0;
+      margin-bottom: 100px;
+    }
+
+    em {
+      color: #999;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    blockquote {
+      margin: 0;
+      margin-bottom: 1em;
+    }
+
+    .item {
+      margin-bottom: 1em;
+    }
+
+    #resume-basic {
+      margin: 0 auto;
+      max-width: 480px;
+      padding: 0 20px;
+    }
+
+    #basics {
+      margin-bottom: -10px;
+    }
+
+    #basics h3 {
+      margin-top: 1.5em;
+    }
+
+    #basics .contact strong,
+    #location strong {
+      clear: both;
+      float: left;
+      line-height: 1.3;
+      width: 120px;
+    }
+
+    #profiles,
+    #skills {
+      overflow: hidden;
+    }
+
+    #profiles .item,
+    #skills .item {
+      float: left;
+      width: 50%;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div id="resume">
+  {{#basics}}
+    <h1>{{firstname}} {{lastname}}</h1>
+    <h2>{{label}}</h2>
+    <section id="basics">
+      <div class="contact">
+        {{#website}}
+          <div class="website">
+            <strong>Website</strong>
+            {{website}}
+          </div>
+        {{/website}}
+        {{#email}}
+          <div class="email">
+            <strong>Email</strong>
+            {{email}}
+          </div>
+        {{/email}}
+        {{#phone}}
+          <div class="phone">
+            <strong>Phone</strong>
+            {{phone}}
+          </div>
+        {{/phone}}
+      </div>
+      {{#summary}}
+        <div class="summary">
+          <p>{{summary}}</p>
+        </div>
+      {{/summary}}
+      {{#location}}
+        <h3>Location</h3>
+        <section id="location">
+          {{#address}}
+            <div class="address">
+              <strong>Address</strong>
+              {{address}}
+            </div>
+          {{/address}}
+          {{#postalCode}}
+            <div class="postalCode">
+              <strong>Postal code</strong>
+              {{postalCode}}
+            </div>
+          {{/postalCode}}
+          {{#city}}
+            <div class="city">
+              <strong>City</strong>
+              {{city}}
+            </div>
+          {{/city}}
+          {{#countryCode}}
+            <div class="countryCode">
+              <strong>Country code</strong>
+              {{countryCode}}
+            </div>
+          {{/countryCode}}
+          {{#state}}
+            <div class="region">
+              <strong>Region</strong>
+              {{region}}
+            </div>
+          {{/state}}
+        </section>
+      {{/location}}
+
+
+        <h3>Profiles</h3>
+        <section id="profiles">
+          {{#profiles}}
+            <div class="item">
+              {{#network}}
+                <strong class="network">
+                  {{network}}
+                </strong>
+              {{/network}}
+              {{#username}}
+                <div class="username">
+                  {{username}}
+                </div>
+              {{/username}}
+              {{#url}}
+                <div class="url">
+                  <a href="{{url}}">Link</a>
+                </div>
+              {{/url}}
+            </div>
+          {{/profiles}}
+        </section>
+
+    </section>
+  {{/basics}}
+
+
+    <section id="employment">
+      <h2>Employment</h2>
+      {{#employment}}
+        <div class="item">
+          {{#company}}
+            <h3 class="name">
+              {{company}}
+            </h3>
+          {{/company}}
+          <div class="date">
+            {{#startDate}}
+              <span class="startDate">
+                {{startDate}}
+              </span>
+            {{/startDate}}
+            {{#endDate}}
+              <span class="endDate">
+				- {{endDate}}
+			</span>
+            {{/endDate}}
+            {{^endDate}}
+              <span class="endDate">
+				- Present
+			</span>
+            {{/endDate}}
+          </div>
+          {{#position}}
+            <div class="position">
+              {{position}}
+            </div>
+          {{/position}}
+          {{#website}}
+            <div class="website">
+              <a href="{{website}}">{{website}}</a>
+            </div>
+          {{/website}}
+          {{#summary}}
+            <div class="summary">
+              <p>{{summary}}</p>
+            </div>
+          {{/summary}}
+          {{#highlights}}
+            <ul class="highlights">
+              {{#highlights}}
+                <li>{{.}}</li>
+              {{/highlights}}
+            </ul>
+          {{/highlights}}
+        </div>
+      {{/employment}}
+    </section>
+
+  <!-- |> volunteer }}-->
+
+    <section id="education">
+      <h2>Education</h2>
+      {{#education}}
+        <div class="item">
+          <div class="date">
+            {{#startDate}}
+              <span class="startDate">
+                {{startDate}}
+              </span>
+            {{/startDate}}
+            {{#endDate}}
+              <span class="endDate">
+				- {{endDate}}
+			</span>
+            {{/endDate}}
+            {{^endDate}}
+              <span class="endDate">
+				- Present
+			</span>
+            {{/endDate}}
+          </div>
+          {{#institution}}
+            <div class="institution">
+              {{institution}}
+            </div>
+          {{/institution}}
+          {{#area}}
+            <div class="area">
+              {{area}}
+            </div>
+          {{/area}}
+          {{#studyType}}
+            <div class="studyType">
+              {{studyType}}
+            </div>
+          {{/studyType}}
+          {{#gpa}}
+            <div class="gpa">
+              GPA: {{gpa}}
+            </div>
+          {{/gpa}}
+          {{#courses}}
+            <ul class="courses">
+              {{#courses}}
+                <li>{{.}}</li>
+              {{/courses}}
+            </ul>
+          {{/courses}}
+        </div>
+      {{/education}}
+    </section>
+
+  <!-- |> awards }}-->
+  <!-- |> publications }}-->
+  <!-- |> skills }}-->
+  <!-- |> languages }}-->
+  <!-- |> interests }}-->
+  <!-- |> references }}-->
+  </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<button type="button" class="close pull-right" aria-label="Close" ng-click="$ctrl.cancel()"><span aria-hidden="true">&times;&nbsp;&nbsp;</span></button>
+<div id="image-uploader">
+  <h3>Crop Image</h3>
+  <form name="$ctrl.upload_form">
+    Single Image with validations
+    <input  class="file-input"
+            id="fileInput"
+            type="file"
+            ngf-select
+            ng-model="$ctrl.file"
+            name="file"
+            ngf-pattern="'image/*'"
+            accept="image/*"
+            ngf-max-size="5MB"
+            ng-change="$ctrl.convertToBase64($ctrl.file)"
+    />
+
+    <!-- Image thumbnail: <img style="width:100px;" ng-show="!!$ctrl.file" ngf-thumbnail="$ctrl.file || '/thumb.jpg'"/>
+    <i ng-show="$ctrl.upload_form.file.$error.required">*required</i><br>
+    <i ng-show="$ctrl.upload_form.file.$error.maxSize">File too large
+      {{$ctrl.file.size / 1000000|number:1}}MB: max 20M</i>
+     Multiple files
+     <div class="button" ngf-select ng-model="up.files" ngf-multiple="true">Select</div>
+     Drop files: <div ngf-drop ng-model="up.files" class="drop-box">Drop</div>
+
+    <p>{{$ctrl.progress}}</p>-->
+    <i ng-show="$ctrl.upload_form.file.$error.required">*required</i><br>
+    <i ng-show="$ctrl.upload_form.file.$error.maxSize" class="text-danger">File too large:
+      <!--{{$ctrl.file.size / 1000000 | number:1}}MB:--> max 5 MB</i>
+
+    <div ng-if="$ctrl.showCropper">
+      <div class="row">
+          <div class="col-md-8">
+            <div class="cropArea">
+              <img-croppie src="$ctrl.file" ng-model="$ctrl.croppedImage"></img-croppie>
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div>
+            <img class="circle-preview" ng-src="{{$ctrl.croppedImage}}" />
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-7">
+          <button type="submit" class="btn btn-success btn-xs" ng-click="$ctrl.submit($ctrl.croppedImage); $ctrl.showCropper = !$ctrl.showCropper; $ctrl.noThumb=true">
+            <span class="glyphicon glyphicon-upload"></span> Done
+          </button>
+          <button type="button" class="btn btn-success btn-xs" ng-click="$ctrl.showCropper = !$ctrl.showCropper">
+            <span class="glyphicon glyphicon-back"></span> back
+          </button>
+        </div>
+      </div>
+      <br/>
+      <br><br><br><br>
+    </div>
+
+  <!--  <button ng-click="$ctrl.showCropper = !$ctrl.showCropper">Crop</button>-->
+  <table class="table" ng-if="!$ctrl.showCropper">
+    <thead>
+    <tr>
+      <th width="50%">Name</th>
+      <th ng-show="!!$ctrl.file">Size</th>
+      <th ng-show="!!$ctrl.file">Progress</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <strong>{{ $ctrl.fileDetails.name }}</strong>
+
+        <!-- Image preview -->
+        <!--auto height
+        <div ng-thumb="{ file: $ctrl.file, width: 100 }"></div>-->
+        <!--auto width-->
+        <div ng-if="!!$ctrl.file && !$ctrl.noThumb">
+          <div ng-show="!!$ctrl.file" ng-thumb="{ file: $ctrl.file, height: 100 }"></div>
+        </div>
+        <!--fixed width and height -->
+        <!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+      </td>
+      <td ng-show="!!$ctrl.file" nowrap>{{ $ctrl.fileDetails.size/1024/1024|number:2 }} MB</td>
+      <td ng-show="!!$ctrl.file">
+        <div class="progress" style="margin-bottom: 0;">
+          <div class="progress-bar" role="progressbar" ng-style="{ 'width': $ctrl.progress + '%' }"></div>
+        </div>
+      </td>
+      <td class="text-center">
+        <span ng-show="$ctrl.uploadSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+       <span ng-show="$ctrl.uploadCanceled"><i class="glyphicon glyphicon-ban-circle"></i></span>
+        <span ng-show="$ctrl.uploadError"><i class="glyphicon glyphicon-remove"></i></span>
+      </td>
+      <td nowrap>
+        <div ng-show="$ctrl.uploadInProgress">
+          <button type="button" class="btn btn-success btn-xs" ng-click="$ctrl.showCropper = !$ctrl.showCropper"
+                  ng-disabled="!$ctrl.file || $ctrl.progress || $ctrl.uploadSuccess">
+            <span class="glyphicon glyphicon-upload"></span> Upload
+          </button>
+          <button type="button" class="btn btn-warning btn-xs" ng-click="$ctrl.cancelUpload()"
+                  ng-disabled="!$ctrl.file || !Number.isInteger($ctrl.progress)  && $ctrl.progress <= 100">
+            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+          </button>
+        </div>
+        <button ng-show="$ctrl.uploadComplete" type="button" class="btn btn-success btn-xs" ng-click="$ctrl.ok()">
+          <span class="glyphicon glyphicon-ok"></span> Done
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  </form>
+</div>
+

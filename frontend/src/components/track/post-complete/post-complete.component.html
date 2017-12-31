@@ -1,0 +1,79 @@
+<br>
+<br>
+<br>
+<div class="complete-slider" ng-style="$ctrl.sliderWidth" >
+  <button type="button" class="btn btn-default pull-right" ng-click="$ctrl.toggleSlider()">X</button>
+    <div class="complete-slider-item" ng-repeat="item in $ctrl.allPosts" ng-click="$ctrl.changePost(item)">
+      <span> <img class="small-logo" ng-src="{{item.logo}}"> {{item.company}}</span>
+
+    </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <button type="button" class="btn btn-primary" ng-click="$ctrl.toggleSlider()">Open Post List</button>
+    <button ng-if="!$ctrl.editing" class="btn btn-default" ng-click="$ctrl.openPostEdit()">Edit</button>
+  </div>
+
+  <div class="col-lg-4 col-lg-offset-1">
+
+
+    <h3>Status: {{$ctrl.allDetails.status}}</h3>
+    <p ng-if="$ctrl.allDetails.label"><span class="detail-topic">Label: </span>{{$ctrl.allDetails.label}}</p>
+    <a ng-if="$ctrl.allDetails.logo" ng-href="http://{{$ctrl.allDetails.company_url}}" target="_blank">
+      <img ng-src="{{$ctrl.allDetails.logo}}">
+    </a>
+
+    <div ng-if="!$ctrl.editing">
+      <p><span class="detail-topic">Company: </span>{{$ctrl.allDetails.company}}</p>
+      <p><span class="detail-topic">Title:</span>{{$ctrl.allDetails.title}}</p>
+      <p ng-if="$ctrl.allDetails.dateApplied"><span class="detail-topic">Applied:</span>Yes</p>
+      <p ng-if="$ctrl.allDetails.dateApplied"><span class="detail-topic">Date Applied:</span>{{$ctrl.allDetails.dateApplied
+        | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+      <p ng-if="!$ctrl.allDetails.dateApplied" class="text-danger"><span class="detail-topic">Applied:</span>No</p>
+      <p ng-if="$ctrl.allDetails.url"><span class="detail-topic">Url:</span><a target="_blank"
+                                                                               ng-href="{{$ctrl.allDetails.url}}">Link
+        To Posting</a></p>
+      <p ng-if="$ctrl.allDetails.location"><span class="detail-topic">Location:</span>{{$ctrl.allDetails.location}}</p>
+      <p ng-if="$ctrl.allDetails.company_url"><span class="detail-topic">Url:</span><a
+              href="http://{{$ctrl.allDetails.company_url}}" target="_blank">{{$ctrl.allDetails.company_url}}</a></p>
+      <p ng-if="$ctrl.allDetails.city"><span class="detail-topic">City:</span>{{$ctrl.allDetails.city}}</p>
+      <p ng-if="$ctrl.allDetails.state"><span class="detail-topic">State:</span>{{$ctrl.allDetails.state}}</p>
+      <p ng-if="$ctrl.allDetails.postingTime"><span class="detail-topic">Posted On:</span>{{$ctrl.allDetails.postingTime}}
+      </p>
+      <p ng-if="$ctrl.allDetails.contactLabel"><span class="detail-topic">Contact:</span>{{$ctrl.allDetails.contactLabel}}
+      </p>
+      <p ng-if="$ctrl.allDetails.contactDetail"><span class="detail-topic">Contact Detail:</span>{{$ctrl.allDetails.contactDetail}}
+      </p>
+      <p ng-if="$ctrl.allDetails.source"><span class="detail-topic">Source:</span>{{$ctrl.allDetails.source}}</p>
+      <p><span class="detail-topic">Added:</span>{{$ctrl.allDetails.created_at | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+      <p></p><span class="detail-topic">Tasks</span>
+      <p ng-if="$ctrl.allDetails.tasks.length === 0">No Tasks</p>
+      <p ng-repeat="task in $ctrl.allDetails.tasks">{{task.label}}</p>
+      <p><span class="detail-topic">Notes</span></p>
+      <p ng-if="!$ctrl.allDetails.notes">No Notes</p>
+      {{$ctrl.allDetails.notes}}
+    </div>
+
+
+
+
+  </div>
+  <div class="col-lg-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- <company-lookup company-selected="$ctrl.companySearchResult(company)"></company-lookup>-->
+      </div>
+      <div ng-if="$ctrl.mapAddress" class="col-lg-12">
+        <google-maps select-map="$ctrl.mapType" company-address="$ctrl.mapAddress" company-name="$ctrl.mapName"
+                     company-logo="$ctrl.mapLogo"></google-maps>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<br>
+<br>
+<br>
+
+<!--{{$ctrl.allDetails}}-->

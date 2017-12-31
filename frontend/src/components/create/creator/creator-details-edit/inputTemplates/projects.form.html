@@ -1,0 +1,82 @@
+<h3 class="norm-cursor">Projects/Activities</h3>
+<div >
+<button ng-click="$ctrl.addRecord()"
+        class="btn btn-sm btn-link text-primary">
+  Enter Another&nbsp;&nbsp;
+  <i class="fa fa-plus " aria-hidden="true"></i>
+</button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul>
+  <li class="res-entity-list"
+      ng-class="{'text-muted': !$ctrl.existingData[$index].show ,'text-primary': $ctrl.existingData[$index].show}"
+      ng-click="$ctrl.forEdit = $index"
+      ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].name.length > 0">
+      {{$ctrl.existingData[$index].name }}&nbsp;&nbsp;
+    <button ng-click="$ctrl.removeRecord('projects', $ctrl.existingData[$index], $index)"
+            class="btn btn-sm btn-link">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    </span>
+    <span ng-if="$ctrl.existingData[$index].name.length < 1">
+      new entry&nbsp;&nbsp;
+
+    <button ng-click="$ctrl.removeRecord('projects', $ctrl.existingData[$index], $index)"
+            class="btn btn-sm btn-link">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    </span>
+
+  </li>
+</ul>
+<button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show" class="btn btn-sm  text-primary">
+  <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true"></i>
+  <span ng-if="!$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Show
+  </span>
+  <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+  <span ng-if="$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Hide
+  </span>
+</button>
+<div>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Project Name"
+         aria-label="Project Name"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].name"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Start Date"
+         aria-label="Start Date"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].startDate"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="End Date"
+         aria-label="End Date"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].endDate"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Summary"
+         aria-label="Summary"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].summary"/>
+  <button ng-click="$ctrl.addDetail($ctrl.forEdit)">Add Detail</button>
+  <div ng-repeat="detail in $ctrl.existingData[$ctrl.forEdit].details">
+    <span ng-click="$ctrl.existingData[$ctrl.forEdit].details[$index].show = !$ctrl.existingData[$ctrl.forEdit].details[$index].show">
+      <i ng-if="$ctrl.existingData[$ctrl.forEdit].details[$index].show" class="fa fa-eye" aria-hidden="true"></i>
+    <i ng-if="!$ctrl.existingData[$ctrl.forEdit].details[$index].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+    </span>
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="Details"
+           aria-label="Details"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].details[$index].detail"/>
+  </div>
+
+</div>
+</div>

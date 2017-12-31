@@ -1,0 +1,23 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<button ng-click="$ctrl.goBack()">Back</button>
+<div class="res-listing-page" style="padding-left: 100px">
+  <h3>Select Res:</h3>
+
+  <div ng-repeat="res in $ctrl.resumeList" class="res-listing-items" ng-if="!$ctrl.resRemoved">
+    <button ng-click="$ctrl.makeSelection(res)">{{res.ref_label}}</button>
+    <span ng-if="res.is_core">Master Res</span>
+  </div>
+  <br/>
+  <br/>
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h3 class="panel-title">Warning!</h3>
+    </div>
+    Making a selection above to begin editing another res will erase the res version currently associated with this posing.<br>
+    The original version (as listed here) is not affected by this action, only those changes made to the copy associated with this posting.
+  </div>
+</div>
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{basics.firstName}} {{basics.lastName}}</title>
+
+
+  <style>
+      {{#cssData}}{{cssData}}{{/cssData}}
+    .backgroundImage{
+      {{#backgroundImageCss}}{{backgroundImageCss}}{{/backgroundImageCss}}
+    }
+  </style>
+  <!--  <link rel="stylesheet" media="all" href="./font-awesome-4.7.0/css/font-awesome.min.css">-->
+
+</head>
+<body>
+<!--<span class="fa-try"></span>-->
+<div class="two-column" style="background-image:url(../../backend/controllers/templates/bkgrnd.design.png); background-size:cover;">
+  <!-- style="background-image:url(../../backend/controllers/templates/bkgrnd.design.png); background-size:cover;
+  <div id="core-template" class="background">-->
+  <div id="core-template">
+    <div id="header-section">
+      Alternate
+      <div class="header-content">
+        {{#basics}}
+          <div class="header-words">
+            <div class="name">
+              <div class=" name-edit {{#design.0.primary_color}}{{design.0.primary_color}}{{/design.0.primary_color}}">
+                {{!#firstName}}{{!firstName}}{{!/firstName}}
+                {{#name}}{{name}}{{/name}}
+                {{#firstname}}{{firstname}}&nbsp;{{lastname}}{{/firstname}}
+                {{design.primary_color}}
+              </div>
+            </div>
+            <div class="heading">
+              <div class=" heading-edit {{#design.0.secondary_color}}{{design.0.secondary_color}}{{/design.0.secondary_color}}">
+                {{#label}}{{label}}{{/label}}
+              </div>
+            </div>
+            <div class="contact-details">
+              <div class="contact-col-one">
+                <div class="contact">
+                  <i class="fa fa-phone icon {{#design.0.secondary_color}}{{design.0.secondary_color}}{{/design.0.secondary_color}}"></i>&nbsp;
+                  <div class=" contact-edit heading-font {{#design.0.primary_color}}{{design.0.primary_color}}{{/design.0.primary_color}}">
+                    {{#phone}}{{phone}}{{/phone}}
+                  </div>
+                </div>
+                <div class="contact">
+                  <i class="fa fa-link icon {{#design.0.secondary_color}}{{design.0.secondary_color}}{{/design.0.secondary_color}}"></i>&nbsp;
+                  <div class=" contact-edit heading-font {{#design.0.primary_color}}{{design.0.primary_color}}{{/design.0.primary_color}}">
+                    {{#website}}{{website}}{{/website}}
+                  </div>
+                </div>
+              </div>
+              <div class="contact-col-two">
+                <div class="contact">
+                  <i class="fa fa-at icon {{#design.0.secondary_color}}{{design.0.secondary_color}}{{/design.0.secondary_color}}"></i>&nbsp;
+                  <div class=" contact-edit heading-font {{#design.0.primary_color}}{{design.0.primary_color}}{{/design.0.primary_color}}">
+                    {{#email}}{{email}}{{/email}}
+                  </div>
+                </div>
+
+                <div class="contact">
+                  {{#location}}
+                    <i class="fa fa-map-marker icon {{#design.0.secondary_color}}{{design.0.secondary_color}}{{/design.0.secondary_color}}"></i>&nbsp;
+                    <div class=" contact-edit heading-font {{#design.0.primary_color}}{{design.0.primary_color}}{{/design.0.primary_color}}">
+                      {{#city}}{{city}}{{/city}}
+                    </div>
+                  {{/location}}
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="header-picture">
+            <img src="{{#attachments.userImage}}{{attachments.userImage}}{{/attachments.userImage}}{{^attachments.userImage}}assets/mrDefulto.png{{/attachments.userImage}}" class="photo photo-round">
+          </div>
+
+
+        {{/basics}}
+      </div>
+
+    </div>
+
+
+    <div class="columns">
+      <div class="two-column-left">
+        <!-- order item is temporary until this information gets included with the label.ordering object -->
+        {{#each design.0.ordering.left}}
+          {{> (partialsOrdering side="left" rank=@index) }}
+        {{/each}}
+        {{!{{> (partialsOrdering side="left" rank=0) }}
+        {{!{{> (partialsOrdering side="left" rank=1) }}
+        {{!{{> (partialsOrdering side="left" rank=2) }}
+        {{!{{> (partialsOrdering side="left" rank=3) }}
+        {{!{{> (partialsOrdering side="left" rank=4) }}
+      </div>
+
+      <div class="two-column-right">
+        {{#each design.0.ordering.right}}
+          {{> (partialsOrdering side="right" rank=@index) }}
+        {{/each}}
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+</body>
+</html>

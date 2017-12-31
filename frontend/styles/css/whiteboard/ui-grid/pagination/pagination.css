@@ -1,0 +1,177 @@
+/* This file contains variable declarations (do not remove this line) */
+/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+/**
+* $section Grid styles
+*/
+/**
+* $section Header styles
+*/
+/** $description Colors for header gradient */
+/**
+* $section Grid body styles
+*/
+/** $description Colors used for row alternation */
+/**
+* $section Sort arrow colors
+*/
+/**
+* $section Scrollbar styles
+
+$scrollbarBackground: darken($rowColorEven, 15%);
+$scrollbarBackgroundHover: darken($scrollbarBackground, 15%);
+$scrollbarBackgroundScrolling: darken($scrollbarBackgroundHover, 15%);
+$scrollbarWidth: 10px;
+$scrollbarBorderRadius: 2px;
+$scrollbarShadow: 0 0 0px #fff;
+$scrollbarBorder: 1px solid darken($scrollbarBackground, 15%);
+$scrollbarBorderScrolling: 1px solid darken($scrollbarBackgroundScrolling, 15%);
+*/
+/**
+* $section font library path
+*/
+/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+.ui-grid-pager-panel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  box-sizing: content-box; }
+
+.ui-grid-pager-container {
+  float: left; }
+
+.ui-grid-pager-control {
+  margin-right: 10px;
+  margin-left: 10px;
+  min-width: 135px;
+  float: left; }
+  .ui-grid-pager-control button {
+    height: 25px;
+    min-width: 26px; }
+    .ui-grid-pager-control button #ui-grid-twbs {
+      color: #eee;
+      background-color: transparent;
+      border-color: #ccc; }
+      .ui-grid-pager-control button #ui-grid-twbs:focus, .ui-grid-pager-control button #ui-grid-twbs.focus {
+        color: #eee;
+        background-color: transparent;
+        border-color: #8c8c8c; }
+      .ui-grid-pager-control button #ui-grid-twbs:hover {
+        color: #eee;
+        background-color: transparent;
+        border-color: #adadad; }
+      .ui-grid-pager-control button #ui-grid-twbs:active, .ui-grid-pager-control button #ui-grid-twbs.active,
+      .open > .ui-grid-pager-control button #ui-grid-twbs.dropdown-toggle {
+        color: #eee;
+        background-color: transparent;
+        border-color: #adadad; }
+        .ui-grid-pager-control button #ui-grid-twbs:active:hover, .ui-grid-pager-control button #ui-grid-twbs:active:focus, .ui-grid-pager-control button #ui-grid-twbs:active.focus, .ui-grid-pager-control button #ui-grid-twbs.active:hover, .ui-grid-pager-control button #ui-grid-twbs.active:focus, .ui-grid-pager-control button #ui-grid-twbs.active.focus,
+        .open > .ui-grid-pager-control button #ui-grid-twbs.dropdown-toggle:hover,
+        .open > .ui-grid-pager-control button #ui-grid-twbs.dropdown-toggle:focus,
+        .open > .ui-grid-pager-control button #ui-grid-twbs.dropdown-toggle.focus {
+          color: #eee;
+          background-color: transparent;
+          border-color: #8c8c8c; }
+      .ui-grid-pager-control button #ui-grid-twbs:active, .ui-grid-pager-control button #ui-grid-twbs.active,
+      .open > .ui-grid-pager-control button #ui-grid-twbs.dropdown-toggle {
+        background-image: none; }
+      .ui-grid-pager-control button #ui-grid-twbs.disabled:hover, .ui-grid-pager-control button #ui-grid-twbs.disabled:focus, .ui-grid-pager-control button #ui-grid-twbs.disabled.focus, .ui-grid-pager-control button #ui-grid-twbs[disabled]:hover, .ui-grid-pager-control button #ui-grid-twbs[disabled]:focus, .ui-grid-pager-control button #ui-grid-twbs[disabled].focus,
+      fieldset[disabled] .ui-grid-pager-control button #ui-grid-twbs:hover,
+      fieldset[disabled] .ui-grid-pager-control button #ui-grid-twbs:focus,
+      fieldset[disabled] .ui-grid-pager-control button #ui-grid-twbs.focus {
+        background-color: transparent;
+        border-color: #ccc; }
+      .ui-grid-pager-control button #ui-grid-twbs .badge {
+        color: transparent;
+        background-color: #eee; }
+  .ui-grid-pager-control input {
+    display: inline;
+    height: 26px;
+    width: 50px;
+    vertical-align: top; }
+    .ui-grid-pager-control input #ui-grid-twbs {
+      border-color: #d4d4d4;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+      .ui-grid-pager-control input #ui-grid-twbs:focus {
+        border-color: #bbbbbb;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white; }
+  .ui-grid-pager-control .ui-grid-pager-max-pages-number {
+    vertical-align: bottom; }
+    .ui-grid-pager-control .ui-grid-pager-max-pages-number > * {
+      vertical-align: middle; }
+  .ui-grid-pager-control .first-bar {
+    width: 10px;
+    border-left: 2px solid #4d4d4d;
+    margin-top: -6px;
+    height: 12px;
+    margin-left: -3px; }
+  .ui-grid-pager-control .first-bar-rtl {
+    width: 10px;
+    border-left: 2px solid #4d4d4d;
+    margin-top: -6px;
+    height: 12px;
+    margin-right: -7px; }
+  .ui-grid-pager-control .first-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 8.7px 5px 0;
+    border-color: transparent #4d4d4d transparent transparent;
+    margin-left: 2px; }
+  .ui-grid-pager-control .next-triangle {
+    margin-left: 1px; }
+  .ui-grid-pager-control .prev-triangle {
+    margin-left: 0; }
+  .ui-grid-pager-control .last-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 8.7px;
+    border-color: transparent transparent transparent #4d4d4d;
+    margin-left: -1px; }
+  .ui-grid-pager-control .last-bar {
+    width: 10px;
+    border-left: 2px solid #4d4d4d;
+    margin-top: -6px;
+    height: 12px;
+    margin-left: 1px; }
+  .ui-grid-pager-control .last-bar-rtl {
+    width: 10px;
+    border-left: 2px solid #4d4d4d;
+    margin-top: -6px;
+    height: 12px;
+    margin-right: -11px; }
+
+.ui-grid-pager-row-count-picker {
+  float: left; }
+  .ui-grid-pager-row-count-picker select {
+    height: 26px;
+    width: 67px;
+    display: inline; }
+    .ui-grid-pager-row-count-picker select #ui-grid-twbs {
+      border-color: #d4d4d4;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+      .ui-grid-pager-row-count-picker select #ui-grid-twbs:focus {
+        border-color: #bbbbbb;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white; }
+  .ui-grid-pager-row-count-picker .ui-grid-pager-row-count-label {
+    margin-top: 3px; }
+
+.ui-grid-pager-count-container {
+  float: right;
+  margin-top: 4px;
+  min-width: 50px; }
+  .ui-grid-pager-count-container .ui-grid-pager-count {
+    margin-right: 10px;
+    margin-left: 10px;
+    float: right; }

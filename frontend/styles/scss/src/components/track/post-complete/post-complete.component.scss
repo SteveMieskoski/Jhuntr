@@ -1,0 +1,33 @@
+@import '../../../../common/base-styles.main';
+
+
+.complete-slider{
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Stay on top */
+  top: 60px;
+  left: 0;
+  //bottom: 100px;
+  padding-bottom: 130px;
+  background-color: #888888; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.small-logo{
+  width: $small-logo-height;
+  height: $small-logo-width;
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  margin: 4px;
+}
+
+.complete-slider-item{
+  color: white;
+  background: $listed-item-background;
+  margin-left: 1px;
+  margin-right: 5px;
+  padding: 5px;
+  border: 2px solid white;
+}

@@ -1,0 +1,18 @@
+<div ng-mouseenter="$ctrl.popoverOpen(true, sectionItem.section)"
+     ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)">
+  <h3 class="popover-title">{{$ctrl.popupTitle}}</h3>
+  <button class="btn btn-sm  text-primary"
+          ng-click="$ctrl.addRecord(sectionItem.section)">
+    Add Entry
+  </button>
+  <button class="btn btn-sm  text-primary"
+          ng-if="$ctrl.sectionListModal"
+          ng-click="$ctrl.extraAction(sectionItem.section)">
+    List All Entries
+  </button>
+  <button class="btn btn-sm  text-primary"
+          ng-click="$ctrl.removeSection(sectionItem.section)">
+    Remove/Hide Section
+  </button>
+  <br>
+</div>

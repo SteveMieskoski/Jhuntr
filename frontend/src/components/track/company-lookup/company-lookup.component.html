@@ -1,0 +1,142 @@
+<div ng-model-options="{debounce: 500 }">
+  <!-- CURRENTLY I ONLY GET 50 REQUESTS PER MONTH.  SHOULD LOOK TO SEE WHAT OTHER DATA PROVIDER(S) I COULD/CAN USE.
+  MAYBE EVEN WIKIPEDIA???
+   -->
+  <!-- Modal Display-->
+  <div ng-if="$ctrl.modal">
+    <div class="loading-overlay" ng-if="$ctrl.loading">
+      <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="modal-header">
+      {{$ctrl.modelState}}
+      <h3 class="modal-title" id="modal-title">Company Lookup</h3>
+    </div>
+
+    <div class="modal-body">
+      <form name="'companyform'">
+      <div class="row">
+        <div class="col-md-12">
+          <div>
+            <label for="companyModalSearch">Company Name:</label>
+            <input class="form-control"
+                   name="companySearch"
+                   type="text"
+                   id="companyModalSearch"
+                   ng-model="$ctrl.companySearch"
+                   ng-disabled="$ctrl.loading">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h3>Filter:</h3>
+
+          <label for="countryFilter">Country:</label>
+          <div class="input-group">
+            <input type="text"
+                   id="countryFilter"
+                   name="filterCountry"
+                   ng-model="$ctrl.filterCountry"
+                   uib-typeahead="country as country.name for country in $ctrl.countries | filter: {name:$viewValue} | limitTo:10"
+                   class="form-control"
+                   ng-blur="$ctrl.restrictToCountry($ctrl.filterCountry)"
+                   ng-disabled="$ctrl.loading">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" ng-click="$ctrl.countrySelectables = !$ctrl.countrySelectables">
+                list
+              </button>
+            </span>
+
+          </div>
+          <select ng-if="$ctrl.countrySelectables"
+                  name="filterCountrySelect"
+                  ng-options="item as item.name for item in $ctrl.countries"
+                  ng-model="$ctrl.filterCountry"
+                  ng-change="$ctrl.countrySelectables = !$ctrl.countrySelectables; $ctrl.restrictToCountry($ctrl.filterCountry)"
+                  ng-disabled="$ctrl.loading">
+          </select>
+          <div ng-if="$ctrl.filterCountry.code === 'US'">
+            <div>
+              <label for="usaStateFilter">State:</label>
+              <div class="input-group">
+                <input type="text"
+                       id="usaStateFilter"
+                       ng-model="$ctrl.filterUsaState"
+                       uib-typeahead="state as state.name for state in $ctrl.usaStates | filter:{name:$viewValue} | limitTo:8"
+                       class="form-control"
+                       placeholder="enter state"
+                       ng-blur="$ctrl.restrictToState($ctrl.filterUsaState)"
+                       ng-disabled="$ctrl.loading">
+                <span class="input-group-btn">
+              <button class="btn btn-primary" ng-click="$ctrl.stateSelectables = !$ctrl.stateSelectables">
+                list
+              </button>
+            </span>
+              </div>
+              <select ng-if="$ctrl.stateSelectables"
+                      ng-options="item as item.name for item in $ctrl.usaStates"
+                      ng-model="$ctrl.filterUsaState"
+                      ng-disabled="$ctrl.loading"
+                      ng-change="$ctrl.stateSelectables = !$ctrl.stateSelectables; $ctrl.restrictToState($ctrl.filterUsaState)">
+              </select>
+              <!--   <label for="usaCityFilter">City:</label>
+             <div class="input-group">
+                 <input type="text" id="usaCityFilter"
+                        ng-model="$ctrl.filterUsaCity"
+                        uib-typeahead="city for city in $ctrl.usaCities | filter:$viewValue | limitTo:8"
+                        class="form-control"
+                        ng-disabled="$ctrl.loading"
+                        ng-change="$ctrl.cityFilter($ctrl.filterCountry.code, $ctrl.filterUsaState.abbreviation, $ctrl.filterUsaCity)"
+                        placeholder="enter city">
+               </div>-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </form>
+    </div>
+    <!-- Non-modal/Embeded Display -->
+    <div ng-if="!$ctrl.modal">
+      <div ng-if="$ctrl.noNameSelected">
+        <h2>Company Lookup</h2>
+        <label for="companySearch">Company Name:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+          <input type="text"
+                 id="companySearch"
+                 ng-model="$ctrl.companySearch"
+                 ng-change="$ctrl.displayDetailsSearch($ctrl.companySearch)">
+        </div>
+
+        <div>
+          <h3>Results:</h3>
+          <p ng-if="!$ctrl.companies"> No Results!</p>
+          <p ng-repeat="company in $ctrl.companies"
+             ng-click="$ctrl.nameSelected(company)">
+            <img ng-src="{{company.logo}}" height="30px"> {{company.name}}
+          </p>
+        </div>
+      </div>
+      <div ng-if="!$ctrl.noNameSelected">
+        <p><img ng-src="{{$ctrl.selectedLogo}}" height="30px"> {{$ctrl.selectedName}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--
+  <div  ng-model-options="{debounce: 500 }">
+    <div ng-if="$ctrl.noNameSelected">
+      <input type="text" ng-model="$ctrl.companySearch" ng-change="$ctrl.runSearch($ctrl.companySearch)">
+      <div>
+        <p ng-repeat="item in $ctrl.companies"
+           ng-click="$ctrl.nameSelectedOpenData(item.company.name, item.company.registered_address_in_full)">
+          {{item.company.name}}
+        </p>
+
+      </div>
+    </div>
+    <div ng-if="!$ctrl.noNameSelected">
+      <p >{{$ctrl.name}}</p>
+    </div>
+  </div>
+  -->

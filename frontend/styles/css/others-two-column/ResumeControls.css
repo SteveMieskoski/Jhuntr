@@ -1,0 +1,53 @@
+.resume-controls-buttons {
+  display: flex;
+  justify-content: space-between; }
+
+.resume-controls-button-big {
+  flex-grow: 1; }
+
+@media (min-width: 768px) {
+  .resume-controls-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; } }
+
+.resume-controls-input {
+  display: flex;
+  flex-direction: column; }
+  .resume-controls-input label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    transform: translate(0, 12px);
+    order: 1;
+    transition: transform linear 0.15s, color linear 0.15s; }
+  .resume-controls-input .form-control {
+    order: 2;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    padding-left: 0;
+    padding-right: 0;
+    transition-property: border-color, box-shadow, background-color, color, padding;
+    transition-duration: 0.15s;
+    box-shadow: none; }
+    .resume-controls-input .form-control::placeholder {
+      font-style: normal;
+      color: white; }
+    .resume-controls-input .form-control:focus {
+      color: #555555;
+      background-color: #fff;
+      border-color: transparent;
+      box-shadow: none;
+      padding: 8px 14px; }
+      .resume-controls-input .form-control:focus::placeholder {
+        font-style: normal;
+        color: #555555;
+        opacity: 0.4 !important; }
+  .resume-controls-input .form-control-feedback i {
+    color: white;
+    font-size: 16px;
+    line-height: 12px; }
+  .resume-controls-input .form-control:focus + label {
+    color: rgba(255, 255, 255, 0.8);
+    transform: translate(0px, 0px); }

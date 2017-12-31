@@ -1,0 +1,131 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+@import 'detailed_sections_mixin.scss';
+
+@mixin volunteer-section {
+
+  @include section-heading;
+
+  .volunteer-item {
+    position: relative;
+
+    .position-item {
+      @include subheading-container;
+     // line-height: 21px;
+    //  margin-top: .7em;
+     // width: 100%;
+
+      .position-item-edit {
+        @include subheading;
+     //   width: 100%;
+     //   margin-top: .7em;
+     //   font-size: 21px;
+    //    font-weight: 400;
+     //   height: 25px;
+      }
+    }
+
+    .company {
+      @include info-heading-container;
+      //line-height: 1em;
+
+      .company-edit {
+        @include info-heading;
+       // width: 100%;
+       // margin-top: .5em;
+      //  font-size: 15px;
+      //  font-weight: 700;
+      //  height: 20px;
+      }
+    }
+
+    .date-location {
+      @include date-location;
+    /*  margin-top: .5em;
+      width: 100%;
+      display: inline-flex;
+
+      .date {
+        display: inline-flex;
+        width: 60%;
+        min-width: 60%;
+        margin: 0;
+        padding: 0;
+
+        .icon {
+          @include sub-icon;
+          //display: inline-block;
+         // margin-right: 1%;
+          //font-size: 13px;
+        }
+
+        .date-edit {
+          margin-right: 1%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+          //font-weight: 400;
+         // height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+
+        .icon {
+          @include sub-icon;
+         // margin-right: 2%;
+         // font-size: 13px;
+        }
+
+        .location-edit {
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+          //font-weight: 400;
+         // height: 15px;
+        }
+      } */
+    }
+
+
+    .volunteer-details {
+      position: relative;
+
+      .details-heading-edit {
+        margin-top: .5em;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 15px;
+        font-weight: 400;
+        flex-grow: 1;
+        height: 18px;
+      }
+
+      .details-description-container{
+        margin-top: .2em;
+
+        .bullet {
+          font-size: .4em;
+          float: left;
+          margin-right: .7em;
+          margin-top: .8em;
+        }
+
+        .details-content-edit {
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 13px;
+          font-weight: 400;
+          flex-grow: 1;
+          width: 90%;
+          height: 54px;
+        }
+      }
+    }
+  }
+}
+

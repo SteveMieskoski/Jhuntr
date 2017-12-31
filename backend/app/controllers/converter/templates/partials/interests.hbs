@@ -1,0 +1,30 @@
+<!--Passions -->
+<div id="passion-section">
+  <div class="section-heading">
+        <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+          {{#if labels.interests}}{{labels.interests}}{{else}}Passions{{/if}}
+        </div>
+  </div>
+
+  <div class="passions">
+    {{#interests}}
+      {{# if show}}
+      <div class="passion-item">
+        {{#if icon_show}}
+          <i class="fa {{icon}} icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+        {{/if}}
+
+        <div class="passion-label">
+          <div class=" passion-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}" >
+            {{#if name}}{{name}}{{else}}Your Passion!{{/if}}
+
+          </div>
+        </div>
+      </div>
+      {{/if}}
+    {{/interests}}
+  </div>
+</div>
+
+<!-- Passions -->
+

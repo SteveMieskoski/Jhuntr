@@ -1,0 +1,38 @@
+<h3>Social Profiles</h3>
+<button ng-click="$ctrl.addRecord('profiles')">Enter Another</button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul >
+  <li class="res-entity-list" ng-class="{'text-muted': !$ctrl.existingData[$index].show ,'text-primary': $ctrl.existingData[$index].show}" ng-click="$ctrl.forEdit = $index" ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].network.length > 0">{{$ctrl.existingData[$index].network }}&nbsp;&nbsp;
+    <button ng-click="$ctrl.removeRecord('profiles', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
+    </span>
+    <span ng-if="$ctrl.existingData[$index].network.length < 1 || $ctrl.existingData[$index].label == undefined">new entry&nbsp;&nbsp;
+    <button ng-click="$ctrl.removeRecord('profiles', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
+    </span>
+
+  </li>
+</ul>
+
+<button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show" >
+  <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true"></i>
+  <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+</button>
+
+<div>
+<input type="text"
+       placeholder="Network"
+       aria-label=""
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].network"/>
+<input type="text"
+       placeholder="username"
+       aria-label=""
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].username">
+<input type="text"
+       placeholder="url"
+       aria-label=""
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].url">
+</div>
+

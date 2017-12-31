@@ -1,0 +1,22 @@
+<button ng-click="$ctrl.addPostTask(); $ctrl.newTaskForm = true;">New Task</button>
+<div class="form-group">
+  <br>
+  <label for="LabelText">Label:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+    <input type="text" class="form-control" id="LabelText" ng-model="$ctrl.newPostTask.label" ng-keypress="$ctrl.savePostTaskEnter($event)"/>
+  </div>
+  <label for="DueText">Due:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+    <input type="text" class="form-control" id="DueText" ng-model="$ctrl.newPostTask.due" ng-keypress="$ctrl.savePostTaskEnter($event)"/>
+  </div>
+  <label for="DetailsText">Details:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+    <input type="text" class="form-control" id="DetailsText" ng-model="$ctrl.newPostTask.details" ng-keypress="$ctrl.savePostTaskEnter($event)"/>
+  </div>
+  <button ng-click="$ctrl.savePostTask()">Save</button>
+</div>
+
+

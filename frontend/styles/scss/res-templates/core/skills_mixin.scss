@@ -1,0 +1,101 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+
+@mixin visual-level{
+  height: 20px;
+  padding: 2px 0 1px 2px;
+  background-clip: content-box;
+  background-color: #f5f4f7;
+  background-image: url($diagonal-stripe-2);
+}
+
+@mixin skills-section {
+
+  @include section-heading;
+
+  .skills {
+    width: 100%;
+    line-height: 1em;
+
+    .skill-item {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 5px;
+
+      width: 49%;
+
+      .icon {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: .2em;
+        font-size: 25px;
+        width: 1em;
+      }
+
+      .skill-label {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 5px;
+        //border: 2px solid black;
+        //border-radius: 10px;
+        width: 80%;
+
+        .skill-label-edit {
+          width: 100%;
+          font-size: 15px;
+          font-weight: 700;
+          height: 20px;
+        }
+        .visual-level-container{
+          width: 100%;
+          border: 2px solid black;
+          padding: 2px;
+          border-radius: 10px;
+          .level-1{
+            width: 10%;
+            @include visual-level;
+          }
+          .level-2{
+            width: 20%;
+            @include visual-level;
+          }
+          .level-3{
+            width: 30%;
+            @include visual-level;
+          }
+          .level-4{
+            width: 40%;
+            @include visual-level;
+          }
+          .level-5{
+            width: 50%;
+            @include visual-level;
+          }
+          .level-6{
+            width: 60%;
+            @include visual-level;
+          }
+          .level-7{
+            width: 70%;
+            @include visual-level;
+          }
+          .level-8{
+            width: 80%;
+            @include visual-level;
+          }
+          .level-9{
+            width: 90%;
+            @include visual-level;
+          }
+          .level-10{
+            width: 99%;
+            @include visual-level;
+          }
+        }
+
+      }
+
+    }
+  }
+
+}

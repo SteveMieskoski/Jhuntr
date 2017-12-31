@@ -1,0 +1,40 @@
+<h3 class="norm-cursor">Basics</h3>
+{{first.$dirty}}
+<div class="res-entity-input" >
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Name"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[0].firstname"/>
+  <!--<input type="text"
+         class="form-control input-sm"
+         placeholder="Family Name"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[0].lastname"/>-->
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Headline"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[0].label">
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Email"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[0].email">
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Phone"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[0].phone">
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Website"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[0].website">
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Summary"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[0].summary">
+</div>
+

@@ -1,0 +1,117 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+@import 'detailed_sections_mixin.scss';
+
+@mixin education-section {
+  display: block;
+
+  @include section-heading;
+
+  .education {
+    .program-details {
+      .school-item {
+        @include subheading-container;
+        //line-height: 21px;
+        //margin-top: .7em;
+        //width: 100%;
+
+        .school-item-edit {
+          @include subheading;
+          //width: 100%;
+
+          // font-size: 21px;
+          // font-weight: 400;
+          // height: 25px;
+        }
+      }
+
+      .edu-container {
+        width: 100%;
+
+        .container-one {
+          width: 70%;
+          display: inline-block;
+          vertical-align: top;
+
+          .study-item {
+            @include info-heading-container;
+            //line-height: 1em;
+
+            .study-item-edit {
+              @include info-heading;
+              // width: 100%;
+              // font-size: 15px;
+              // font-weight: 700;
+              //  height: 20px;
+            }
+          }
+
+          .study-dates {
+
+            .date-icon {
+              @include sub-icon;
+              // display: inline-block;
+              // margin-right: 5px;
+              // font-size: 13px;
+              float: left;
+            }
+
+            .study-dates-edit {
+              width: 80%;
+              display: inline-block;
+              @include icon-label;
+              // font-size: 13px;
+              // font-weight: 400;
+              // height: 20px;
+
+            }
+          }
+        }
+
+        .container-two {
+          width: 28%;
+          display: inline-block;
+          vertical-align: top;
+
+          .ranking-container {
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+
+            .ranking-item-one {
+              display: inline-block;
+              vertical-align: top;
+              width: 40%;
+              height: 20px !important;
+              color: $second-color;
+              text-align: right;
+            }
+
+            .ranking-item-two {
+              display: inline-block;
+              vertical-align: top;
+              width: 40%;
+              height: 20px !important;
+              color: $second-color;
+              text-align: left;
+            }
+
+            .separator {
+              display: inline-block;
+              position: relative;
+              vertical-align: top;
+            }
+
+            h4 {
+              font-size: 13px;
+              margin-top: 0;
+              margin-bottom: 0;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

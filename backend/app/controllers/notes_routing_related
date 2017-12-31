@@ -1,0 +1,4 @@
+
+*** The initial idea of using a function to generate routes appears to be much more work than it is worth.  Use a method similar to before and break up operations at various levels behind route.METHOD.
+
+*** Standardize the parameters used, and the order in which they are provided.  (e.g. /api/thing/:id  ->  where id has the same relationship to the requested resource for all resources where a similar parameter is used.  /api/user/:id -> userId ; /api/comment/:id -> comment id  where both the user id and the comment id serve as the identifier/ or base query for the underlying resource (such as an ObjectId);

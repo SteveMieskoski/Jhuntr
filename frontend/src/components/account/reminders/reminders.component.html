@@ -1,0 +1,29 @@
+
+<div>
+  <button ng-click="$ctrl.addReminderForm()">
+    Add
+  </button>
+
+
+  <div>
+    <div ng-repeat="reminder in $ctrl.reminderList">
+      <div ng-if="!$ctrl.reminderEditState[$index].state">
+        <button ng-click="$ctrl.completeReminder(reminder, $index)">Complete</button>
+        {{reminder.label}} | {{reminder.content}}
+        <button ng-click="$ctrl.reminderEditState[$index].state = !$ctrl.reminderEditState[$index].state;">Update
+        </button>
+        <button ng-click="$ctrl.deleteReminder(reminder, $index);">Delete</button>
+      </div>
+      <div ng-if="$ctrl.reminderEditState[$index].state">
+        <input type="text" ng-model="$ctrl.reminderEditState[$index].data.label" placeholder="label">
+        <input type="text" ng-model="$ctrl.reminderEditState[$index].data.content" placeholder="content">
+        <!-- <input type="select" ng-model="$ctrl.newTask.priority" > -->
+        <button ng-click="$ctrl.updateReminder($ctrl.reminderEditState[$index].data, $index)">Submit</button>
+        <button ng-click="$ctrl.reminderEditState[$index].state = !$ctrl.reminderEditState[$index].state">Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

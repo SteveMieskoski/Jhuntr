@@ -1,0 +1,112 @@
+
+$fullWidth: 850px;
+$fullHeight: 1100px;
+
+// data-form module   ---------------------------------------------------------------------------------------
+
+
+
+#application-list {
+  padding: 2em;
+}
+
+.my-popup-container {
+  position: relative;
+  display: inline-block;
+  .my-popup {
+    z-index: 1060;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    bottom: 100%;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
+
+.ang-ui-grid {
+  width: 100%;
+  height: 98vh;
+  .ui-grid-row{
+    .lastEdited{
+      background-color: #befdff;
+     // content: "";
+    }
+  }
+
+}
+
+.external-link-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.center-icon {
+  align-self: center;
+}
+
+// Editor Module
+.editor-toolbar {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.editor-padding {
+  padding-left: 2em;
+}
+
+.my-popup-content {
+  display: block;
+  margin: auto;
+}
+
+.basic-padding {
+  padding-top: 2em;
+
+}
+
+.account-padding {
+  padding-left: 2em;
+  // padding-right: 2em;
+}
+
+
+
+
+.site-margin {
+  padding: 3em;
+}
+
+.result-item {
+  padding: 3em;
+}
+
+
+
+.text-editor {
+  height: 500px;
+  font-size: 14px;
+}
+
+.modal-body .container {
+  width: 100%;
+}
+
+button.delete-button {
+  right: 10%;
+}
+
+.red-attention {
+  color: red;
+}
+
+.red-button {
+  background: red;
+}
+
+td:target {
+
+}

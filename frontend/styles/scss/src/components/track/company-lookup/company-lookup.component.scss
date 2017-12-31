@@ -1,0 +1,10 @@
+.pac-container{
+  z-index: 3050;
+}
+
+.loading-overlay{
+  z-index: 4000;
+  height: 100%;
+  min-height: 50vh;
+  background: rgba(0, 0, 0, 0.2);
+}

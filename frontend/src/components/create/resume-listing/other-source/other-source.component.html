@@ -1,0 +1,16 @@
+<input
+       ng-model-options="{debounce: 100 }"
+       ng-model="$ctrl.otherLabel"
+       placeholder="label" />
+<input
+        ng-model-options="{debounce: 100 }"
+        ng-model="$ctrl.otherSource"
+        placeholder="source or location"
+        required/>
+<button class="btn btn-sm text-primary"
+        ng-click="$ctrl.saveAssociation($ctrl.otherLabel, $ctrl.otherSource)">
+  save
+</button>
+<button class="btn btn-sm text-primary"  ng-click="$ctrl.cancelAssociation()">
+  cancel
+</button>

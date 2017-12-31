@@ -1,0 +1,159 @@
+<!--<div class="row">-->
+
+
+  <div class="col-md-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title pull-left">
+          Targeted
+        </h3>
+        <div uib-dropdown>
+          <h3 class="panel-title pull-right" style="cursor: pointer;" uib-dropdown-toggle>
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </h3>
+          <ul class="dropdown-menu pull-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a style="cursor: pointer;">Rename list</a></li>
+            <li role="menuitem"><a ng-click="$ctrl.addPlainPostForm('targeted')" style="cursor: pointer;">Add a
+              job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel-heading" style="border-radius: 0;">
+      </div>
+      <div class="panel-body"
+           dragula='"targetList"'
+           dragula-model="targeted">
+        <div ng-repeat="item in targeted" ng-dblclick="$ctrl.viewPostDetails(item)"
+             dragula-scope="$parent">
+          <div class="label-info" style="border-top: 2px solid white; border-radius: .25em;">
+            <h3 class="label label-info">{{item.label}} </h3>
+            <span class="badge">{{item.tasks.length}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div ng-click="$ctrl.addPlainPostForm('targeted')" style="cursor: pointer;">
+          <i class="fa fa-plus"></i> Add a Job
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--
+  <div class="col-md-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title pull-left">
+          Sent
+        </h3>
+        <div uib-dropdown>
+          <h3 class="panel-title pull-right" style="cursor: pointer;" uib-dropdown-toggle>
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </h3>
+          <ul class="dropdown-menu pull-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a style="cursor: pointer;">Rename list</a></li>
+            <li role="menuitem"><a ng-click="$ctrl.addPlainPostForm('sent')" style="cursor: pointer;">Add a
+              job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel-heading" style="border-radius: 0;">
+      </div>
+      <div class="panel-body"
+           dragula='"targetList"'
+           dragula-model="sent">
+        <div ng-repeat="item in sent"
+             dragula-scope="$parent">
+          <div class="label-info" style="border-top: 2px solid white; border-radius: .25em;">
+            <h3 class="label label-info">{{item.label}} </h3>
+            <span class="badge">{{item.tasks.length}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div ng-click="$ctrl.addPlainPostForm('sent')" style="cursor: pointer;">
+          <i class="fa fa-plus"></i> Add a Job
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title pull-left">
+          Interviewing
+        </h3>
+        <div uib-dropdown>
+          <h3 class="panel-title pull-right" style="cursor: pointer;" uib-dropdown-toggle>
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </h3>
+          <ul class="dropdown-menu pull-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a style="cursor: pointer;">Rename list</a></li>
+            <li role="menuitem"><a ng-click="$ctrl.addPlainPostForm('interviewing')" style="cursor: pointer;">Add
+              a job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel-heading" style="border-radius: 0;">
+      </div>
+      <div class="panel-body"
+           dragula='"targetList"'
+           dragula-model="interviewing">
+        <div ng-repeat="item in interviewing"
+             dragula-scope="$parent">
+          <div class="label-info" style="border-top: 2px solid white; border-radius: .25em;">
+            <h3 class="label label-info">{{item.label}} </h3>
+            <span class="badge">{{item.tasks.length}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div ng-click="$ctrl.addPlainPostForm('interviewing')" style="cursor: pointer;">
+          <i class="fa fa-plus"></i> Add a Job
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title pull-left">
+          Offers
+        </h3>
+        <div uib-dropdown>
+          <h3 class="panel-title pull-right" style="cursor: pointer;" uib-dropdown-toggle>
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </h3>
+          <ul class="dropdown-menu pull-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a style="cursor: pointer;">Rename list</a></li>
+            <li role="menuitem"><a ng-click="$ctrl.addPlainPostForm('offers')" style="cursor: pointer;">Add a
+              job</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel-heading" style="border-radius: 0;">
+      </div>
+      <div class="panel-body"
+           dragula='"targetList"'
+           dragula-model="offers">
+        <div ng-repeat="item in offers"
+             dragula-scope="$parent">
+          <div class="label-info" style="border-top: 2px solid white; border-radius: .25em;">
+            <h3 class="label label-info">{{item.label}} </h3>
+            <span class="badge">{{item.tasks.length}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div ng-click="$ctrl.addPlainPostForm('offers')" style="cursor: pointer;">
+          <i class="fa fa-plus"></i> Add a Job
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+-->

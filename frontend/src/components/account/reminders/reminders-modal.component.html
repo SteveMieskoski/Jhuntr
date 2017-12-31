@@ -1,0 +1,17 @@
+  <div>
+
+    <div style="display:inline-block; min-height:290px; vertical-align: middle;">
+
+    <input type="text" ng-model="$ctrl.newReminder.label" placeholder="label">
+    <input type="text" ng-model="$ctrl.newReminder.content" placeholder="content">
+      <button ng-click="$ctrl.ok()">Submit</button>
+      <button ng-click="$ctrl.cancel()">Cancel</button>
+    <!-- <input type="select" ng-model="$ctrl.newTask.priority" > -->
+    </div>
+
+    <div style="display:inline-block; min-height:290px;">
+      <div uib-datepicker ng-model="$ctrl.newReminder.date" class="well well-sm" datepicker-options="$ctrl.dateOptions"></div>
+
+    </div>
+
+  </div>

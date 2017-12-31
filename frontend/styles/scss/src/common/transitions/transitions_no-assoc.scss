@@ -1,0 +1,769 @@
+@mixin prefixed($property, $value, $second:false) {
+  @if $second {
+    -webkit-#{$property}: $value, $second;
+    -moz-#{$property}: $value, $second;
+    -ms-#{$property}: $value, $second;
+    -o-#{$property}: $value, $second;
+    #{$property}: $value, $second;
+  } @else {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+  }
+}
+
+
+#transition-container{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainView.pre-anim{
+  opacity: 0;
+}
+
+#transition-container.jh-loading {
+  overflow: hidden;
+}
+
+.jh-loading-screen {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  // top: 50px;
+  z-index: 1000000;
+  opacity: 1;
+  background-color: #FFF;
+  @include prefixed(transition, background-color 0.4s ease-in-out 0s);
+
+  &.jh-loaded {
+    opacity: 0;
+    @include prefixed(animation, jhAnimLoaded 0.5s cubic-bezier(0.7,0,0.3,1) both);
+  }
+
+  &.jh-loading {
+    .jh-loading-logo-header, .jh-loading-html {
+      opacity: 1;
+    }
+
+    .jh-loading-logo-header, .jh-loading-html:not(.jh-loaded) {
+      @include prefixed(animation, jhAnimLoading 1s cubic-bezier(0.7,0,0.3,1) both);
+    }
+
+    .jh-loading-html:not(.jh-loaded) {
+      @include prefixed(animation-delay, 0.3s);
+    }
+  }
+
+  .jh-loading-inner {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+
+  .jh-loading-center-outer {
+    width: 100%;
+    padding: 0;
+    display: table !important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .jh-loading-center-middle {
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell  !important;
+    margin: 0;
+    text-align: center;
+  }
+
+  .jh-loading-logo-header, .jh-loading-html {
+    width: 100%;
+    opacity: 0;
+  }
+
+  .jh-loading-logo-header {
+    text-align: center;
+
+    img {
+      display: inline-block !important;
+    }
+  }
+
+  .jh-loading-html {
+    margin-top: 90px;
+
+    &.jh-loaded {
+      @include prefixed(transition, opacity 0.5s cubic-bezier(0.7,0,0.3,1));
+
+      &.jh-removing {
+        opacity: 0;
+      }
+
+      &.jh-loading {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@-moz-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@-o-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@-ms-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@-moz-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@-o-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@-ms-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+
+
+// LOGIN overlay/psudo-modal/popup
+
+#transition-container.pop-loading {
+  overflow: hidden;
+}
+
+.pop-loading-screen {
+  position: fixed;
+  bottom: 10%;
+  left: 25%;
+  right:25%;
+  top: 50px;
+  z-index: 1000000;
+  opacity: 1;
+  background-color: #FFF;
+  @include prefixed(transition, background-color 0.4s ease-in-out 0s);
+
+  &.pop-loaded {
+    opacity: 0;
+    @include prefixed(animation, popAnimLoaded 0.5s cubic-bezier(0.7,0,0.3,1) both);
+  }
+
+  &.pop-loading {
+    .pop-loading-logo-header, .pop-loading-html {
+      opacity: 1;
+    }
+
+    .pop-loading-logo-header, .pop-loading-html:not(.pop-loaded) {
+      @include prefixed(animation, popAnimLoading 1s cubic-bezier(0.7,0,0.3,1) both);
+    }
+
+    .pop-loading-html:not(.pop-loaded) {
+      @include prefixed(animation-delay, 0.3s);
+    }
+  }
+
+  .pop-loading-inner {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+
+  .pop-loading-center-outer {
+    width: 100%;
+    padding: 0;
+    display: table !important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .pop-loading-center-middle {
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell  !important;
+    margin: 0;
+    text-align: center;
+  }
+
+  .pop-loading-logo-header, .pop-loading-html {
+    width: 100%;
+    opacity: 0;
+  }
+
+  .pop-loading-logo-header {
+    text-align: center;
+
+    img {
+      display: inline-block !important;
+    }
+  }
+
+  .pop-loading-html {
+    margin-top: 90px;
+
+    &.pop-loaded {
+      @include prefixed(transition, opacity 0.5s cubic-bezier(0.7,0,0.3,1));
+
+      &.pop-removing {
+        opacity: 0;
+      }
+
+      &.pop-loading {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes popAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@-moz-keyframes popAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@-o-keyframes popAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@-ms-keyframes popAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes popAnimLoading {
+  from {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes popAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@-moz-keyframes popAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@-o-keyframes popAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@-ms-keyframes popAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+@keyframes popAnimLoaded {
+  from {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+// LAST MY TRY (START)
+#transitionComponent {
+z-index: 2;
+}
+
+// .fade-in-trans-active
+.fade-in-trans, .fade-in-trans-active, .fade-in-trans-remove{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  position: absolute;
+  background-color: rgb(244, 109, 59);
+  // display: block;
+  overflow: hidden;
+  height: 900px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 90px;
+  z-index: 1000000;
+  opacity: 1;
+}
+
+.fade-in-trans-add {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+}
+
+
+.fade-in-trans-remove {
+  animation-name: fadeOutDown;
+  animation-duration: 1s;
+}
+
+
+.fade-out-trans-add{
+  transition: all 1s;
+  position: absolute;
+  background-color: rgb(244, 109, 59);
+  // display: block;
+  overflow: hidden;
+  height: 900px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 90px;
+  z-index: -10;
+  opacity: 0;
+}
+*/
+// LAST MY TRY (END)
+
+/*
+.transitionClass {
+  position: absolute;
+  background-color: rgb(244, 109, 59);
+  // display: none;
+  overflow: hidden;
+  z-index: -10;
+ // opacity: 0;
+}
+
+
+.fade-in-trans, .fade-in-trans-active{
+  position: absolute;
+  background-color: rgb(244, 109, 59);
+  // display: block;
+  overflow: hidden;
+  height: 900px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000000;
+  opacity: 1;
+}
+
+.fade-in-trans-add {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.fade-out-trans{
+  animation-name: fadeOut;
+  animation-duration: 2s;
+}
+
+.fade-out-trans-add{
+
+}
+*/
+
+/*
+#transitionComponent.ng-animate {
+ // @include prefixed(transition, opacity .5s  ease);
+  transition: opacity .5s ease;
+  opacity: 1;
+}
+
+#transitionComponent.ng-hide {
+  //@include prefixed(transition, opacity 1s  ease);
+  // z-index: -1000000;
+ // opacity: 0;
+}
+*/
+/*
+#transitionComponent.ng-enter {
+  @include prefixed(transition, opacity .5s ease);
+  background-color: green;
+  opacity: 1;
+}
+
+#transitionComponent.ng-enter-active {
+
+}
+
+#transitionComponent.ng-leave {
+  //  @include prefixed(transition, opacity 1s  linear);
+  //z-index: -1000000;
+  // background-color: red;
+  // opacity: 0;
+}
+
+#transitionComponent.ng-leave-active {
+  @include prefixed(transition, opacity 2s ease);
+  // z-index: -1000000;
+  background-color: red;
+  opacity: 0;
+}
+*/
+/*
+
+//  @include prefixed(transition, opacity 1s cubic-bezier(1, 0.01, 0.57, 0.58));
+//  @include prefixed(transition, opacity 1s cubic-bezier(0.58, 0, 0.29, 1.01));
+
+
+#transitionComponent.jh-view-height {
+  height: 90vh;
+  width: 100%;
+  z-index: 900000;
+}
+
+#transitionComponent.jh-trans-hidden {
+  display: none;
+  z-index: -1000000;
+}
+
+#transitionComponent {
+  opacity: 0;
+  .jh-load {
+    opacity: 1;
+    @include prefixed(transition, opacity 1s cubic-bezier(0.11, 0.63, 0.89, 0.99));
+  }
+
+  .jh-loading {
+    opacity: 0;
+    @include prefixed(transition, opacity 1s cubic-bezier(0.4, 0.03, 0.46, 0.63));
+  }
+
+  .jh-loaded {
+
+  }
+  .jh-loading-screen {
+    position: fixed;
+    height: 90vh;
+    width: 100%;
+    //bottom: 0;
+    //left: 0;
+   // right: 0;
+   // top: 0;
+    z-index: 1000000;
+    opacity: 1;
+    background-color: #FFF;
+   // @include prefixed(transition, background-color 0.4s ease-in-out 0s);
+
+    .jh-loading-inner {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      position: static;
+    }
+
+    .jh-loading-center-outer {
+      width: 100%;
+      padding: 0;
+      display: table !important;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+    }
+
+    .jh-loading-center-middle {
+      padding: 0;
+      vertical-align: middle;
+      display: table-cell !important;
+      margin: 0;
+      text-align: center;
+    }
+
+    .jh-loading-logo-header, .jh-loading-html {
+      width: 100%;
+      opacity: 0;
+    }
+
+    .jh-loading-logo-header {
+      text-align: center;
+
+      img {
+        display: inline-block !important;
+      }
+    }
+  }
+
+
+}
+*/
+
+//------------------------------------------------------------------------
+/*
+.jh-loading-screen {
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000000;
+  opacity: 1;
+  background-color: #FFF;
+  @include prefixed(transition, background-color 0.4s ease-in-out 0s);
+
+  &.jh-loaded {
+    opacity: 0;
+    @include prefixed(animation, jhAnimLoaded 0.5s cubic-bezier(0.7, 0, 0.3, 1) both);
+  }
+
+  &.jh-loading {
+    .jh-loading-logo-header, .jh-loading-html {
+      opacity: 1;
+    }
+
+    .jh-loading-logo-header, .jh-loading-html:not(.jh-loaded) {
+      @include prefixed(animation, jhAnimLoading 1s cubic-bezier(0.7, 0, 0.3, 1) both);
+    }
+
+    .jh-loading-html:not(.jh-loaded) {
+      @include prefixed(animation-delay, 0.3s);
+    }
+  }
+
+  .jh-loading-inner {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+
+  .jh-loading-center-outer {
+    width: 100%;
+    padding: 0;
+    display: table !important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .jh-loading-center-middle {
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell !important;
+    margin: 0;
+    text-align: center;
+  }
+
+  .jh-loading-logo-header, .jh-loading-html {
+    width: 100%;
+    opacity: 0;
+  }
+
+  .jh-loading-logo-header {
+    text-align: center;
+
+    img {
+      display: inline-block !important;
+    }
+  }
+
+  .jh-loading-html {
+    margin-top: 90px;
+
+    &.jh-loaded {
+      @include prefixed(transition, opacity 0.5s cubic-bezier(0.7, 0, 0.3, 1));
+
+      &.jh-removing {
+        opacity: 0;
+      }
+
+      &.jh-loading {
+        opacity: 1;
+      }
+    }
+  }
+}
+*/
+
+@-webkit-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes jhAnimLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes jhAnimLoaded {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

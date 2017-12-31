@@ -1,0 +1,40 @@
+<h3 class="norm-cursor">Technologies </h3>
+<div >
+<button ng-click="$ctrl.addRecord()" class="btn btn-sm btn-link text-primary">
+  Enter Another&nbsp;&nbsp;
+  <i class="fa fa-plus " aria-hidden="true"></i>
+</button>
+
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul >
+  <li class="res-entity-list" ng-class="{'text-muted': !$ctrl.existingData[$index].show ,'text-primary': $ctrl.existingData[$index].show}" ng-click="$ctrl.forEdit = $index" ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].name.length > 0">
+      {{$ctrl.existingData[$index].name }}
+    </span>
+    <span ng-if="$ctrl.existingData[$index].name.length < 1 || $ctrl.existingData[$index].name == undefined">
+      new entry
+    </span>
+    &nbsp;<button ng-click="$ctrl.removeRecord('technologies', $ctrl.existingData[$index], $index)" class="btn btn-sm btn-link" >
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </button>
+  </li>
+</ul>
+<button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show" class="btn btn-sm  text-primary">
+  <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true"></i>
+  <span ng-if="!$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Show
+  </span>
+  <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+  <span ng-if="$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Hide
+  </span>
+</button>
+<div >
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Technology"
+         aria-label="technology"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].name"/>
+</div>
+</div>

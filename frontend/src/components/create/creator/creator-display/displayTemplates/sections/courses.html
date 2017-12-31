@@ -1,0 +1,54 @@
+<!--Passions -->
+<div id="course-section"
+     page-link
+     page-break>
+
+  <script type="text/ng-template" id="coursesPopover.html">
+    <button ng-click="$ctrl.removeSection('courses')">
+      Hide Section
+    </button>
+  </script>
+  <div class="section-heading"
+       ng-click="$ctrl.popoverOpen(true, sectionItem.section); $ctrl.buildPopupTitle(sectionItem.section);"
+       ng-mouseenter="$ctrl.popoverOpen('alt', sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)"
+       popover-trigger="none"
+       popover-is-open="$ctrl.optionsOpen.courses"
+       uib-popover-template="$ctrl.sectionOptions()">
+        <textarea class="editable section-heading-edit"
+                  ng-class="[$ctrl.primaryColor, $ctrl.headingFont]"
+                  placeholder="Courses"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.labels.courses">
+        </textarea>
+  </div>
+  <div class="courses">
+    <div class="course-item"
+         ng-repeat="course in $ctrl.templateData.courses">
+      <div class="course-label">
+                <textarea class="editable course-label-edit"
+                          ng-click="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+                          ng-mouseenter="$ctrl.popoverOpenItem('alt', sectionItem.section, $index)"
+                          ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)"
+                          popover-trigger="none"
+                          popover-is-open="$ctrl.optionsOpenItem[sectionItem.section][$index]"
+                          uib-popover-template="$ctrl.sectionOptions('noIconOptions')"
+                          ng-class="[$ctrl.primaryColor, $ctrl.subHeadingFont]"
+                          placeholder="Pys 405 - Quantum Theory I"
+                          maxlength="100"
+                          spellcheck="false"
+                          autocomplete="off"
+                          rows="1"
+                          ng-change="$ctrl.dirtyValue(true)"
+                          ng-model="$ctrl.templateData.courses[$index].name">
+                </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Passions -->

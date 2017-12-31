@@ -1,0 +1,115 @@
+@import '../../../common/base-styles.main';
+
+/*
+.navbar-brand {
+    float: left;
+    padding: 19.5px 15px;
+    font-size: 19px;
+    line-height: 21px;
+    height: 60px
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none
+}
+
+.navbar-brand > img {
+    display: block
+}
+
+ */
+
+a.navbar-brand{
+  float: left;
+  padding-top: 10px !important;
+  padding-bottom: 15px !important;
+  //font-size: 19px;
+  //  line-height: 21px;
+  // height: 20px;
+
+  > img {
+    display: inline
+  }
+}
+
+img.nav-logo{
+  height: 40px;
+  //padding-bottom: 10px !important;
+  &:hover{
+    background: black;
+  }
+}
+
+
+
+
+.top-nav {
+  padding: 0 20px;
+
+  //from bootstrap fixed-navbar class
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background: rgba(0, 0, 0, 0.39);
+  //from bootstrap navbar class
+  //position: relative;
+  min-height: 60px;
+  //margin-bottom: 21px;
+  // border: 1px solid transparent
+}
+
+
+.nav-style{
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 25px;
+  &:hover{
+    background: transparent !important;
+    color: white !important;
+  }
+  &:active, &:focus{
+    background: transparent !important;
+    color: rgb(244, 109, 59) !important;
+  }
+
+}
+
+.nav-home{
+  top: 10px;
+}
+
+.acct-btn{
+  border:none;
+  line-height: 21px;
+  // padding: 15px 15px;
+}
+
+
+// from bootstrap line 4547
+.navbar-collapse.collapse {
+  display: block !important;
+  // height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important
+}
+
+
+
+.right-nav-item{
+  padding-right: 40px;
+}
+.nav-cursor {
+  cursor: pointer;
+}
+
+
+
+.small-nav{
+  @media (max-width: 767px) {
+  }
+}
+
+a.site-colors-bgreen{
+  color: #848a8b !important;
+}

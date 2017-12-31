@@ -1,0 +1,50 @@
+
+
+<div class="login-page-container">
+  <div class="login-top-items login-heading">
+    <h1 style="color: gray; font-size: 45px; z-index: 2;">Sign Up</h1>
+  </div>
+  <div class="login-top-items"></div>
+  <div class="login-top-items"></div>
+  <div class="login-top-items">
+    <img class='login-loading-logo' src="/src/assets/brand/drawing-medium.png" width="20px" height="20px">
+  </div>
+  <div class="login-small-fill"></div>
+  <div class="login-middle-items">
+
+    <form id="login-form" ng-if="$ctrl.loginForm">
+      <fieldset>
+        <!-- <label class="input-label" for="user">Email</label>-->
+        <input class="login-input email-form" id="user" type="text" name="user" placeholder="Email"
+               ng-model="$ctrl.user"
+               ng-disabled="$ctrl.loading"/>
+        <br>
+        <!-- <label class="input-label" for="password">Password</label>-->
+        <input class="login-input" id="password" type="password" name="pass" placeholder="password"
+               ng-model="$ctrl.pass"
+               ng-disabled="$ctrl.loading"/>
+        <br>
+        <!-- <label class="input-label" for="user"></label>-->
+        <button class="login-input login-submit" type="submit" ng-disabled="$ctrl.loading"
+                 ng-click="$ctrl.signup()"
+                id="login-button">Sign Up
+        </button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="login-extra-small-fill">
+    <button ng-click="$ctrl.facebookLogin()" class="social-button top  btn-social btn-facebook"><span class="fa fa-facebook"></span>Sign Up with Facebook</button>
+    <button  ng-click="$ctrl.googleLogin()" class="social-button middle btn-social btn-google"><span class="fa fa-google"></span>Sign Up  with Google</button>
+    <button ng-click="$ctrl.githubLogin()" class="social-button bottom btn-social btn-github"><span class="fa fa-github"></span>Sign Up  with Github</button>
+  </div>
+  <div class="login-middle-items">
+
+  </div>
+  <div class="login-middle-items"></div>
+  <div class="login-middle-items"></div>
+  <div class="login-middle-items">
+
+  </div>
+</div>
+
+

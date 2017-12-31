@@ -1,0 +1,7 @@
+.intro-page {
+  height: 100vh;
+  background-color: #f46d3b;
+  padding-top: 70px; }
+  .intro-page #get-started {
+    top: 70px;
+    padding-left: 20px; }

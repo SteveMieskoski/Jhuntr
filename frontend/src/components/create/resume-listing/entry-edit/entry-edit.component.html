@@ -1,0 +1,13 @@
+<input
+       ng-model="$ctrl.editLabel"/>
+<button class="btn btn-sm text-primary"
+        ng-click="$ctrl.saveEdit($ctrl.editRes, $ctrl.editLabel, $ctrl.editIndex)">
+  save
+</button>
+<button class="btn btn-sm text-primary"  ng-click="$ctrl.cancelEdit()">
+  cancel
+</button>
+<span>&nbsp;&nbsp;</span>
+<button class="btn btn-sm text-primary" ng-click="$ctrl.deleteEntry($ctrl.editRes, $ctrl.editKind)" >
+  Delete
+</button>

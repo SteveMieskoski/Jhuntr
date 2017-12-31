@@ -1,0 +1,24 @@
+.to-editor {
+  padding-left: 20px;
+  cursor: pointer; }
+  .to-editor:hover {
+    color: #575757 !important; }
+  .to-editor:active, .to-editor:focus {
+    color: #f46d3b !important; }
+
+.entry-status {
+  padding-left: 15px; }
+
+.to-external {
+  padding-left: 20px;
+  cursor: pointer; }
+  .to-external:hover:before {
+    content: 'go'; }
+  .to-external:active, .to-external:focus {
+    background: #f46d3b !important; }
+
+.lastEdited {
+  background-color: #befdff !important; }
+
+.red-attention {
+  color: red !important; }

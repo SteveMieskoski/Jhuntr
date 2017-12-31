@@ -1,0 +1,147 @@
+<h3 class="norm-cursor">Education</h3>
+<div >
+<button ng-click="$ctrl.addRecord()" class="btn btn-sm btn-link text-primary">
+  Add Entry&nbsp;&nbsp;
+  <i class="fa fa-plus " aria-hidden="true">
+  </i>
+</button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul >
+  <li class="res-entity-list"
+      ng-class="{'text-muted': !$ctrl.existingData[$index].show ,'text-primary': $ctrl.existingData[$index].show}"
+      ng-click="$ctrl.forEdit = $index"
+      ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].institution.length > 0">
+      {{$ctrl.existingData[$index].institution }}
+      <button ng-click="$ctrl.removeRecord('education', $ctrl.existingData[$index], $index)"
+              class="btn btn-sm btn-link color-black">
+        <i class="fa fa-times" aria-hidden="true" aria-label="Close">
+        </i>
+      </button>
+    </span>
+    <span ng-if="$ctrl.existingData[$index].institution.length < 1 || $ctrl.existingData[$index].institution == undefined">
+      new entry
+          <button ng-click="$ctrl.removeRecord('education', $ctrl.existingData[$index], $index)"
+                  class="btn btn-sm btn-link color-black">
+        <i class="fa fa-times" aria-hidden="true" aria-label="Close">
+        </i>
+      </button>
+    </span>
+
+  </li>
+</ul>
+
+<button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show"
+        class="btn btn-sm  text-primary">
+  <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true">
+  </i>
+  <span ng-if="!$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Show
+  </span>
+  <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true">
+  </i>
+  <span ng-if="$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Hide
+  </span>
+</button>
+<!-- WITHOUT LABELS -->
+<div >
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Institution"
+         id="institution"
+         aria-label="institution"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].institution"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Degree and Field of Study"
+         id="area"
+         aria-label="area"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].area">
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Start Date"
+         id="startDate"
+         aria-label="Start Date"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].startDate">
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Graduation Date"
+         id="endDate"
+         aria-label="Graduation Date"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].endDate">
+ <input type="text"
+        class="form-control input-sm"
+        placeholder="Worth"
+        id="worth"
+        aria-label="Worth"
+        ng-change="$ctrl.dirtyValue()"
+        ng-model="$ctrl.existingData[$ctrl.forEdit].gpa">
+<span>
+  <label for="worth-show">
+    Show Worth:
+<input type="checkbox"
+       id="worth-show"
+       aria-label="worth-show"
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].gpa_show">
+</label>
+  </span>
+<br/>
+<button class="btn btn-sm"
+        ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
+  Address
+</button>
+<div uib-collapse="!$ctrl.isCollapsed">
+  <label for="address">address:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="address"
+           id="address"
+           aria-label="address"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.address">
+  </label>
+  <label for="postalCode">postal Code:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="postalCode"
+           id="postalCode"
+           aria-label="postalCode"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.postalCode">
+  </label>
+  <label for="city">city:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="city"
+           id="city"
+           aria-label="city"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.city">
+  </label>
+  <label for="countryCode">country Code:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="countryCode"
+           id="countryCode"
+           aria-label="countryCode"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.countryCode">
+  </label>
+  <label for="state">state:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="state"
+           id="state"
+           aria-label="state"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.state">
+  </label>
+</div>
+</div>
+</div>

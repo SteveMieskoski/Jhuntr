@@ -1,0 +1,20 @@
+* textarea {
+  padding: 0;
+  border: 0;
+  resize: none;
+  width: 100%;
+  outline: none;
+  margin: 0;
+  box-shadow: none;
+  display: block;
+  min-height: 10px;
+  background: transparent;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  text-size-adjust: none;
+  position: relative;
+  z-index: 1; }
+
+.basics-container .name {
+  font-size: 42px;
+  font-weight: 600 !important; }

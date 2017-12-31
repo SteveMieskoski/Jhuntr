@@ -1,0 +1,66 @@
+
+
+
+<div>
+  <h5 ng-if="!$ctrl.dtStop">{{$ctrl.dtStart | date:'fullDate'}}</h5>
+  <h5 ng-if="$ctrl.dtStop">{{$ctrl.dtStart | date:'fullDate'}} - {{$ctrl.dtStop | date:'fullDate'}}</h5>
+</div>
+
+<button type="button" class="btn btn-sm btn-info" ng-click="$ctrl.today()">Today</button>
+<div style="display:inline-block; min-height:290px;">
+  <div uib-datepicker ng-model="$ctrl.dt" class="well well-sm" datepicker-options="$ctrl.dateOptions"></div>
+</div>
+<!--
+
+<div class="row">
+  <div class="col-md-6">
+    <p class="input-group">
+      <input type="text"
+             class="form-control"
+             uib-datepicker-popup="{{$ctrl.format}}"
+             ng-model="$ctrl.dtStart"
+             is-open="$ctrl.opened"
+             datepicker-options="$ctrl.dateOptions"
+             ng-required="true"
+             close-text="Close"
+             alt-input-formats="$ctrl.altInputFormats[0]"
+             on-change="$ctrl.changed()"/>
+      <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="$ctrl.datePickOpen()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+    </p>
+  </div>
+
+  <div class="col-md-6">
+    <p class="input-group">
+      <input type="text"
+             class="form-control"
+             uib-datepicker-popup
+             ng-model="$ctrl.dtStop"
+             is-open="$ctrl.opened2"
+             datepicker-options="$ctrl.dateOptions"
+             ng-required="true"
+             close-text="Close"
+             on-change="$ctrl.changed()"/>
+      <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="$ctrl.datePickOpenTwo()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+    </p>
+  </div>
+</div>
+-->
+<button ng-click="$ctrl.submit()">Submit</button>
+
+<!--
+<p class="input-group">
+  <input type="text" class="form-control" uib-datepicker="{{$ctrl.format}}" ng-model="$ctrl.postData.dateApplied" is-open="$ctrl.opened" datepicker-options="$ctrl.dateOptions" ng-required="true" close-text="Close" alt-input-formats="$ctrl.altInputFormats" placeholder="{{$ctrl.postData.dateApplied | date:'fullDate'}}" />
+  <span class="input-group-btn">
+             <button type="button" class="btn btn-default" ng-click="$ctrl.datePickOpen()"><i class="glyphicon glyphicon-calendar"></i></button>
+           </span>
+</p>
+<label>Format: <span class="muted-text">(manual alternate <em>{{$ctrl.altInputFormats[0]}}</em>)</span></label>
+<select class="form-control" ng-model="$ctrl.format" ng-options="f for f in $ctrl.formats">
+  <option></option>
+</select>
+{{$ctrl.postData.dateApplied}}
+-->

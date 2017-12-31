@@ -1,0 +1,273 @@
+<button ng-click="$ctrl.showInputData = true; $ctrl.inputFieldsCollapse()"
+        class="btn btn-sm btn-link text-primary"
+        ng-class="{'active-item': !$ctrl.showInputData, 'creator-active-bkgnd': $ctrl.showInputData}">
+  <i class="fa fa-pencil" aria-hidden="true">
+  </i>
+  Enter Info
+</button>
+<button ng-click="$ctrl.showInputData = false;" class="btn btn-sm btn-link text-primary"
+        ng-class="{'active-item': $ctrl.showInputData, 'creator-active-bkgnd': !$ctrl.showInputData}">
+  <i class="fa fa-paint-brush" aria-hidden="true">
+  </i>
+  Design
+  <i class="fa fa-picture-o" aria-hidden="true">
+  </i>
+</button>
+<button class="pull-right btn btn-sm btn-link text-primary"
+        ng-click="$ctrl.saveData()"
+        uib-tooltip="Save"
+        tooltip-popup-delay="200"
+        tooltip-placement="top-right"
+        ng-cloak>
+  <i class="fa fa-floppy-o fa-lg fa-fw" aria-hidden="true">
+  </i>
+</button>
+
+<!----------------------------------  INPUT ------------------------------------------------------->
+
+<div ng-if="$ctrl.showInputData">
+  <uib-tabset active="$ctrl.active"
+              class="creator-tab-container"
+              justified="true">
+    <!----------------------------------  publications and examples ------------------------------->
+    <uib-tab index="3" class="creator-tab">
+      <uib-tab-heading uib-tooltip="publications and examples"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left"
+                       classes="input-tab tab-icon">
+        <i class="fa fa-book tab-icon" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <h4>Under Construction</h4>
+
+    </uib-tab>
+    <!----------------------------------  affiliations and leadership ----------------------------->
+    <uib-tab index="4" class="creator-tab">
+      <!--  -->
+      <uib-tab-heading uib-tooltip="affiliations and leadership"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-users tab-icon " aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorinput class="creator-form"
+                    input-selection="volunteer"
+                    existing-data="$ctrl.inData.volunteer"
+                    path="{{$ctrl.paths.inputTemplatePath}}"></creatorinput>
+    </uib-tab>
+    <!----------------------------------  references and awards ----------------------------------->
+    <uib-tab index="5" class="creator-tab">
+      <!--  -->
+      <uib-tab-heading uib-tooltip="references and awards"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-trophy tab-icon " aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorinput class="creator-form" input-selection="achievements"
+                    existing-data="$ctrl.inData.achievements"
+                    path="{{$ctrl.paths.inputTemplatePath}}"></creatorinput>
+      <creatorinput class="creator-form" input-selection="projects"
+                    existing-data="$ctrl.inData.projects"
+                    path="{{$ctrl.paths.inputTemplatePath}}"></creatorinput>
+      <creatorinput class="creator-form" input-selection="awards"
+                    existing-data="$ctrl.inData.awards"
+                    path="{{$ctrl.paths.inputTemplatePath}}"></creatorinput>
+    </uib-tab>
+
+    <!----------------------------------  skills, languages, and passions/interests ---------------->
+    <uib-tab index="6" class="creator-tab">
+      <uib-tab-heading uib-tooltip="skills and languages"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-cogs tab-icon" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorinput class="creator-form"
+                    input-selection="skills"
+                    existing-data="$ctrl.inData.skills"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+      <creatorinput class="creator-form"
+                    input-selection="technologies"
+                    existing-data="$ctrl.inData.technologies"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+      <creatorinput class="creator-form"
+                    input-selection="languages"
+                    existing-data="$ctrl.inData.languages"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+      <creatorinput class="creator-form"
+                    input-selection="interests"
+                    existing-data="$ctrl.inData.interests"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+      <creatorinput class="creator-form"
+                    input-selection="strengths"
+                    existing-data="$ctrl.inData.strengths"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+    </uib-tab>
+
+    <p></p>
+    <!----------------------------------  basic information ---------------------------------------->
+    <uib-tab index="0" class="creator-tab">
+      <uib-tab-heading uib-tooltip="basic information"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <!-- Save Button -->
+        <i class="fa fa-address-card-o fa-lg tab-icon" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorinput class="creator-form"
+                    input-selection="basics"
+                    existing-data="$ctrl.inData.basics"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+      <creatorinput class="creator-form"
+                    input-selection="location"
+                    existing-data="$ctrl.inData.location"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+    </uib-tab>
+    <!----------------------------------  employment and volunteering ------------------------------->
+    <uib-tab index="1" class="creator-tab">
+      <uib-tab-heading uib-tooltip="employment and volunteering"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-briefcase fa-lg tab-icon" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorinput class="creator-form"
+                    input-selection="employment"
+                    existing-data="$ctrl.inData.employment"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+
+
+    </uib-tab>
+    <!----------------------------------  education ------------------------------------------------->
+    <uib-tab index="2" class="creator-tab">
+      <uib-tab-heading uib-tooltip="education" tooltip-popup-delay="500" tooltip-placement="top-left">
+        <i class="fa fa-graduation-cap fa-lg tab-icon" aria-hidden="true"></i>
+      </uib-tab-heading>
+      <creatorinput class="creator-form"
+                    input-selection="education"
+                    existing-data="$ctrl.inData.education"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+      <creatorinput class="creator-form"
+                    input-selection="courses"
+                    existing-data="$ctrl.inData.courses"
+                    path="{{$ctrl.paths.inputTemplatePath}}">
+      </creatorinput>
+    </uib-tab>
+  </uib-tabset>
+  <p></p>
+  <button class="pull-right btn  btn-outline btn-sm"
+          ng-click="$ctrl.saveData()"
+          ng-cloak>
+    <i class="fa fa-floppy-o fa-2x fa-fw" aria-hidden="true">
+    </i>
+  </button>
+</div>
+
+<!---------------------------------- DESIGN TAB SET ------------------------------------------------->
+<div ng-if="!$ctrl.showInputData">
+  <!-------------------------------- TOP ROW -------------------------------------------------------->
+  <!-------------------------------- Image Options/Upload ------------------------------------------->
+  <uib-tabset active="$ctrl.active"
+              class="creator-tab-container"
+              justified="true">
+    <!-- publications and examples -->
+    <uib-tab index="3" class="creator-tab">
+      <uib-tab-heading uib-tooltip="asdfsafd"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-upload color-black" aria-hidden="true">
+        </i>
+        <i class="fa fa-user-circle-o color-black" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="image"
+                     existing-data="$ctrl.inData"
+                     sections-update="$ctrl.sectionsUpdated"
+                     colors-update="$ctrl.colorsUpdate"
+                     path="{{$ctrl.paths.styleTemplatePath}}">
+      </creatorstyles>
+
+
+    </uib-tab>
+    <!-------------------------------- Color Select -------------------------------------------------->
+    <uib-tab index="1" class="creator-tab">
+      <uib-tab-heading uib-tooltip="Change Colors"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <img src="../../../assets/icons/ic_format_paint_black_24px.png" class="tab-icon" aria-hidden="true"/>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="colors"
+                     existing-data="$ctrl.inData"
+                     sections-update="$ctrl.sectionsUpdated"
+                     colors-update="$ctrl.colorsUpdate"
+                     path="{{$ctrl.paths.styleTemplatePath}}">
+      </creatorstyles>
+
+    </uib-tab>
+    <!-------------------------------- Fonts ---------------------------------------------------------->
+    <uib-tab index="2" class="creator-tab">
+      <uib-tab-heading uib-tooltip="references and awards"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-font fa-lg color-black" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="fonts"
+                     existing-data="$ctrl.inData"
+                     sections-update="$ctrl.sectionsUpdated"
+                     colors-update="$ctrl.colorsUpdate"
+                     path="{{$ctrl.paths.styleTemplatePath}}">
+      </creatorstyles>
+    </uib-tab>
+
+    <p></p>
+
+    <!------------------------------- BOTTOM ROW ------------------------------------------------------>
+    <!------------------------------- Section Select -------------------------------------------------->
+    <uib-tab index="0" class="creator-tab">
+      <uib-tab-heading uib-tooltip="Add Section(s)"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <img src="../../../assets/icons/add-section-V2.png" aria-hidden="true"/>
+      </uib-tab-heading>
+      <h3>
+        Design Item
+      </h3>
+      <creatorstyles class="creator-form"
+                     input-selection="sections"
+                     existing-data="$ctrl.inData"
+                     sections-update="$ctrl.sectionsUpdated"
+                     colors-update="$ctrl.colorsUpdate"
+                     path="{{$ctrl.paths.styleTemplatePath}}">
+      </creatorstyles>
+    </uib-tab>
+    <uib-tab index="4" class="creator-tab">
+      <uib-tab-heading uib-tooltip="Change Background"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-picture-o" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="background"
+                     existing-data="$ctrl.inData"
+                     sections-update="$ctrl.sectionsUpdated"
+                     colors-update="$ctrl.colorsUpdate"
+                     path="{{$ctrl.paths.styleTemplatePath}}">
+      </creatorstyles>
+
+    </uib-tab>
+</div>

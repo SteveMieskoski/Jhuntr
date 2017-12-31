@@ -1,0 +1,36 @@
+<!--Courses -->
+<div id="course-section">
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{!--{{#labels.interests}}{{labels.interests}}{{/labels.interests}}
+                {{^labels.interests}}Passions{{/labels.interests}} --}}
+      {{#if labels.courses}}{{labels.courses}}{{else}}Courses{{/if}}
+    </div>
+  </div>
+
+  <div class="courses">
+    {{#courses}}
+      <div class="course-item">
+
+        <div class="course-label">
+          <div class=" course-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}" >
+            {{#if name}}{{name}}{{else}}Pys 405 - Quantum Theory I{{/if}}
+          </div>
+        </div>
+      </div>
+    {{/courses}}
+    <!-- Below is Placeholders for added but empty section -->
+    {{^courses}}
+      <div class="course-item">
+
+        <div class="course-label">
+          <div class=" course-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}" >
+            Pys 405 - Quantum Theory I
+          </div>
+        </div>
+      </div>
+    {{/courses}}
+  </div>
+</div>
+
+<!-- Courses -->

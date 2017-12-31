@@ -1,0 +1,59 @@
+
+
+@mixin ngifAnimate($start, $finish, $duration) {
+
+  transition: #{$duration}s linear all;
+  -webkit-transition: #{$duration}s linear all;
+
+  .ng-enter {
+    opacity: $start;
+  }
+
+  .ng-enter.ng-enter-active {
+    opacity: $finish;
+  }
+
+  .ng-leave {
+    opacity: $finish;
+  }
+
+  .ng-leave.ng-leave-active {
+    opacity: $start;
+  }
+}
+
+
+
+@mixin prefixKeyframes($name, $property, $start, $finish){
+  @-webkit-keyframes #{$name} { from { #{$property}: $start; } to { #{$property}: $finish; }  }
+  @-moz-keyframes #{$name} { from { #{$property}: $start; } to { #{$property}: $finish; }  }
+  @-o-keyframes #{$name} { from { #{$property}: $start; } to { #{$property}-left: $finish; }  }
+  @keyframes #{$name} { from { #{$property}: $start; } to { #{$property}: $finish; }  }
+}
+
+@mixin prefixAnimation ($duration, $easing, $delay, $iterations, $direction, $name){
+  -webkit-animation: #{$duration}s $easing #{$delay}s $iterations $direction $name;
+  -moz-animation: #{$duration}s $easing #{$delay}s $iterations $direction $name;
+  -o-animation: #{$duration}s $easing #{$delay}s $iterations $direction $name;
+  animation: #{$duration}s $easing #{$delay}s $iterations $direction $name;
+}
+
+
+@mixin sliderStyle($prefix, $duration, $easing, $transform, $transformValue, $properties){
+  $middleVar: unquote("(")#{$transformValue} unquote(")");
+  .#{$prefix}-close{
+    @each $key, $value in $properties {
+      #{$key}: $value;
+    }
+  }
+
+  .#{$prefix}-open{
+    transform: #{$transform}#{$middleVar};
+    @each $key, $value in $properties {
+      #{$key}: $value;
+    }
+  }
+  .#{$prefix}-slide{
+    transition: all #{$duration}s $easing;
+  }
+}

@@ -1,0 +1,45 @@
+
+
+.basics-container{
+  .name{
+    font-size: 42px;
+    font-weight: 600 !important;
+  }
+  .heading{
+
+  }
+}
+
+.ui-scrollpoint {
+ background: rgba(53, 128, 64, 0.31);
+}
+
+
+
+
+.bottom-buffer{
+  height: 70px;
+  width: 100%;
+}
+
+// utility classes
+
+.no-screen {
+  display: none;
+}
+
+.dev-outline {
+  border: 1px solid black;
+}
+
+.placeholder {
+  height: 800px;
+}
+
+
+.color-black{
+  color: black;
+}
+
+
+

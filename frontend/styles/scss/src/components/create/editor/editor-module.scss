@@ -1,0 +1,106 @@
+@import '../../../../common/classes/flex_grid';
+@import '../../../../common/base-styles.main';
+
+.core-input-basics{
+  color: #2c3e50 !important;
+}
+
+.editor-container{
+  background-image: url($empty-desk);
+  background-size: cover;
+  padding-right: -5px;
+  padding-top: 30px;
+}
+.editor-top-container{
+  resize: both;
+  //height: 150px;
+  padding: 30px 15px 0 10px;
+}
+
+.editor-sides-container{
+  //padding: 0 15px 0 10px;
+  position: relative;
+  //display: flex;
+ // flex-basis: auto;
+//  flex-direction: row;
+}
+.editor-left-container{
+  position: relative;
+ // display: flex;
+ // padding-right: 5px;
+  flex: 0 0 62%;
+ // left: 0;
+ // flex-grow: 1;
+ // resize: both;
+  max-width: 850px;
+  margin-left: 3px;
+  padding-bottom: 30px;
+  min-height: 200px;
+  background-color: white;
+}
+.editor-right-container{
+ // padding-right: 5px;
+ // padding-left: 5px;
+  //display: flex;
+  flex: 0 0 38%;
+  position: relative;
+ // right: 0;
+  //flex-grow: 1;
+ // flex-shrink: 2;
+ // resize: both;
+ // min-width: 20%;
+  min-height: 200px;
+  .right-image{
+   // border: 1px solid #c3c3c3;
+    padding-left: 5px;
+    max-width: 510px;
+  }
+}
+
+#editor-crop-modal {
+
+    max-width: 100%;
+
+  //padding: 25px 25px 25px 25px;
+  //padding-left: 5px;
+
+  .image-preview {
+    vertical-align: top;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    // float: right;
+    margin-right: -5px;
+    transition: border-radius 0.5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+
+  }
+
+  .cropParent {
+    width: 500px;
+    height: 350px;
+  }
+  .cropArea {
+    width: 517px;
+    height: 1100px;
+    margin-bottom: 25px;
+  }
+
+  canvas {
+    background-color: #f3f3f3;
+    -webkit-box-shadow: 3px 3px 3px 0 #e3e3e3;
+    -moz-box-shadow: 3px 3px 3px 0 #e3e3e3;
+    box-shadow: 3px 3px 3px 0 #e3e3e3;
+    border: 1px solid #c3c3c3;
+    height: 100px;
+    margin: 6px 0 0 6px;
+  }
+
+}

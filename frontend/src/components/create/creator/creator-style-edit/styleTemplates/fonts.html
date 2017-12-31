@@ -1,0 +1,123 @@
+<h4  class="norm-cursor"> Choose Fonts</h4>
+<div >
+<br/>
+<div>
+<span class="btn btn-sm btn-default"
+      ng-click="$ctrl.isCollapsedPairings = !$ctrl.isCollapsedPairings; $ctrl.isCollapsedParts = true">
+    Curated Font Pairings
+  </span>
+<!--<span  class="btn btn-sm btn-default"
+       ng-click="$ctrl.isCollapsedParts = !$ctrl.isCollapsedParts; $ctrl.isCollapsedPairings = true">
+  Build your own font combination
+</span>-->
+</div>
+<br/>
+<div class="font-divider" ng-if="(!($ctrl.usedParingHeading == '') && $ctrl.isCollapsedParts) || !$ctrl.isCollapsedPairings">
+
+  <span ng-if="$ctrl.usedParingHeading == ''">&nbsp;</span>
+  <span ng-class="$ctrl.headingFont">{{$ctrl.usedParingHeading}}</span><span ng-class="$ctrl.bodyFont">{{$ctrl.usedParingBody}}</span>
+</div>
+
+
+
+
+<div uib-collapse="$ctrl.isCollapsedPairings">
+  <div ng-repeat="parings in $ctrl.featureConstants.fontPairings">
+    <div ng-click="$ctrl.changeFonts(parings.headingFont, parings.subHeadingFont, parings.bodyFont); $ctrl.displayPairingFonts(parings)"
+         class="font-choices">
+      <span ng-class="parings.headingFont">
+        {{parings.headingName}}
+      </span>
+      /
+      <span ng-class="parings.bodyFont">
+        {{parings.bodyName}}
+      </span>
+
+      <span ng-if="$ctrl.headingFont == parings.headingFont">
+      <i class="fa fa-check" aria-hidden="true">
+      </i>
+    </span>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div uib-collapse="$ctrl.isCollapsedParts">-->
+
+  <!-- heading font selectables -->
+<!--<div class="font-divider" ng-click="$ctrl.isCollapsedHeading = !$ctrl.isCollapsedHeading">
+  Heading:&nbsp;
+ <span ng-class="[$ctrl.headingFont]">
+  {{$ctrl.usedHeadingFont}}
+</span>
+</div>
+
+<div uib-collapse="$ctrl.isCollapsedHeading">
+  <div ng-repeat="font in $ctrl.featureConstants.fontListing">
+    <div ng-click="$ctrl.changeFonts(font.class, $ctrl.subHeadingFont, $ctrl.bodyFont);
+    $ctrl.usedHeadingFont = font.name; $ctrl.usedParingHeading = ''; $ctrl.usedParingBody = ''"
+         ng-class="['font-choices', font.class]">
+      {{font.name}}
+      <span ng-if="$ctrl.headingFont == font.class">
+      <i class="fa fa-check" aria-hidden="true">
+      </i>
+    </span>
+    </div>
+
+  </div>
+</div>
+
+  <div class="font-divider" ng-click="$ctrl.isCollapsedSubHeading = !$ctrl.isCollapsedSubHeading">
+    Sub Heading:&nbsp;
+   <span ng-class="[$ctrl.subHeadingFont]">
+  {{$ctrl.usedSubHeadingFont}}
+</span>
+  </div>
+<div uib-collapse="$ctrl.isCollapsedSubHeading">
+  <div ng-repeat="font in $ctrl.featureConstants.fontListing">
+    <div ng-click="$ctrl.changeFonts($ctrl.headingFont, font.class, $ctrl.bodyFont);
+    $ctrl.usedSubHeadingFont = font.name ; $ctrl.usedParingHeading = ''; $ctrl.usedParingBody = ''"
+         ng-class="['font-choices', font.class]">
+      {{font.name}}
+      <span ng-if="$ctrl.subHeadingFont == font.class">
+      <i class="fa fa-check" aria-hidden="true">
+      </i>
+    </span>
+    </div>
+  </div>
+</div>
+
+  <div class="font-divider"
+       ng-click="$ctrl.isCollapsedBody = !$ctrl.isCollapsedBody">
+    Body:&nbsp;
+    <span ng-class="[$ctrl.bodyFont]">
+  {{$ctrl.usedBodyFont}}
+</span>
+  </div>
+
+<div uib-collapse="$ctrl.isCollapsedBody">
+  <div ng-repeat="font in $ctrl.featureConstants.fontListing">
+    <div ng-click="$ctrl.changeFonts($ctrl.headingFont, $ctrl.subHeadingFont, font.class);
+    $ctrl.usedBodyFont = font.name; $ctrl.usedParingHeading = ''; $ctrl.usedParingBody = ''"
+         ng-class="['font-choices', font.class]">
+      {{font.name}}
+      <span ng-if="$ctrl.bodyFont == font.class">
+      <i class="fa fa-check" aria-hidden="true"></i>
+    </span>
+    </div>
+  </div>
+</div>
+</div>-->
+
+<h4>Reset All</h4>
+<button ng-click="$ctrl.changeFonts('basic', 'basic', 'basic'); $ctrl.defaultFontConfig()"
+        class="btn btn-sm btn-default garamond-font">
+  Default
+</button>
+<span ng-if="$ctrl.headingFont == 'basic' && $ctrl.bodyFont == 'basic'">
+  <i class="fa fa-check" aria-hidden="true">
+  </i>
+</span>
+<br>
+</div>

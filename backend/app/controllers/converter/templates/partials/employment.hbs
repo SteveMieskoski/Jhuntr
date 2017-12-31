@@ -1,0 +1,126 @@
+<!-- Experience Section -->
+<div id="experience-section">
+
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{#labels.employment}}{{labels.employment}}{{/labels.employment}}
+      {{^labels.employment}}Experience{{/labels.employment}}
+    </div>
+  </div>
+  {{#employment}}
+    {{# if show}}
+      <div class="experience-item">
+        <div class="position-item">
+          <div class=" position-item-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+            {{#if position}}
+              {{position}}
+            {{else}}
+              Title/Position
+            {{/if}}
+          </div>
+        </div>
+        <div class="company">
+          <div class=" company-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+            {{#if company}}{{company}}{{else}}Company{{/if}}
+          </div>
+
+          <div class="date-location">
+
+            <div class="date">
+              <i class="fa {{design.style_options.calendar_icon}} icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              <div class=" date-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                {{#if startDate}}{{startDate}}{{else}}Start Date — End Date{{/if}}
+              </div>
+            </div>
+
+            <div class="location">
+              <i class="fa fa-map-marker icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+              <div class=" location-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                {{#if location.city}}{{location.city}}{{else}}Location{{/if}}
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="experience-details">
+            <!-- <div class="experience-details-heading">-->
+            <div class=" details-heading-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              {{#if summary}}{{summary}}{{/if}}
+
+            </div>
+            <!--  </div> -->
+            <div class="details-description-container">
+              {{#each details}}
+                {{#if show}}
+                  <i class="fa fa-circle bullet {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+                  <div class=" details-content-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                    {{detail}}
+
+                  </div>
+                {{/if}}
+              {{/each}}
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  {{/employment}}
+
+  <!-- Below is Placeholders for added but empty section -->
+  {{^employment}}
+    <div class="experience-item">
+      <div class="position-item">
+        <div class=" position-item-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+          Title/Position
+        </div>
+      </div>
+      <div class="company">
+        <div class=" company-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+          Company
+        </div>
+
+        <div class="date-location">
+
+          <div class="date">
+            <i class="fa fa-calendar icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" date-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              Start Date — End Date
+            </div>
+          </div>
+
+          <div class="location">
+            <i class="fa fa-map-marker icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" location-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              Location
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="experience-details">
+          <!-- <div class="experience-details-heading">-->
+          <div class=" details-heading-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+            Company Description
+
+          </div>
+          <!--  </div> -->
+          <div class="details-description-container">
+            <i class="fa fa-circle bullet {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" details-content-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              What was an example of a successful outcome of this activity?
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  {{/employment}}
+
+</div>  <!-- Experience Section End -->

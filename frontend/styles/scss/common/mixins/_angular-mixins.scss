@@ -1,0 +1,25 @@
+
+
+
+@mixin ngifAnimate($start, $finish, $duration) {
+
+  transition: #{$duration}s linear all;
+  -webkit-transition: #{$duration}s linear all;
+
+  .ng-enter {
+    opacity: $start;
+  }
+
+  .ng-enter.ng-enter-active {
+    opacity: $finish;
+  }
+
+  .ng-leave {
+    opacity: $finish;
+  }
+
+  .ng-leave.ng-leave-active {
+    opacity: $start;
+  }
+}
+

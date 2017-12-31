@@ -1,0 +1,78 @@
+.top-nav {
+  padding: 0 20px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background: rgba(0, 0, 0, 0.39);
+  min-height: 60px; }
+
+.nav-style {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 25px; }
+
+.nav-home {
+  padding-bottom: 19.5px !important; }
+
+.navbar-collapse.collapse {
+  display: block !important;
+  padding-bottom: 0;
+  overflow: visible !important; }
+
+.right-nav-item {
+  padding-right: 40px; }
+
+.nav-cursor {
+  cursor: pointer; }
+
+a.site-colors-bgreen {
+  color: #848a8b !important; }
+
+.site-footer {
+  color: white;
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  bottom: -120px;
+  padding: 15px 20px; }
+
+.footer-template-container {
+  position: relative;
+  width: 100%; }
+  .footer-template-container .site-footer-left {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 20px); }
+    .footer-template-container .site-footer-left .footer-tagline {
+      display: inline-block;
+      margin-bottom: 10px; }
+    .footer-template-container .site-footer-left .footer-support {
+      display: block; }
+    .footer-template-container .site-footer-left .footer-disclaimer {
+      display: block;
+      margin-top: 15px; }
+  .footer-template-container .site-footer-right {
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 50%; }
+    .footer-template-container .site-footer-right .footer-right-content {
+      width: 100%; }
+      .footer-template-container .site-footer-right .footer-right-content .footer-copy {
+        float: right;
+        margin-left: 80%;
+        margin-top: 15px;
+        vertical-align: bottom;
+        display: inline-block; }
+      .footer-template-container .site-footer-right .footer-right-content .footer-help {
+        float: right;
+        margin-left: 80%;
+        margin-bottom: 10px;
+        vertical-align: bottom;
+        display: inline-block; }
+      .footer-template-container .site-footer-right .footer-right-content .footer-version {
+        float: right;
+        margin-left: 70%;
+        vertical-align: top;
+        display: inline-block; }

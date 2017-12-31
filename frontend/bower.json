@@ -1,0 +1,24 @@
+{
+  "name": "hunt",
+  "description": "",
+  "main": "",
+  "authors": [
+    "thatn3wguy <thatn3wguy@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "auth0.js": "^7.6.0"
+  },
+  "dependencies": {
+    "bootstrap-social": "^5.1.1"
+  }
+}

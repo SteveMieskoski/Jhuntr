@@ -1,0 +1,97 @@
+@import '../../../../common/base-styles.main';
+
+
+//===================== Confirmed Present ======================================
+
+.filter-size-menu-button{
+  height: 80px !important;
+}
+
+
+.listor-page-container {
+  @include flex-grid;
+  position: absolute;
+  height: 100%;
+
+  .listor-background{
+    background: $whiteboard-page-background;
+    background-size: cover;
+    width: 100vw;
+  }
+
+  .application-list {
+    //  width: 83.33333333%;
+    //height: 98vh;
+    padding-left: 5vw;
+    .ang-ui-grid {
+      width: 90vw;
+      //    height: 120%;
+      // height: 98vh;
+      //height: 25vh;
+    }
+  }
+}
+
+
+
+
+//==================================== OLD ================================================
+
+//.small-text{
+//  font-size: 10px;
+//}
+//.listor-page-container {
+//  @include flex-grid;
+//  position: absolute;
+//  height: 100%;
+//
+//  /*  no-repeat center center fixed */
+//  .listor-background{
+//    background: $whiteboard-page-background;
+//    background-size: cover;
+//    width: 100vw;
+//  }
+//
+//  .architects-daughter{
+//    font-family: $architectsDaughter !important;
+//  }
+//  .top-col-height{
+//    height: 70px;
+//  }
+//  .abox {
+//    position: relative;
+//    //@include grayBox-medium;
+//    background-color: #949e9e;
+//    height: 30px;
+//    width: 300px;
+//    border-radius: 7px;
+//    opacity: 0.75;  }
+//  .task-outer-container {
+//    position: relative;
+//    //@include grayBox-medium;
+//    //   background-color: #949e9e;
+//    //  flex-basis: 200px;
+//    //  flex-direction: row;
+//    // flex-wrap: wrap;
+//    height: auto;
+//    width: auto;
+//    border-radius: 7px;
+//    opacity: 0.75;
+//    // cursor: pointer;
+//    // margin-left: 20px;
+//    // margin-bottom: 20px;
+//    text-align: center;
+//  }
+//  .application-list {
+//    //  width: 83.33333333%;
+//    //height: 98vh;
+//    padding-left: 5vw;
+//    .ang-ui-grid {
+//      width: 90vw;
+//      //    height: 120%;
+//      // height: 98vh;
+//      //height: 25vh;
+//    }
+//  }
+//
+//}

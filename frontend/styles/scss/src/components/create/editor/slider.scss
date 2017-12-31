@@ -1,0 +1,98 @@
+@import '../../../../common/mixins/animation-mixins';
+
+
+
+$startName: enter_slide;
+$endName: exit_slide;
+$startPoint: -50%;
+$endPoint: 50%;
+
+$prefix: slider;
+$width: 300px;
+$duration: 1;
+$easing: ease-in-out;
+$transform: translate;
+$transformValue: -300px;
+$properties: (margin: 20px auto, background: #5FCF80, height: 500px, width: 300px, right: 0);
+
+//@include animatePropertyTransform($prefix, $duration, $easing, $transform, $transformValue, $properties);
+
+
+.slider-container-main{
+  padding: 15px;
+}
+
+.slider-container-demo{
+  position: absolute;
+  top: 0;
+  background: #5FCF80 !important;
+}
+
+.slider-entity-list{
+  padding: 5px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.slider-close{
+  transform:translate(-300px);
+  margin: 20px auto;
+  background: #5FCF80;
+  height: 500px;
+  width: 300px;
+  right: -300px;
+  opacity: 1;
+}
+
+
+.slider-open{
+  margin: 20px auto;
+  background: #5FCF80;
+  height: 500px;
+  width: 300px;
+  right: -300px;
+  opacity: 0;
+}
+
+.slider-slide{
+  transition: 1s all ease-in-out
+}
+/*
+
+.slider-container-main{
+  padding: 15px;
+}
+
+.slider-container-demo{
+  position: absolute;
+  top: 100px;
+  background: #5FCF80 !important;
+}
+
+.slider-entity-list{
+  padding: 5px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.slider-close{
+  margin: 20px auto;
+  background: #5FCF80;
+  height: 500px;
+  width: 300px;
+  right: 0;
+}
+
+
+.slider-open{
+  transform:translate(-300px);
+  margin: 20px auto;
+  background: #5FCF80;
+  height: 500px;
+  width: 300px;
+  right: 0;
+}
+
+.slider-slide{
+  transition: 1s all ease-in-out
+}
+*/
+

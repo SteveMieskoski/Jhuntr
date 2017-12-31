@@ -1,0 +1,43 @@
+
+
+
+@mixin pageOnlyFonts{
+
+
+  @font-face {
+    font-family: 'Architects Daughter';
+    src: url('/styles/fonts/All_Fonts/ArchitectsDaughter.eot');
+    src: local('Architects Daughter'), local('ArchitectsDaughter'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.eot?#iefix') format('embedded-opentype'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.woff2') format('woff2'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.woff') format('woff'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+}
+
+
+@mixin scrollbars($size, $foreground-color, $background-color) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+    border: 1px solid black;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

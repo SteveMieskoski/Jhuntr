@@ -1,0 +1,40 @@
+.basic {
+  background: #fff;
+  font: 15px Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  margin: 50px 0;
+  margin-bottom: 100px; }
+  .basic em {
+    color: #999; }
+  .basic p {
+    line-height: 1.4; }
+  .basic ul {
+    margin-bottom: 0; }
+  .basic section {
+    margin-bottom: 2em; }
+  .basic blockquote {
+    margin: 0;
+    margin-bottom: 1em; }
+  .basic .item {
+    margin-bottom: 1em; }
+  .basic #resume {
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 0 20px; }
+  .basic #basics {
+    margin-bottom: -10px; }
+  .basic #basics h3 {
+    margin-top: 1.5em; }
+  .basic #basics .contact strong,
+  .basic #location strong {
+    clear: both;
+    float: left;
+    line-height: 1.3;
+    width: 120px; }
+  .basic #profiles,
+  .basic #skills {
+    overflow: hidden; }
+  .basic #profiles .item,
+  .basic #skills .item {
+    float: left;
+    width: 50%; }

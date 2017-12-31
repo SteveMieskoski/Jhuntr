@@ -1,0 +1,157 @@
+
+<div ng-model-options="{ allowInvalid: true, debounce: 200,  updateOn: 'mouseleave default', '*': '$inherit' }">
+<div class="two-column" >
+  <div id="core-template" ng-class="$ctrl.backgroundDisplay">
+    <div id="header-section">
+      <div class="header-words">
+        <div class="name">
+        <textarea class="editable name-edit"
+                  ng-class="[$ctrl.primaryColor, $ctrl.headingFont]"
+                  placeholder="Your name"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  aria-label="Your name"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.basics.firstname"
+                  msd-elastic>
+        </textarea>
+        </div>
+        <div class="heading">
+        <textarea class="editable heading-edit"
+                  ng-class="[$ctrl.secondaryColor, $ctrl.subHeadingFont]"
+                  placeholder="Something about yourself"
+                  maxlength="500"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  aria-label="heading quote"
+                  ng-change="$ctrl.dirtyValue( true)"
+                  ng-model="$ctrl.templateData.basics.label"
+                  msd-elastic>
+        </textarea>
+        </div>
+      </div>
+      <div class="header-picture">
+        <img ng-if="$ctrl.showPhoto"
+             ng-src="{{$ctrl.userImage}}"
+             class="photo photo-round">
+      </div>
+      <div class="contact-details">
+        <div class="contact-col-one">
+          <div class="contact">
+            <i class="fa fa-fw icon"
+               ng-class="[$ctrl.secondaryColor, $ctrl.templateData.basics.phone_icon]"
+               ng-click="$ctrl.iconSelectIndex = 'phone_icon'; $ctrl.closeBasicPopover['phone'] = true;"
+               popover-trigger="outsideClick"
+               popover-is-open="$ctrl.closeBasicPopover['phone']"
+               popover-placement="right"
+               uib-popover-template="$ctrl.sectionOptions('basicsIconSelect')"></i>
+            <textarea class="editable contact-edit"
+                      ng-class="[$ctrl.primaryColor, $ctrl.bodyFont]"
+                      placeholder="Phone"
+                      maxlength="30"
+                      spellcheck="false"
+                      autocomplete="off"
+                      rows="1"
+                      aria-label="Phone"
+                      ng-change="$ctrl.dirtyValue( true)"
+                      ng-model="$ctrl.templateData.basics.phone"
+                      msd-elastic>
+            </textarea>
+          </div>
+          <div class="contact">
+            <i class="fa fa-fw icon"
+               ng-class="[$ctrl.secondaryColor, $ctrl.templateData.basics.website_icon]"
+               ng-click="$ctrl.iconSelectIndex = 'website_icon'; $ctrl.closeBasicPopover['website'] = true;"
+               popover-trigger="outsideClick"
+               popover-is-open="$ctrl.closeBasicPopover['website']"
+               popover-placement="right"
+               uib-popover-template="$ctrl.sectionOptions('basicsIconSelect')"></i>
+            <textarea class="editable contact-edit"
+                      ng-class="[$ctrl.primaryColor, $ctrl.bodyFont]"
+                      placeholder="Website/Link"
+                      maxlength="75"
+                      spellcheck="false"
+                      autocomplete="off"
+                      rows="1"
+                      aria-label="Website/Link"
+                      ng-change="$ctrl.dirtyValue( true)"
+                      ng-model="$ctrl.templateData.basics.website"
+                      msd-elastic>
+            </textarea>
+          </div>
+        </div>
+        <div class="contact-col-two">
+          <div class="contact">
+            <i class="fa fa-fw icon"
+               ng-class="[$ctrl.secondaryColor, $ctrl.templateData.basics.email_icon]"
+               ng-click="$ctrl.iconSelectIndex = 'email_icon'; $ctrl.closeBasicPopover['email'] = true;"
+               popover-trigger="outsideClick"
+               popover-is-open="$ctrl.closeBasicPopover['email']"
+               popover-placement="right"
+               uib-popover-template="$ctrl.sectionOptions('basicsIconSelect')"></i>
+            <textarea class="editable contact-edit"
+                      ng-class="[$ctrl.primaryColor, $ctrl.bodyFont]"
+                      placeholder="Email"
+                      maxlength="75"
+                      spellcheck="false"
+                      autocomplete="off"
+                      rows="1"
+                      aria-label="Email"
+                      ng-change="$ctrl.dirtyValue(true)"
+                      ng-model="$ctrl.templateData.basics.email"
+                      msd-elastic>
+            </textarea>
+          </div>
+          <div class="contact">
+            <i class="fa fa-fw icon"
+               ng-class="[$ctrl.secondaryColor, $ctrl.templateData.basics.location_icon]"
+               ng-click="$ctrl.iconSelectIndex = 'location_icon'; $ctrl.closeBasicPopover['location'] = true;"
+               popover-trigger="outsideClick"
+               popover-is-open="$ctrl.closeBasicPopover['location']"
+               popover-placement="right"
+               uib-popover-template="$ctrl.sectionOptions('basicsIconSelect')"></i>
+            <textarea class="editable contact-edit"
+                      ng-class="[$ctrl.primaryColor, $ctrl.bodyFont]"
+                      placeholder="Location"
+                      maxlength="75"
+                      spellcheck="false"
+                      autocomplete="off"
+                      rows="1"
+                      aria-label="Location"
+                      ng-change="$ctrl.dirtyValue(true)"
+                      ng-model="$ctrl.templateData.basics.location"
+                      msd-elastic>
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="two-column-left"
+         dragula='"ordering"'
+         dragula-model="left" >
+      <!--           ng-include="'src/components/creator/creator-display/displayTemplates/sections/' + sectionItem.section + '.html'"-->
+      <div ng-repeat="sectionItem in left"
+           ng-include="$ctrl.rootPath +'/creator-display/displayTemplates/sections/' + sectionItem.section + '.html'"
+           dragula-scope="$parent">
+      </div>
+     <div ng-if="left.length === 0" ng-include="$ctrl.rootPath +'/creator-display/displayTemplates/sections/prevent-empty.html'"
+           dragula-scope="$parent"></div>
+    </div>
+    <div class="two-column-right"
+         dragula='"ordering"'
+         dragula-model="right">
+      <!--           ng-include="'src/components/creator/creator-display/displayTemplates/sections/' + sectionItem.section + '.html'"
+-->
+      <div ng-repeat="sectionItem in right"
+           ng-include="$ctrl.rootPath +'/creator-display/displayTemplates/sections/' + sectionItem.section + '.html'"
+           dragula-scope="$parent">
+      </div>
+      <div ng-if="right.length === 0" ng-include="$ctrl.rootPath +'/creator-display/displayTemplates/sections/prevent-empty.html'"
+           dragula-scope="$parent"></div>
+    </div>
+  </div>
+</div>
+</div>

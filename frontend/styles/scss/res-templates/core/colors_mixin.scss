@@ -1,0 +1,198 @@
+@import '_constants.scss';
+// see scss/creator/style-color-chooser.scss for styling of the selection item
+
+
+@mixin colors{
+
+  .first-color{
+    color: $first-color !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $first-color !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $first-color !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $first-color !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $first-color !important;
+    }
+  }
+
+  .second-color {
+    color: $second-color !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $second-color !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $second-color !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $second-color !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $second-color !important;
+    }
+  }
+
+  .sea-foam-color{
+    color: $sea-foam-color !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $sea-foam-color !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $sea-foam-color !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $sea-foam-color !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $sea-foam-color !important;
+    }
+  }
+
+  .yellow-color{
+    color: $yellow-color !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $yellow-color !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $yellow-color !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $yellow-color !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $yellow-color !important;
+    }
+  }
+
+  .bright-blue{
+    color: $bright-blue !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $bright-blue !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $bright-blue !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $bright-blue !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $bright-blue !important;
+    }
+  }
+
+  .purpleish{
+    color: $purpleish !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $purpleish !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $purpleish !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $purpleish !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $purpleish !important;
+    }
+  }
+
+  .dark-blueish{
+    color: $dark-blueish !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $dark-blueish !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $dark-blueish !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $dark-blueish !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $dark-blueish !important;
+    }
+  }
+
+  .umm-blue{
+    color: $umm-blue !important;
+
+    &::-webkit-input-placeholder,
+    & input::-webkit-input-placeholder {
+      color: $umm-blue !important;
+    }
+
+    &:-moz-placeholder,
+    & input:-moz-placeholder {
+      color: $umm-blue !important;
+    }
+
+    &::-moz-placeholder,
+    & input::-moz-placeholder {
+      color: $umm-blue !important;
+    }
+
+    &:-ms-input-placeholder,
+    & input:-ms-input-placeholder {
+      color: $umm-blue !important;
+    }
+  }
+}

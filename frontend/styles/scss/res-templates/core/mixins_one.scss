@@ -1,0 +1,84 @@
+@import '_constants.scss';
+
+@mixin upperCased() {
+  text-transform: uppercase;
+}
+
+@mixin section-heading{
+
+  .section-heading {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: $section-border solid black;
+
+    .section-heading-edit {
+      @include upperCased;
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      word-wrap: break-word;
+      font-size: 25px;
+      color: $base-font-color;
+      font-weight: 700;
+    }
+  }
+}
+
+@mixin section-spacing{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@mixin editable-fields{
+  .editable {
+    padding: 0;
+    border: 0;
+    resize: none;
+    width: 100%;  // this may be necessary watch for issues where this class is applied
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+    min-height: 10px;
+    background: transparent;
+    overflow-y: hidden;   //recently added (alpha 9)
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    text-size-adjust: none;
+    position: relative;
+    z-index: 1;
+  }
+  .editable-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+  .editable-wrapper-inline {
+    display: inline-block;
+  }
+
+  .editable-field::placeholder, .editable-field input::placeholder, .date-range-label {
+    color: $second-color !important;
+    opacity: 1 !important;
+  }
+}
+
+
+@mixin section-headings{
+  font-size: 21px;
+  color: $base-font-color;
+  font-weight: 700;
+}
+
+@mixin section-content-labels{
+  font-size: 15px;
+  margin-top: 1em;
+  font-weight: 600;
+}
+
+@mixin section-content-details{
+  font-size: 13px;
+  position: relative;
+  margin-top: 5px;
+}
+
+

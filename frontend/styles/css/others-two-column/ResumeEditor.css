@@ -1,0 +1,67 @@
+.resume-editor-content-box {
+  position: relative;
+  padding-left: 240px; }
+  .resume-editor-content-box .center-resume {
+    margin: 0 auto; }
+
+@media (max-width: 1199px) {
+  .resume-editor-content-box {
+    padding-left: 60px; } }
+
+.browser-resume-page {
+  position: relative;
+  margin-bottom: 40px;
+  box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.3); }
+  .browser-resume-page:before {
+    content: " ";
+    z-index: -1;
+    position: absolute;
+    width: 60%;
+    top: 93%;
+    bottom: 24px;
+    left: 10px;
+    transform: rotate(-1deg);
+    box-shadow: 0 30px 20px rgba(0, 0, 0, 0.5); }
+  .browser-resume-page:after {
+    content: " ";
+    z-index: -1;
+    position: absolute;
+    width: 60%;
+    top: 97%;
+    bottom: 25px;
+    right: -10px;
+    transform: rotate(1deg);
+    box-shadow: 0 30px 20px rgba(0, 0, 0, 0.4); }
+
+.resume-animate-appear {
+  opacity: 0;
+  backface-visibility: hidden;
+  transform: translateY(20%); }
+  .resume-animate-appear.resume-animate-appear-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 400ms linear, transform 400ms ease-out; }
+
+.resume-navbar-animate-appear {
+  opacity: 0;
+  backface-visibility: hidden;
+  transform: translateY(-50%); }
+  .resume-navbar-animate-appear.resume-navbar-animate-appear-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    transition-delay: 300ms; }
+
+.resume-toolbox-animate-appear {
+  opacity: 0;
+  backface-visibility: hidden;
+  transform: translateX(-50%); }
+  .resume-toolbox-animate-appear.resume-toolbox-animate-appear-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    transition-delay: 300ms; }

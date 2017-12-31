@@ -1,0 +1,137 @@
+<!-- Projects Section -->
+<div id="projects-section">
+
+  <div class="section-heading">
+                  <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+                    {{#labels.projects}}{{labels.projects}}{{/labels.projects}}
+                    {{^labels.projects}}Projects{{/labels.projects}}
+                  </div>
+  </div>
+
+  {{#projects}}
+    {{# if show}}
+    <div class="project-item">
+
+      <div class="project-name">
+        <div class=" project-name-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+          {{#if name}}
+            {{name}}
+          {{else}}
+            Project/Activity Name
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="summary">
+
+        <div class="date-location">
+
+          <div class="date">
+            {{#if startDate}}
+            <i class="fa {{design.style_options.calendar_icon}} icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            {{/if}}
+            <div class=" date-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              {{#if startDate}}
+                {{startDate}}
+              {{/if}}
+            </div>
+          </div>
+
+          <div class="location">
+    {{#if location.city}}
+            <i class="fa fa-map-marker icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+    {{/if}}
+            <div class=" location-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              {{#if location.city}}
+              {{location.city}}
+              {{/if}}
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="project-details">
+
+          <div class=" project-heading-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+            {{#if summary}}
+              {{summary}}
+            {{else}}
+              Short Summary
+            {{/if}}
+          </div>
+
+          {{#each details}}
+            {{#if show}}
+          <div class="details-description-container">
+
+
+            <i class="fa fa-circle bullet {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" details-content-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                {{detail}}
+             {{!-- {{#if detail}}
+            {{else}}
+              What was an example of a successful outcome of this activity?
+              {{/if}} --}}
+
+            </div>
+          </div>
+            {{/if}}
+          {{/each}}
+
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  {{/projects}}
+  <!-- Below is Placeholders for added but empty section -->
+  {{^projects}}
+    <div class="project-item">
+
+      <div class="project-name">
+        <div class=" project-name-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+            Project/Activity Name
+        </div>
+      </div>
+
+      <div class="summary">
+
+        <div class="date-location">
+
+          <div class="date">
+            <i class="fa fa-calendar icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" date-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                Date Period
+            </div>
+          </div>
+
+          <div class="location">
+            <i class="fa fa-map-marker icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" location-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+                Location
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="project-details">
+
+          <div class=" project-heading-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              Short Summary
+          </div>
+
+          <div class="details-description-container">
+            <i class="fa fa-circle bullet {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" details-content-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              What was an example of a successful outcome of this activity?
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  {{/projects}}
+</div>
+<!-- Projects Section End-->

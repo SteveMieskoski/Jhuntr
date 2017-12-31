@@ -1,0 +1,15 @@
+<!--<div>LEFT</div>-->
+
+<creatordisplay id="core"
+                ng-if="$ctrl.initContentData"
+                template-data="$ctrl.initContentData"
+                template-selection="core"
+                templateChoice="$ctrl.templateSelected"
+                template-details="$ctrl.templateDetails"
+                section-list-modal="true"
+                ng-cloak>
+</creatordisplay>
+
+<div ng-if="!$ctrl.initContentData">
+  <h1>Select A Res to Start Customizing!!!</h1>
+</div>

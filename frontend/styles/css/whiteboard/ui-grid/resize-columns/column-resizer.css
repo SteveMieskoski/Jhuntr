@@ -1,0 +1,61 @@
+/* This file contains variable declarations (do not remove this line) */
+/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+/**
+* $section Grid styles
+*/
+/**
+* $section Header styles
+*/
+/** $description Colors for header gradient */
+/**
+* $section Grid body styles
+*/
+/** $description Colors used for row alternation */
+/**
+* $section Sort arrow colors
+*/
+/**
+* $section Scrollbar styles
+
+$scrollbarBackground: darken($rowColorEven, 15%);
+$scrollbarBackgroundHover: darken($scrollbarBackground, 15%);
+$scrollbarBackgroundScrolling: darken($scrollbarBackgroundHover, 15%);
+$scrollbarWidth: 10px;
+$scrollbarBorderRadius: 2px;
+$scrollbarShadow: 0 0 0px #fff;
+$scrollbarBorder: 1px solid darken($scrollbarBackground, 15%);
+$scrollbarBorderScrolling: 1px solid darken($scrollbarBackgroundScrolling, 15%);
+*/
+/**
+* $section font library path
+*/
+/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+.ui-grid-column-resizer {
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  position: absolute;
+  cursor: col-resize; }
+  .ui-grid-column-resizer.left {
+    left: 0; }
+  .ui-grid-column-resizer.right {
+    right: 0; }
+
+.ui-grid-header-cell:last-child .ui-grid-column-resizer.right {
+  border-right: 1px solid rgba(0, 0, 0, 0.84); }
+
+.ui-grid[dir=rtl] .ui-grid-header-cell:last-child .ui-grid-column-resizer.right {
+  border-right: 0; }
+
+.ui-grid[dir=rtl] .ui-grid-header-cell:last-child .ui-grid-column-resizer.left {
+  border-left: 1px solid rgba(0, 0, 0, 0.84); }
+
+.ui-grid.column-resizing {
+  cursor: col-resize; }
+
+.ui-grid.column-resizing .ui-grid-resize-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.84); }

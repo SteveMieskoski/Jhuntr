@@ -1,0 +1,110 @@
+/*
+
+  .text {
+    font-family: 'Merriweather', serif !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    opacity: 1;
+  }
+
+    .text {
+    font-family: 'Merriweather', serif !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    opacity: 1;
+  }
+ */
+/* Mixin's in this file:
+pageOnlyFonts
+muyMuchoFont
+extraLargeFont
+largeFont
+mediumFont
+normalFont
+smallFont
+
+*/
+/*
+// Site Font Sizing
+for $fontFamily ( see variables/fonts )
+
+
+wording based upon the pixel size of the font"
+extra large: 50px
+large: 40px
+medium: 30px
+normal: 20px
+small: 15px
+extra small: 10px
+
+ */
+/*
+.navbar-brand {
+    float: left;
+    padding: 19.5px 15px;
+    font-size: 19px;
+    line-height: 21px;
+    height: 60px
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none
+}
+
+.navbar-brand > img {
+    display: block
+}
+
+ */
+a.navbar-brand {
+  float: left;
+  padding-top: 10px !important;
+  padding-bottom: 15px !important; }
+  a.navbar-brand > img {
+    display: inline; }
+
+img.nav-logo {
+  height: 40px; }
+  img.nav-logo:hover {
+    background: black; }
+
+.top-nav {
+  padding: 0 20px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background: rgba(0, 0, 0, 0.39);
+  min-height: 60px; }
+
+.nav-style {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 25px; }
+  .nav-style:hover {
+    background: transparent !important;
+    color: white !important; }
+  .nav-style:active, .nav-style:focus {
+    background: transparent !important;
+    color: #f46d3b !important; }
+
+.nav-home {
+  top: 10px; }
+
+.acct-btn {
+  border: none;
+  line-height: 21px; }
+
+.navbar-collapse.collapse {
+  display: block !important;
+  padding-bottom: 0;
+  overflow: visible !important; }
+
+.right-nav-item {
+  padding-right: 40px; }
+
+.nav-cursor {
+  cursor: pointer; }
+
+a.site-colors-bgreen {
+  color: #848a8b !important; }

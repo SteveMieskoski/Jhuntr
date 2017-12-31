@@ -1,0 +1,136 @@
+//@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import 'mixins_one.scss';
+@import '_constants.scss';
+@import 'detailed_sections_mixin.scss';
+
+@mixin projects-section {
+
+  @include section-heading;
+
+  .project-item {
+    position: relative;
+    padding-bottom: 10px;
+
+    .project-name {
+      @include subheading-container;
+     // line-height: 21px;
+     // margin-top: .7em;
+     // width: 100%;
+
+      .project-name-edit {
+        @include subheading;
+       // width: 100%;
+       // margin-top: .7em;
+      //  font-size: 21px;
+      //  font-weight: 400;
+      //  height: 25px;
+      }
+    }
+
+    .summary {
+      @include info-heading-container;
+
+      .summary-edit {
+        @include info-heading;
+       // width: 100%;
+       // margin-top: .5em;
+       // font-size: 15px;
+       // font-weight: 700;
+       // height: 20px;
+      }
+    }
+
+    .date-location {
+      @include date-location;
+     /* margin-top: .5em;
+      width: 100%;
+      display: inline-flex;
+
+      .date {
+        display: inline-flex;
+        width: 60%;
+        min-width: 60%;
+        margin: 0;
+        padding: 0;
+
+        .icon {
+          @include sub-icon;
+         // display: inline-block;
+         // margin-right: 1%;
+         // font-size: 13px;
+        }
+
+        .date-edit {
+          margin-right: 1%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+         // font-weight: 400;
+         // height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+
+        .icon {
+          @include sub-icon;
+         // margin-right: 2%;
+
+         // font-size: 13px;
+        }
+
+        .location-edit {
+          // width: 40%;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+         // font-size: 13px;
+         // font-weight: 400;
+         // height: 15px;
+        }
+      } */
+    }
+
+    .project-details {
+      position: relative;
+      margin-top: 5px;
+      display: inline-block;
+      width: 100%;
+
+      .project-heading-edit {
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 400;
+        flex-grow: 1;
+        height: 20px;
+      }
+
+      .details-description-container{
+        margin-top: .2em;
+
+        .bullet {
+          font-size: .4em;
+          float: left;
+          margin-right: .7em;
+          margin-top: 5px;
+        }
+
+        .details-content-edit {
+          overflow: hidden;
+          //line-height: 30px;
+          word-wrap: break-word;
+          font-size: 13px;
+          font-weight: 400;
+          flex-grow: 1;
+          width: 90%;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

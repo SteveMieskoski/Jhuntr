@@ -1,0 +1,29 @@
+<h3>References</h3>
+<button ng-click="$ctrl.addRecord()">Enter Another</button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul >
+  <li class="res-entity-list" ng-class="{'text-muted': !$ctrl.existingData[$index].show ,'text-primary': $ctrl.existingData[$index].show}" ng-click="$ctrl.forEdit = $index" ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].name.length > 0">{{$ctrl.existingData[$index].name }}&nbsp;&nbsp;
+    <button ng-click="$ctrl.removeRecord('references', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
+    </span>
+    <span ng-if="$ctrl.existingData[$index].name.length < 1 || $ctrl.existingData[$index].label == undefined">new entry&nbsp;&nbsp;
+    <button ng-click="$ctrl.removeRecord('references', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
+    </span>
+
+  </li>
+</ul>
+<button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show" >
+  <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true"></i>
+  <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+</button>
+<div>
+  <input type="text" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].name"/>
+  <input type="text" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].role"/>
+  <input type="text" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].category"/>
+  <input type="radio" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].private"/>
+  <input type="text" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].summary"/>
+  <input type="text" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].contact.label"/>
+  <input type="text" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].contact.category"/>
+  <input type="text" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].contact.value"/>
+</div>
+<button ng-click="$ctrl.addRecord()">Enter Another</button>

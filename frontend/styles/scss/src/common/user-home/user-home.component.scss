@@ -1,0 +1,15 @@
+@import '../../../common/base-styles.main';
+
+.intro-page {
+  height:100vh;
+  background-color: $home-page-background;
+  padding-top: 70px;
+  #get-started{
+    top: 70px;
+    padding-left: 20px;
+  }
+}
+
+.intro-page{
+  padding-top: 70px;
+}

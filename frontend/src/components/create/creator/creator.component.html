@@ -1,0 +1,61 @@
+<div id="download-prep-screeen" ng-if="$ctrl.downloadPending">
+  <div ng-include="$ctrl.downloadPendingOverlay"></div>
+</div>
+<div class="frow top-fcol"
+     id="creator-component">
+
+  <div class="fcol-3 creator-input-adjust">
+    <div class="frow">
+    <div class="fcol-0"></div>
+      <div class="fcol-11 creator-input">
+       <creatorform in-data="$ctrl.initContentData"></creatorform>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="fcol-7 ">
+    <div class="creator-outline" ng-style="$ctrl.extraPages">
+      <div ng-include="$ctrl.popupTemplates"></div>
+      <div ng-include="$ctrl.itemPopupTemplates"></div>
+      <creatordisplay id="core"
+                      template-data="$ctrl.initContentData"
+                      template-selection="core"
+                      templateChoice="$ctrl.templateSelected"
+                      template-details="$ctrl.templateDetails"
+                      section-list-modal="false"
+                      path="{{$ctrl.paths}}"
+                      ng-cloak>
+      </creatordisplay>
+    </div>
+    </div>  <!-- creator-display end tag -->
+<!-- ToDo: correct placement of action links/buttons from bottom to side of creator page.
+  </div>  <!-- column end tag -->
+  <div class="side-items">
+    <div class="side-item-master" >
+      <span class="set-master"
+            ng-click="$ctrl.setMaster()">Set Master</span>
+    </div>
+    <div class="side-item-save" >
+      <span class="creator-save"
+            ng-click="$ctrl.saveData()">Save</span>
+    </div>
+    <div class="side-item-download" >
+      <span class="creator-download"
+            ng-click="$ctrl.downloadPending = true; $ctrl.createAndDownloadPdf()">Download</span>
+    </div>
+    <div class="side-item-view" >
+      <span class="creator-view"
+            ng-click="$ctrl.viewPdf()"
+            >View</span>
+    </div>
+   <!-- <div class="side-item-view" >
+      <span class="creator-view"
+            ng-click="$ctrl._resModel.view()"
+      >CHECK</span>
+    </div>-->
+  </div>
+</div> <!-- row end tag -->
+
+

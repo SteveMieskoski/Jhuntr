@@ -1,0 +1,132 @@
+
+
+
+
+
+.top-nav {
+  padding: 0 20px;
+
+  //from bootstrap fixed-navbar class
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background: rgba(0, 0, 0, 0.39);
+  //from bootstrap navbar class
+  //position: relative;
+  min-height: 60px;
+  //margin-bottom: 21px;
+  // border: 1px solid transparent
+}
+
+
+.nav-style{
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 25px;
+}
+
+.nav-home{
+  padding-bottom: 19.5px !important;
+}
+
+
+// from bootstrap line 4547
+.navbar-collapse.collapse {
+  display: block !important;
+  // height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important
+}
+
+
+
+.right-nav-item{
+  padding-right: 40px;
+}
+.nav-cursor {
+  cursor: pointer;
+}
+
+
+
+.small-nav{
+  @media (max-width: 767px) {
+  }
+}
+
+a.site-colors-bgreen{
+  color: #848a8b !important;
+}
+
+
+.site-footer {
+  color: white;
+  //background-color: #2c3e50;
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  bottom: -120px;
+  padding: 15px 20px;
+}
+
+.footer-template-container{
+  position: relative;
+  width: 100%;
+  .site-footer-left{
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 20px);
+
+    .footer-tagline{
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .footer-support{
+      display: block;
+
+    }
+
+    .footer-disclaimer{
+      display: block;
+      margin-top: 15px;
+    }
+
+  }
+
+  .site-footer-right{
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 50%;
+    .footer-right-content{
+      width: 100%;
+      .footer-copy{
+        float: right;
+        margin-left: 80%;
+        margin-top: 15px;
+        vertical-align: bottom;
+        display: inline-block;
+      }
+
+      .footer-help{
+        float: right;
+        margin-left: 80%;
+        margin-bottom: 10px;
+        vertical-align: bottom;
+        display: inline-block;
+      }
+
+      .footer-version{
+        float: right;
+        margin-left: 70%;
+        vertical-align: top;
+        display: inline-block;
+      }
+    }
+
+  }
+
+
+}

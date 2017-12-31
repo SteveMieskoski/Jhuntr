@@ -1,0 +1,63 @@
+
+
+.display-item{
+  cursor: pointer
+}
+
+
+.detail-topic{
+  font-weight: bold;
+  font-size: 1.25em;
+  padding-right: 5px;
+}
+
+.map-icon-container{
+  position: relative;
+  // height:72px;
+  // width: 72px;
+}
+
+.round-target{
+  border-radius: 100%;
+  border: 5px solid black;
+  width: 34px;
+  height: 34px;
+}
+
+.round-target-inner{
+  border-radius: 100%;
+  transform: translate(5px, 5px);
+  border: 5px solid black;
+  width: 15px;
+  height: 15px;
+}
+
+.round-image{
+  // position: absolute;
+  width: 34px;
+  height: 34px;
+  //top: 35%;
+  // right: 50%;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+
+.map-icon-pin{
+  // position: absolute;
+  transform: translate(-30px, 25px);
+  //  width: 64px;
+  //  height: 64px;
+  // top: 30%;
+  // right: 50%;
+  color: black;
+}
+
+.map-icon-color{
+  position: absolute;
+  transform: scale(1.25);
+  //  width: 64px;
+  //  height: 64px;
+  top: 50%;
+  right: 50%;
+  color: red;
+}

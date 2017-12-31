@@ -1,0 +1,118 @@
+@import '../../../../common/base-styles.main';
+
+@include flex-grid;
+
+.reenie-beanie {
+  font-family: $reenie_beanie !important;
+}
+
+.add-task {
+  float: left;
+  border: 1px solid black;
+}
+
+.task-container-inner {
+
+  .task-align {
+    text-align: left !important;
+    .task-label {
+      padding: 5px 5px 5px 5px;
+      // background-color: #c5cfcf;
+      font-family: $architectsDaughter !important;
+      font-size: 25px;
+      color: black;
+      text-align: left;
+    }
+
+    .task-content {
+      padding: 5px 5px 5px 5px;
+      // background-color: #c5cfcf;
+      font-family: $architectsDaughter !important;
+      font-size: 25px;
+      color: black;
+      text-align: left;
+    }
+
+    .edit-button {
+      position: relative;
+      padding-right: 15px;
+     // width: 10px;
+      .non-hover {
+        position: absolute;
+    //    left: 3px;
+        @include prefixTransition(opacity, .5, ease-in-out);
+      }
+      .hover {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        @include prefixTransition(opacity, .5, ease-in-out);
+      }
+
+      &:hover {
+        .non-hover{
+          opacity: 0;
+        }
+        .hover {
+          opacity: 1;
+        }
+      }
+      &:active, &:focus {
+        background: rgb(244, 109, 59) !important;
+      }
+    }
+
+    .delete-button {
+      margin-left: 15px;
+      position: relative;
+      padding-right: 10px;
+      // width: 10px;
+      .non-hover {
+        position: absolute;
+        //    left: 3px;
+        @include prefixTransition(opacity, .5, ease-in-out);
+      }
+      .hover {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        @include prefixTransition(opacity, .5, ease-in-out);
+      }
+
+      &:hover {
+        .non-hover{
+          opacity: 0;
+        }
+        .hover {
+          opacity: 1;
+        }
+      }
+      &:active, &:focus {
+        background: rgb(244, 109, 59) !important;
+      }
+    }
+
+    .complete-box {
+      padding-left: 10px;
+    }
+
+    .text-input {
+      padding: 0;
+      border: 0;
+      resize: none;
+      outline: none;
+      margin: 0;
+      box-shadow: none;
+      // display: block;
+      min-height: 10px;
+      background: transparent;
+      overflow-y: hidden; //recently added (alpha 9)
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      text-size-adjust: none;
+      position: relative;
+      //z-index: 1;
+    }
+  }
+
+}

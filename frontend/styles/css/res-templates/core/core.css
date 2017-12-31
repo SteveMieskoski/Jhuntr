@@ -1,0 +1,3171 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@font-face {
+  font-family: "Lato";
+  src: url("../../../fonts/All_Fonts/Lato-Regular.eot");
+  src: url("../../../fonts/All_Fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/Lato-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/Lato-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/Lato-Regular.svg#Lato") format("svg"); }
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../../../fonts/All_Fonts/Merriweather-Regular.eot");
+  src: url("../../../fonts/All_Fonts/Merriweather-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/Merriweather-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/Merriweather-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/Merriweather-Regular.svg#Merriweather") format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../../fonts/All_Fonts/Montserrat-Regular.eot");
+  src: url("../../../fonts/All_Fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/Montserrat-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/Montserrat-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/Montserrat-Regular.svg#Montserrat") format("svg"); }
+
+@font-face {
+  font-family: "Neuton";
+  src: url("../../../fonts/All_Fonts/Neuton-Regular.eot");
+  src: url("../../../fonts/All_Fonts/Neuton-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/Neuton-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/Neuton-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/Neuton-Regular.svg#Neuton") format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../fonts/All_Fonts/OpenSans-Regular.eot");
+  src: url("../../../fonts/All_Fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/OpenSans-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/OpenSans-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/OpenSans-Regular.svg#Open Sans") format("svg"); }
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../../../fonts/All_Fonts/Oswald-Bold.eot");
+  src: url("../../../fonts/All_Fonts/Oswald-Bold.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/Oswald-Bold.woff") format("woff"), url("../../../fonts/All_Fonts/Oswald-Bold.ttf") format("truetype"), url("../../../fonts/All_Fonts/Oswald-Bold.svg#Oswald") format("svg"); }
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../../../fonts/All_Fonts/PlayfairDisplay-Regular.eot");
+  src: url("../../../fonts/All_Fonts/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/PlayfairDisplay-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/PlayfairDisplay-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/PlayfairDisplay-Regular.svg#Playfair Display") format("svg"); }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../fonts/All_Fonts/Roboto-Regular.eot");
+  src: url("../../../fonts/All_Fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/Roboto-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/Roboto-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/Roboto-Regular.svg#Roboto") format("svg"); }
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../../fonts/All_Fonts/RobotoSlab-Regular.eot");
+  src: url("../../../fonts/All_Fonts/RobotoSlab-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/RobotoSlab-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/RobotoSlab-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/RobotoSlab-Regular.svg#Roboto Slab") format("svg"); }
+
+@font-face {
+  font-family: "Alex Brush";
+  src: url("../../../fonts/All_Fonts/AlexBrush-Regular.eot");
+  src: url("../../../fonts/All_Fonts/AlexBrush-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/AlexBrush-Regular.woff") format("woff"), url("../../../fonts/All_Fonts/AlexBrush-Regular.ttf") format("truetype"), url("../../../fonts/All_Fonts/AlexBrush-Regular.svg#Alex Brush") format("svg"); }
+
+@font-face {
+  font-family: 'Quattrocento Sans';
+  src: url("../../../fonts/All_Fonts/QuattrocentoSans.eot");
+  src: url("../../../fonts/All_Fonts/QuattrocentoSans.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/QuattrocentoSans.woff") format("woff"), url("../../../fonts/All_Fonts/QuattrocentoSans.ttf") format("truetype"), url("../../../fonts/All_Fonts/QuattrocentoSans.svg#QuattrocentoSans") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CAC Champagne';
+  src: url("../../../fonts/All_Fonts/CACChampagne.eot");
+  src: url("../../../fonts/All_Fonts/CACChampagne.eot?#iefix") format("embedded-opentype"), url("../../../fonts/All_Fonts/CACChampagne.woff") format("woff"), url("../../../fonts/All_Fonts/CACChampagne.ttf") format("truetype"), url("../../../fonts/All_Fonts/CACChampagne.svg#CACChampagne") format("svg"); }
+
+@font-face {
+  font-family: "Dancing Script OT";
+  src: url("../../../fonts/hinted-DancingScriptOT/hinted-DancingScriptOT.eot");
+  src: url("../../../fonts/hinted-DancingScriptOT/hinted-DancingScriptOT.eot?#iefix") format("embedded-opentype"), url("../../../fonts/hinted-DancingScriptOT/hinted-DancingScriptOT.woff") format("woff"), url("../../../fonts/hinted-DancingScriptOT/hinted-DancingScriptOT.ttf") format("truetype"), url("../../../fonts/hinted-DancingScriptOT/hinted-DancingScriptOT.svg#Dancing Script OT") format("svg"); }
+
+@font-face {
+  font-family: "EB Garamond 12";
+  src: url("../../../fonts/hinted-EBGaramond12-Regular/hinted-EBGaramond12-Regular.eot");
+  src: url("../../../fonts/hinted-EBGaramond12-Regular/hinted-EBGaramond12-Regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/hinted-EBGaramond12-Regular/hinted-EBGaramond12-Regular.woff") format("woff"), url("../../../fonts/hinted-EBGaramond12-Regular/hinted-EBGaramond12-Regular.ttf") format("truetype"), url("../../../fonts/hinted-EBGaramond12-Regular/hinted-EBGaramond12-Regular.svg#EB Garamond 12") format("svg"); }
+
+@font-face {
+  font-family: FontAwesome;
+  src: url("../../styles/fonts/font-awesome/fonts/fontawesome-webfont.eot");
+  src: url("../../styles/fonts/font-awesome/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../../styles/fonts/font-awesome/fonts/fontawesome-webfont.woff") format("woff"), url("../../styles/fonts/font-awesome/fonts/fontawesome-webfont.ttf") format("truetype"), url("../../styles/fonts/font-awesome/fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+.basic {
+  font: 15px Arial, Helvetica, sans-serif; }
+
+.garamond-font {
+  font-family: 'EB Garamond 12', serif; }
+
+.lato-font {
+  font-family: 'Lato', sans-serif; }
+
+.merriweather-font {
+  font-family: 'Merriweather', serif; }
+
+.montserrat-font {
+  font-family: 'Montserrat', sans-serif; }
+
+.neuton-font {
+  font-family: 'Neuton', serif; }
+
+.oswald-font {
+  font-family: 'Oswald', sans-serif; }
+
+.quattrocento-font {
+  font-family: 'Quattrocento', serif; }
+
+.playfair-display-font {
+  font-family: 'Playfair Display', serif; }
+
+.open-sans-font {
+  font-family: 'Open Sans', sans-serif; }
+
+.roboto-slab-font {
+  font-family: 'Roboto Slab', serif; }
+
+.roboto-font {
+  font-family: 'Roboto', sans-serif; }
+
+.georgia-font {
+  font-family: Georgia,Times,"Times New Roman",serif; }
+
+.dancing-script-font {
+  font-family: 'Dancing Script OT', cursive; }
+
+.alex-brush-font {
+  font-family: 'Alex Brush',  cursive; }
+
+.cac-champagne-font {
+  font-family: 'CAC Champagne',  cursive; }
+
+.heading-font {
+  font-family: "Lato", Arial, Helvetica, sans-serif; }
+
+@media (max-width: 767px) {
+  .two-column {
+    zoom: 0.72; } }
+
+@media (max-width: 360px) {
+  .two-column {
+    zoom: 0.40; } }
+
+@media (min-width: 768px) {
+  .two-column {
+    width: 850px !important;
+    height: 1100px !important; } }
+
+.two-column .honey-background {
+  background-image: url(../../../backgrounds/background-design.svg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.two-column .curve-background {
+  background-image: url(../../../backgrounds/background-curve.svg);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.two-column #core-template {
+  position: relative;
+  width: 850px !important;
+  height: 1130px !important;
+  font-size: 15px;
+  line-height: 1.6;
+  border: 1px solid white; }
+  .two-column #core-template .editable {
+    padding: 0;
+    border: 0;
+    resize: none;
+    width: 100%;
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+    min-height: 10px;
+    background: transparent;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    text-size-adjust: none;
+    position: relative;
+    z-index: 1; }
+  .two-column #core-template .editable-wrapper {
+    position: relative;
+    flex-grow: 1; }
+  .two-column #core-template .editable-wrapper-inline {
+    display: inline-block; }
+  .two-column #core-template .editable-field::placeholder, .two-column #core-template .editable-field input::placeholder, .two-column #core-template .date-range-label {
+    color: #686868 !important;
+    opacity: 1 !important; }
+  .two-column #core-template .first-color {
+    color: #000000 !important; }
+    .two-column #core-template .first-color::-webkit-input-placeholder,
+    .two-column #core-template .first-color input::-webkit-input-placeholder {
+      color: #000000 !important; }
+    .two-column #core-template .first-color:-moz-placeholder,
+    .two-column #core-template .first-color input:-moz-placeholder {
+      color: #000000 !important; }
+    .two-column #core-template .first-color::-moz-placeholder,
+    .two-column #core-template .first-color input::-moz-placeholder {
+      color: #000000 !important; }
+    .two-column #core-template .first-color:-ms-input-placeholder,
+    .two-column #core-template .first-color input:-ms-input-placeholder {
+      color: #000000 !important; }
+  .two-column #core-template .second-color {
+    color: #686868 !important; }
+    .two-column #core-template .second-color::-webkit-input-placeholder,
+    .two-column #core-template .second-color input::-webkit-input-placeholder {
+      color: #686868 !important; }
+    .two-column #core-template .second-color:-moz-placeholder,
+    .two-column #core-template .second-color input:-moz-placeholder {
+      color: #686868 !important; }
+    .two-column #core-template .second-color::-moz-placeholder,
+    .two-column #core-template .second-color input::-moz-placeholder {
+      color: #686868 !important; }
+    .two-column #core-template .second-color:-ms-input-placeholder,
+    .two-column #core-template .second-color input:-ms-input-placeholder {
+      color: #686868 !important; }
+  .two-column #core-template .sea-foam-color {
+    color: #236860 !important; }
+    .two-column #core-template .sea-foam-color::-webkit-input-placeholder,
+    .two-column #core-template .sea-foam-color input::-webkit-input-placeholder {
+      color: #236860 !important; }
+    .two-column #core-template .sea-foam-color:-moz-placeholder,
+    .two-column #core-template .sea-foam-color input:-moz-placeholder {
+      color: #236860 !important; }
+    .two-column #core-template .sea-foam-color::-moz-placeholder,
+    .two-column #core-template .sea-foam-color input::-moz-placeholder {
+      color: #236860 !important; }
+    .two-column #core-template .sea-foam-color:-ms-input-placeholder,
+    .two-column #core-template .sea-foam-color input:-ms-input-placeholder {
+      color: #236860 !important; }
+  .two-column #core-template .yellow-color {
+    color: #bab52e !important; }
+    .two-column #core-template .yellow-color::-webkit-input-placeholder,
+    .two-column #core-template .yellow-color input::-webkit-input-placeholder {
+      color: #bab52e !important; }
+    .two-column #core-template .yellow-color:-moz-placeholder,
+    .two-column #core-template .yellow-color input:-moz-placeholder {
+      color: #bab52e !important; }
+    .two-column #core-template .yellow-color::-moz-placeholder,
+    .two-column #core-template .yellow-color input::-moz-placeholder {
+      color: #bab52e !important; }
+    .two-column #core-template .yellow-color:-ms-input-placeholder,
+    .two-column #core-template .yellow-color input:-ms-input-placeholder {
+      color: #bab52e !important; }
+  .two-column #core-template .bright-blue {
+    color: #0ad3ff !important; }
+    .two-column #core-template .bright-blue::-webkit-input-placeholder,
+    .two-column #core-template .bright-blue input::-webkit-input-placeholder {
+      color: #0ad3ff !important; }
+    .two-column #core-template .bright-blue:-moz-placeholder,
+    .two-column #core-template .bright-blue input:-moz-placeholder {
+      color: #0ad3ff !important; }
+    .two-column #core-template .bright-blue::-moz-placeholder,
+    .two-column #core-template .bright-blue input::-moz-placeholder {
+      color: #0ad3ff !important; }
+    .two-column #core-template .bright-blue:-ms-input-placeholder,
+    .two-column #core-template .bright-blue input:-ms-input-placeholder {
+      color: #0ad3ff !important; }
+  .two-column #core-template .purpleish {
+    color: purple !important; }
+    .two-column #core-template .purpleish::-webkit-input-placeholder,
+    .two-column #core-template .purpleish input::-webkit-input-placeholder {
+      color: purple !important; }
+    .two-column #core-template .purpleish:-moz-placeholder,
+    .two-column #core-template .purpleish input:-moz-placeholder {
+      color: purple !important; }
+    .two-column #core-template .purpleish::-moz-placeholder,
+    .two-column #core-template .purpleish input::-moz-placeholder {
+      color: purple !important; }
+    .two-column #core-template .purpleish:-ms-input-placeholder,
+    .two-column #core-template .purpleish input:-ms-input-placeholder {
+      color: purple !important; }
+  .two-column #core-template .dark-blueish {
+    color: #1C085B !important; }
+    .two-column #core-template .dark-blueish::-webkit-input-placeholder,
+    .two-column #core-template .dark-blueish input::-webkit-input-placeholder {
+      color: #1C085B !important; }
+    .two-column #core-template .dark-blueish:-moz-placeholder,
+    .two-column #core-template .dark-blueish input:-moz-placeholder {
+      color: #1C085B !important; }
+    .two-column #core-template .dark-blueish::-moz-placeholder,
+    .two-column #core-template .dark-blueish input::-moz-placeholder {
+      color: #1C085B !important; }
+    .two-column #core-template .dark-blueish:-ms-input-placeholder,
+    .two-column #core-template .dark-blueish input:-ms-input-placeholder {
+      color: #1C085B !important; }
+  .two-column #core-template .umm-blue {
+    color: #216785 !important; }
+    .two-column #core-template .umm-blue::-webkit-input-placeholder,
+    .two-column #core-template .umm-blue input::-webkit-input-placeholder {
+      color: #216785 !important; }
+    .two-column #core-template .umm-blue:-moz-placeholder,
+    .two-column #core-template .umm-blue input:-moz-placeholder {
+      color: #216785 !important; }
+    .two-column #core-template .umm-blue::-moz-placeholder,
+    .two-column #core-template .umm-blue input::-moz-placeholder {
+      color: #216785 !important; }
+    .two-column #core-template .umm-blue:-ms-input-placeholder,
+    .two-column #core-template .umm-blue input:-ms-input-placeholder {
+      color: #216785 !important; }
+  .two-column #core-template .basic {
+    font: 15px Arial, Helvetica, sans-serif; }
+  .two-column #core-template .garamond-font {
+    font-family: 'EB Garamond 12', serif; }
+  .two-column #core-template .lato-font {
+    font-family: 'Lato', sans-serif; }
+  .two-column #core-template .merriweather-font {
+    font-family: 'Merriweather', serif; }
+  .two-column #core-template .montserrat-font {
+    font-family: 'Montserrat', sans-serif; }
+  .two-column #core-template .neuton-font {
+    font-family: 'Neuton', serif; }
+  .two-column #core-template .oswald-font {
+    font-family: 'Oswald', sans-serif; }
+  .two-column #core-template .quattrocento-font {
+    font-family: 'Quattrocento', serif; }
+  .two-column #core-template .playfair-display-font {
+    font-family: 'Playfair Display', serif; }
+  .two-column #core-template .open-sans-font {
+    font-family: 'Open Sans', sans-serif; }
+  .two-column #core-template .roboto-slab-font {
+    font-family: 'Roboto Slab', serif; }
+  .two-column #core-template .roboto-font {
+    font-family: 'Roboto', sans-serif; }
+  .two-column #core-template .georgia-font {
+    font-family: Georgia,Times,"Times New Roman",serif; }
+  .two-column #core-template .dancing-script-font {
+    font-family: 'Dancing Script OT', cursive; }
+  .two-column #core-template .alex-brush-font {
+    font-family: 'Alex Brush',  cursive; }
+  .two-column #core-template .cac-champagne-font {
+    font-family: 'CAC Champagne',  cursive; }
+  .two-column #core-template .heading-font {
+    font-family: "Lato", Arial, Helvetica, sans-serif; }
+  .two-column #core-template #header-section {
+    margin: 7% 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
+    position: relative; }
+    .two-column #core-template #header-section .header-words {
+      left: 0; }
+      .two-column #core-template #header-section .header-words .name {
+        width: 70%; }
+        .two-column #core-template #header-section .header-words .name .name-edit {
+          line-height: 1em;
+          font-size: 42px;
+          font-weight: 600 !important;
+          color: #000000;
+          overflow-x: visible !important;
+          word-wrap: break-word;
+          height: 50px;
+          text-transform: uppercase; }
+      .two-column #core-template #header-section .header-words .heading {
+        width: 70%; }
+        .two-column #core-template #header-section .header-words .heading .heading-edit {
+          line-height: 1em;
+          width: 100%;
+          font-size: 21px;
+          overflow: hidden;
+          word-wrap: break-word;
+          height: 25px;
+          font-weight: 600 !important; }
+    .two-column #core-template #header-section .header-picture {
+      position: absolute;
+      top: 21px;
+      right: 30px;
+      z-index: 1; }
+      .two-column #core-template #header-section .header-picture .photo-round {
+        border-radius: 50%; }
+      .two-column #core-template #header-section .header-picture .photo {
+        z-index: 1;
+        vertical-align: top;
+        display: inline-block;
+        height: 150px;
+        width: 150px;
+        float: right;
+        transition: border-radius 0.5s;
+        background-size: cover;
+        background-repeat: no-repeat;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -o-crisp-edges;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor; }
+    .two-column #core-template #header-section .contact-details {
+      width: 80%;
+      padding-top: 10px;
+      display: inline-flex; }
+      .two-column #core-template #header-section .contact-details .contact-col-one .contact .icon {
+        margin-right: 5px;
+        font-size: 13px;
+        float: left; }
+      .two-column #core-template #header-section .contact-details .contact-col-one .contact .contact-edit {
+        width: 87%;
+        margin-top: .5em;
+        font-size: 13px;
+        font-weight: 400;
+        height: 28px; }
+      .two-column #core-template #header-section .contact-details .contact-col-two .contact .icon {
+        margin-right: 5px;
+        font-size: 13px;
+        float: left; }
+      .two-column #core-template #header-section .contact-details .contact-col-two .contact .contact-edit {
+        width: 87%;
+        margin-top: .5em;
+        font-size: 13px;
+        font-weight: 400;
+        height: 28px; }
+  .two-column #core-template .two-column-left {
+    display: block;
+    padding-right: 2.5%;
+    padding-left: 5%;
+    width: 60%;
+    float: left; }
+    .two-column #core-template .two-column-left .editable {
+      padding: 0;
+      border: 0;
+      resize: none;
+      width: 100%;
+      outline: none;
+      margin: 0;
+      box-shadow: none;
+      display: block;
+      min-height: 10px;
+      background: transparent;
+      overflow-y: hidden;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      text-size-adjust: none;
+      position: relative;
+      z-index: 1; }
+    .two-column #core-template .two-column-left .editable-wrapper {
+      position: relative;
+      flex-grow: 1; }
+    .two-column #core-template .two-column-left .editable-wrapper-inline {
+      display: inline-block; }
+    .two-column #core-template .two-column-left .editable-field::placeholder, .two-column #core-template .two-column-left .editable-field input::placeholder, .two-column #core-template .two-column-left .date-range-label {
+      color: #686868 !important;
+      opacity: 1 !important; }
+    .two-column #core-template .two-column-left #education-section {
+      display: block; }
+      .two-column #core-template .two-column-left #education-section .section-heading {
+        padding-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 3px solid black; }
+        .two-column #core-template .two-column-left #education-section .section-heading .section-heading-edit {
+          text-transform: uppercase;
+          display: inline-block;
+          width: 100%;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 25px;
+          color: #333;
+          font-weight: 700; }
+      .two-column #core-template .two-column-left #education-section .education .program-details .school-item {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-left #education-section .education .program-details .school-item .school-item-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-left #education-section .education .program-details .edu-container {
+        width: 100%; }
+        .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-one {
+          width: 70%;
+          display: inline-block;
+          vertical-align: top; }
+          .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-one .study-item {
+            line-height: 1em; }
+            .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-one .study-item .study-item-edit {
+              margin-top: .5em;
+              font-size: 15px;
+              font-weight: 700;
+              overflow-wrap: break-word;
+              display: inline-block;
+              height: 20px; }
+          .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-one .study-dates .date-icon {
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block;
+            float: left; }
+          .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-one .study-dates .study-dates-edit {
+            width: 80%;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-two {
+          width: 28%;
+          display: inline-block;
+          vertical-align: top; }
+          .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-two .ranking-container {
+            width: 100%;
+            text-align: center;
+            display: inline-block; }
+            .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-two .ranking-container .ranking-item-one {
+              display: inline-block;
+              vertical-align: top;
+              width: 40%;
+              height: 20px !important;
+              color: #686868;
+              text-align: right; }
+            .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-two .ranking-container .ranking-item-two {
+              display: inline-block;
+              vertical-align: top;
+              width: 40%;
+              height: 20px !important;
+              color: #686868;
+              text-align: left; }
+            .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-two .ranking-container .separator {
+              display: inline-block;
+              position: relative;
+              vertical-align: top; }
+            .two-column #core-template .two-column-left #education-section .education .program-details .edu-container .container-two .ranking-container h4 {
+              font-size: 13px;
+              margin-top: 0;
+              margin-bottom: 0;
+              text-align: center; }
+    .two-column #core-template .two-column-left #language-section .unselected-color {
+      color: #4b4b4b !important; }
+    .two-column #core-template .two-column-left #language-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #language-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #language-section .languages {
+      width: 100%; }
+      .two-column #core-template .two-column-left #language-section .languages .language-item {
+        vertical-align: top;
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: 220px;
+        line-height: 20px; }
+        .two-column #core-template .two-column-left #language-section .languages .language-item .language-details {
+          display: inline-block;
+          vertical-align: top;
+          width: 47%; }
+          .two-column #core-template .two-column-left #language-section .languages .language-item .language-details .language-name {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%; }
+            .two-column #core-template .two-column-left #language-section .languages .language-item .language-details .language-name .language-name-edit {
+              width: 100%;
+              overflow-y: hidden;
+              font-size: 18px;
+              font-weight: 400;
+              height: 22px; }
+          .two-column #core-template .two-column-left #language-section .languages .language-item .language-details .fluency-level {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%; }
+            .two-column #core-template .two-column-left #language-section .languages .language-item .language-details .fluency-level .fluency-level-edit {
+              width: 100%;
+              font-size: 13px;
+              font-weight: 400;
+              height: 20px; }
+        .two-column #core-template .two-column-left #language-section .languages .language-item .fluency-display {
+          display: inline-flex;
+          flex-direction: row;
+          align-self: flex-start;
+          vertical-align: top;
+          width: 50%;
+          padding-left: .5em;
+          padding-top: .5em; }
+          .two-column #core-template .two-column-left #language-section .languages .language-item .fluency-display .fluency-display-container .fluency-icon {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 17px;
+            padding-right: 1px; }
+    .two-column #core-template .two-column-left #passion-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #passion-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #passion-section .passions {
+      width: 100%;
+      line-height: 20px; }
+      .two-column #core-template .two-column-left #passion-section .passions .passion-item {
+        display: inline-flex;
+        flex-wrap: wrap;
+        vertical-align: top;
+        width: 220px; }
+        .two-column #core-template .two-column-left #passion-section .passions .passion-item .icon {
+          width: 18%;
+          display: inline-block;
+          vertical-align: top;
+          font-size: 25px; }
+        .two-column #core-template .two-column-left #passion-section .passions .passion-item .passion-label {
+          display: inline-block;
+          vertical-align: top;
+          width: 80%; }
+          .two-column #core-template .two-column-left #passion-section .passions .passion-item .passion-label .passion-label-edit {
+            width: 100%;
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            height: 20px; }
+    .two-column #core-template .two-column-left #achievement-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #achievement-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #achievement-section .achievements {
+      line-height: 20px; }
+      .two-column #core-template .two-column-left #achievement-section .achievements .achievement-item .icon {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: .4em;
+        font-size: 25px; }
+      .two-column #core-template .two-column-left #achievement-section .achievements .achievement-item .single-achievement {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%; }
+        .two-column #core-template .two-column-left #achievement-section .achievements .achievement-item .single-achievement .achievement-label .achievement-label-edit {
+          width: 100%;
+          line-height: 20px;
+          font-size: 18px;
+          font-weight: 700;
+          height: 20px; }
+        .two-column #core-template .two-column-left #achievement-section .achievements .achievement-item .single-achievement .achievement-details .achievement-details-edit {
+          width: 100%;
+          margin-top: .2em;
+          font-size: 13px;
+          font-weight: 400;
+          height: 20px; }
+    .two-column #core-template .two-column-left #experience-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #experience-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #experience-section .experience .experience-item {
+      position: relative;
+      padding-bottom: 10px; }
+      .two-column #core-template .two-column-left #experience-section .experience .experience-item .position-item {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-left #experience-section .experience .experience-item .position-item .position-item-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-left #experience-section .experience .experience-item .company {
+        line-height: 1em; }
+        .two-column #core-template .two-column-left #experience-section .experience .experience-item .company .company-edit {
+          margin-top: .5em;
+          font-size: 15px;
+          font-weight: 700;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 20px; }
+      .two-column #core-template .two-column-left #experience-section .experience .experience-item .date-location {
+        margin-top: 10px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+        /*
+        margin-top: .5em;
+        width: 100%;
+        display: inline-flex;
+
+        .date {
+          display: inline-flex;
+          width: 60%;
+          min-width: 60%;
+          margin: 0;
+          padding: 0;
+
+          .icon {
+            @include sub-icon;
+           // display: inline-block;
+           // margin-right: 1%;
+           // font-size: 13px;
+          }
+
+          .date-edit {
+            margin-right: 1%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            @include icon-label;
+            //font-size: 13px;
+           // font-weight: 400;
+           // height: 15px;
+          }
+        }
+
+        .location {
+          display: inline-flex;
+
+          .icon {
+            @include sub-icon;
+          // margin-right: 2%;
+          //  font-size: 13px;
+          }
+
+          .location-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            @include icon-label;
+            //font-size: 13px;
+            //font-weight: 400;
+           // height: 15px;
+          }
+        } */ }
+        .two-column #core-template .two-column-left #experience-section .experience .experience-item .date-location .date {
+          display: inline-block;
+          word-wrap: break-word;
+          position: relative;
+          vertical-align: top;
+          margin: 0;
+          padding: 0;
+          width: 55%;
+          height: auto; }
+          .two-column #core-template .two-column-left #experience-section .experience .experience-item .date-location .date .icon {
+            width: 8px;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-left #experience-section .experience .experience-item .date-location .date .date-edit {
+            margin-right: 5px;
+            width: 85%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-left #experience-section .experience .experience-item .date-location .location {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          width: 40%; }
+          .two-column #core-template .two-column-left #experience-section .experience .experience-item .date-location .location .icon {
+            width: 3%;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-left #experience-section .experience .experience-item .date-location .location .location-edit {
+            width: 87%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+      .two-column #core-template .two-column-left #experience-section .experience .experience-item .experience-details {
+        position: relative; }
+        .two-column #core-template .two-column-left #experience-section .experience .experience-item .experience-details .details-heading-edit {
+          margin-top: .5em;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 15px;
+          font-weight: 400;
+          flex-grow: 1;
+          height: 18px; }
+        .two-column #core-template .two-column-left #experience-section .experience .experience-item .experience-details .details-description-container {
+          margin-top: .2em; }
+          .two-column #core-template .two-column-left #experience-section .experience .experience-item .experience-details .details-description-container .bullet {
+            font-size: .4em;
+            float: left;
+            margin-right: .7em;
+            margin-top: .8em; }
+          .two-column #core-template .two-column-left #experience-section .experience .experience-item .experience-details .details-description-container .details-content-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            flex-grow: 1;
+            width: 90%;
+            height: 30px; }
+    .two-column #core-template .two-column-left #projects-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #projects-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #projects-section .project-item {
+      position: relative;
+      padding-bottom: 10px; }
+      .two-column #core-template .two-column-left #projects-section .project-item .project-name {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-left #projects-section .project-item .project-name .project-name-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-left #projects-section .project-item .summary {
+        line-height: 1em; }
+        .two-column #core-template .two-column-left #projects-section .project-item .summary .summary-edit {
+          margin-top: .5em;
+          font-size: 15px;
+          font-weight: 700;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 20px; }
+      .two-column #core-template .two-column-left #projects-section .project-item .date-location {
+        margin-top: 10px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+        /* margin-top: .5em;
+      width: 100%;
+      display: inline-flex;
+
+      .date {
+        display: inline-flex;
+        width: 60%;
+        min-width: 60%;
+        margin: 0;
+        padding: 0;
+
+        .icon {
+          @include sub-icon;
+         // display: inline-block;
+         // margin-right: 1%;
+         // font-size: 13px;
+        }
+
+        .date-edit {
+          margin-right: 1%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+         // font-weight: 400;
+         // height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+
+        .icon {
+          @include sub-icon;
+         // margin-right: 2%;
+
+         // font-size: 13px;
+        }
+
+        .location-edit {
+          // width: 40%;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+         // font-size: 13px;
+         // font-weight: 400;
+         // height: 15px;
+        }
+      } */ }
+        .two-column #core-template .two-column-left #projects-section .project-item .date-location .date {
+          display: inline-block;
+          word-wrap: break-word;
+          position: relative;
+          vertical-align: top;
+          margin: 0;
+          padding: 0;
+          width: 55%;
+          height: auto; }
+          .two-column #core-template .two-column-left #projects-section .project-item .date-location .date .icon {
+            width: 8px;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-left #projects-section .project-item .date-location .date .date-edit {
+            margin-right: 5px;
+            width: 85%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-left #projects-section .project-item .date-location .location {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          width: 40%; }
+          .two-column #core-template .two-column-left #projects-section .project-item .date-location .location .icon {
+            width: 3%;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-left #projects-section .project-item .date-location .location .location-edit {
+            width: 87%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+      .two-column #core-template .two-column-left #projects-section .project-item .project-details {
+        position: relative;
+        margin-top: 5px;
+        display: inline-block;
+        width: 100%; }
+        .two-column #core-template .two-column-left #projects-section .project-item .project-details .project-heading-edit {
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 15px;
+          line-height: 15px;
+          font-weight: 400;
+          flex-grow: 1;
+          height: 20px; }
+        .two-column #core-template .two-column-left #projects-section .project-item .project-details .details-description-container {
+          margin-top: .2em; }
+          .two-column #core-template .two-column-left #projects-section .project-item .project-details .details-description-container .bullet {
+            font-size: .4em;
+            float: left;
+            margin-right: .7em;
+            margin-top: 5px; }
+          .two-column #core-template .two-column-left #projects-section .project-item .project-details .details-description-container .details-content-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            flex-grow: 1;
+            width: 90%;
+            height: 30px; }
+    .two-column #core-template .two-column-left #strengths-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #strengths-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #strengths-section .strengths {
+      line-height: 1em; }
+      .two-column #core-template .two-column-left #strengths-section .strengths .strength-item {
+        margin-top: 1em; }
+        .two-column #core-template .two-column-left #strengths-section .strengths .strength-item .icon {
+          display: inline-block;
+          vertical-align: top;
+          padding-right: .4em;
+          font-size: 25px; }
+        .two-column #core-template .two-column-left #strengths-section .strengths .strength-item .single-strength {
+          display: inline-block;
+          vertical-align: top;
+          width: 80%; }
+          .two-column #core-template .two-column-left #strengths-section .strengths .strength-item .single-strength .strength-label .strength-label-edit {
+            width: 100%;
+            margin-top: .5em;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px; }
+          .two-column #core-template .two-column-left #strengths-section .strengths .strength-item .single-strength .strength-details .strength-details-edit {
+            width: 100%;
+            margin-top: .2em;
+            font-size: 13px;
+            font-weight: 400;
+            height: 20px; }
+    .two-column #core-template .two-column-left #volunteer-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #volunteer-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #volunteer-section .volunteer-item {
+      position: relative; }
+      .two-column #core-template .two-column-left #volunteer-section .volunteer-item .position-item {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-left #volunteer-section .volunteer-item .position-item .position-item-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-left #volunteer-section .volunteer-item .company {
+        line-height: 1em; }
+        .two-column #core-template .two-column-left #volunteer-section .volunteer-item .company .company-edit {
+          margin-top: .5em;
+          font-size: 15px;
+          font-weight: 700;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 20px; }
+      .two-column #core-template .two-column-left #volunteer-section .volunteer-item .date-location {
+        margin-top: 10px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+        /*  margin-top: .5em;
+      width: 100%;
+      display: inline-flex;
+
+      .date {
+        display: inline-flex;
+        width: 60%;
+        min-width: 60%;
+        margin: 0;
+        padding: 0;
+
+        .icon {
+          @include sub-icon;
+          //display: inline-block;
+         // margin-right: 1%;
+          //font-size: 13px;
+        }
+
+        .date-edit {
+          margin-right: 1%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+          //font-weight: 400;
+         // height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+
+        .icon {
+          @include sub-icon;
+         // margin-right: 2%;
+         // font-size: 13px;
+        }
+
+        .location-edit {
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+          //font-weight: 400;
+         // height: 15px;
+        }
+      } */ }
+        .two-column #core-template .two-column-left #volunteer-section .volunteer-item .date-location .date {
+          display: inline-block;
+          word-wrap: break-word;
+          position: relative;
+          vertical-align: top;
+          margin: 0;
+          padding: 0;
+          width: 55%;
+          height: auto; }
+          .two-column #core-template .two-column-left #volunteer-section .volunteer-item .date-location .date .icon {
+            width: 8px;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-left #volunteer-section .volunteer-item .date-location .date .date-edit {
+            margin-right: 5px;
+            width: 85%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-left #volunteer-section .volunteer-item .date-location .location {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          width: 40%; }
+          .two-column #core-template .two-column-left #volunteer-section .volunteer-item .date-location .location .icon {
+            width: 3%;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-left #volunteer-section .volunteer-item .date-location .location .location-edit {
+            width: 87%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+      .two-column #core-template .two-column-left #volunteer-section .volunteer-item .volunteer-details {
+        position: relative; }
+        .two-column #core-template .two-column-left #volunteer-section .volunteer-item .volunteer-details .details-heading-edit {
+          margin-top: .5em;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 15px;
+          font-weight: 400;
+          flex-grow: 1;
+          height: 18px; }
+        .two-column #core-template .two-column-left #volunteer-section .volunteer-item .volunteer-details .details-description-container {
+          margin-top: .2em; }
+          .two-column #core-template .two-column-left #volunteer-section .volunteer-item .volunteer-details .details-description-container .bullet {
+            font-size: .4em;
+            float: left;
+            margin-right: .7em;
+            margin-top: .8em; }
+          .two-column #core-template .two-column-left #volunteer-section .volunteer-item .volunteer-details .details-description-container .details-content-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            flex-grow: 1;
+            width: 90%;
+            height: 54px; }
+    .two-column #core-template .two-column-left #course-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #course-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #course-section .courses {
+      width: 100%; }
+      .two-column #core-template .two-column-left #course-section .courses .course-item {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 49%;
+        padding-right: 2px; }
+        .two-column #core-template .two-column-left #course-section .courses .course-item .course-label {
+          display: inline-block;
+          vertical-align: top;
+          width: 100%;
+          margin: 0 2px 2px 2px;
+          line-height: 25px; }
+          .two-column #core-template .two-column-left #course-section .courses .course-item .course-label .course-label-edit {
+            min-width: 98%;
+            line-height: 25px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            height: 30px; }
+    .two-column #core-template .two-column-left #summary-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #summary-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #summary-section .summary {
+      line-height: 1em; }
+      .two-column #core-template .two-column-left #summary-section .summary .summary-item {
+        margin-top: 1em; }
+        .two-column #core-template .two-column-left #summary-section .summary .summary-item .summary-content {
+          display: inline-block;
+          vertical-align: top;
+          width: 100%; }
+          .two-column #core-template .two-column-left #summary-section .summary .summary-item .summary-content .summary-details .summary-details-edit {
+            width: 100%;
+            font-size: 13px;
+            font-weight: 400;
+            height: 50px; }
+    .two-column #core-template .two-column-left #technologies-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #technologies-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #technologies-section .technologies {
+      line-height: 1em;
+      margin-right: auto;
+      margin-left: auto; }
+      .two-column #core-template .two-column-left #technologies-section .technologies .technology-item {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 1px;
+        text-align: center; }
+        .two-column #core-template .two-column-left #technologies-section .technologies .technology-item .icon {
+          display: inline-block;
+          vertical-align: top;
+          padding-right: .2em;
+          font-size: 25px; }
+        .two-column #core-template .two-column-left #technologies-section .technologies .technology-item .technology-label {
+          vertical-align: top; }
+          .two-column #core-template .two-column-left #technologies-section .technologies .technology-item .technology-label .technology-label-edit {
+            width: 130px;
+            text-align: center;
+            margin: 0 2px 2px 2px;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px; }
+      .two-column #core-template .two-column-left #technologies-section .technologies .technology-item ~ .technology-item {
+        margin-top: 1px; }
+    .two-column #core-template .two-column-left #technologies-section .tech-editable {
+      padding: 0;
+      border: 0;
+      outline: none;
+      margin: 0;
+      box-shadow: none;
+      display: block;
+      min-height: 10px;
+      min-width: 20px;
+      background: transparent;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      position: relative;
+      z-index: 1; }
+    .two-column #core-template .two-column-left #technologies-section .editable-wrapper {
+      position: relative;
+      flex-grow: 1; }
+    .two-column #core-template .two-column-left #technologies-section .editable-wrapper-inline {
+      display: inline-block; }
+    .two-column #core-template .two-column-left #technologies-section .editable-field::placeholder, .two-column #core-template .two-column-left #technologies-section .editable-field input::placeholder, .two-column #core-template .two-column-left #technologies-section .date-range-label {
+      color: #686868 !important;
+      opacity: 1 !important; }
+    .two-column #core-template .two-column-left #skills-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-left #skills-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-left #skills-section .skills {
+      width: 100%;
+      line-height: 1em; }
+      .two-column #core-template .two-column-left #skills-section .skills .skill-item {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 5px;
+        width: 49%; }
+        .two-column #core-template .two-column-left #skills-section .skills .skill-item .icon {
+          display: inline-block;
+          vertical-align: top;
+          padding-right: .2em;
+          font-size: 25px;
+          width: 1em; }
+        .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label {
+          display: inline-block;
+          vertical-align: top;
+          margin-bottom: 5px;
+          width: 80%; }
+          .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .skill-label-edit {
+            width: 100%;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px; }
+          .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container {
+            width: 100%;
+            border: 2px solid black;
+            padding: 2px;
+            border-radius: 10px; }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-1 {
+              width: 10%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-2 {
+              width: 20%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-3 {
+              width: 30%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-4 {
+              width: 40%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-5 {
+              width: 50%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-6 {
+              width: 60%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-7 {
+              width: 70%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-8 {
+              width: 80%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-9 {
+              width: 90%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-left #skills-section .skills .skill-item .skill-label .visual-level-container .level-10 {
+              width: 99%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+  .two-column #core-template .two-column-right {
+    display: block;
+    padding-right: 5%;
+    padding-left: 2.5%;
+    width: 40%;
+    float: right; }
+    .two-column #core-template .two-column-right .editable {
+      padding: 0;
+      border: 0;
+      resize: none;
+      width: 100%;
+      outline: none;
+      margin: 0;
+      box-shadow: none;
+      display: block;
+      min-height: 10px;
+      background: transparent;
+      overflow-y: hidden;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      text-size-adjust: none;
+      position: relative;
+      z-index: 1; }
+    .two-column #core-template .two-column-right .editable-wrapper {
+      position: relative;
+      flex-grow: 1; }
+    .two-column #core-template .two-column-right .editable-wrapper-inline {
+      display: inline-block; }
+    .two-column #core-template .two-column-right .editable-field::placeholder, .two-column #core-template .two-column-right .editable-field input::placeholder, .two-column #core-template .two-column-right .date-range-label {
+      color: #686868 !important;
+      opacity: 1 !important; }
+    .two-column #core-template .two-column-right #experience-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #experience-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #experience-section .experience .experience-item {
+      position: relative;
+      padding-bottom: 10px; }
+      .two-column #core-template .two-column-right #experience-section .experience .experience-item .position-item {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-right #experience-section .experience .experience-item .position-item .position-item-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-right #experience-section .experience .experience-item .company {
+        line-height: 1em; }
+        .two-column #core-template .two-column-right #experience-section .experience .experience-item .company .company-edit {
+          margin-top: .5em;
+          font-size: 15px;
+          font-weight: 700;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 20px; }
+      .two-column #core-template .two-column-right #experience-section .experience .experience-item .date-location {
+        margin-top: 10px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+        /*
+        margin-top: .5em;
+        width: 100%;
+        display: inline-flex;
+
+        .date {
+          display: inline-flex;
+          width: 60%;
+          min-width: 60%;
+          margin: 0;
+          padding: 0;
+
+          .icon {
+            @include sub-icon;
+           // display: inline-block;
+           // margin-right: 1%;
+           // font-size: 13px;
+          }
+
+          .date-edit {
+            margin-right: 1%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            @include icon-label;
+            //font-size: 13px;
+           // font-weight: 400;
+           // height: 15px;
+          }
+        }
+
+        .location {
+          display: inline-flex;
+
+          .icon {
+            @include sub-icon;
+          // margin-right: 2%;
+          //  font-size: 13px;
+          }
+
+          .location-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            @include icon-label;
+            //font-size: 13px;
+            //font-weight: 400;
+           // height: 15px;
+          }
+        } */ }
+        .two-column #core-template .two-column-right #experience-section .experience .experience-item .date-location .date {
+          display: inline-block;
+          word-wrap: break-word;
+          position: relative;
+          vertical-align: top;
+          margin: 0;
+          padding: 0;
+          width: 55%;
+          height: auto; }
+          .two-column #core-template .two-column-right #experience-section .experience .experience-item .date-location .date .icon {
+            width: 8px;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-right #experience-section .experience .experience-item .date-location .date .date-edit {
+            margin-right: 5px;
+            width: 85%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-right #experience-section .experience .experience-item .date-location .location {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          width: 40%; }
+          .two-column #core-template .two-column-right #experience-section .experience .experience-item .date-location .location .icon {
+            width: 3%;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-right #experience-section .experience .experience-item .date-location .location .location-edit {
+            width: 87%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+      .two-column #core-template .two-column-right #experience-section .experience .experience-item .experience-details {
+        position: relative; }
+        .two-column #core-template .two-column-right #experience-section .experience .experience-item .experience-details .details-heading-edit {
+          margin-top: .5em;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 15px;
+          font-weight: 400;
+          flex-grow: 1;
+          height: 18px; }
+        .two-column #core-template .two-column-right #experience-section .experience .experience-item .experience-details .details-description-container {
+          margin-top: .2em; }
+          .two-column #core-template .two-column-right #experience-section .experience .experience-item .experience-details .details-description-container .bullet {
+            font-size: .4em;
+            float: left;
+            margin-right: .7em;
+            margin-top: .8em; }
+          .two-column #core-template .two-column-right #experience-section .experience .experience-item .experience-details .details-description-container .details-content-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            flex-grow: 1;
+            width: 90%;
+            height: 30px; }
+    .two-column #core-template .two-column-right #projects-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #projects-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #projects-section .project-item {
+      position: relative;
+      padding-bottom: 10px; }
+      .two-column #core-template .two-column-right #projects-section .project-item .project-name {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-right #projects-section .project-item .project-name .project-name-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-right #projects-section .project-item .summary {
+        line-height: 1em; }
+        .two-column #core-template .two-column-right #projects-section .project-item .summary .summary-edit {
+          margin-top: .5em;
+          font-size: 15px;
+          font-weight: 700;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 20px; }
+      .two-column #core-template .two-column-right #projects-section .project-item .date-location {
+        margin-top: 10px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+        /* margin-top: .5em;
+      width: 100%;
+      display: inline-flex;
+
+      .date {
+        display: inline-flex;
+        width: 60%;
+        min-width: 60%;
+        margin: 0;
+        padding: 0;
+
+        .icon {
+          @include sub-icon;
+         // display: inline-block;
+         // margin-right: 1%;
+         // font-size: 13px;
+        }
+
+        .date-edit {
+          margin-right: 1%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+         // font-weight: 400;
+         // height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+
+        .icon {
+          @include sub-icon;
+         // margin-right: 2%;
+
+         // font-size: 13px;
+        }
+
+        .location-edit {
+          // width: 40%;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+         // font-size: 13px;
+         // font-weight: 400;
+         // height: 15px;
+        }
+      } */ }
+        .two-column #core-template .two-column-right #projects-section .project-item .date-location .date {
+          display: inline-block;
+          word-wrap: break-word;
+          position: relative;
+          vertical-align: top;
+          margin: 0;
+          padding: 0;
+          width: 55%;
+          height: auto; }
+          .two-column #core-template .two-column-right #projects-section .project-item .date-location .date .icon {
+            width: 8px;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-right #projects-section .project-item .date-location .date .date-edit {
+            margin-right: 5px;
+            width: 85%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-right #projects-section .project-item .date-location .location {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          width: 40%; }
+          .two-column #core-template .two-column-right #projects-section .project-item .date-location .location .icon {
+            width: 3%;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-right #projects-section .project-item .date-location .location .location-edit {
+            width: 87%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+      .two-column #core-template .two-column-right #projects-section .project-item .project-details {
+        position: relative;
+        margin-top: 5px;
+        display: inline-block;
+        width: 100%; }
+        .two-column #core-template .two-column-right #projects-section .project-item .project-details .project-heading-edit {
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 15px;
+          line-height: 15px;
+          font-weight: 400;
+          flex-grow: 1;
+          height: 20px; }
+        .two-column #core-template .two-column-right #projects-section .project-item .project-details .details-description-container {
+          margin-top: .2em; }
+          .two-column #core-template .two-column-right #projects-section .project-item .project-details .details-description-container .bullet {
+            font-size: .4em;
+            float: left;
+            margin-right: .7em;
+            margin-top: 5px; }
+          .two-column #core-template .two-column-right #projects-section .project-item .project-details .details-description-container .details-content-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            flex-grow: 1;
+            width: 90%;
+            height: 30px; }
+    .two-column #core-template .two-column-right #education-section {
+      display: block; }
+      .two-column #core-template .two-column-right #education-section .section-heading {
+        padding-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 3px solid black; }
+        .two-column #core-template .two-column-right #education-section .section-heading .section-heading-edit {
+          text-transform: uppercase;
+          display: inline-block;
+          width: 100%;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 25px;
+          color: #333;
+          font-weight: 700; }
+      .two-column #core-template .two-column-right #education-section .education .program-details .school-item {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-right #education-section .education .program-details .school-item .school-item-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-right #education-section .education .program-details .edu-container {
+        width: 100%; }
+        .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-one {
+          width: 70%;
+          display: inline-block;
+          vertical-align: top; }
+          .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-one .study-item {
+            line-height: 1em; }
+            .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-one .study-item .study-item-edit {
+              margin-top: .5em;
+              font-size: 15px;
+              font-weight: 700;
+              overflow-wrap: break-word;
+              display: inline-block;
+              height: 20px; }
+          .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-one .study-dates .date-icon {
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block;
+            float: left; }
+          .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-one .study-dates .study-dates-edit {
+            width: 80%;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-two {
+          width: 28%;
+          display: inline-block;
+          vertical-align: top; }
+          .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-two .ranking-container {
+            width: 100%;
+            text-align: center;
+            display: inline-block; }
+            .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-two .ranking-container .ranking-item-one {
+              display: inline-block;
+              vertical-align: top;
+              width: 40%;
+              height: 20px !important;
+              color: #686868;
+              text-align: right; }
+            .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-two .ranking-container .ranking-item-two {
+              display: inline-block;
+              vertical-align: top;
+              width: 40%;
+              height: 20px !important;
+              color: #686868;
+              text-align: left; }
+            .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-two .ranking-container .separator {
+              display: inline-block;
+              position: relative;
+              vertical-align: top; }
+            .two-column #core-template .two-column-right #education-section .education .program-details .edu-container .container-two .ranking-container h4 {
+              font-size: 13px;
+              margin-top: 0;
+              margin-bottom: 0;
+              text-align: center; }
+    .two-column #core-template .two-column-right #language-section .unselected-color {
+      color: #4b4b4b !important; }
+    .two-column #core-template .two-column-right #language-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #language-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #language-section .languages {
+      width: 100%; }
+      .two-column #core-template .two-column-right #language-section .languages .language-item {
+        vertical-align: top;
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: 220px;
+        line-height: 20px; }
+        .two-column #core-template .two-column-right #language-section .languages .language-item .language-details {
+          display: inline-block;
+          vertical-align: top;
+          width: 47%; }
+          .two-column #core-template .two-column-right #language-section .languages .language-item .language-details .language-name {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%; }
+            .two-column #core-template .two-column-right #language-section .languages .language-item .language-details .language-name .language-name-edit {
+              width: 100%;
+              overflow-y: hidden;
+              font-size: 18px;
+              font-weight: 400;
+              height: 22px; }
+          .two-column #core-template .two-column-right #language-section .languages .language-item .language-details .fluency-level {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%; }
+            .two-column #core-template .two-column-right #language-section .languages .language-item .language-details .fluency-level .fluency-level-edit {
+              width: 100%;
+              font-size: 13px;
+              font-weight: 400;
+              height: 20px; }
+        .two-column #core-template .two-column-right #language-section .languages .language-item .fluency-display {
+          display: inline-flex;
+          flex-direction: row;
+          align-self: flex-start;
+          vertical-align: top;
+          width: 50%;
+          padding-left: .5em;
+          padding-top: .5em; }
+          .two-column #core-template .two-column-right #language-section .languages .language-item .fluency-display .fluency-display-container .fluency-icon {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 17px;
+            padding-right: 1px; }
+    .two-column #core-template .two-column-right #passion-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #passion-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #passion-section .passions {
+      width: 100%;
+      line-height: 20px; }
+      .two-column #core-template .two-column-right #passion-section .passions .passion-item {
+        display: inline-flex;
+        flex-wrap: wrap;
+        vertical-align: top;
+        width: 220px; }
+        .two-column #core-template .two-column-right #passion-section .passions .passion-item .icon {
+          width: 18%;
+          display: inline-block;
+          vertical-align: top;
+          font-size: 25px; }
+        .two-column #core-template .two-column-right #passion-section .passions .passion-item .passion-label {
+          display: inline-block;
+          vertical-align: top;
+          width: 80%; }
+          .two-column #core-template .two-column-right #passion-section .passions .passion-item .passion-label .passion-label-edit {
+            width: 100%;
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            height: 20px; }
+    .two-column #core-template .two-column-right #achievement-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #achievement-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #achievement-section .achievements {
+      line-height: 20px; }
+      .two-column #core-template .two-column-right #achievement-section .achievements .achievement-item .icon {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: .4em;
+        font-size: 25px; }
+      .two-column #core-template .two-column-right #achievement-section .achievements .achievement-item .single-achievement {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%; }
+        .two-column #core-template .two-column-right #achievement-section .achievements .achievement-item .single-achievement .achievement-label .achievement-label-edit {
+          width: 100%;
+          line-height: 20px;
+          font-size: 18px;
+          font-weight: 700;
+          height: 20px; }
+        .two-column #core-template .two-column-right #achievement-section .achievements .achievement-item .single-achievement .achievement-details .achievement-details-edit {
+          width: 100%;
+          margin-top: .2em;
+          font-size: 13px;
+          font-weight: 400;
+          height: 20px; }
+    .two-column #core-template .two-column-right #strengths-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #strengths-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #strengths-section .strengths {
+      line-height: 1em; }
+      .two-column #core-template .two-column-right #strengths-section .strengths .strength-item {
+        margin-top: 1em; }
+        .two-column #core-template .two-column-right #strengths-section .strengths .strength-item .icon {
+          display: inline-block;
+          vertical-align: top;
+          padding-right: .4em;
+          font-size: 25px; }
+        .two-column #core-template .two-column-right #strengths-section .strengths .strength-item .single-strength {
+          display: inline-block;
+          vertical-align: top;
+          width: 80%; }
+          .two-column #core-template .two-column-right #strengths-section .strengths .strength-item .single-strength .strength-label .strength-label-edit {
+            width: 100%;
+            margin-top: .5em;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px; }
+          .two-column #core-template .two-column-right #strengths-section .strengths .strength-item .single-strength .strength-details .strength-details-edit {
+            width: 100%;
+            margin-top: .2em;
+            font-size: 13px;
+            font-weight: 400;
+            height: 20px; }
+    .two-column #core-template .two-column-right #volunteer-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #volunteer-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #volunteer-section .volunteer-item {
+      position: relative; }
+      .two-column #core-template .two-column-right #volunteer-section .volunteer-item .position-item {
+        margin-top: .7em;
+        width: 100%;
+        overflow-wrap: break-word;
+        display: inline-block; }
+        .two-column #core-template .two-column-right #volunteer-section .volunteer-item .position-item .position-item-edit {
+          font-size: 21px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 25px; }
+      .two-column #core-template .two-column-right #volunteer-section .volunteer-item .company {
+        line-height: 1em; }
+        .two-column #core-template .two-column-right #volunteer-section .volunteer-item .company .company-edit {
+          margin-top: .5em;
+          font-size: 15px;
+          font-weight: 700;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 20px; }
+      .two-column #core-template .two-column-right #volunteer-section .volunteer-item .date-location {
+        margin-top: 10px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+        /*  margin-top: .5em;
+      width: 100%;
+      display: inline-flex;
+
+      .date {
+        display: inline-flex;
+        width: 60%;
+        min-width: 60%;
+        margin: 0;
+        padding: 0;
+
+        .icon {
+          @include sub-icon;
+          //display: inline-block;
+         // margin-right: 1%;
+          //font-size: 13px;
+        }
+
+        .date-edit {
+          margin-right: 1%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+          //font-weight: 400;
+         // height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+
+        .icon {
+          @include sub-icon;
+         // margin-right: 2%;
+         // font-size: 13px;
+        }
+
+        .location-edit {
+          overflow: hidden;
+          word-wrap: break-word;
+          @include icon-label;
+          //font-size: 13px;
+          //font-weight: 400;
+         // height: 15px;
+        }
+      } */ }
+        .two-column #core-template .two-column-right #volunteer-section .volunteer-item .date-location .date {
+          display: inline-block;
+          word-wrap: break-word;
+          position: relative;
+          vertical-align: top;
+          margin: 0;
+          padding: 0;
+          width: 55%;
+          height: auto; }
+          .two-column #core-template .two-column-right #volunteer-section .volunteer-item .date-location .date .icon {
+            width: 8px;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-right #volunteer-section .volunteer-item .date-location .date .date-edit {
+            margin-right: 5px;
+            width: 85%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+        .two-column #core-template .two-column-right #volunteer-section .volunteer-item .date-location .location {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          width: 40%; }
+          .two-column #core-template .two-column-right #volunteer-section .volunteer-item .date-location .location .icon {
+            width: 3%;
+            font-size: 13px;
+            margin-right: 5px;
+            display: inline-block; }
+          .two-column #core-template .two-column-right #volunteer-section .volunteer-item .date-location .location .location-edit {
+            width: 87%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 15px; }
+      .two-column #core-template .two-column-right #volunteer-section .volunteer-item .volunteer-details {
+        position: relative; }
+        .two-column #core-template .two-column-right #volunteer-section .volunteer-item .volunteer-details .details-heading-edit {
+          margin-top: .5em;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 15px;
+          font-weight: 400;
+          flex-grow: 1;
+          height: 18px; }
+        .two-column #core-template .two-column-right #volunteer-section .volunteer-item .volunteer-details .details-description-container {
+          margin-top: .2em; }
+          .two-column #core-template .two-column-right #volunteer-section .volunteer-item .volunteer-details .details-description-container .bullet {
+            font-size: .4em;
+            float: left;
+            margin-right: .7em;
+            margin-top: .8em; }
+          .two-column #core-template .two-column-right #volunteer-section .volunteer-item .volunteer-details .details-description-container .details-content-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            font-size: 13px;
+            font-weight: 400;
+            flex-grow: 1;
+            width: 90%;
+            height: 54px; }
+    .two-column #core-template .two-column-right #course-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #course-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #course-section .courses {
+      width: 100%; }
+      .two-column #core-template .two-column-right #course-section .courses .course-item {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 49%;
+        padding-right: 2px; }
+        .two-column #core-template .two-column-right #course-section .courses .course-item .course-label {
+          display: inline-block;
+          vertical-align: top;
+          width: 100%;
+          margin: 0 2px 2px 2px;
+          line-height: 25px; }
+          .two-column #core-template .two-column-right #course-section .courses .course-item .course-label .course-label-edit {
+            min-width: 98%;
+            line-height: 25px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            height: 30px; }
+    .two-column #core-template .two-column-right #summary-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #summary-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #summary-section .summary {
+      line-height: 1em; }
+      .two-column #core-template .two-column-right #summary-section .summary .summary-item {
+        margin-top: 1em; }
+        .two-column #core-template .two-column-right #summary-section .summary .summary-item .summary-content {
+          display: inline-block;
+          vertical-align: top;
+          width: 100%; }
+          .two-column #core-template .two-column-right #summary-section .summary .summary-item .summary-content .summary-details .summary-details-edit {
+            width: 100%;
+            font-size: 13px;
+            font-weight: 400;
+            height: 50px; }
+    .two-column #core-template .two-column-right #technologies-section .tech-editable {
+      padding: 0;
+      border: 0;
+      outline: none;
+      margin: 0;
+      box-shadow: none;
+      display: block;
+      min-height: 10px;
+      min-width: 20px;
+      background: transparent;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      position: relative;
+      z-index: 1; }
+    .two-column #core-template .two-column-right #technologies-section .editable-wrapper {
+      position: relative;
+      flex-grow: 1; }
+    .two-column #core-template .two-column-right #technologies-section .editable-wrapper-inline {
+      display: inline-block; }
+    .two-column #core-template .two-column-right #technologies-section .editable-field::placeholder, .two-column #core-template .two-column-right #technologies-section .editable-field input::placeholder, .two-column #core-template .two-column-right #technologies-section .date-range-label {
+      color: #686868 !important;
+      opacity: 1 !important; }
+    .two-column #core-template .two-column-right #technologies-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #technologies-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #technologies-section .technologies {
+      line-height: 1em;
+      margin-right: auto;
+      margin-left: auto; }
+      .two-column #core-template .two-column-right #technologies-section .technologies .technology-item {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 1px;
+        text-align: center; }
+        .two-column #core-template .two-column-right #technologies-section .technologies .technology-item .icon {
+          display: inline-block;
+          vertical-align: top;
+          padding-right: .2em;
+          font-size: 25px; }
+        .two-column #core-template .two-column-right #technologies-section .technologies .technology-item .technology-label {
+          vertical-align: top; }
+          .two-column #core-template .two-column-right #technologies-section .technologies .technology-item .technology-label .technology-label-edit {
+            width: 130px;
+            text-align: center;
+            margin: 0 2px 2px 2px;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px; }
+      .two-column #core-template .two-column-right #technologies-section .technologies .technology-item ~ .technology-item {
+        margin-top: 1px; }
+    .two-column #core-template .two-column-right #skills-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .two-column #core-template .two-column-right #skills-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .two-column #core-template .two-column-right #skills-section .skills {
+      width: 100%;
+      line-height: 1em; }
+      .two-column #core-template .two-column-right #skills-section .skills .skill-item {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 5px;
+        width: 49%; }
+        .two-column #core-template .two-column-right #skills-section .skills .skill-item .icon {
+          display: inline-block;
+          vertical-align: top;
+          padding-right: .2em;
+          font-size: 25px;
+          width: 1em; }
+        .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label {
+          display: inline-block;
+          vertical-align: top;
+          margin-bottom: 5px;
+          width: 80%; }
+          .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .skill-label-edit {
+            width: 100%;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px; }
+          .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container {
+            width: 100%;
+            border: 2px solid black;
+            padding: 2px;
+            border-radius: 10px; }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-1 {
+              width: 10%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-2 {
+              width: 20%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-3 {
+              width: 30%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-4 {
+              width: 40%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-5 {
+              width: 50%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-6 {
+              width: 60%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-7 {
+              width: 70%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-8 {
+              width: 80%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-9 {
+              width: 90%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+            .two-column #core-template .two-column-right #skills-section .skills .skill-item .skill-label .visual-level-container .level-10 {
+              width: 99%;
+              height: 20px;
+              padding: 2px 0 1px 2px;
+              background-clip: content-box;
+              background-color: #f5f4f7;
+              background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); }
+
+.one-column #core-template {
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  background: #fff;
+  font: 15px Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin-left: 42.5px;
+  margin-right: 42.5px;
+  margin-bottom: 85px;
+  border: 1px solid black; }
+  .one-column #core-template .editable {
+    padding: 0;
+    border: 0;
+    resize: none;
+    width: 100%;
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+    min-height: 10px;
+    background: transparent;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    text-size-adjust: none;
+    position: relative;
+    z-index: 1; }
+  .one-column #core-template .editable-wrapper {
+    position: relative;
+    flex-grow: 1; }
+  .one-column #core-template .editable-wrapper-inline {
+    display: inline-block; }
+  .one-column #core-template .editable-field::placeholder, .one-column #core-template .editable-field input::placeholder, .one-column #core-template .date-range-label {
+    color: #686868 !important;
+    opacity: 1 !important; }
+  .one-column #core-template #header-section {
+    margin: 7% 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
+    position: relative; }
+    .one-column #core-template #header-section .header-words {
+      left: 0; }
+      .one-column #core-template #header-section .header-words .name {
+        width: 70%; }
+        .one-column #core-template #header-section .header-words .name .name-edit {
+          line-height: 1em;
+          font-size: 42px;
+          font-weight: 600 !important;
+          color: #000000;
+          overflow-x: visible !important;
+          word-wrap: break-word;
+          height: 50px;
+          text-transform: uppercase; }
+      .one-column #core-template #header-section .header-words .heading {
+        width: 70%; }
+        .one-column #core-template #header-section .header-words .heading .heading-edit {
+          line-height: 1em;
+          width: 100%;
+          font-size: 21px;
+          overflow: hidden;
+          word-wrap: break-word;
+          height: 25px;
+          font-weight: 600 !important; }
+    .one-column #core-template #header-section .header-picture {
+      position: absolute;
+      top: 21px;
+      right: 30px;
+      z-index: 1; }
+      .one-column #core-template #header-section .header-picture .photo-round {
+        border-radius: 50%; }
+      .one-column #core-template #header-section .header-picture .photo {
+        z-index: 1;
+        vertical-align: top;
+        display: inline-block;
+        height: 150px;
+        width: 150px;
+        float: right;
+        transition: border-radius 0.5s;
+        background-size: cover;
+        background-repeat: no-repeat;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -o-crisp-edges;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor; }
+    .one-column #core-template #header-section .contact-details {
+      width: 80%;
+      padding-top: 10px;
+      display: inline-flex; }
+      .one-column #core-template #header-section .contact-details .contact-col-one .contact .icon {
+        margin-right: 5px;
+        font-size: 13px;
+        float: left; }
+      .one-column #core-template #header-section .contact-details .contact-col-one .contact .contact-edit {
+        width: 87%;
+        margin-top: .5em;
+        font-size: 13px;
+        font-weight: 400;
+        height: 28px; }
+      .one-column #core-template #header-section .contact-details .contact-col-two .contact .icon {
+        margin-right: 5px;
+        font-size: 13px;
+        float: left; }
+      .one-column #core-template #header-section .contact-details .contact-col-two .contact .contact-edit {
+        width: 87%;
+        margin-top: .5em;
+        font-size: 13px;
+        font-weight: 400;
+        height: 28px; }
+  .one-column #core-template .editable {
+    padding: 0;
+    border: 0;
+    resize: none;
+    width: 100%;
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+    min-height: 10px;
+    background: transparent;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    text-size-adjust: none;
+    position: relative;
+    z-index: 1; }
+  .one-column #core-template .editable-wrapper {
+    position: relative;
+    flex-grow: 1; }
+  .one-column #core-template .editable-wrapper-inline {
+    display: inline-block; }
+  .one-column #core-template .editable-field::placeholder, .one-column #core-template .editable-field input::placeholder, .one-column #core-template .date-range-label {
+    color: #686868 !important;
+    opacity: 1 !important; }
+  .one-column #core-template #education-section {
+    display: block; }
+    .one-column #core-template #education-section .section-heading {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid black; }
+      .one-column #core-template #education-section .section-heading .section-heading-edit {
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 25px;
+        color: #333;
+        font-weight: 700; }
+    .one-column #core-template #education-section .education .program-details .school-item {
+      margin-top: .7em;
+      width: 100%;
+      overflow-wrap: break-word;
+      display: inline-block; }
+      .one-column #core-template #education-section .education .program-details .school-item .school-item-edit {
+        font-size: 21px;
+        font-weight: 400;
+        overflow-wrap: break-word;
+        display: inline-block;
+        height: 25px; }
+    .one-column #core-template #education-section .education .program-details .edu-container {
+      width: 100%; }
+      .one-column #core-template #education-section .education .program-details .edu-container .container-one {
+        width: 70%;
+        display: inline-block;
+        vertical-align: top; }
+        .one-column #core-template #education-section .education .program-details .edu-container .container-one .study-item {
+          line-height: 1em; }
+          .one-column #core-template #education-section .education .program-details .edu-container .container-one .study-item .study-item-edit {
+            margin-top: .5em;
+            font-size: 15px;
+            font-weight: 700;
+            overflow-wrap: break-word;
+            display: inline-block;
+            height: 20px; }
+        .one-column #core-template #education-section .education .program-details .edu-container .container-one .study-dates .date-icon {
+          font-size: 13px;
+          margin-right: 5px;
+          display: inline-block;
+          float: left; }
+        .one-column #core-template #education-section .education .program-details .edu-container .container-one .study-dates .study-dates-edit {
+          width: 80%;
+          display: inline-block;
+          font-size: 13px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 15px; }
+      .one-column #core-template #education-section .education .program-details .edu-container .container-two {
+        width: 28%;
+        display: inline-block;
+        vertical-align: top; }
+        .one-column #core-template #education-section .education .program-details .edu-container .container-two .ranking-container {
+          width: 100%;
+          text-align: center;
+          display: inline-block; }
+          .one-column #core-template #education-section .education .program-details .edu-container .container-two .ranking-container .ranking-item-one {
+            display: inline-block;
+            vertical-align: top;
+            width: 40%;
+            height: 20px !important;
+            color: #686868;
+            text-align: right; }
+          .one-column #core-template #education-section .education .program-details .edu-container .container-two .ranking-container .ranking-item-two {
+            display: inline-block;
+            vertical-align: top;
+            width: 40%;
+            height: 20px !important;
+            color: #686868;
+            text-align: left; }
+          .one-column #core-template #education-section .education .program-details .edu-container .container-two .ranking-container .separator {
+            display: inline-block;
+            position: relative;
+            vertical-align: top; }
+          .one-column #core-template #education-section .education .program-details .edu-container .container-two .ranking-container h4 {
+            font-size: 13px;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center; }
+  .one-column #core-template .editable {
+    padding: 0;
+    border: 0;
+    resize: none;
+    width: 100%;
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+    min-height: 10px;
+    background: transparent;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    text-size-adjust: none;
+    position: relative;
+    z-index: 1; }
+  .one-column #core-template .editable-wrapper {
+    position: relative;
+    flex-grow: 1; }
+  .one-column #core-template .editable-wrapper-inline {
+    display: inline-block; }
+  .one-column #core-template .editable-field::placeholder, .one-column #core-template .editable-field input::placeholder, .one-column #core-template .date-range-label {
+    color: #686868 !important;
+    opacity: 1 !important; }
+  .one-column #core-template #experience-section .section-heading {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid black; }
+    .one-column #core-template #experience-section .section-heading .section-heading-edit {
+      text-transform: uppercase;
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      word-wrap: break-word;
+      font-size: 25px;
+      color: #333;
+      font-weight: 700; }
+  .one-column #core-template #experience-section .experience .experience-item {
+    position: relative;
+    padding-bottom: 10px; }
+    .one-column #core-template #experience-section .experience .experience-item .position-item {
+      margin-top: .7em;
+      width: 100%;
+      overflow-wrap: break-word;
+      display: inline-block; }
+      .one-column #core-template #experience-section .experience .experience-item .position-item .position-item-edit {
+        font-size: 21px;
+        font-weight: 400;
+        overflow-wrap: break-word;
+        display: inline-block;
+        height: 25px; }
+    .one-column #core-template #experience-section .experience .experience-item .company {
+      line-height: 1em; }
+      .one-column #core-template #experience-section .experience .experience-item .company .company-edit {
+        margin-top: .5em;
+        font-size: 15px;
+        font-weight: 700;
+        overflow-wrap: break-word;
+        display: inline-block;
+        height: 20px; }
+    .one-column #core-template #experience-section .experience .experience-item .date-location {
+      margin-top: 10px;
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+      /*
+        margin-top: .5em;
+        width: 100%;
+        display: inline-flex;
+
+        .date {
+          display: inline-flex;
+          width: 60%;
+          min-width: 60%;
+          margin: 0;
+          padding: 0;
+
+          .icon {
+            @include sub-icon;
+           // display: inline-block;
+           // margin-right: 1%;
+           // font-size: 13px;
+          }
+
+          .date-edit {
+            margin-right: 1%;
+            display: inline-block;
+            overflow: hidden;
+            word-wrap: break-word;
+            @include icon-label;
+            //font-size: 13px;
+           // font-weight: 400;
+           // height: 15px;
+          }
+        }
+
+        .location {
+          display: inline-flex;
+
+          .icon {
+            @include sub-icon;
+          // margin-right: 2%;
+          //  font-size: 13px;
+          }
+
+          .location-edit {
+            overflow: hidden;
+            word-wrap: break-word;
+            @include icon-label;
+            //font-size: 13px;
+            //font-weight: 400;
+           // height: 15px;
+          }
+        } */ }
+      .one-column #core-template #experience-section .experience .experience-item .date-location .date {
+        display: inline-block;
+        word-wrap: break-word;
+        position: relative;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        width: 55%;
+        height: auto; }
+        .one-column #core-template #experience-section .experience .experience-item .date-location .date .icon {
+          width: 8px;
+          font-size: 13px;
+          margin-right: 5px;
+          display: inline-block; }
+        .one-column #core-template #experience-section .experience .experience-item .date-location .date .date-edit {
+          margin-right: 5px;
+          width: 85%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 13px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 15px; }
+      .one-column #core-template #experience-section .experience .experience-item .date-location .location {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 40%; }
+        .one-column #core-template #experience-section .experience .experience-item .date-location .location .icon {
+          width: 3%;
+          font-size: 13px;
+          margin-right: 5px;
+          display: inline-block; }
+        .one-column #core-template #experience-section .experience .experience-item .date-location .location .location-edit {
+          width: 87%;
+          display: inline-block;
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 13px;
+          font-weight: 400;
+          overflow-wrap: break-word;
+          display: inline-block;
+          height: 15px; }
+    .one-column #core-template #experience-section .experience .experience-item .experience-details {
+      position: relative; }
+      .one-column #core-template #experience-section .experience .experience-item .experience-details .details-heading-edit {
+        margin-top: .5em;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 15px;
+        font-weight: 400;
+        flex-grow: 1;
+        height: 18px; }
+      .one-column #core-template #experience-section .experience .experience-item .experience-details .details-description-container {
+        margin-top: .2em; }
+        .one-column #core-template #experience-section .experience .experience-item .experience-details .details-description-container .bullet {
+          font-size: .4em;
+          float: left;
+          margin-right: .7em;
+          margin-top: .8em; }
+        .one-column #core-template #experience-section .experience .experience-item .experience-details .details-description-container .details-content-edit {
+          overflow: hidden;
+          word-wrap: break-word;
+          font-size: 13px;
+          font-weight: 400;
+          flex-grow: 1;
+          width: 90%;
+          height: 30px; }
+  .one-column #core-template .editable {
+    padding: 0;
+    border: 0;
+    resize: none;
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+    min-height: 10px;
+    background: transparent;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    z-index: 1; }
+  .one-column #core-template .editable-wrapper {
+    position: relative;
+    flex-grow: 1; }
+  .one-column #core-template .editable-wrapper-inline {
+    display: inline-block; }
+  .one-column #core-template .editable-field::placeholder, .one-column #core-template .editable-field input::placeholder, .one-column #core-template .date-range-label {
+    color: #686868 !important;
+    opacity: 1 !important; }
+  .one-column #core-template .first-color {
+    color: #000000 !important; }
+    .one-column #core-template .first-color::-webkit-input-placeholder,
+    .one-column #core-template .first-color input::-webkit-input-placeholder {
+      color: #000000 !important; }
+    .one-column #core-template .first-color:-moz-placeholder,
+    .one-column #core-template .first-color input:-moz-placeholder {
+      color: #000000 !important; }
+    .one-column #core-template .first-color::-moz-placeholder,
+    .one-column #core-template .first-color input::-moz-placeholder {
+      color: #000000 !important; }
+    .one-column #core-template .first-color:-ms-input-placeholder,
+    .one-column #core-template .first-color input:-ms-input-placeholder {
+      color: #000000 !important; }
+  .one-column #core-template .second-color {
+    color: #686868 !important; }
+    .one-column #core-template .second-color::-webkit-input-placeholder,
+    .one-column #core-template .second-color input::-webkit-input-placeholder {
+      color: #686868 !important; }
+    .one-column #core-template .second-color:-moz-placeholder,
+    .one-column #core-template .second-color input:-moz-placeholder {
+      color: #686868 !important; }
+    .one-column #core-template .second-color::-moz-placeholder,
+    .one-column #core-template .second-color input::-moz-placeholder {
+      color: #686868 !important; }
+    .one-column #core-template .second-color:-ms-input-placeholder,
+    .one-column #core-template .second-color input:-ms-input-placeholder {
+      color: #686868 !important; }

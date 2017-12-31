@@ -1,0 +1,5 @@
+--check for whitespace added before data items (i.e. user info)
+-- remove editable class from items that are templated that are textareas in the base version.
+
+
+-- columns class was being calculate to have a height of 850, and header section was also calculated to have a height of 850

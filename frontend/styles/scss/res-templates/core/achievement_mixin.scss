@@ -1,0 +1,51 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+
+
+@mixin achievement-section {
+
+  @include section-heading;
+
+
+  .achievements {
+    line-height: 20px;
+
+    .achievement-item {
+
+      .icon {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: .4em;
+        font-size: 25px;
+      }
+
+      .single-achievement {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%;
+
+        .achievement-label {
+
+          .achievement-label-edit {
+            width: 100%;
+            line-height: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            height: 20px;
+          }
+        }
+
+        .achievement-details {
+
+          .achievement-details-edit {
+            width: 100%;
+            margin-top: .2em;
+            font-size: 13px;
+            font-weight: 400;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

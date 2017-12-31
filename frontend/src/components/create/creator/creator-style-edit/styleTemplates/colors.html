@@ -1,0 +1,14 @@
+<h4  class="norm-cursor"> Choose Colors</h4>
+<div >
+  <div ng-repeat="color in $ctrl.featureConstants.colorPairings">
+    <button ng-click="$ctrl.changeColors(color.primary, color.secondary)"
+            ng-class="[color.selectable]">
+    </button>
+    <span ng-if="$ctrl.colorTwo == color.secondary">
+    <i class="fa fa-check"  aria-hidden="true">
+    </i>
+  </span>
+    <br>
+  </div>
+</div>
+

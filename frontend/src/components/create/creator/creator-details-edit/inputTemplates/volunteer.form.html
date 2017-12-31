@@ -1,0 +1,78 @@
+<h3 class="norm-cursor">Volunteer</h3>
+<div >
+<button ng-click="$ctrl.addRecord()" class="btn btn-sm btn-link text-primary">
+  Enter Another&nbsp;&nbsp;
+  <i class="fa fa-plus " aria-hidden="true"></i>
+</button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul>
+  <li class="res-entity-list"
+      ng-class="{'text-muted': !$ctrl.existingData[$index].show ,'text-primary': $ctrl.existingData[$index].show}"
+      ng-click="$ctrl.forEdit = $index" ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].organization.length > 0">
+      {{$ctrl.existingData[$index].organization }}&nbsp;&nbsp;
+    <button ng-click="$ctrl.removeRecord('volunteer', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)"
+            class="btn btn-sm btn-link">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    </span>
+    <span ng-if="$ctrl.existingData[$index].organization.length < 1 || $ctrl.existingData[$index].organization == undefined">
+      new entry&nbsp;&nbsp;
+    <button ng-click="$ctrl.removeRecord('volunteer', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)"
+            class="btn btn-sm btn-link">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    </span>
+
+  </li>
+</ul>
+<button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show" class="btn btn-sm  text-primary">
+  <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true"></i>
+  <span ng-if="!$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Show
+  </span>
+  <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+  <span ng-if="$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Hide
+  </span>
+</button>
+
+<div>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Organization"
+         aria-label="Organization"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].organization"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Position"
+         aria-label="Position"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].position"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Website"
+         aria-label="Website"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].website"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Start Date"
+         aria-label="Start Date"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].startDate"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="End Date"
+         aria-label="End Date"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].endDate"/>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Summary"
+         aria-label="Summary"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].summary"/>
+</div>
+</div>

@@ -1,0 +1,80 @@
+<div>
+  <uib-tabset active="$ctrl.active"
+              class="creator-tab-container"
+              justified="true">
+    <!-- publications and examples -->
+    <uib-tab index="3" class="creator-tab">
+      <uib-tab-heading uib-tooltip="asdfsafd"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-upload color-black" aria-hidden="true">
+        </i>
+        <i class="fa fa-user-circle-o color-black" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="image"
+                     existing-data="$ctrl.inData">
+      </creatorstyles>
+
+
+    </uib-tab>
+    <!-------------------------------- Color Select -------------------------------------------------->
+    <uib-tab index="1" class="creator-tab">
+      <uib-tab-heading uib-tooltip="Change Colors"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <img src="../../../../assets/icons/ic_format_paint_black_24px.png" class="tab-icon" aria-hidden="true"/>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="colors"
+                     existing-data="$ctrl.inData">
+      </creatorstyles>
+
+    </uib-tab>
+    <!-------------------------------- Fonts ---------------------------------------------------------->
+    <uib-tab index="2" class="creator-tab">
+      <uib-tab-heading uib-tooltip="references and awards"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-font fa-lg color-black" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="fonts"
+                     existing-data="$ctrl.inData">
+      </creatorstyles>
+    </uib-tab>
+
+    <p></p>
+
+    <!------------------------------- BOTTOM ROW ------------------------------------------------------>
+    <!------------------------------- Section Select -------------------------------------------------->
+    <uib-tab index="0" class="creator-tab">
+      <uib-tab-heading uib-tooltip="Add Section(s)"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <img src="../../../../assets/icons/add-section-V2.png" aria-hidden="true"/>
+      </uib-tab-heading>
+      <h3>
+        Design Item
+      </h3>
+      <creatorstyles class="creator-form"
+                     input-selection="sections"
+                     existing-data="$ctrl.inData">
+      </creatorstyles>
+    </uib-tab>
+    <uib-tab index="4" class="creator-tab">
+      <uib-tab-heading uib-tooltip="Change Background"
+                       tooltip-popup-delay="500"
+                       tooltip-placement="top-left">
+        <i class="fa fa-picture-o" aria-hidden="true">
+        </i>
+      </uib-tab-heading>
+      <creatorstyles class="creator-form"
+                     input-selection="background"
+                     existing-data="$ctrl.inData">
+      </creatorstyles>
+
+    </uib-tab>
+</div>

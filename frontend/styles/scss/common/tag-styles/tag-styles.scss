@@ -1,0 +1,34 @@
+@import '../variables/common_internal_var_bundle.scss';
+
+
+
+
+html {
+  min-height: 100vh;
+  background-color: $base-background-color;
+  font-size: $base-font-size;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+* textarea {
+  padding: 0;
+  border: 0;
+  resize: none;
+  width: 100%;
+  outline: none;
+  margin: 0;
+  box-shadow: none;
+  display: block;
+  min-height: 10px;
+  background: transparent;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  text-size-adjust: none;
+  position: relative;
+  z-index: 1;
+}

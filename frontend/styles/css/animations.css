@@ -1,0 +1,52 @@
+.view-container {
+  position: relative;
+  height: 98vh; }
+
+ui-view.ng-enter {
+  transition: 1s;
+  opacity: 0; }
+
+ui-view.ng-enter-active {
+  opacity: 1; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes slideOutLeft {
+  to {
+    transform: translateY(-200%); } }
+
+@-moz-keyframes slideOutLeft {
+  to {
+    -moz-transform: translateY(-200%); } }
+
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateY(-200%); } }
+
+@keyframes slideInRight {
+  from {
+    transform: translateY(200%); }
+  to {
+    transform: translateY(0); } }
+
+@-moz-keyframes slideInRight {
+  from {
+    -moz-transform: translateY(200%); }
+  to {
+    -moz-transform: translateY(0); } }
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateY(200%); }
+  to {
+    -webkit-transform: translateY(0); } }

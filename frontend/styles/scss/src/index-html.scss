@@ -1,0 +1,26 @@
+.view-container{
+  position:relative;
+  height: 98vh;  //should use calc here
+}
+
+.page-trans.ng-anchor-in {
+}
+
+
+ui-view{
+  &.ng-enter {
+    transition: 1s;
+
+    opacity: 0;
+  }
+
+  &.ng-enter-active {
+    opacity: 1;
+  }
+}
+
+#mainView {
+  flex: 0 0 90%;
+  min-height: 90vh;
+  margin-bottom: 70px;
+}

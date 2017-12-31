@@ -1,0 +1,11 @@
+<div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section  + 'icon', $index)"
+     ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section  + 'icon', $index)">
+    <span ng-repeat="iconChoice in $ctrl.iconList.misc">
+      |&nbsp;<span class="fa" ng-class="iconChoice"
+                   ng-click="$ctrl.iconSelected('misc', iconChoice, sectionItem.section)">
+    </span>&nbsp;
+    </span>
+  |&nbsp;<span class="fa" ng-click="$ctrl.iconSelected('none', 'none', sectionItem.section)">
+    none
+    </span>&nbsp;
+</div>

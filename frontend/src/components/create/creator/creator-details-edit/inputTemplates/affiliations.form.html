@@ -1,0 +1,29 @@
+<h3>Affiliations</h3>
+<button ng-click="$ctrl.addRecord()">
+  Enter Another
+</button>
+<button ng-click="$ctrl.removeRecord('affiliations', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)">
+  <i class="fa fa-times-circle-o" aria-hidden="true">
+  </i>
+</button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul >
+  <li class="res-entity-list"
+      ng-click="$ctrl.forEdit = $index"
+      ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].organization.length > 0">
+      {{$ctrl.existingData[$index].organization }}
+    </span>
+    <span ng-if="$ctrl.existingData[$index].organization.length < 1 || $ctrl.existingData[$index].organization == undefined">
+      new entry
+    </span>
+  </li>
+</ul>
+<div class="res-entity-input" >
+  <input type="text" class="form-control input-sm" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].organization"/>
+  <input type="text" class="form-control input-sm" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].role"/>
+  <input type="text" class="form-control input-sm" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].url"/>
+  <input type="radio" class="form-control" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].start"/>
+  <input type="text" class="form-control input-sm" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].end"/>
+  <input type="text" class="form-control input-sm" placeholder="A Passion" ng-model="$ctrl.existingData[$ctrl.forEdit].summary"/>
+</div>

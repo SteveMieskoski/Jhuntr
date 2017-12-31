@@ -1,0 +1,13 @@
+<h3 class="norm-cursor">Image</h3>
+<div>
+  <input type="checkbox"
+         ng-model="$ctrl.imageShowState"
+         ng-change="$ctrl.toggleImageShown()"
+         aria-label="Finished?">
+  Show Image
+  </input>
+  <h3>Upload Image</h3>
+  <button ng-click="$ctrl.fileUploader()">
+    Upload File
+  </button>
+</div>

@@ -1,0 +1,18 @@
+
+
+
+
+@mixin backgrounds{
+
+  .honey-background{
+    background-image: url(../../../backgrounds/background-design.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .curve-background{
+    background-image: url(../../../backgrounds/background-curve.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

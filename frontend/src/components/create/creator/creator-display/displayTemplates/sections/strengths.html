@@ -1,0 +1,81 @@
+<!-- Strengths Section -->
+<div id="strengths-section">
+
+  <script type="text/ng-template" id="strengthsPopover.html">
+    <button ng-click="$ctrl.removeSection('strengths')">
+      Hide Section
+    </button>
+  </script>
+  <div class="section-heading"
+       ng-click="$ctrl.popoverOpen(true, sectionItem.section); $ctrl.buildPopupTitle(sectionItem.section);"
+       ng-mouseenter="$ctrl.popoverOpen('alt', sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)"
+       popover-trigger="none"
+       popover-is-open="$ctrl.optionsOpen.strengths"
+       uib-popover-template="$ctrl.sectionOptions()">
+        <textarea class="editable section-heading-edit"
+                  ng-class="[$ctrl.primaryColor, $ctrl.headingFont]"
+                  placeholder="Strengths"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.labels.strengths">
+        </textarea>
+  </div>
+  <div class="strengths"
+       ng-repeat="strength in $ctrl.templateData.strengths"
+       ng-if="strength.show">
+    <div class="strength-item" page-link page-break>
+      <i class="fa icon"
+         ng-if="$ctrl.templateData.strengths[$index].icon_show"
+         ng-class="[$ctrl.secondaryColor, $ctrl.templateData[sectionItem.section][$index].icon]"
+         ng-click="$ctrl.popoverOpenItem(true, sectionItem.section + 'icon', $index); $ctrl.iconSelectIndex = $index;"
+         ng-mouseenter="$ctrl.popoverOpenItem('alt', sectionItem.section + 'icon', $index)"
+         ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section + 'icon', $index)"
+         popover-trigger="none"
+         popover-placement="right"
+         popover-is-open="$ctrl.optionsOpenItem[sectionItem.section + 'icon'][$index]"
+         uib-popover-template="$ctrl.sectionOptions('iconSelect')">
+      </i>
+      <div class="single-strength">
+        <div class="strength-label">
+                <textarea class="editable strength-label-edit"
+                          ng-click="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+                          ng-mouseenter="$ctrl.popoverOpenItem('alt', sectionItem.section, $index)"
+                          ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)"
+                          popover-trigger="none"
+                          popover-is-open="$ctrl.optionsOpenItem[sectionItem.section][$index]"
+                          uib-popover-template="$ctrl.sectionOptions('iconOptions')"
+                          ng-class="[$ctrl.primaryColor, $ctrl.subHeadingFont]"
+                          placeholder="What are you most proud of?"
+                          maxlength="100"
+                          spellcheck="false"
+                          autocomplete="off"
+                          rows="1"
+                          ng-change="$ctrl.dirtyValue(true)"
+                          ng-model="$ctrl.templateData.strengths[$index].label"
+                          msd-elastic>
+                </textarea>
+        </div>
+        <div class="strength-details">
+                <textarea class="editable strength-details-edit"
+                          ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                          placeholder="A bit about your achievement"
+                          maxlength="100"
+                          spellcheck="false"
+                          autocomplete="off"
+                          rows="1"
+                          ng-change="$ctrl.dirtyValue(true)"
+                          ng-model="$ctrl.templateData.strengths[$index].details"
+                          msd-elastic>
+                </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Strengths Section end -->

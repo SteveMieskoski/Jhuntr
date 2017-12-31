@@ -1,0 +1,78 @@
+<div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+     ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+
+  <div class="detail-item-listing"
+       ng-if="$ctrl.templateData[sectionItem.section][$index].details"
+       ng-init="topIndex = $index">
+    <div ng-repeat="detail in $ctrl.templateData[sectionItem.section][topIndex].details track by $id(detail)">
+      <div class="detail-item-show"
+           ng-click="$ctrl.templateData[sectionItem.section][topIndex].details[$index].show = !$ctrl.templateData[sectionItem.section][topIndex].details[$index].show">
+        <i class="fa fa-eye"
+           aria-hidden="true"
+           ng-if="$ctrl.templateData[sectionItem.section][topIndex].details[$index].show">
+        </i>
+        <i class="fa fa-eye-slash"
+           aria-hidden="true"
+           ng-if="!$ctrl.templateData[sectionItem.section][topIndex].details[$index].show">
+        </i>
+      </div>
+      <div class="detail-item-entry"
+           ng-class="{'text-muted': !detail.show ,'text-primary': detail.show}"
+           ng-if="detail.detail.length > 0">
+        {{detail.detail}}
+      </div>
+      <div class="detail-item-entry"
+           ng-class="{'text-muted': !detail.show ,'text-primary': detail.show}"
+           ng-if="detail.detail.length < 1">
+        New Detail Entry
+      </div>
+      <button class="btn btn-sm  text-primary detail-item-delete"
+              ng-click="$ctrl.removeDetailItem(sectionItem.section, topIndex, $index)">
+        <i class="fa fa-fw fa-times"
+           aria-label="Delete">
+        </i>
+      </button>
+    </div>
+  </div>
+
+  <button class="btn btn-sm  text-primary"
+          ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show">
+    Hide Item
+    <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+       class="fa fa-eye-slash" aria-hidden="true">
+    </i>
+  </button>
+  <button class="btn btn-sm  text-primary"
+          ng-if="$ctrl.templateData[sectionItem.section][$index].icon"
+          ng-click="$ctrl.templateData[sectionItem.section][$index].icon_show = !$ctrl.templateData[sectionItem.section][$index].icon_show">
+
+      <span ng-if="!$ctrl.templateData[sectionItem.section][$index].icon_show">
+              Show Icon
+      <i class="fa fa-eye"
+         aria-hidden="true">
+      </i>
+      </span>
+    <span ng-if="$ctrl.templateData[sectionItem.section][$index].icon_show">
+              Hide Icon
+      <i class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+      </span>
+  </button>
+  <button class="btn btn-sm  text-primary"
+          ng-if="$ctrl.templateData[sectionItem.section][$index].details"
+          ng-click="$ctrl.templateData[sectionItem.section][$index].details.push({detail:'', show: true})">
+    Add Detail Entry
+  </button>
+  <span ng-if="$ctrl.templateData[sectionItem.section][$index].gpa_show !== undefined">
+    <label for="worth-show">
+      Show Worth:
+      <input type="checkbox"
+             id="worth-show"
+             aria-label="worth-show"
+             ng-change="$ctrl.dirtyValue()"
+             ng-model="$ctrl.templateData[sectionItem.section][$index].gpa_show"/>
+    </label>
+    </span>
+
+</div>

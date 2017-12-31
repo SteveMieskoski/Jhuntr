@@ -1,0 +1,117 @@
+<!-- Volunteer Section -->
+<div id="volunteer-section">
+
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{#labels.volunteer}}{{labels.volunteer}}{{/labels.volunteer}}
+      {{^labels.volunteer}}Volunteer{{/labels.volunteer}}
+    </div>
+  </div>
+  {{#volunteer}}
+    {{# if show}}
+    <div class="volunteer-item">
+      <div class="position-item">
+        <div class=" position-item-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+          {{# if position}}
+            {{position}}
+          {{else}}
+            Title/Position
+          {{/if}}
+        </div>
+      </div>
+      <div class="company">
+        <div class=" company-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+          {{#if organization}}{{organization}}{{else}}Organization{{/if}}
+        </div>
+      </div>
+
+        <div class="date-location">
+
+          <div class="date">
+            <i class="fa {{design.style_options.calendar_icon}} icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" date-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              {{#if startDate}}{{startDate}} — {{endDate}}{{else}}Start Date — End Date{{/if}}
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="volunteer-details">
+          <!-- <div class="experience-details-heading">-->
+          <div class=" details-heading-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+            {{#if summary}}{{summary}}{{else}}Description{{/if}}
+
+          </div>
+          <!--  </div> -->
+          <div class="details-description-container">
+            <i class="fa fa-circle bullet {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" details-content-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              {{#each highlights}}{{.}}{{/each}}
+              {{^highlights}}What was an example of a successful outcome of this activity?{{/highlights}}
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+   <!-- </div> -->
+    {{/if}}
+  {{/volunteer}}
+
+  <!-- Below is Placeholders for added but empty section -->
+  {{^volunteer}}
+    <div class="volunteer-item">
+      <div class="position-item">
+        <div class=" position-item-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+          Title/Position
+        </div>
+      </div>
+      <div class="company">
+        <div class=" company-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+          Company
+        </div>
+      </div>
+        <div class="date-location">
+
+          <div class="date">
+            <i class="fa fa-calendar icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" date-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              Start Date — End Date
+            </div>
+          </div>
+
+          <div class="location">
+            <i class="fa fa-map-marker icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" location-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              Location
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="experience-details">
+          <!-- <div class="experience-details-heading">-->
+          <div class=" details-heading-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} heading-font">
+            Company Description
+
+          </div>
+          <!--  </div> -->
+          <div class="details-description-container">
+            <i class="fa fa-circle bullet {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+            <div class=" details-content-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              What was an example of a successful outcome of this activity?
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+  {{/volunteer}}
+
+</div>  <!-- Volunteer Section End -->

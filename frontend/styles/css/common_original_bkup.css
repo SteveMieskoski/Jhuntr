@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:700');
+
+.title-headline{
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 100px;
+}
+
+.my-popup-container .my-popup{
+    z-index: 1060;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    bottom: 100%;
+    left: 50%;
+    margin-left: -30px;
+}
+
+.my-popup-container{
+    position: relative;
+    display: inline-block;
+}
+
+.my-popup-content{
+    display: block;
+    margin: auto;
+}
+
+body{
+    padding: 3em;
+}
+
+.top-nav{
+    padding: 2em;
+}
+.nav-cursor{
+    cursor: pointer;
+}
+
+.site-margin {
+    padding: 3em;
+}
+
+.result-item {
+    padding: 3em;
+}
+
+#skiky-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.text-editor {
+    height: 500px;
+    font-size: 14px;
+}
+
+
+.modal-body .container{
+    width: 100%;
+}
+
+
+button.delete-button{
+    right: 10%;
+}
+
+.red-attention{
+    color: red;
+}
+
+.red-button{
+    background: red;
+}
+
+td:target {
+
+}
+
+/*
+.drop-box {
+    background: #F8F8F8;
+    border: 5px dashed #DDD;
+    width: 200px;
+    height: 65px;
+    text-align: center;
+    padding-top: 25px;
+    margin: 10px;
+}
+.dragover {
+    border: 5px dashed blue;
+}
+*/
+.search-page{
+
+}
+
+.result-item{
+    border: 5px solid green;
+}

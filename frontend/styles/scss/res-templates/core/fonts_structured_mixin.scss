@@ -1,0 +1,42 @@
+@import '../font_faces_mixin.scss';
+
+// use web font loader when serving from AWS
+@include font-only-structured('Lato','Lato', 'Regular')
+@include font-only-structured('Merriweather', 'Merriweather', 'Regular')
+@include font-only-structured('Montserrat', 'Montserrat', 'Regular')
+@include font-only-structured('Neuton', 'Neuton', 'Regular')
+//@include font-only-structured('Open Sans', 'OpenSans', 'Regular')
+@include font-only-structured('Oswald', 'Oswald', 'Bold')
+@include font-only-structured('Playfair Display', 'PlayfairDisplay', 'Regular')
+@include font-only-structured('Roboto',  'Roboto', 'Regular')
+@include font-only-structured('Roboto Slab', 'RobotoSlab', 'Regular')
+@include font-only-structured('Alex Brush', 'AlexBrush', 'Regular')
+
+@font-face {
+  font-family: 'Quattrocento Sans';
+  src: url('../../../fonts/All_Fonts/QuattrocentoSans.eot');
+  src: url('../../../fonts/All_Fonts/QuattrocentoSans.eot?#iefix') format('embedded-opentype'),
+  url('../../../fonts/All_Fonts/QuattrocentoSans.woff') format('woff'),
+  url('../../../fonts/All_Fonts/QuattrocentoSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../../../fonts/All_Fonts/OpenSans.eot');
+  src: url('../../../fonts/All_Fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+  url('../../../fonts/All_Fonts/OpenSans.woff') format('woff'),
+  url('../../../fonts/All_Fonts/OpenSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CAC Champagne';
+  src: url('../../../fonts/All_Fonts/CACChampagne.eot');
+  src: url('../../../fonts/All_Fonts/CACChampagne.eot?#iefix') format('embedded-opentype'),
+  url('../../../fonts/All_Fonts/CACChampagne.woff') format('woff'),
+  url('../../../fonts/All_Fonts/CACChampagne.ttf') format('truetype');
+}
+

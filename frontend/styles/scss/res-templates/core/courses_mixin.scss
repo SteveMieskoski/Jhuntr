@@ -1,0 +1,38 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+
+
+@mixin course-section {
+
+  @include section-heading;
+
+  .courses {
+    width: 100%;
+
+    .course-item {
+      display: inline-block;
+      vertical-align: top;
+      min-width: 49%;
+      padding-right: 2px;
+
+      .course-label {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        margin: 0 2px 2px 2px;
+        line-height: 25px;
+
+        .course-label-edit {
+          min-width: 98%;
+          line-height: 25px;
+          text-align: center;
+          border: 2px solid black;
+          border-radius: 10px;
+          font-size: 15px;
+          font-weight: 400;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

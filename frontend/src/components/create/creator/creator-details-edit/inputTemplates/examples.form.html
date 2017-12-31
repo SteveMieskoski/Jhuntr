@@ -1,0 +1,16 @@
+<h3>Examples</h3>
+<button ng-click="$ctrl.addRecord()">Enter Another</button>
+<button ng-click="$ctrl.removeRecord('examples', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul >
+  <li class="res-entity-list" ng-click="$ctrl.forEdit = $index" ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].network.length > 0">{{$ctrl.existingData[$index].network }}</span>
+    <span ng-if="$ctrl.existingData[$index].network.length < 1 || $ctrl.existingData[$index].label == undefined">new entry</span>
+  </li>
+</ul>
+<div>
+  <input type="text" class="form-control input-sm" placeholder="Title" ng-model="$ctrl.existingData[$ctrl.forEdit].title"/>
+  <input type="text" class="form-control input-sm" placeholder="Summary" ng-model="$ctrl.existingData[$ctrl.forEdit].summary"/>
+  <input type="text" class="form-control input-sm" placeholder="Url" ng-model="$ctrl.existingData[$ctrl.forEdit].url"/>
+  <input type="text" class="form-control input-sm" placeholder="Date" ng-model="$ctrl.existingData[$ctrl.forEdit].date"/>
+</div>

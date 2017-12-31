@@ -1,0 +1,189 @@
+/**
+* Fix for renderer
+* **/
+* {
+  box-sizing: border-box; }
+
+.resume-renderer {
+  width: 940px;
+  line-height: initial; }
+  .resume-renderer .powered-by-link {
+    position: absolute;
+    left: 75px;
+    bottom: 50px;
+    font-size: 11px; }
+  .resume-renderer .resume-footer {
+    font-size: 11px; }
+    .resume-renderer .resume-footer .enhancv-link {
+      position: absolute;
+      bottom: 50px; }
+    .resume-renderer .resume-footer .powered-by {
+      position: absolute;
+      bottom: 50px;
+      right: 75px;
+      display: table; }
+      .resume-renderer .resume-footer .powered-by .powered-by-logo {
+        width: 101px;
+        display: table-cell; }
+        .resume-renderer .resume-footer .powered-by .powered-by-logo .icon {
+          font-size: 100px; }
+        .resume-renderer .resume-footer .powered-by .powered-by-logo .icon:before {
+          position: absolute;
+          bottom: -42px; }
+      .resume-renderer .resume-footer .powered-by .verified-by {
+        padding-right: 18px;
+        line-height: 15.7143px;
+        display: table-cell; }
+  .resume-renderer .resume-section {
+    /**overflow: hidden;**/
+    padding-bottom: 20px; }
+    .resume-renderer .resume-section .resume-section-container {
+      border-radius: 5px;
+      border: 1px transparent solid; }
+      .resume-renderer .resume-section .resume-section-container.editable:hover, .resume-renderer .resume-section .resume-section-container.editable.resume-section-selected {
+        border: 1px solid #60d5ba; }
+      .resume-renderer .resume-section .resume-section-container.resume-section-selected {
+        position: relative;
+        z-index: 20;
+        background: #fff;
+        transition: background 0.3s; }
+    .resume-renderer .resume-section .resume-section-text-container {
+      margin: 10px 15px 0; }
+    .resume-renderer .resume-section .resume-section-text {
+      display: block;
+      margin: 0;
+      padding-bottom: 5px;
+      border-bottom: 3px solid #000;
+      text-transform: uppercase;
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 600; }
+    .resume-renderer .resume-section .moveable-items {
+      position: relative;
+      top: -1px; }
+  .resume-renderer .moveable-items .item-object {
+    cursor: move; }
+  .resume-renderer .resume-item-holder {
+    /*** overflow: hidden; ****/
+    position: relative;
+    top: -1px; }
+    .resume-renderer .resume-item-holder .item-object {
+      padding: 15px 15px 0;
+      color: #000;
+      border-radius: 5px;
+      border: 1px transparent solid; }
+      .resume-renderer .resume-item-holder .item-object > .inner {
+        border-bottom: 1px dashed #ccc;
+        padding-bottom: 15px;
+        position: relative;
+        top: 1px; }
+      .resume-renderer .resume-item-holder .item-object .padded-item-content {
+        padding-left: 40px; }
+    .resume-renderer .resume-item-holder .skill-item .inner {
+      padding-bottom: 5px; }
+    .resume-renderer .resume-item-holder.editable:hover .item-object, .resume-renderer .resume-item-holder.editable.selected-resume-item .item-object {
+      border: 1px solid #60d5ba; }
+    .resume-renderer .resume-item-holder.selected-resume-item {
+      border-radius: 5px;
+      position: relative;
+      z-index: 20;
+      background: #fff;
+      transition: background 0.3s; }
+
+.resume-renderer-page {
+  height: 1329px;
+  padding: 60px;
+  page-break-after: always;
+  position: relative; }
+  .resume-renderer-page.browser-resume-page {
+    background: url("./defaultBackground.jpg");
+    background-color: #fafafa; }
+  .resume-renderer-page .resume-background-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+  .resume-renderer-page .resume-page-wrapper {
+    position: relative; }
+
+.resume-page-title {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 18px; }
+  .resume-page-title .text {
+    position: relative; }
+    .resume-page-title .text:before, .resume-page-title .text:after {
+      content: " ";
+      background-color: #fff;
+      height: 1px;
+      display: block;
+      position: absolute;
+      top: 11px;
+      width: 40px; }
+    .resume-page-title .text:before {
+      left: -70px; }
+    .resume-page-title .text:after {
+      right: -70px; }
+
+.resume-renderer-one-column {
+  width: 100%; }
+  .resume-renderer-one-column .CertificateSection .resume-item-holder,
+  .resume-renderer-one-column .AchievementSection .resume-item-holder,
+  .resume-renderer-one-column .TalentSection .resume-item-holder {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top; }
+  .resume-renderer-one-column .SkillSection .resume-item-holder,
+  .resume-renderer-one-column .AwardSection .resume-item-holder,
+  .resume-renderer-one-column .PassionSection .resume-item-holder,
+  .resume-renderer-one-column .CourseSection .resume-item-holder,
+  .resume-renderer-one-column .LanguageSection .resume-item-holder {
+    width: 33.3%;
+    display: inline-block;
+    vertical-align: top; }
+
+.resume-renderer-two-column {
+  float: left;
+  width: 50%;
+  min-height: 1px; }
+  .resume-renderer-two-column:nth-child(1) {
+    width: 60%;
+    padding-right: 15px; }
+    .resume-renderer-two-column:nth-child(1) .SkillSection .resume-item-holder,
+    .resume-renderer-two-column:nth-child(1) .AwardSection .resume-item-holder,
+    .resume-renderer-two-column:nth-child(1) .PassionSection .resume-item-holder,
+    .resume-renderer-two-column:nth-child(1) .CourseSection .resume-item-holder,
+    .resume-renderer-two-column:nth-child(1) .LanguageSection .resume-item-holder {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top; }
+  .resume-renderer-two-column:nth-child(2) {
+    width: 40%; }
+
+.resume-no-hover .resume-section-container, .resume-no-hover .item-object, .resume-no-hover .resume-header {
+  background: transparent !important; }
+
+.item-no-popover .popover-container {
+  display: none; }
+
+.resume-layout-condensed .resume-section .moveable-items {
+  top: 0; }
+
+.resume-layout-condensed .resume-section .resume-section-text {
+  border-bottom: none;
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: normal;
+  color: #808080; }
+
+.resume-layout-condensed .resume-item-holder .item-object {
+  padding: 6px 15px 0; }
+  .resume-layout-condensed .resume-item-holder .item-object > .inner {
+    padding-bottom: 6px;
+    border-bottom: 0 none;
+    top: 0; }

@@ -1,0 +1,35 @@
+<h1>DropBox Ui</h1>
+<div class="container main">
+  <div id="authed-section">
+    <p>You have successfully authenticated. Below are the contents of your root directory.</p>
+    <ol class="breadcrumb">
+      <li ng-repeat="(key, value) in $ctrl.filePaths">
+        <a href ng-click="$ctrl.enterFolder(key , value)">{{key}}</a>
+      </li>
+    </ol>
+
+    <p ng-repeat="file in $ctrl.contents track by $id(file)">
+
+
+      <span ng-if="file['.tag'] == 'folder'" ng-click="$ctrl.enterFolder(file.name, file.path_display)" style="cursor: pointer;">
+        <i class="fa fa-folder-o" aria-hidden="true"></i>&nbsp;&nbsp;{{file.name}}
+      </span>
+      <span ng-if="file['.tag'] == 'file'">
+        {{file.name}}&nbsp;&nbsp;
+      <button class="btn btn-primary btn-sm"
+              ng-if="!file.jhuntrSaved && $ctrl.addingRes !== $index"
+              ng-click="$ctrl.addFileRefAsResume(file, $index)">save as resume</button>
+      <span ng-if="$ctrl.addingRes == $index">Adding</span>
+      <button class="btn btn-primary btn-sm"
+              ng-if="file.jhuntrSaved" ng-click="$ctrl.removeFileRefAsResume(file, $index)">remove as resume</button>
+
+      <!--<button class="btn btn-primary btn-sm"
+              ng-click="$ctrl.getMetadata(file)">get metadata</button>-->
+      <button class="btn btn-primary btn-sm"
+              ng-if="$ctrl.previewReady !== $index" ng-click="$ctrl.fileDownload(file, $index)">get preview</button>
+      <span ng-if="$ctrl.previewReady == $index">Loading</span>
+    </span>
+
+    </p>
+  </div>
+</div>

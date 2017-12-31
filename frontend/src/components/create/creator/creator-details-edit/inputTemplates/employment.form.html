@@ -1,0 +1,154 @@
+<h3 class="norm-cursor">Experience</h3>
+<div >
+<button ng-click="$ctrl.addRecord()" class="btn btn-sm btn-link text-primary">
+  Enter Another&nbsp;&nbsp;
+  <i class="fa fa-plus " aria-hidden="true"></i>
+</button>
+
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul>
+  <li class="res-entity-list"
+      ng-class="{'text-muted': !$ctrl.existingData[$index].show ,'text-primary': $ctrl.existingData[$index].show}"
+      ng-click="$ctrl.forEdit = $index" ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].company.length > 0">{{$ctrl.existingData[$index].company }}
+      &nbsp;&nbsp;<button class="btn btn-sm btn-link"
+                          ng-click="$ctrl.removeRecord('employment', $ctrl.existingData[$index], $index)">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    </span>
+
+    <span ng-if="$ctrl.existingData[$index].company.length < 1 ">new entry
+    &nbsp;&nbsp;<button class="btn btn-sm btn-link"
+                        ng-click="$ctrl.removeRecord('employment', $ctrl.existingData[$index], $index)">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+
+    </span>
+  </li>
+</ul>
+
+<!--<div ng-repeat="thing in $ctrl.existingData">-->
+<button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show" class="btn btn-sm  text-primary">
+  <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true"></i>
+  <span ng-if="!$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Show
+  </span>
+  <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+  <span ng-if="$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Hide
+  </span>
+</button>
+<!-- WITHOUT LABELS -->
+
+<input type="text"
+       class="form-control input-sm"
+       placeholder="Company"
+       id="company"
+       aria-label="Company"
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].company"/>
+<input type="text"
+       class="form-control input-sm"
+       placeholder="Position"
+       id="position"
+       aria-label="Position"
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].position">
+<input type="text"
+       class="form-control input-sm"
+       placeholder="Website"
+       id="website"
+       aria-label="Website"
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].website">
+<input type="text"
+       class="form-control input-sm"
+       placeholder="Date Period"
+       id="startDate"
+       aria-label="Date Period"
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].startDate">
+<!--<input type="text" class="form-control input-sm" placeholder="endDate" id="endDate"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].endDate">-->
+<input type="text"
+       class="form-control input-sm"
+       placeholder="Summary"
+       id="summary"
+       aria-label="summary"
+       ng-change="$ctrl.dirtyValue()"
+       ng-model="$ctrl.existingData[$ctrl.forEdit].summary">
+  <button ng-click="$ctrl.addDetail($ctrl.forEdit)">Add Detail</button>
+  <div ng-repeat="detail in $ctrl.existingData[$ctrl.forEdit].details">
+    <span ng-click="$ctrl.existingData[$ctrl.forEdit].details[$index].show = !$ctrl.existingData[$ctrl.forEdit].details[$index].show">
+      <i ng-if="$ctrl.existingData[$ctrl.forEdit].details[$index].show" class="fa fa-eye" aria-hidden="true"></i>
+    <i ng-if="!$ctrl.existingData[$ctrl.forEdit].details[$index].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+    </span>
+    <span ng-click="$ctrl.removeDetail($ctrl.forEdit, $index)">Delete</span>
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="Summary"
+         id="details"
+         aria-label="summary"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].details[$index].detail">
+  </div>
+<button class="btn btn-sm" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
+  Address
+</button>
+<div uib-collapse="!$ctrl.isCollapsed">
+  <label for="address">address:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="address"
+           id="address"
+           aria-label="address"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.address">
+  </label>
+  <label for="phone">phone:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="phone"
+           id="phone"
+           aria-label="phone"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.phone">
+  </label>
+  <label for="postalCode">postal Code:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="postalCode"
+           id="postalCode"
+           aria-label="postalCode"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.postalCode">
+  </label>
+  <label for="city">city:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="city"
+           id="city"
+           aria-label="city"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.city">
+  </label>
+  <label for="countryCode">country Code:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="countryCode"
+           id="countryCode"
+           aria-label="countryCode"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.countryCode">
+  </label>
+  <label for="state">state:&nbsp;
+    <input type="text"
+           class="form-control input-sm"
+           placeholder="state"
+           id="state"
+           aria-label="state"
+           ng-change="$ctrl.dirtyValue()"
+           ng-model="$ctrl.existingData[$ctrl.forEdit].location.state">
+  </label>
+</div>
+</div>

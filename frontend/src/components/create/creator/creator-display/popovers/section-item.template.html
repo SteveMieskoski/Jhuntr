@@ -1,0 +1,312 @@
+<script type="text/ng-template" id="itemOptionsPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+
+    <div class="detail-item-listing"
+         ng-if="$ctrl.templateData[sectionItem.section][$index].details"
+         ng-init="topIndex = $index">
+      <div ng-repeat="detail in $ctrl.templateData[sectionItem.section][topIndex].details track by $id(detail)">
+        <div class="detail-item-show"
+             ng-click="$ctrl.templateData[sectionItem.section][topIndex].details[$index].show = !$ctrl.templateData[sectionItem.section][topIndex].details[$index].show">
+          <i class="fa fa-eye"
+             aria-hidden="true"
+             ng-if="$ctrl.templateData[sectionItem.section][topIndex].details[$index].show">
+          </i>
+          <i class="fa fa-eye-slash"
+             aria-hidden="true"
+             ng-if="!$ctrl.templateData[sectionItem.section][topIndex].details[$index].show">
+          </i>
+        </div>
+        <div class="detail-item-entry"
+             ng-class="{'text-muted': !detail.show ,'text-primary': detail.show}"
+             ng-if="detail.detail.length > 0">
+          {{detail.detail}}
+        </div>
+        <div class="detail-item-entry"
+             ng-class="{'text-muted': !detail.show ,'text-primary': detail.show}"
+             ng-if="detail.detail.length < 1">
+          New Detail Entry
+        </div>
+        <button class="btn btn-sm  text-primary detail-item-delete"
+                ng-click="$ctrl.removeDetailItem(sectionItem.section, topIndex, $index)">
+          <i class="fa fa-fw fa-times"
+             aria-label="Delete">
+          </i>
+        </button>
+      </div>
+    </div>
+
+    <button class="btn btn-sm  text-primary"
+            ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+    <button class="btn btn-sm  text-primary"
+            ng-if="$ctrl.templateData[sectionItem.section][$index].icon"
+            ng-click="$ctrl.templateData[sectionItem.section][$index].icon_show = !$ctrl.templateData[sectionItem.section][$index].icon_show">
+
+      <span ng-if="!$ctrl.templateData[sectionItem.section][$index].icon_show">
+              Show Icon
+      <i class="fa fa-eye"
+         aria-hidden="true">
+      </i>
+      </span>
+      <span ng-if="$ctrl.templateData[sectionItem.section][$index].icon_show">
+              Hide Icon
+      <i class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+      </span>
+    </button>
+    <button class="btn btn-sm  text-primary"
+            ng-if="$ctrl.templateData[sectionItem.section][$index].details"
+            ng-click="$ctrl.templateData[sectionItem.section][$index].details.push({detail:'', show: true})">
+      Add Detail Entry
+    </button>
+    <span ng-if="$ctrl.templateData[sectionItem.section][$index].gpa_show !== undefined">
+    <label for="worth-show">
+      Show Worth:
+      <input type="checkbox"
+             id="worth-show"
+             aria-label="worth-show"
+             ng-change="$ctrl.dirtyValue()"
+             ng-model="$ctrl.templateData[sectionItem.section][$index].gpa_show"/>
+    </label>
+    </span>
+
+  </div>
+</script>
+
+
+<!-- Scraps below (double check & confirm then remove) -->
+<script type="text/ng-template" id="educationItemPopover.html">
+  <h3 class="popover-title">{{$ctrl.popupTitle}}</h3>
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.addRecord(sectionItem.section)">Add Entry</button>
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+    <span>
+  <label for="worth-show1">
+    Show Worth:
+  <input type="checkbox"
+         id="worth-show1"
+         aria-label="worth-show"
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.templateData[sectionItem.section][$index].gpa_show"/>
+  </label>
+  </span>
+  </div>
+</script>
+<script type="text/ng-template" id="achievementsItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+
+    <button class="btn btn-sm  text-primary"
+            ng-click="$ctrl.templateData[sectionItem.section][$index].icon_show = !$ctrl.templateData[sectionItem.section][$index].icon_show">
+      Icon:
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].icon_show"
+         class="fa fa-eye"
+         aria-hidden="true">
+      </i>
+      <i ng-if="!$ctrl.templateData[sectionItem.section][$index].icon_show"
+         class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+    </button>
+
+
+  </div>
+</script>
+
+<script type="text/ng-template" id="detailsNoIconOptionsPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="noIconOptionsPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="projectsItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="interestsItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+    <button class="btn btn-sm  text-primary"
+            ng-click="$ctrl.templateData[sectionItem.section][$index].icon_show = !$ctrl.templateData[sectionItem.section][$index].icon_show">
+      Icon:
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].icon_show"
+         class="fa fa-eye"
+         aria-hidden="true">
+      </i>
+      <i ng-if="!$ctrl.templateData[sectionItem.section][$index].icon_show"
+         class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="employmentItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="skillsItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="volunteerItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash" aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="strengthsItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+    </button>
+    <button class="btn btn-sm  text-primary"
+            ng-click="$ctrl.templateData[sectionItem.section][$index].icon_show = !$ctrl.templateData[sectionItem.section][$index].icon_show">
+      Icon:
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].icon_show"
+         class="fa fa-eye"
+         aria-hidden="true">
+      </i>
+      <i ng-if="!$ctrl.templateData[sectionItem.section][$index].icon_show"
+         class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="coursesItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="technologiesItemPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+    <button ng-click="$ctrl.templateData[sectionItem.section][$index].show = !$ctrl.templateData[sectionItem.section][$index].show"
+            class="btn btn-sm  text-primary">
+      Hide Item
+      <i ng-if="$ctrl.templateData[sectionItem.section][$index].show"
+         class="fa fa-eye-slash"
+         aria-hidden="true">
+      </i>
+    </button>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="itemPopoverCustom.html">
+  <h3 class="popover-title">{{$ctrl.popupTitle}}</h3>
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)">
+  </div>
+  <button ng-click="$ctrl.addRecord(sectionItem.section)">Add Entry</button>
+  <button>button2</button>
+  <button ng-click="$ctrl.removeSection(sectionItem.section)">
+    Remove/Hide Item
+  </button>
+</script>

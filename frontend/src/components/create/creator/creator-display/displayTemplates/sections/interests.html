@@ -1,0 +1,72 @@
+<!--Passions -->
+<div id="passion-section"
+     page-link
+     page-break >
+
+  <script type="text/ng-template" id="interestsPopover.html">
+    <button ng-click="$ctrl.removeSection('interests')">
+      Hide Section
+    </button>
+  </script>
+
+  <div class="section-heading"
+       ng-click="$ctrl.popoverOpen(true, sectionItem.section); $ctrl.buildPopupTitle(sectionItem.section);"
+       ng-mouseenter="$ctrl.popoverOpen('alt', sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)"
+       popover-trigger="none"
+       popover-is-open="$ctrl.optionsOpen.interests"
+       uib-popover-template="$ctrl.sectionOptions()">
+        <textarea class="editable section-heading-edit "
+                  ng-class="[$ctrl.primaryColor, $ctrl.headingFont]"
+                  placeholder="Passions"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.labels.interests">
+        </textarea>
+  </div>
+
+  <div class="passions">
+
+    <div class="passion-item"
+         ng-repeat="interest in $ctrl.templateData.interests"
+         ng-if="interest.show">
+
+      <i class="fa icon"
+         ng-if="$ctrl.templateData.interests[$index].icon_show"
+         ng-class="[$ctrl.secondaryColor, $ctrl.templateData[sectionItem.section][$index].icon]"
+         ng-click="$ctrl.popoverOpenItem(true, sectionItem.section + 'icon', $index); $ctrl.iconSelectIndex = $index;"
+         ng-mouseenter="$ctrl.popoverOpenItem('alt', sectionItem.section + 'icon', $index)"
+         ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section + 'icon', $index)"
+         popover-trigger="none"
+         popover-placement="right"
+         popover-is-open="$ctrl.optionsOpenItem[sectionItem.section + 'icon'][$index]"
+         uib-popover-template="$ctrl.sectionOptions('iconSelect')">
+      </i>
+
+      <div class="passion-label">
+                <textarea class="editable passion-label-edit "
+                          ng-click="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+                          ng-mouseenter="$ctrl.popoverOpenItem('alt', sectionItem.section, $index)"
+                          ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)"
+                          popover-trigger="none"
+                          popover-is-open="$ctrl.optionsOpenItem[sectionItem.section][$index]"
+                          uib-popover-template="$ctrl.sectionOptions('iconOptions')"
+                          ng-class="[$ctrl.primaryColor, $ctrl.subHeadingFont]"
+                          placeholder="Your Passion"
+                          maxlength="100"
+                          spellcheck="false"
+                          autocomplete="off"
+                          rows="1"
+                          ng-change="$ctrl.dirtyValue(true)"
+                          ng-model="$ctrl.templateData.interests[$index].name"
+                          msd-elastic>
+                </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Passions -->

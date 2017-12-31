@@ -1,0 +1,99 @@
+<nav class="navbar top-nav navbar-fixed-top">
+  <div class="navbar-header"
+       ng-cloak>
+    <button type="button"
+            class="navbar-toggle"
+            ng-click="$ctrl.isNavCollapsed = !$ctrl.isNavCollapsed">
+      <span class="sr-only">
+        Toggle navigation
+      </span>
+    </button>
+  </div>
+
+  <a class="navbar-brand"
+         ng-if="$ctrl.isAuthenticated"
+         ui-sref="userhome">
+        <!--Jhuntr-->
+    <img  class='nav-logo' src="../../assets/brand/drawing_white2.png" width="40px" height="40px"><!--navbar-brand -->
+  </a>
+
+
+
+  <div class="collapse navbar-collapse"
+       uib-collapse="$ctrl.isNavCollapsed">
+    <ul class="nav navbar-nav navbar-left ">
+      <li>
+        <a class="nav-style"
+           ng-if="$ctrl.isAuthenticated"
+           ui-sref="postlisting">
+          Target List
+        </a>
+      </li>
+      <li>
+        <a class="nav-style"
+           ng-if="$ctrl.isAuthenticated"
+           ui-sref="reslist">
+          Resumes
+        </a>
+      </li>
+      <li>
+        <a class="nav-style"
+           ng-if="$ctrl.isAuthenticated"
+           ui-sref="cloud">
+          Cloud
+        </a>
+      </li>
+    </ul>
+
+
+    <div ng-if="$ctrl.showSaveState"
+         class="navbar-text">
+      <p ng-show="$ctrl.areUnsaved"
+         class="text-danger">
+        Unsaved Changes
+      </p>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a ng-if="!$ctrl.isAuthenticated" ui-sref="login" class="site-colors-bgreen">
+          <i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+          &nbsp;&nbsp;Login
+        </a>
+      </li>
+
+      <li ng-if="$ctrl.isAuthenticated"
+          class="nav navbar-nav"
+          uib-dropdown>
+        <p id="single-button"
+                class="navbar-text nav-style acct-btn"
+                uib-dropdown-toggle>
+          Account
+        </p>
+        <ul ng-if="$ctrl.isAuthenticated"
+            class="dropdown-menu"
+            uib-dropdown-menu
+            role="menu"
+            aria-labelledby="Account dropdown">
+          <li role="menuitem">
+            <a ui-sref="user">
+              Account
+            </a>
+          </li>
+          <li role="menuitem">
+            <a ng-if="$ctrl.isAuthenticated"
+               ng-click="$ctrl.logout()"
+               class="nav-cursor btn navbar-btn site-colors-bgreen ">
+              Log Out&nbsp;&nbsp;
+              <i class="fa fa-sign-out  fa-lg" aria-hidden="true">
+              </i>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li role="separator" class="divider"></li>
+    </ul>
+  </div>
+</nav>
+
+
+

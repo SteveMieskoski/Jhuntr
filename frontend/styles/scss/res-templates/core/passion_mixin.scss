@@ -1,0 +1,44 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+
+
+@mixin passion-section {
+
+  @include section-heading;
+
+  .passions {
+    width: 100%;
+    line-height: 20px;
+    .passion-item {
+      display: inline-flex;
+      flex-wrap: wrap;
+      vertical-align: top;
+      //width: 50%;
+      width: 220px;
+
+      .icon {
+        width: 18%;
+        display: inline-block;
+        vertical-align: top;
+       // padding-right: 5px;
+        font-size: 25px;
+      }
+
+      .passion-label {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%;
+        .passion-label-edit {
+          width: 100%;
+          display: inline-block;
+          margin-top: 5px;
+          font-size: 18px;
+          font-weight: 700;
+          height: 20px;
+        }
+      }
+
+    }
+  }
+
+}

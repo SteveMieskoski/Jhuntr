@@ -1,0 +1,219 @@
+@import '../../../../common/classes/flex_grid';
+@import '../../../../common/base-styles.main';
+
+$name: 'input-hover';
+$property: opacity;
+$start: 0.75;
+$finish: 1;
+
+$duration: 0.2;
+$easing: linear;
+$delay: 0;
+$iterations: 1;
+$direction: normal;
+
+
+.login-boundries {
+  padding-top: 5%;
+  padding-bottom: 20%;
+}
+
+.login-page-container {
+  border: 1px solid black;
+  height: 100vh;
+  background-image: $login-page-background;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .login-heading{
+    height: 180px;
+    margin-bottom: 0;
+    padding-left: 30px;
+    //font-size: 45px;
+    .login-loading-logo{
+      // height: 150px;
+      margin-bottom: 0;
+    }
+  }
+  .login-top-items{
+    margin-bottom: 0;
+    flex: 0 0 25%;
+    .flex-container-inner {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .small-flex-item {
+      flex-basis: 100%;
+      height: 100px;
+      background: #000;
+    }
+
+  }
+  .login-middle-items{
+    flex: 0 0 33.33%;
+  }
+  .login-extra-small-fill{
+    flex: 0 0 8.333%;
+  }
+
+  .login-small-fill{
+    flex: 0 0 16.667%;
+  }
+  .input-label{
+    width: 100px;
+  }
+  .login-bottom-items{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .social-button{
+    border-radius: 4px;
+    opacity: 0.75;
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease 0s;
+    @include normalFont();
+    .top{
+      justify-content: flex-start;
+      text-align: start;
+    }
+    .middle{
+      justify-content: center;
+      text-align: center;
+    }
+    .bottom{
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .login-input {
+    position: relative;
+    color: white;
+    background-color: #949e9e;
+    height: 45px;
+    width: 200px;
+    border-radius: 7px;
+    opacity: 0.75;
+    margin-bottom: 20px;
+    border: 0;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      border: 1px outset #cacaca;
+      //  box-shadow:  -2px 2px 4px 2px #6b6b6b,  2px -2px 4px 2px #cacaca;
+    }
+
+    &:focus {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      // border: 1px inset #575757;
+      box-shadow: inset -2px 2px 3px 1px #6b6b6b, inset 2px -2px 3px 1px #cacaca;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: white;
+      opacity: 1;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: white;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: white;
+      opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: white;
+      opacity: 1;
+    }
+
+    //.email-form{
+    //  font-family: $alex_brush !important;
+    // }
+
+    .login-forms-text {
+      @include normalFont(bold);
+      opacity: 1;
+    }
+
+    .login-submit{
+      cursor: pointer;
+    }
+  }
+
+  .login-bottom-signup-button{
+    position: relative;
+    @include grayBox-medium(0.75);
+    //  background-color: #949e9e;
+    // height: 100px;
+    // width: 200px;
+    //  border-radius: 7px;
+    //   opacity: 0.75;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      border: 1px outset #cacaca;
+      //  box-shadow:  -2px 2px 4px 2px #6b6b6b,  2px -2px 4px 2px #cacaca;
+    }
+
+    &:focus {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      // border: 1px inset #575757;
+      box-shadow: inset -2px 2px 4px 2px #6b6b6b, inset 2px -2px 4px 2px #cacaca;
+    }
+
+    &:active {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      background-color: #545e5e;
+      box-shadow: inset -2px 2px 4px 2px #6b6b6b, inset 2px -2px 4px 2px #cacaca;
+    }
+
+    .login-signup-button-text {
+      color: white;
+      padding-top: 20px;
+      @include mediumFont();
+      opacity: 1;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+

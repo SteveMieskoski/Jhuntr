@@ -1,0 +1,214 @@
+<!DOCTYPE html><!--  ng-strict-di="false"  -->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="root" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="root"  class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="root"  class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="root" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Jhunter</title>
+  <link rel="shortcut icon" href="https://jhuntr.com/assets/icons/drawing-medium.ico"/>
+  <meta itemprop="description" content="Jhuntr helps take the effort out of your job hunt With a side by side editor, combined with easy tracking of positions applied or just of interest.">
+  <meta itemprop="name" content="Take the effort out of your job hunt - Jhuntr">
+  <meta itemprop="image" content="https://jhuntr.com/jhuntr-social-image.jpg">
+  <meta name="keywords" content="resume, creative resume, side-by-side resume, performance-based resume, online resume, cv, career, job search, resume builder, create a resume, create resumes, create cv, resume design, cv design, job hunt">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/please-wait/build/please-wait.css"/>
+  <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.css"/>
+  <link rel="stylesheet" href="../vendor/bootstrap.css"/>
+  <link rel="stylesheet" href="node_modules/please-wait/build/please-wait.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css"/>
+
+  <link rel="stylesheet" href="node_modules/ui-select/dist/select.min.css"/>
+ <!-- <link rel="stylesheet" href="styles/css/whiteboard/ui-grid/main.css"/>-->
+  <link rel="stylesheet" href="styles/css/main.css"/>
+  <link rel="stylesheet" href="node_modules/angular-dragula/dist/dragula.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.4.0/croppie.min.css"/>
+  <!-- <script src="https://use.fontawesome.com/a4df8f1fb5.js"></script> -->
+
+
+  <link rel="stylesheet" href="styles/css/res-templates/core/core.css"/>
+</head>
+<!--START   APPLICATION DISPLAY ELEMENTS ------------------------------------------START  APPLICATION DISPLAY ELEMENTS ------------------------------------------>
+<body ng-controller="RootController as rtCtrl" >
+
+<navbar></navbar>
+
+
+  <div id="transition-container"
+       ng-class="{'jh-loaded':rtCtrl.jhloaded, 'jh-loading': rtCtrl.jhloading, 'jh-removing': rtCtrl.jhremoving}">
+    <transition id="transitionComponent" class="jh-loading-screen"
+                ng-class="{'jh-loaded':rtCtrl.jhloadedInner, 'jh-loading': rtCtrl.jhloadingInner, 'jh-removing': rtCtrl.jhremovingInner}"
+                style="background-color: rgb(244, 109, 59);" ng-if="rtCtrl.jhloading"></transition>
+
+    <ui-view id="mainView" ng-class="{'pre-anim': rtCtrl.uiViewStart}"></ui-view>
+    <!--<bottomfooter new-page="rtCtrl.currentUrl"></bottomfooter>-->
+  </div>
+<div class="site-footer hidden-footer" footer-show show-value="70">
+  <bottomfooter></bottomfooter>
+</div>
+
+<!--END   APPLICATION DISPLAY ELEMENTS ------------------------------------------ END  APPLICATION DISPLAY ELEMENTS ------------------------------------------>
+
+<!-- SPLASH SCREEN DURING APPLICATION BOOTSTRAPING -->
+<script src="node_modules/please-wait/build/please-wait.js"></script>
+
+<script type="text/javascript">
+    window.loading_screen = window.pleaseWait({
+        logo: "assets/drawing-medium-beta.png",
+        backgroundColor: '#2c3e50',
+        loadingHtml: '<div class="sk-wave"> <div class="sk-rect sk-rect1"></div> <div class="sk-rect sk-rect2"></div> <div class="sk-rect sk-rect3"></div> <div class="sk-rect sk-rect4"></div> <div class="sk-rect sk-rect5"></div> </div><p class="pg-loading-html">Jhunter (Alpha 8)</p>'
+    });
+</script>
+
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<!-- 3RD PARTY API SDKs -->
+<script type="text/javascript" src="https://cdn.auth0.com/js/lock/10.6/lock.min.js"></script>
+
+<!-- Bower -->
+<!-- AceEditor-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+
+<!--<script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ext-language_tools.js"></script>
+
+
+<!-- TinyMCE Editor
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>-->
+<script src="bower_components/tinymce/tinymce.min.js"></script>
+<script src="bower_components/tinymce/plugins/code/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/paste/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/template/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/imagetools/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/colorpicker/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/textpattern/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/emoticons/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/searchreplace/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/spellchecker/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/save/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/importcss/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/fullpage/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/preview/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/wordcount/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/hr/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/autoresize/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/autosave/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/contextmenu/plugin.min.js"></script>
+<script src="bower_components/tinymce/plugins/nonbreaking/plugin.min.js"></script>
+
+<!-- NPM  -->
+<!-- (those included in package.json even if retrieved via CDN) -->
+<!-- Core Angular CDN
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+
+<!-- Additional Angular CDNs
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-touch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-sanitize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-messages.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-cookies.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.4.0/croppie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+ -->
+<!-- with CDN Available -->
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/angular-animate/angular-animate.min.js"></script>
+<script src="node_modules/angular-touch/angular-touch.min.js"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="node_modules/angular-aria/angular-aria.min.js"></script>
+<script src="node_modules/angular-material/angular-material.min.js"></script>
+<script src="node_modules/angular-messages/angular-messages.min.js"></script>
+<script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+<script src="vendor/croppie.js"></script>
+
+<!-- Non CDNs (via NPM) -->
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src='node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js'></script>
+<script src="node_modules/ui-select/dist/select.min.js"></script>
+<script src="node_modules/angular-lock/dist/angular-lock.js"></script>
+<script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
+<script src="node_modules/angular-storage/dist/angular-storage.min.js"></script>
+<script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+<script src="node_modules/angular-ui-grid/ui-grid.min.js"></script>
+<script src="node_modules/angular-dragula/dist/angular-dragula.min.js"></script>
+<script src="node_modules/ng-img-crop-full-extended/compile/unminified/ng-img-crop.js"></script>
+<script src="node_modules/angular-loggly-logger/angular-loggly-logger.min.js"></script>
+<script src="node_modules/lodash/lodash.js"></script>
+
+<!-- Bower -->
+<script src="bower_components/angular-ui-scrollpoint/dist/scrollpoint.js"></script>
+<script src="bower_components/angular-ui-ace/ui-ace.js"></script>
+<script src="bower_components/angular-ui-tinymce/dist/tinymce.min.js"></script>
+<script src="bower_components/ace-builds/src-min-noconflict/ext-whitespace.js"></script>
+
+<!-- Following is the one item that is the only Bower sourced alternatively using a CDN -->
+<script src="https://cdn.auth0.com/w2/auth0-7.4.min.js"></script>
+<script src="bower_components/angular-auth0/dist/angular-auth0.js"></script>
+
+<script src="node_modules/angular-elastic/elastic.js"></script>
+
+
+<!----------    APPLICATION FILES (START)   ---------->
+<script src="root.module.js"></script>
+<!--<script src="/dist/123bundle.js"></script>-->
+
+<!----------    APPLICATION FILES (END)    ---------->
+
+<!----------    WEB FONT LOADER (START)    ---------->
+<!-- Feel that it is not setup or working as intended at the moment.
+    Will need to investigate later;
+-->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+<script>
+    WebFont.load({
+        google: {
+            families: [
+                'EB Garamond 12',
+                'Lato',
+                'Merriweather',
+                'Montserrat',
+                'Neuton',
+                'Oswald',
+                'Quattrocento',
+                'Playfair Display',
+                'Open Sans',
+                'Roboto Slab',
+                'Roboto',
+                'Times New Roman',
+                'Dancing Script OT',
+                'Alex Brush',
+                'CAC Champagne',
+                'Architects Daughter',
+                'The Girl Next Door',
+                'Reenie Beanie',
+                'Nothing You Could Do'
+            ]
+        }
+    });
+</script>
+-->
+<!----------    WEB FONT LOADER (END)    ---------->
+</body>
+</html>

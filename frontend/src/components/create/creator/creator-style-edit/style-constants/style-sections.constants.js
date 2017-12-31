@@ -1,0 +1,72 @@
+
+
+export const styleSectionsConstants = {
+	sectionsArray: [  //todo reduce number of section constant collections to a couple
+		{name: "achievements", label: "Achievements"},
+		{name: "languages", label: "Languages"},
+		{name: "projects", label: "Projects"},
+		{name: "interests", label: "Passions"},
+		{name: "employment", label: "Employment"},
+		{name: "education", label: "Education"},
+		{name: "skills", label: "Skills"},
+		{name: "volunteer", label: "Volunteer"},
+		{name: "strengths", label: "Strengths"},
+		{name: "courses", label: "Courses"},
+		{name: "summary", label: "Summary"},
+		{name: "technologies", label: "Technologies"}],
+	allSectionsDefault: {
+		achievements: false,
+		languages: false,
+		projects: false,
+		interests: false,
+		employment: false,
+		education: false,
+		skills: true,
+		volunteer: true,
+		strengths: true,
+		courses: true,
+		summary: true,
+		technologies: true
+	},
+	allSections: [
+		"achievements",
+		"languages",
+		"projects",
+		"interests",
+		"employment",
+		"education",
+		"skills",
+		"volunteer",
+		"strengths",
+		"courses",
+		"summary",
+		"technologies"],
+	sectionsObject: {
+		"achievements": "Achievements",
+		"languages": "Languages",
+		"projects": "Projects",
+		"interests": "Passions",
+		"employment": "Employment",
+		"education": "Education",
+		"skills": "Skills",
+		"volunteer": "Volunteer",
+		"strengths": "Strengths",
+		"courses": "Courses",
+		"summary": "Summary",
+		"technologies": "Technologies"
+	},
+	sectionLabelField: {
+		"achievements": "label",
+		"languages": "language",
+		"projects": "name",
+		"interests": "name",
+		"employment": "company",
+		"education": "institution",
+		"skills": "name",
+		"volunteer": "organization",
+		"strengths": "name",
+		"courses": "name",
+		"technologies": "name",
+		"basics": "firstname"
+	}
+}

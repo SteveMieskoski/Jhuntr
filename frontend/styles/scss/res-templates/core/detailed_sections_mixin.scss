@@ -1,0 +1,179 @@
+@mixin subheading-container {
+ // line-height: 22px;
+  margin-top: .7em;
+  width: 100%;
+  //white-space: nowrap;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+
+@mixin subheading {
+  //width: 100%;
+  font-size: 21px;
+  font-weight: 400;
+  //white-space: nowrap;
+  overflow-wrap: break-word;
+  display: inline-block;
+  height: 25px;
+}
+
+@mixin sub-icon {
+  font-size: 13px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+@mixin icon-label {
+  font-size: 13px;
+  font-weight: 400;
+  //white-space: nowrap;
+  overflow-wrap: break-word;
+  display: inline-block;
+  height: 15px;
+}
+
+@mixin info-heading-container {
+  line-height: 1em;
+}
+
+@mixin info-heading {
+  // width: 100%;
+  margin-top: .5em;
+  font-size: 15px;
+  font-weight: 700;
+  //white-space: nowrap;
+  overflow-wrap: break-word;
+  display: inline-block;
+  height: 20px;
+}
+
+@mixin detail-container {
+
+}
+
+@mixin details-heading {
+  margin-top: .5em;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: 15px;
+  font-weight: 400;
+  flex-grow: 1;
+  height: 18px;
+}
+@mixin detail-content-container {
+  margin-top: 5px;
+}
+
+@mixin detail-bullet{
+  font-size: .4em;
+  float: left;
+  margin-right: .7em;
+  margin-top: .8em;
+}
+
+@mixin detail-content {
+  overflow: hidden;
+  word-wrap: break-word;
+  padding-bottom: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  flex-grow: 1;
+  width: 100%;
+  height: 30px;
+}
+
+@mixin date-location {
+
+  margin-top: 10px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+
+  .date {
+    display: inline-block;
+    word-wrap: break-word;
+    position: relative;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    width: 55%;
+    height: auto;
+
+    .icon {
+      width: 8px;
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 5px;
+      width: 85%;
+      display: inline-block;
+      overflow: hidden;
+      word-wrap: break-word;
+      @include icon-label;
+    }
+  }
+
+  .location {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+
+    .icon {
+      width: 3%;
+      @include sub-icon;
+    }
+
+    .location-edit {
+      width: 87%;
+      display: inline-block;
+      overflow: hidden;
+      word-wrap: break-word;
+      @include icon-label;
+    }
+  }
+  /*
+  margin-top: .5em;
+  width: 100%;
+  display: inline-flex;
+  overflow-wrap: break-word;
+  .date {
+    display: inline-flex;
+    //white-space: nowrap;
+
+    width: 55%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .date-edit {
+      margin-right: 1%;
+      display: inline-block;
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+
+  .location {
+    display: inline-flex;
+
+    .icon {
+      @include sub-icon;
+    }
+
+    .location-edit {
+      overflow: hidden;
+      //white-space: nowrap;
+
+      @include icon-label;
+    }
+  }
+  */
+}

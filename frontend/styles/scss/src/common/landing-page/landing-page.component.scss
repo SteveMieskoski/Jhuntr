@@ -1,0 +1,77 @@
+@import '../../../common/base-styles.main';
+
+
+#landing-page{
+
+  .landing-title {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 100px;
+    color: $home-page-background;
+
+    text-align: right;
+  }
+
+  .landing-title-image{
+    position: absolute;
+    //right: 30px;
+    right: 3%;
+    top: 4%;
+    //top: 20px;
+    height: 180px;
+  }
+
+  .landing-action-item{
+    position: absolute;
+    top: 250px;
+    left: 270px;
+    @include grayBox-medium(0.75);
+    // color: white;
+    // background-color: #949e9e;
+    //height: 105px;
+    // width: 330px;
+    // border-radius: 7px;
+    // opacity: 0.75;
+    cursor: pointer;
+    .landing-action-text{
+      @include largeFont(bold);
+      opacity: 1;
+    }
+  }
+
+  .landing-tagline{
+    position: absolute;
+    vertical-align: bottom;
+    left: 20px;
+    bottom: 2%;
+    color: #30f099;
+  }
+
+  .landing-beta-notice{
+    position: absolute;
+    vertical-align: bottom;
+    right: 7px;
+    bottom: 1%;
+  }
+
+  .land-white-text{
+    color: white;
+  }
+
+  #index-background{
+    // background-image: url("../backgrounds/man-people-office-writing.jpg");
+    // background-size: cover;
+  }
+
+  //style="min-height: 100vh; background-image: url('assets/backgrounds/man-people-office-writing.jpg');"
+
+  // height:100vh;
+  // padding-left: 2em;
+  min-height: 100vh;
+  //background-image: url("../backgrounds/man-people-office-writing.jpg");
+  background-image: $landing-page-background;
+  background-size: cover;
+  padding-top: -20px;
+
+
+
+}

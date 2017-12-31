@@ -1,0 +1,84 @@
+/*
+
+  .text {
+    font-family: 'Merriweather', serif !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    opacity: 1;
+  }
+
+    .text {
+    font-family: 'Merriweather', serif !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    opacity: 1;
+  }
+ */
+/* Mixin's in this file:
+pageOnlyFonts
+muyMuchoFont
+extraLargeFont
+largeFont
+mediumFont
+normalFont
+smallFont
+
+*/
+/*
+// Site Font Sizing
+for $fontFamily ( see variables/fonts )
+
+
+wording based upon the pixel size of the font"
+extra large: 50px
+large: 40px
+medium: 30px
+normal: 20px
+small: 15px
+extra small: 10px
+
+ */
+#landing-page {
+  min-height: 100vh;
+  background-image: url("../backgrounds/man-people-office-writing.jpg");
+  background-size: cover;
+  padding-top: -20px; }
+  #landing-page .landing-title {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 100px;
+    color: #f46d3b;
+    text-align: right; }
+  #landing-page .landing-title-image {
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    height: 180px; }
+  #landing-page .landing-action-item {
+    position: absolute;
+    top: 250px;
+    left: 270px;
+    color: white;
+    background-color: #949e9e;
+    height: 100px;
+    width: 300px;
+    border-radius: 7px;
+    opacity: 0.75;
+    cursor: pointer; }
+    #landing-page .landing-action-item .landing-action-text {
+      font-size: 30px !important;
+      font-family: "Merriweather", serif !important;
+      font-weight: 700 !important;
+      opacity: 1; }
+  #landing-page .landing-tagline {
+    position: absolute;
+    vertical-align: bottom;
+    left: 20px;
+    bottom: 2%;
+    color: #30f099; }
+  #landing-page .landing-beta-notice {
+    position: absolute;
+    vertical-align: bottom;
+    right: 7px;
+    bottom: 1%; }
+  #landing-page .land-white-text {
+    color: white; }

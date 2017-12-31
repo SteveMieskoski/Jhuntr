@@ -1,0 +1,38 @@
+<br/>
+<br/>
+<div class="res-listing-page" style="padding-left: 100px">
+  <button class="btn text-primary" ng-click="$ctrl.createNewRes()" >Create Res</button>
+  <button class="btn text-primary" ng-click="$ctrl.showAddPlaceholder = !$ctrl.showAddPlaceholder">Add Placeholder</button>
+  <button class="btn text-primary" ng-click="$ctrl.showAddOtherSource = !$ctrl.showAddOtherSource">Add From Computer</button>
+  <br/>
+  <add-placeholder ng-if="$ctrl.showAddPlaceholder"
+                   return-data="$ctrl.addLabelOnly(data, action)">
+  </add-placeholder>
+  <other-source ng-if="$ctrl.showAddOtherSource"
+                   return-data="$ctrl.addOtherSource(data, action)">
+  </other-source>
+  <br/>
+  <div ng-repeat="res in $ctrl.resumeList" class="res-listing-items" ng-if="!$ctrl.resRemoved">
+    <div >
+      <span ng-if="!($ctrl.editing === $index)" ng-click="$ctrl.editing = $index">
+        {{res.ref_label}}
+      </span>
+    <entry-edit ng-if="$ctrl.editing === $index"
+                edit-data="res" edit-index="$index"
+                return-data="$ctrl.editResponse(editRes, data, action)" >
+    </entry-edit>
+    </div>
+    <a ng-if="$ctrl.parseResumeView(res)" ui-sref="rescreate({res: res._id, template: res.template_ref})">
+      View
+    </a>
+    <span ng-if="!$ctrl.parseResumeView(res)" ng-bind="$ctrl.parseAltLabel(res)" class="small">
+    </span>
+    <span>&nbsp;&nbsp;</span>
+    <span ng-if="res.is_core">
+      Master Res
+    </span>
+  <!--  <res-thumbnail thumb-host="$ctrl.host" thumb-ref="res._id"></res-thumbnail>-->
+  </div>
+</div>
+
+

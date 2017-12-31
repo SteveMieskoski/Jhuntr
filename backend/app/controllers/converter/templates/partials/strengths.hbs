@@ -1,0 +1,73 @@
+
+<!-- Strengths Section -->
+<div id="strengths-section">
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{#labels.strengths}}{{labels.strengths}}{{/labels.strengths}}
+      {{^labels.strengths}}Strengths{{/labels.strengths}}
+    </div>
+  </div>
+
+  <div class="strengths">
+    {{#strengths}}
+      {{# if show}}
+      <div class="strength-item">
+        {{#if icon_show}}
+        <i class="fa fa-diamond icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+        {{/if}}
+        <div class="single-strength">
+
+          <div class="strength-label">
+            <div class=" strength-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+              {{#if label}}
+                {{label}}
+              {{else}}
+                What are you most proud of?
+              {{/if}}
+            </div>
+          </div>
+          <div class="strength-details">
+            <div class=" strength-details-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              {{#if detail}}
+                {{detail}}
+              {{else}}
+                A bit about your achievement
+              {{/if}}
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      {{/if}}
+    {{/strengths}}
+    <!-- Below is Placeholders for added but empty section -->
+    {{^strengths}}
+      <div class="achievement-item">
+
+        <i class="fa fa-diamond icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+
+        <div class="single-achievement">
+
+          <div class="achievement-label">
+            <div class=" achievement-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+              What are you most proud of?
+            </div>
+          </div>
+          <div class="achievement-details">
+            <div class=" achievement-details-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              A bit about your achievement
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    {{/strengths}}
+  </div>
+</div>
+
+
+<!-- Strengths Section end -->

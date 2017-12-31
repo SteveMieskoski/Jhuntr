@@ -1,0 +1,31 @@
+<br>
+<br>
+<h1>Cloud</h1>
+
+<div ng-if="$ctrl.cloudService === 'choose'">
+  <div class="row">
+    <div class="col-lg-3 col-lg-offset-3">
+      <button ui-sref="drive" class="btn btn-primary btn-lg">Google Drive</button>
+    </div>
+    <div class="col-lg-3">
+      <button ui-sref="dropbox" class="btn btn-primary btn-lg">DropBox</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2 col-lg-offset-4">
+      <br>
+      Remember Choice: <input type="checkbox" ng-model="$ctrl.rememberMe">
+    </div>
+  </div>
+</div>
+
+<!---
+<div ng-if="$ctrl.cloudService === 'google'">
+  <gdrive></gdrive>
+</div>
+<div ng-if="$ctrl.cloudService === 'dropbox'">
+  <dropbox></dropbox>
+</div>
+-->
+<!--<devcomponent></devcomponent>
+<cloud-auth></cloud-auth>-->

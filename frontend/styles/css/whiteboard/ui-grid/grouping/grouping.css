@@ -1,0 +1,34 @@
+/* This file contains variable declarations (do not remove this line) */
+/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+/**
+* $section Grid styles
+*/
+/**
+* $section Header styles
+*/
+/** $description Colors for header gradient */
+/**
+* $section Grid body styles
+*/
+/** $description Colors used for row alternation */
+/**
+* $section Sort arrow colors
+*/
+/**
+* $section Scrollbar styles
+
+$scrollbarBackground: darken($rowColorEven, 15%);
+$scrollbarBackgroundHover: darken($scrollbarBackground, 15%);
+$scrollbarBackgroundScrolling: darken($scrollbarBackgroundHover, 15%);
+$scrollbarWidth: 10px;
+$scrollbarBorderRadius: 2px;
+$scrollbarShadow: 0 0 0px #fff;
+$scrollbarBorder: 1px solid darken($scrollbarBackground, 15%);
+$scrollbarBorderScrolling: 1px solid darken($scrollbarBackgroundScrolling, 15%);
+*/
+/**
+* $section font library path
+*/
+/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+.ui-grid-tree-header-row {
+  font-weight: bold !important; }

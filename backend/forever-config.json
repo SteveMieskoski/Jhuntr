@@ -1,0 +1,10 @@
+{
+  // Comments are supported
+  "uid": "server",
+  "script": "server.js",
+  "watch": true,
+  "append": true,
+  "sourceDir": "/home/ubuntu/production-backend/backend",
+  "workingDir": "/home/ubuntu/production-backend/backend"
+}
+

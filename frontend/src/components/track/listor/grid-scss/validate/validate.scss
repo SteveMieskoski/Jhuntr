@@ -1,0 +1,6 @@
+@import '../variables';
+
+
+div.ui-grid-cell-contents.invalid {
+  border: $invalidValueBorder;
+}

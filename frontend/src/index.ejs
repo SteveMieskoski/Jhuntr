@@ -1,0 +1,159 @@
+<!DOCTYPE html><!--  ng-strict-di="false"  -->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="root" ng-strict-di class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="root"  ng-strict-di class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="root"  ng-strict-di class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="root" ng-strict-di class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://jhuntr.com/assets/icons/drawing-medium.ico"/>
+    <title>Jhunter</title>
+    <meta itemprop="description" content="Jhuntr helps take the effort out of your job hunt With a side by side editor, combined with easy tracking of positions applied or just of interest.">
+    <meta itemprop="name" content="Take the effort out of your job hunt - Jhuntr">
+    <meta itemprop="image" content="https://jhuntr.com/jhuntr-social-image.jpg">
+    <meta name="keywords" content="resume, creative resume, side-by-side resume, performance-based resume, online resume, cv, career, job search, resume builder, create a resume, create resumes, create cv, resume design, cv design, job hunt">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="node_modules/please-wait/build/please-wait.css"/>
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="../vendor/bootstrap.css"/>
+    <link rel="stylesheet" href="node_modules/please-wait/build/please-wait.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css"/>
+
+    <link rel="stylesheet" href="node_modules/ui-select/dist/select.min.css"/>-->
+    <link rel="stylesheet" href="../node_modules/angular-ui-grid/ui-grid.css"/>
+    <!-- <link rel="stylesheet" href="styles/css/whiteboard/ui-grid/main.css"/>-->
+   <!-- <link rel="stylesheet" href="styles/css/main.css"/>-->
+   <!-- <link rel="stylesheet" href="/dist/main.css" />-->
+  <!--  <link rel="stylesheet" href="node_modules/angular-dragula/dist/dragula.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.4.0/croppie.min.css"/>-->
+    <!-- <script src="https://use.fontawesome.com/a4df8f1fb5.js"></script>
+
+
+    <link rel="stylesheet" href="styles/css/res-templates/core/core.css"/>-->
+
+    <link href="/please-wait.css" rel="stylesheet">
+    <link href="/3-wave.css" rel="stylesheet">
+
+</head>
+<!--START   APPLICATION DISPLAY ELEMENTS ------------------------------------------START  APPLICATION DISPLAY ELEMENTS ------------------------------------------>
+<body ng-controller="RootController as rtCtrl" >
+
+<navbar></navbar>
+
+
+<div id="transition-container"
+     ng-class="{'jh-loaded':rtCtrl.jhloaded, 'jh-loading': rtCtrl.jhloading, 'jh-removing': rtCtrl.jhremoving}">
+    <transition id="transitionComponent" class="jh-loading-screen"
+                ng-class="{'jh-loaded':rtCtrl.jhloadedInner, 'jh-loading': rtCtrl.jhloadingInner, 'jh-removing': rtCtrl.jhremovingInner}"
+                style="background-color: #2c3e50;" ng-if="rtCtrl.jhloading"></transition>
+    <!-- style="background-color: rgb(244, 109, 59);"-->
+    <ui-view id="mainView" ng-class="{'pre-anim': rtCtrl.uiViewStart}"></ui-view>
+    <!--<bottomfooter new-page="rtCtrl.currentUrl"></bottomfooter>-->
+</div>
+
+<div class="site-footer hidden-footer" footer-show show-value="70">
+    <bottomfooter></bottomfooter>
+</div>
+
+<!--END   APPLICATION DISPLAY ELEMENTS ------------------------------------------ END  APPLICATION DISPLAY ELEMENTS ------------------------------------------>
+
+<!-- SPLASH SCREEN DURING APPLICATION BOOTSTRAPING -->
+<!--<script src="node_modules/please-wait/build/please-wait.js"></script>-->
+<script src="/please-wait.min.js"></script>
+<script type="text/javascript">
+    window.loading_screen = window.pleaseWait({
+        logo: "/drawing-medium.png",
+        backgroundColor: '#2c3e50',
+        loadingHtml: '<div class="sk-wave"> <div class="sk-rect sk-rect1"></div> <div class="sk-rect sk-rect2"></div> <div class="sk-rect sk-rect3"></div> <div class="sk-rect sk-rect4"></div> <div class="sk-rect sk-rect5"></div> </div><p class="pg-loading-html">Jhunter (Beta)</p>'
+    });
+</script>
+
+<!--<script src="/dist/please-wait.min.js"></script>
+<script type="text/javascript">
+    window.loading_screen = window.pleaseWait({
+        logo: "/drawing-medium.png",
+        backgroundColor: '#2c3e50',
+        loadingHtml: '<div class="sk-wave"> <div class="sk-rect sk-rect1"></div> <div class="sk-rect sk-rect2"></div> <div class="sk-rect sk-rect3"></div> <div class="sk-rect sk-rect4"></div> <div class="sk-rect sk-rect5"></div> </div><p class="pg-loading-html">Jhunter (Alpha 8)</p>'
+    });
+</script>-->
+
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<!-- 3RD PARTY API SDKs -->
+<script type="text/javascript" src="https://cdn.auth0.com/js/lock/10.6/lock.min.js"></script>
+<!--<script src="https://apis.google.com/js/drive-share:picker:client:platform.js?onload=on_gapi_loaded"></script>-->
+<script>
+    function on_gapi_loaded() {
+        if (window.init_gapi) {
+            console.log('GOOGLE API CLIENT LOADED');
+            window.init_gapi();
+        } else {
+            setTimeout(on_gapi_loaded, 10);
+        }
+    }
+</script>
+<script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};gapi.load('client:auth2', on_gapi_loaded);" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+
+
+<!--
+    --------    EXTERNAL CDNs (START)   ----------
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script>
+    window.angular || document.write('<script src="js/angular"><\/script>')
+</script>
+-->
+<!----------    EXTERNAL CDNs (END)   ---------->
+<!----------    APPLICATION SOURCE (START)   ---------->
+<!----------    APPLICATION SOURCE (END)    ---------->
+
+<!----------    WEB FONT LOADER (START)    ---------->
+<!-- Feel that it is not setup or working as intended at the moment.
+    Will need to investigate later;
+-->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+<script>
+    WebFont.load({
+        google: {
+            families: [
+                'EB Garamond 12',
+                'Lato',
+                'Merriweather',
+                'Montserrat',
+                'Neuton',
+                'Oswald',
+                'Quattrocento',
+                'Playfair Display',
+                'Open Sans',
+                'Roboto Slab',
+                'Roboto',
+                'Times New Roman',
+                'Dancing Script OT',
+                'Alex Brush',
+                'CAC Champagne',
+                'Architects Daughter',
+                'The Girl Next Door',
+                'Reenie Beanie',
+                'Nothing You Could Do'
+            ]
+        }
+    });
+</script>
+-->
+<!----------    WEB FONT LOADER (END)    ---------->
+</body>
+</html>

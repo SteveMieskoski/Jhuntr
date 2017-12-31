@@ -1,0 +1,84 @@
+
+<div class="listor-page-container" >
+  <section >
+    <div class="frow around-fcol listor-background">
+      <div class="fcol-1 top-col-height"></div>
+      <div class="fcol-1"></div>
+      <div class="fcol-10 ">
+        <!-- <div class="fcol-0"></div>
+        <div class="fcol-11">-->
+        <button ng-click="$ctrl.toggleFiltering()" class="btn btn-primary btn-sm" style="margin-left: 20px;">filter</button>
+        <div class="application-list " >
+          <!-- todo: correct the width overflow and the creation of a bottom scroll-bar on the ui-grid And the calculation of the grid height in listor.controller. -->
+          <div ui-grid-edit ui-grid-resize-columns ui-grid="$ctrl.gridOptions" class="ang-ui-grid" ng-style="$ctrl.gridSize"></div>
+
+        </div>
+      </div>
+      <!-- </div>
+        <div class="fcol-0"></div>-->
+    </div>
+    <span>Status cell with light blue background indicates the last edit materials item visited during this session </span>
+  </section>
+
+</div>
+
+
+<script type="text/ng-template" id="custom-date-filter.html">
+
+  <div class="modal-content col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+
+    <div class="modal-header">
+      <p class="modal-title well custom-date-filter-header">
+            <span class="custom-date-filter-title-text">
+              {{ custom.title }}
+            </span>
+      </p>
+    </div>
+
+    <div class="row modal-body custom-date-filter-container-row">
+
+      <form name="custom.customDateFilterForm"
+            ng-submit="custom.setFilterDate(custom.filterDate)"
+            no-validation>
+
+        <div class="row custom-filter-date-input-row">
+
+          <div class="well col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 custom-date-filter-input">
+
+            <uib-datepicker ng-model="custom.filterDate"
+                            min-date="custom.minDate"
+                            max-date="custom.maxDate"
+                            ng-change="custom.filterDateChanged()"
+                            class="well well-sm">
+            </uib-datepicker>
+
+          </div>
+
+        </div>
+
+        <div class="row modal-footer custom-date-filter-submit-buttons-row">
+
+          <div class="custom-date-filter-submit-buttons-div col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+
+            <button class="btn btn-success btn-lg custom-date-filter-submit-button"
+                    type="submit">
+              Apply
+            </button>
+
+            <button type="button"
+                    class="btn btn-warning btn-lg custom-date-filter-cancel-button"
+                    ng-click="custom.cancelDateFilter()">
+              Cancel
+            </button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</script>

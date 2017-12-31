@@ -1,0 +1,11 @@
+<div>
+  <label for="resSelect">Resume:</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-file-text-o" aria-hidden="true"></i> </span>
+  <select class="form-control"
+          id="resSelect"
+          ng-options="res.ref_label for res in $ctrl.resumeList"
+          ng-model="$ctrl.selectedResume"
+          ng-change="$ctrl.updateSelected()" ></select>
+  </div>
+</div>

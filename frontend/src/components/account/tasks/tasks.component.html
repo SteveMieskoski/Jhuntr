@@ -1,0 +1,185 @@
+
+<div style="position: relative;">
+  <div ng-class="$ctrl.taskClasses.addContainerClass">
+  <button ng-class="$ctrl.taskClasses.addTaskClass"
+          ng-click="$ctrl.addTaskForm()"><i class="fa fa-plus"></i> Task
+  </button>
+  <div ng-class="$ctrl.taskClasses.addTaskInput"
+       ng-if="$ctrl.showTaskInput">
+    <input type="text" ng-model="$ctrl.newTask.label" placeholder="label">
+    <input type="text" ng-model="$ctrl.newTask.content" placeholder="content">
+    <button ng-click="$ctrl.addTask($ctrl.newTask)">Submit</button>
+    <button ng-click="$ctrl.showTaskInput = !$ctrl.showTaskInput">Cancel</button>
+  </div>
+  </div>
+  <div ng-class="$ctrl.taskClasses.innerContainer">
+    <div ng-class="[{'pre-delete': preDelete}, $ctrl.taskClasses.taskRow]"
+         ng-repeat="task in $ctrl.taskList">
+      <div ng-if="!$ctrl.taskEditState[$index].state">
+        <span ng-class="$ctrl.taskClasses.inCompleteIconClass"
+              ng-if="!task.complete"
+              ng-click="$ctrl.completeTask(task, $index)"
+              ng-transclude="inCompleteIcon">
+          <img src="../../../assets/icons/box3.svg"
+               width=30
+               height=40>
+        </span>
+        <span ng-class="$ctrl.taskClasses.completeIconClass"
+              ng-if="task.complete" ng-click="$ctrl.completeTask(task, $index)"
+              ng-transclude="completeIcon">
+          <img src="../../../assets/icons/check-box3.svg"
+               width=30
+               height=40>
+        </span>
+        <span ng-class="$ctrl.taskClasses.taskLabelClass">
+          {{task.label}}:
+        </span>
+        <span ng-class="$ctrl.taskClasses.taskContentClass">
+          {{task.content}}
+        </span>
+        <span ng-class="$ctrl.taskClasses.editIconClass"
+              ng-click="$ctrl.taskEditState[$index].state = !$ctrl.taskEditState[$index].state; $ctrl.prepEdit(task)"
+              ng-transclude="editIcon">
+          <img class="non-hover"
+               src="../../../assets/icons/sketch-pencil.svg"
+               width=20
+               height=20
+               aria-hidden="true">
+          <img class="hover"
+               src="../../../assets/icons/light-pencil.svg"
+               width=20
+               height=20
+               aria-hidden="true">
+        </span>
+        <span ng-class="$ctrl.taskClasses.deleteIconClass"
+              ng-click="$ctrl.deleteTask(task, $index); preDelete = true "
+              ng-transclude="deleteIcon">
+          <img class="non-hover"
+               src="../../../assets/icons/an-x.svg"
+               width=20
+               height=20>
+                    <img class="hover"
+                         src="../../../assets/icons/red-x.svg"
+                         width=20
+                         height=20>
+        </span>
+      </div>
+
+      <div ng-class="$ctrl.taskClasses.editInputContainer"
+           ng-if="$ctrl.taskEditState[$index].state">
+        <input ng-class="$ctrl.taskClasses.editInputClass"
+               ng-model="$ctrl.newTask.label"
+               msd-elastic>
+        <input ng-class="$ctrl.taskClasses.editInputClass"
+               ng-model="$ctrl.newTask.content"
+               msd-elastic>
+        <!-- <input type="text" ng-model="$ctrl.taskEditState[$index].data.label" placeholder="label">
+         <input type="text" ng-model="$ctrl.taskEditState[$index].data.content" placeholder="content">
+         <input type="select" ng-model="$ctrl.newTask.priority" > -->
+        <span ng-class="$ctrl.taskClasses.updateIconClass"
+              ng-click="$ctrl.updateTask($ctrl.newTask, $index)"
+              ng-transclude="updateIcon">
+          <img src="../../../assets/icons/check.svg"
+               width=30
+               height=30>
+        </span>
+        <span ng-class="$ctrl.taskClasses.cancelIconClass"
+              ng-click="$ctrl.taskEditState[$index].state = !$ctrl.taskEditState[$index].state"
+              ng-transclude="cancelIcon">
+          <img src="../../../assets/icons/slash-pencil.svg"
+               width=30
+               height=30>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div>
+
+  <div ng-if="$ctrl.showTaskInput">
+    <input type="text" ng-model="$ctrl.newTask.label" placeholder="label">
+    <input type="text" ng-model="$ctrl.newTask.content" placeholder="content">
+    <button ng-click="$ctrl.addTask($ctrl.newTask)">Submit</button>
+    <button ng-click="$ctrl.showTaskInput = !$ctrl.showTaskInput">Cancel</button>
+  </div>
+
+  <div class="frow task-container-inner">
+    <div class="fcol-4 task-align" ng-class="{'pre-delete': preDelete}"
+         ng-repeat="task in $ctrl.taskList">
+      <span ng-if="!$ctrl.taskEditState[$index].state">
+        <span class="complete-box"
+              ng-if="!task.complete"
+              ng-click="$ctrl.completeTask(task, $index)"
+              ng-transclude="inCompleteIcon">
+          <img src="/assets/icons/box3.svg"
+               width=30
+               height=40>
+        </span>
+        <span class="complete-box"
+              ng-if="task.complete" ng-click="$ctrl.completeTask(task, $index)"
+              ng-transclude="completeIcon">
+          <img src="/assets/icons/check-box3.svg"
+               width=30
+               height=40>
+        </span>
+        <span class="task-label">
+          {{task.label}}:
+        </span>
+        <span class="task-content">
+          {{task.content}}
+        </span>
+        <span class="edit-button"
+              ng-click="$ctrl.taskEditState[$index].state = !$ctrl.taskEditState[$index].state; $ctrl.prepEdit(task)"
+              ng-transclude="editIcon">
+          <img class="non-hover"
+               src="/assets/icons/sketch-pencil.svg"
+               width=20
+               height=20
+               aria-hidden="true">
+          <img class="hover"
+               src="/assets/icons/light-pencil.svg"
+               width=20
+               height=20
+               aria-hidden="true">
+        </span>
+        <span class="delete-button" ng-click="$ctrl.deleteTask(task, $index); preDelete = true "
+              ng-transclude="deleteIcon">
+          <img class="non-hover"
+               src="/assets/icons/an-x.svg"
+               width=20
+               height=20>
+                    <img class="hover"
+                         src="/assets/icons/red-x.svg"
+                         width=20
+                         height=20>
+        </span>
+      </span>
+
+      <span ng-if="$ctrl.taskEditState[$index].state">
+        <input class="task-label text-input"
+               ng-model="$ctrl.newTask.label"
+               msd-elastic>
+        <input class="task-label text-input"
+               ng-model="$ctrl.newTask.content"
+               msd-elastic>
+
+<span ng-click="$ctrl.updateTask($ctrl.newTask, $index)"
+      ng-transclude="updateIcon">
+          <img src="/assets/icons/check.svg"
+               width=30
+               height=30>
+        </span>
+<span ng-click="$ctrl.taskEditState[$index].state = !$ctrl.taskEditState[$index].state"
+      ng-transclude="cancelIcon">
+          <img src="/assets/icons/slash-pencil.svg"
+               width=30
+               height=30>
+        </span>
+</span>
+</div>
+</div>
+</div>
+-->

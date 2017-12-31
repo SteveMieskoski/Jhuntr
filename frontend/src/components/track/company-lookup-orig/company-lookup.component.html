@@ -1,0 +1,140 @@
+<div ng-model-options="{debounce: 500 }">
+  <!-- CURRENTLY I ONLY GET 50 REQUESTS PER MONTH.  SHOULD LOOK TO SEE WHAT OTHER DATA PROVIDER(S) I COULD/CAN USE.
+  MAYBE EVEN WIKIPEDIA???
+   -->
+  <!-- Modal Display-->
+  <div ng-if="$ctrl.modal">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Company Lookup</h3>
+    </div>
+    <div class="modal-body">
+
+      <div class="row">
+        <div class="col-md-6">
+          {{$ctrl.selectedName}}
+          <label for="companyModalSearch">Company Name:</label>
+          <div class="input-group">
+            <input type="text"
+                   id="companyModalSearch"
+                   ng-model="$ctrl.companySearch"
+                   ng-change="$ctrl.companyLookup($ctrl.companySearch)">
+            <span class="input-group-addon">
+              <button class="btn">expand search</button>
+            </span>
+          </div>
+          <div>
+            <h3>Filter:</h3>
+          </div>
+          <!--  <label for="countryFilter">Country:</label>
+           <div class="input-group">
+             <input type="text" id="countryFilter"
+                    ng-model="$ctrl.filterCountry"
+                    uib-typeahead="country as country.name for country in $ctrl.countries | filter: {name:$viewValue} | limitTo:10"
+                    class="form-control">
+           </div>
+          <div ng-if="$ctrl.filterCountry.code === 'US'"> -->
+          <div>
+            <label for="usaStateFilter">State:</label>
+            <div class="input-group">
+              <input type="text" id="usaStateFilter"
+                     ng-model="$ctrl.filterUsaState"
+                     uib-typeahead="state as state.name for state in $ctrl.usaStates | filter:{name:$viewValue} | limitTo:8"
+                     class="form-control"
+                     placeholder="enter state">
+            </div>
+            <label for="usaCityFilter">City:</label>
+            <div class="input-group">
+              <input type="text" id="usaCityFilter"
+                     ng-model="$ctrl.filterUsaCity"
+                     uib-typeahead="city for city in $ctrl.usaCities | filter:$viewValue | limitTo:8"
+                     class="form-control"
+                     ng-change="$ctrl.cityFilter($ctrl.filterCountry.code, $ctrl.filterUsaState.abbreviation, $ctrl.filterUsaCity)"
+                     placeholder="enter city">
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div>
+            <h3>Results:</h3>
+            <h4 ng-if="$ctrl.noResults">No Results</h4>
+            <div ng-if="!$ctrl.filterCountry">
+              <p ng-click="$ctrl.nameSelected(company)"
+                 ng-repeat="company in $ctrl.resultList | orderBy: 'max_year' : true">
+                {{company.company_name}}<br>
+                <small class="text-muted">{{company.raw_address}}</small>
+              </p>
+            </div>
+            <div ng-if="!$ctrl.filterUsaState &&  $ctrl.filterCountry">
+              <p ng-click="$ctrl.nameSelected(company)"
+                 ng-repeat="company in $ctrl.resultList | filter: {country_code: $ctrl.filterCountry.code} | orderBy: 'max_year' : true">
+                {{company.company_name}}<br>
+                <small>{{company.raw_address}}</small>
+              </p>
+            </div>
+            <div ng-if="$ctrl.filterUsaState &&  $ctrl.filterCountry &&  !$ctrl.filterUsaCity">
+              <p ng-click="$ctrl.nameSelected(company)"
+                 ng-repeat="company in $ctrl.resultList | filter: {country_code: $ctrl.filterCountry.code, subdiv_code: $ctrl.filterUsaState.abbreviation} | orderBy: 'max_year' : true">
+                {{company.company_name}}<br>
+                <small>{{company.raw_address}}</small>
+              </p>
+            </div>
+            <div ng-if="$ctrl.filterUsaState &&  $ctrl.filterCountry &&  $ctrl.filterUsaCity">
+              with city
+              <p ng-click="$ctrl.nameSelected(company)"
+                 ng-repeat="company in $ctrl.resultList | filter: {country_code: $ctrl.filterCountry.code, subdiv_code: $ctrl.filterUsaState.abbreviation} | orderBy: 'max_year' : true">
+                {{company.company_name}}<br>
+                <small>{{company.raw_address}}</small>
+              </p>
+            </div>
+            <p ng-if="$ctrl.resultList.length === 0"> No Results!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Non-modal/Embeded Display -->
+  <div ng-if="!$ctrl.modal">
+    <div ng-if="$ctrl.noNameSelected">
+      <h2>Company Lookup</h2>
+      <label for="companySearch">Company Name:</label>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+        <input type="text"
+               id="companySearch"
+               ng-model="$ctrl.companySearch"
+               ng-change="$ctrl.displayDetailsSearch($ctrl.companySearch)">
+      </div>
+
+      <div>
+        <h3>Results:</h3>
+        <p ng-if="!$ctrl.companies"> No Results!</p>
+        <p ng-repeat="company in $ctrl.companies"
+           ng-click="$ctrl.nameSelected(company)">
+          <img ng-src="{{company.logo}}" height="30px"> {{company.name}}
+        </p>
+      </div>
+    </div>
+    <div ng-if="!$ctrl.noNameSelected">
+      <p><img ng-src="{{$ctrl.selectedLogo}}" height="30px"> {{$ctrl.selectedName}}</p>
+    </div>
+  </div>
+</div>
+<!--
+<div  ng-model-options="{debounce: 500 }">
+  <div ng-if="$ctrl.noNameSelected">
+    <input type="text" ng-model="$ctrl.companySearch" ng-change="$ctrl.runSearch($ctrl.companySearch)">
+    <div>
+      <p ng-repeat="item in $ctrl.companies"
+         ng-click="$ctrl.nameSelectedOpenData(item.company.name, item.company.registered_address_in_full)">
+        {{item.company.name}}
+      </p>
+
+    </div>
+  </div>
+  <div ng-if="!$ctrl.noNameSelected">
+    <p >{{$ctrl.name}}</p>
+  </div>
+</div>
+-->

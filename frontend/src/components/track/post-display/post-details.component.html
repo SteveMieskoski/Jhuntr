@@ -1,0 +1,83 @@
+<div style="margin: auto 10px;">
+  <!--<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Status: {{$ctrl.postStatus}}</h3>
+  </div>-->
+  <div class="pd-modal-header">
+  <div class="pd-model-container">
+    <h3 class="modal-nav">
+      <span ng-class="{'modal-active': $ctrl.modalActive === 'one'}" ng-click="$ctrl.activeModal('one')">Details</span>
+      <span ng-class="{'modal-active': $ctrl.modalActive === 'two'}" ng-click="$ctrl.activeModal('two')"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Notes</span>
+      <span ng-class="{'modal-active': $ctrl.modalActive === 'three'}" ng-click="$ctrl.activeModal('three')"><i class="glyphicon glyphicon-bell"></i> Tasks!</span>
+    </h3>
+    <div class="modal-status">
+      <h4 class="modal-status-label">Status</h4>
+      <h4 class="modal-status-current">{{$ctrl.postStatus}}</h4>
+    </div>
+  </div>
+  </div>
+
+<div ng-if="$ctrl.modalActive === 'one'">
+  <br>
+  <p><span class="detail-topic">Label: </span>{{$ctrl.postData.label}}</p>
+  <p><span class="detail-topic">Company: </span>{{$ctrl.postData.company}}</p>
+  <p><span class="detail-topic">Title:</span>{{$ctrl.postData.title}}</p>
+  <p ng-if="$ctrl.postData.location"><span class="detail-topic">Location:</span>{{$ctrl.postData.location}}</p>
+  <p ng-if="$ctrl.postData.url"><span class="detail-topic">Url:</span>{{$ctrl.postData.url}}</p>
+  <p><span class="detail-topic">Resume:</span>{{$ctrl.postData.resume_label}}</p>
+  <p><span class="detail-topic">Date Applied:</span>{{$ctrl.postData.dateApplied | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+  <p ng-if="$ctrl.postData.city"><span class="detail-topic">City:</span>{{$ctrl.postData.city}}</p>
+  <p ng-if="$ctrl.postData.state"><span class="detail-topic">State:</span>{{$ctrl.postData.state}}</p>
+  <p ng-if="$ctrl.postData.postingTime"><span class="detail-topic">Posted On:</span>{{$ctrl.postData.postingTime}}</p>
+  <p ng-if="$ctrl.postData.contactLabel"><span class="detail-topic">Contact:</span>{{$ctrl.postData.contactLabel}}</p>
+  <p ng-if="$ctrl.postData.contactDetail"><span class="detail-topic">Contact Detail:</span>{{$ctrl.postData.contactDetail}}</p>
+  <p ng-if="$ctrl.postData.address"><span class="detail-topic">Address:</span>{{$ctrl.postData.address}}</p>
+  <p ng-if="$ctrl.postData.source"><span class="detail-topic">Source:</span>{{$ctrl.postData.source}}</p>
+  <br>
+</div>
+  <div ng-if="$ctrl.modalActive === 'two'">
+    <p ng-if="!$ctrl.postData.notes">No Notes</p>
+    {{$ctrl.postData.notes}}
+  </div>
+  <div ng-if="$ctrl.modalActive === 'three'">
+    <taskhandler post-data="$ctrl.postData"></taskhandler>
+  </div>
+  <!--<uib-tabset>
+    <uib-tab index="0" heading="Details">
+        <br>
+      <p><span class="detail-topic">Label: </span>{{$ctrl.postData.label}}</p>
+      <p><span class="detail-topic">Company: </span>{{$ctrl.postData.company}}</p>
+      <p><span class="detail-topic">Title:</span>{{$ctrl.postData.title}}</p>
+      <p ng-if="$ctrl.postData.location"><span class="detail-topic">Location:</span>{{$ctrl.postData.location}}</p>
+      <p ng-if="$ctrl.postData.url"><span class="detail-topic">Url:</span>{{$ctrl.postData.url}}</p>
+      <p><span class="detail-topic">Resume:</span>{{$ctrl.postData.resume_label}}</p>
+      <p><span class="detail-topic">Date Applied:</span>{{$ctrl.postData.dateApplied | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+      <p ng-if="$ctrl.postData.city"><span class="detail-topic">City:</span>{{$ctrl.postData.city}}</p>
+      <p ng-if="$ctrl.postData.state"><span class="detail-topic">State:</span>{{$ctrl.postData.state}}</p>
+      <p ng-if="$ctrl.postData.postingTime"><span class="detail-topic">Posted On:</span>{{$ctrl.postData.postingTime}}</p>
+      <p ng-if="$ctrl.postData.contactLabel"><span class="detail-topic">Contact:</span>{{$ctrl.postData.contactLabel}}</p>
+      <p ng-if="$ctrl.postData.contactDetail"><span class="detail-topic">Contact Detail:</span>{{$ctrl.postData.contactDetail}}</p>
+      <p ng-if="$ctrl.postData.address"><span class="detail-topic">Address:</span>{{$ctrl.postData.address}}</p>
+      <p ng-if="$ctrl.postData.source"><span class="detail-topic">Source:</span>{{$ctrl.postData.source}}</p>
+        <br>
+    </uib-tab>
+    <uib-tab index="1">
+      <uib-tab-heading>
+        <i class="fa fa-sticky-note-o" aria-hidden="true"></i> Notes
+      </uib-tab-heading>
+      <p ng-if="!$ctrl.postData.notes">No Notes</p>
+      {{$ctrl.postData.notes}}
+    </uib-tab>
+    <uib-tab index="2">
+      <uib-tab-heading>
+        <i class="glyphicon glyphicon-bell"></i> Tasks!
+      </uib-tab-heading>
+      <taskhandler post-data="$ctrl.postData"></taskhandler>
+    </uib-tab>
+  </uib-tabset>-->
+  <br>
+  <div class="modal-footer">
+    <button class="btn pull-left" ng-click="$ctrl.close()">Close</button>
+    <button class="btn" ng-click="$ctrl.openPostEdit($ctrl.postData)">Quick Edit</button>
+  </div>
+
+</div>

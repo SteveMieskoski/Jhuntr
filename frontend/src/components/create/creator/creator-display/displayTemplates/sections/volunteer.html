@@ -1,0 +1,123 @@
+<!-- Volunteer Section -->
+<div id="volunteer-section"
+     page-link
+     page-break>
+
+  <script type="text/ng-template" id="volunteerPopover.html">
+    <button ng-click="$ctrl.removeSection('volunteer')">
+      Hide Section
+    </button>
+  </script>
+
+  <div class="section-heading"
+       ng-click="$ctrl.popoverOpen(true, sectionItem.section); $ctrl.buildPopupTitle(sectionItem.section);"
+       ng-mouseenter="$ctrl.popoverOpen('alt', sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)"
+       popover-trigger="none"
+       popover-is-open="$ctrl.optionsOpen.volunteer"
+       uib-popover-template="$ctrl.sectionOptions()">
+      <textarea class="editable section-heading-edit"
+                ng-class="[$ctrl.primaryColor, $ctrl.headingFont]"
+                placeholder="Volunteer"
+                maxlength="100"
+                spellcheck="false"
+                autocomplete="off"
+                rows="1"
+                ng-change="$ctrl.dirtyValue(true)"
+                ng-model="$ctrl.templateData.labels.volunteer">
+      </textarea>
+  </div>
+  <div class="volunteer-item"
+       ng-repeat="volunteer in $ctrl.templateData.volunteer"
+       ng-if="volunteer.show">
+    <div class="position-item">
+        <textarea class="editable position-item-edit"
+                  ng-click="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+                  ng-mouseenter="$ctrl.popoverOpenItem('alt', sectionItem.section, $index)"
+                  ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)"
+                  popover-trigger="none"
+                  popover-is-open="$ctrl.optionsOpenItem[sectionItem.section][$index]"
+                  uib-popover-template="$ctrl.sectionOptions('detailsNoIconOptions')"
+                  ng-class="[$ctrl.primaryColor, $ctrl.subHeadingFont]"
+                  placeholder="Title/Position"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.volunteer[$index].position"
+                  msd-elastic>
+        </textarea>
+    </div>
+    <div class="company">
+        <textarea popover-trigger="'outsideClick'"
+                  uib-popover-template="$ctrl.sectionOptions('detailOptions')"
+                  class="editable company-edit"
+                  ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                  placeholder="Company"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.volunteer[$index].organization"
+                  msd-elastic>
+        </textarea>
+      <div class="date-location">
+        <div class="date">
+          <i class="fa icon"
+             ng-class="[$ctrl.secondaryColor, $ctrl.templateData.design.style_options.calendar_icon]"
+             ng-click="$ctrl.closeBasicPopover['calVol' + $index] = true;"
+             popover-trigger="outsideClick"
+             popover-is-open="$ctrl.closeBasicPopover['calVol'  + $index]"
+             popover-placement="right"
+             uib-popover-template="$ctrl.sectionOptions('calendarIconSelect')">
+          </i>
+          <textarea class="editable date-edit"
+                    ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                    placeholder="Date Period"
+                    maxlength="100"
+                    spellcheck="false"
+                    autocomplete="off"
+                    rows="1"
+                    ng-change="$ctrl.dirtyValue(true)"
+                    ng-model="$ctrl.templateData.volunteer[$index].startDate"
+                    msd-elastic>
+          </textarea>
+        </div>
+      </div>
+      <div class="volunteer-details">
+        <div class="details-description-container">
+          <div ng-repeat="detail in $ctrl.templateData.volunteer[$index].details">
+            <i ng-if="detail.show" class="fa fa-circle bullet" ng-class="$ctrl.secondaryColor">
+            </i>
+            <textarea ng-if="detail.show"
+                      class="editable details-content-edit"
+                      ng-class="[$ctrl.primaryColor, $ctrl.bodyFont]"
+                      placeholder="What was an example of a successful outcome of this activity?"
+                      maxlength="120"
+                      spellcheck="false"
+                      autocomplete="off"
+                      rows="1"
+                      ng-change="$ctrl.dirtyValue(true)"
+                      ng-model="detail.detail"
+                      msd-elastic>
+          </textarea>
+          </div>
+        </div>
+        <!--
+          <textarea class="editable details-content-edit"
+                    ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                    placeholder="What was an example of a successful outcome of this activity?"
+                    maxlength="100"
+                    spellcheck="false"
+                    autocomplete="off"
+                    rows="1"
+                    ng-change="$ctrl.dirtyValue(true)"
+                    ng-model="$ctrl.templateData.volunteer[$index].detail"
+                    msd-elastic>
+          </textarea>-->
+      </div>
+    </div>
+  </div>
+</div>  <!-- Volunteer Section End -->

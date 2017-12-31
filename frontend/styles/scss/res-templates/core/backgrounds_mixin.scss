@@ -1,0 +1,31 @@
+@import 'backgrounds_variables.scss';
+
+@mixin backgrounds {
+
+  .slanted-stars {
+    background-color: #f5f4f7;
+    background-image: url($slanted-stars-image);
+  }
+
+  .waves {
+    background: url($waves-image);
+  }
+
+  .leaf {
+    background-color: #f5f4f7;
+    background-image: url($leaf-image);
+  }
+
+  .lined-paper {
+    background-color: #fff;
+    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+  }
+
+  .circuit-board {
+    background-color: #f5f4f7;
+    background-image: url($circuit-board-image);
+  }
+
+}

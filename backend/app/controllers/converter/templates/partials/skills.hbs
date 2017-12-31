@@ -1,0 +1,45 @@
+<!--Passions (placeholding for skills section)-->
+<div id="skills-section">
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{!--{{#labels.interests}}{{labels.interests}}{{/labels.interests}}
+                {{^labels.interests}}Passions{{/labels.interests}} --}}
+      {{#if labels.skills}}{{labels.skills}}{{else}}Skills{{/if}}
+    </div>
+  </div>
+
+  <div class="skills">
+    {{#each skills}}
+      {{#if show}}
+        <div class="skill-item">
+
+
+          <div class="skill-label">
+            <div class=" skill-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}" >
+              {{#if name}}{{name}}{{else}}Skill!{{/if}}
+            </div>
+            <div class="visual-level-container">
+              <div class="{{#if level}}{{level}}{{else}}level-5{{/if}}"></div>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    {{/each}}
+    <!-- Below is Placeholders for added but empty section -->
+    {{^skills}}
+      <div class="skill-item">
+
+
+        <div class="skill-label">
+          <div class=" skill-label-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}" >
+            Skill!
+
+          </div>
+        </div>
+      </div>
+    {{/skills}}
+  </div>
+</div>
+
+<!-- Passions -->
+

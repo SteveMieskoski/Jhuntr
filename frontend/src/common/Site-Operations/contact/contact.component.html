@@ -1,0 +1,35 @@
+<br/>
+
+<div class="row support-filler" >
+  <div class="col-md-1">
+
+  </div>
+  <div class="col-md-5">
+    <h1>Contact</h1>
+    <!-- <div ng-if="$ctrl.loggedInForm">
+       <input id="to" type="text" placeholder="Enter your" /> -->
+    <!--  <input id="subject" type="text" placeholder="Write Subject" /><br/>
+     <select ng-model="$ctrl.emailModel.supportKey" ng-options="m for m in $ctrl.emailModel.supportChoices" ng-change="modeChanged()"></select> -->
+    <!--  <select ng-model="$ctrl.emailModel.supportKey" ng-options="m for m in $ctrl.supportChoices"></select><br/>
+      <textarea id="content_user" cols="40" rows="5" placeholder="Write what you want to send" ng-model="$ctrl.emailModel.emailContent"></textarea><br/>
+      <button id="send_email_user" ng-click="$ctrl.sendEmail($ctrl.emailModel)">Send Email</button><br/>
+      <span id="message_user"></span>
+    </div>-->
+    <div class="row">
+      <div class="col-md-10 col-md-push-6">
+        <div ng-show="!$ctrl.requestSuccess">
+          <input ng-if="!$ctrl.loggedInForm" id="from" type="email" placeholder="Enter your email address"
+                 ng-model="$ctrl.emailModel.contactEmail" required/><br/>
+          <input id="subject" type="text" placeholder="Subject" ng-model="$ctrl.emailModel.supportKey"/><br/>
+          <textarea id="content" cols="40" rows="5" placeholder="Write your message here"
+                    ng-model="$ctrl.emailModel.emailContent"></textarea><br/>
+          <button id="send_email" ng-click="$ctrl.sendEmail($ctrl.emailModel)">Submit</button>
+          <br/>
+          <!-- </div> -->
+        </div>
+        <h3 id="message" ng-show="$ctrl.requestSuccess"> Message Sent</h3>
+      </div>
+    </div>
+
+  </div>
+</div>

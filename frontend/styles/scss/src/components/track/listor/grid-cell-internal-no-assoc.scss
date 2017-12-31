@@ -1,0 +1,44 @@
+
+
+
+
+
+
+.to-editor{
+  padding-left: 20px;
+  cursor: pointer;
+  &:hover{
+    color: #575757 !important;
+  }
+  &:active, &:focus{
+    color: rgb(244, 109, 59) !important;
+  }
+ // text-align: center;
+}
+
+.entry-status{
+  padding-left: 15px;
+}
+
+.to-external{
+  padding-left: 20px;
+  cursor: pointer;
+  &:hover{
+    &:before{
+      content: 'go';
+    }
+  //  background: rgba(39, 39, 39, 0.88);
+  }
+  &:active, &:focus{
+    background: rgb(244, 109, 59) !important;
+  }
+}
+
+.lastEdited{
+  background-color: #befdff !important;
+  // content: "";
+}
+
+.red-attention {
+  color: red !important;
+}

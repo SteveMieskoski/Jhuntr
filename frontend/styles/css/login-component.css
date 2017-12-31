@@ -1,0 +1,192 @@
+.frow {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .frow .fcol-full {
+    flex: 0 0 100%; }
+  .frow .fcol-11 {
+    margin-left: 91.66666667%; }
+  .frow .fcol-10 {
+    margin-left: 83.33333333%; }
+  .frow .fcol-9 {
+    margin-left: 75%; }
+  .frow .fcol-8 {
+    margin-left: 66.66666667%; }
+  .frow .fcol-7 {
+    margin-left: 58.33333333%; }
+  .frow .fcol-6 {
+    flex: 0 0 50%; }
+  .frow .fcol-5 {
+    margin-left: 41.66666667%; }
+  .frow .fcol-4 {
+    flex: 0 0 33.3333%; }
+  .frow .fcol-3 {
+    flex: 0 0 25%; }
+  .frow .fcol-2 {
+    flex: 0 0 16.667%; }
+  .frow .fcol-1 {
+    flex: 0 0 8.333%; }
+  .frow .start-fcol {
+    justify-content: flex-start;
+    text-align: start; }
+  .frow .center-fcol {
+    justify-content: center;
+    text-align: center; }
+  .frow .end-fcol {
+    justify-content: flex-end;
+    text-align: end; }
+  .frow .top-fcol {
+    align-items: flex-start; }
+  .frow .middle-fcol {
+    align-items: center; }
+  .frow .bottom-fcol {
+    align-items: flex-end; }
+  .frow .around-fcol {
+    justify-content: space-around; }
+  .frow .between-fcol {
+    justify-content: space-between; }
+
+.login-boundries {
+  padding-top: 5%;
+  padding-bottom: 20%; }
+
+.login-page-container {
+  border: 1px solid black;
+  height: 100vh;
+  background-image: url("../backgrounds/people-coffee-tea-meeting.jpg");
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .login-page-container .login-heading {
+    height: 180px;
+    margin-bottom: 0;
+    padding-left: 30px; }
+    .login-page-container .login-heading .login-loading-logo {
+      margin-bottom: 0; }
+  .login-page-container .login-top-items {
+    margin-bottom: 0;
+    flex: 0 0 25%; }
+    .login-page-container .login-top-items .flex-container-inner {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1; }
+    .login-page-container .login-top-items .small-flex-item {
+      flex-basis: 100%;
+      height: 100px;
+      background: #000; }
+  .login-page-container .login-middle-items {
+    flex: 0 0 33.33%; }
+  .login-page-container .login-extra-small-fill {
+    flex: 0 0 8.333%; }
+  .login-page-container .login-small-fill {
+    flex: 0 0 16.667%; }
+  .login-page-container .input-label {
+    width: 100px; }
+  .login-page-container .login-bottom-items {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; }
+  .login-page-container .social-button {
+    border-radius: 4px;
+    opacity: 0.75;
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease 0s; }
+    .login-page-container .social-button .top {
+      justify-content: flex-start;
+      text-align: start; }
+    .login-page-container .social-button .middle {
+      justify-content: center;
+      text-align: center; }
+    .login-page-container .social-button .bottom {
+      justify-content: flex-end;
+      text-align: end; }
+    .login-page-container .social-button:hover {
+      opacity: 1; }
+    .login-page-container .social-button:focus {
+      opacity: 1; }
+  .login-page-container .login-input {
+    position: relative;
+    color: white;
+    background-color: #949e9e;
+    height: 45px;
+    width: 200px;
+    border-radius: 7px;
+    opacity: 0.75;
+    margin-bottom: 20px;
+    border: 0;
+    transition: all 0.3s ease 0s; }
+    .login-page-container .login-input:hover {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      border: 1px outset #cacaca; }
+    .login-page-container .login-input:focus {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      box-shadow: inset -2px 2px 3px 1px #6b6b6b, inset 2px -2px 3px 1px #cacaca; }
+    .login-page-container .login-input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: white;
+      opacity: 1; }
+    .login-page-container .login-input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: white;
+      opacity: 1; }
+    .login-page-container .login-input:-ms-input-placeholder {
+      /* IE 10+ */
+      color: white;
+      opacity: 1; }
+    .login-page-container .login-input:-moz-placeholder {
+      /* Firefox 18- */
+      color: white;
+      opacity: 1; }
+    .login-page-container .login-input .login-forms-text {
+      font-family: 'Merriweather', serif !important;
+      font-size: 30px !important;
+      font-weight: 800 !important;
+      opacity: 1; }
+    .login-page-container .login-input .login-submit {
+      cursor: pointer; }
+  .login-page-container .login-bottom-signup-button {
+    position: relative;
+    background-color: #949e9e;
+    height: 100px;
+    width: 200px;
+    border-radius: 7px;
+    opacity: 0.75;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.3s ease 0s; }
+    .login-page-container .login-bottom-signup-button:hover {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      border: 1px outset #cacaca; }
+    .login-page-container .login-bottom-signup-button:focus {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      box-shadow: inset -2px 2px 4px 2px #6b6b6b, inset 2px -2px 4px 2px #cacaca; }
+    .login-page-container .login-bottom-signup-button:active {
+      outline: none;
+      border-radius: 7px;
+      opacity: 1;
+      background-color: #545e5e;
+      box-shadow: inset -2px 2px 4px 2px #6b6b6b, inset 2px -2px 4px 2px #cacaca; }
+    .login-page-container .login-bottom-signup-button .login-signup-button-text {
+      color: white;
+      padding-top: 20px;
+      font-family: 'Merriweather', serif !important;
+      font-size: 20px !important;
+      font-weight: 800 !important;
+      opacity: 1; }

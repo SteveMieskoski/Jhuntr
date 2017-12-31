@@ -1,0 +1,1 @@
+div.ui-grid-cell input,div.ui-grid-cell input:focus{color:inherit;outline:0}div.ui-grid-cell input{border-radius:inherit;padding:0;width:100%;height:auto;font:inherit}div.ui-grid-cell input[type=checkbox]{margin:9px 0 0 6px;width:auto}div.ui-grid-cell input.ng-invalid{border:1px solid #fc8f8f}div.ui-grid-cell input.ng-valid{border:1px solid rgba(0,0,0,.84)}

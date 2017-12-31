@@ -1,0 +1,52 @@
+
+@import 'mixins_one.scss';
+//@import '../../../fonts/font_faces_mixin.scss';
+@import 'fonts_structured_mixin.scss';
+//@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+//@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+
+@include font-only('Dancing Script OT', '../../../fonts/All_Fonts/DancingScriptOT')
+
+@mixin fonts{
+
+  .basic{ font: 15px Arial, Helvetica, sans-serif;  }
+
+  .garamond-font{ font-family: 'EB Garamond 12', serif;}
+
+  .lato-font{  font-family: 'Lato', sans-serif;  }
+
+  .merriweather-font{  font-family: 'Merriweather', serif;  }
+
+  .montserrat-font{  font-family: 'Montserrat', sans-serif;  }
+
+  .neuton-font{  font-family: 'Neuton', serif;}
+
+  .oswald-font{  font-family: 'Oswald', sans-serif;}
+
+  .quattrocento-font{  font-family: 'Quattrocento', serif;}
+
+  .playfair-display-font{  font-family: 'Playfair Display', serif;}
+
+  .open-sans-font{  font-family: 'Open Sans', sans-serif;}
+
+  .roboto-slab-font{  font-family: 'Roboto Slab', serif;}
+
+  .roboto-font{  font-family: 'Roboto', sans-serif;}
+
+  .georgia-font{  font-family: Georgia,Times,"Times New Roman",serif ;  }
+
+  .dancing-script-font{  font-family: 'Dancing Script OT', cursive ;  }
+
+  .alex-brush-font{   font-family: 'Alex Brush',  cursive;  }
+
+  .cac-champagne-font{ font-family: 'CAC Champagne',  cursive;}
+
+  .heading-font {  font-family: "Lato", Arial, Helvetica, sans-serif;  }
+
+
+}
+
+@mixin body-font {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+

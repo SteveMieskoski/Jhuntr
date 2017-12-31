@@ -1,0 +1,31 @@
+<h3 class="norm-cursor">Courses</h3>
+<div >
+<button ng-click="$ctrl.addRecord()">
+  Enter Another
+</button>
+<button ng-click="$ctrl.removeRecord('courses', $ctrl.existingData[$ctrl.forEdit], $ctrl.forEdit)">
+  <i class="fa fa-times-circle-o" aria-hidden="true">
+  </i>
+</button>
+<span ng-if="$ctrl.forEdit == $index"></span>
+<ul >
+  <li class="res-entity-list"
+      ng-click="$ctrl.forEdit = $index"
+      ng-repeat="thing in $ctrl.existingData">
+    <span ng-if="$ctrl.existingData[$index].name.length > 0">
+      {{$ctrl.existingData[$index].name }}
+    </span>
+    <span ng-if="$ctrl.existingData[$index].name.length < 1 || $ctrl.existingData[$index].name == undefined">
+      new entry
+    </span>
+  </li>
+</ul>
+<div class="res-entity-input">
+  <input type="text"
+         class="form-control input-sm"
+         placeholder="A Course"
+         aria-label=""
+         ng-change="$ctrl.dirtyValue()"
+         ng-model="$ctrl.existingData[$ctrl.forEdit].name"/>
+</div>
+</div>

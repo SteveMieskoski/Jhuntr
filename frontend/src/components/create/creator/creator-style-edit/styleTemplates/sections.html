@@ -1,0 +1,15 @@
+
+  <h4  class="norm-cursor">Add Sections</h4>
+
+  <div >
+  <div ng-repeat="section in $ctrl.featureConstants.sectionsArray">
+    <button class="btn btn-link text-primary"
+            ng-click="$ctrl.addSections(section.name)"
+            ng-disabled="!$ctrl.allSections[section.name]">
+      <i class="fa fa-plus" aria-hidden="true">
+      </i>&nbsp;
+      {{section.label}}
+    </button>
+    <br>
+  </div>
+  </div>

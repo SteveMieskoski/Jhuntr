@@ -1,0 +1,19 @@
+<div ng-if="!$ctrl.cropPosting">
+ <div style="{position: absolute; top: 0; left: 0; width: 517px;}">
+ </div>
+ <div id="editor-crop-modal">
+  <div class="cropArea">
+
+   <croppie-edit close-crop="$ctrl.showCrop()" promise-data="$ctrl.completeCrop(cropData)" src="$ctrl.srcImage" ng-model="$ctrl.croppedImage" img-height="1100" img-width="517" img-shape="square"></croppie-edit>
+  </div>
+ </div>
+ <!--<editor-crop show-cropper="$ctrl.showCrop()"></editor-crop>-->
+</div>
+<div class="right-image" ng-show="$ctrl.cropPosting">
+ <img class="right-image" ng-src="{{$ctrl.postImage}}" style="{{$ctrl.imageView}}" />
+</div>
+
+
+
+
+

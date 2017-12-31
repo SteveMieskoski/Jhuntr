@@ -1,0 +1,51 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+
+
+@mixin strength-section {
+
+  @include section-heading;
+
+  .strengths {
+    line-height: 1em;
+
+    .strength-item {
+      margin-top: 1em;
+
+      .icon {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: .4em;
+        font-size: 25px;
+      }
+
+      .single-strength {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%;
+
+        .strength-label {
+
+          .strength-label-edit {
+            width: 100%;
+            margin-top: .5em;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px;
+          }
+        }
+
+        .strength-details {
+
+          .strength-details-edit {
+            width: 100%;
+            margin-top: .2em;
+            font-size: 13px;
+            font-weight: 400;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+<!-- Education Section -->
+
+<!--
+    popover-popup-close-delay="500"
+     ng-mouseenter="$ctrl.popoverOpen=false"
+     ng-click="$ctrl.popoverOpen=true"
+     popover-is-open="$ctrl.popoverOpen"
+-->
+<div id="education-section">
+
+
+  <script type="text/ng-template" id="educationPopover.html">
+    <button ng-click="$ctrl.removeSection('education')">
+      Hide Section
+    </button>
+  </script>
+
+  <div class="section-heading"
+       ng-click="$ctrl.popoverOpen(true, sectionItem.section); $ctrl.buildPopupTitle(sectionItem.section);"
+       ng-mouseenter="$ctrl.popoverOpen('alt', sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)"
+       popover-trigger="none"
+       popover-is-open="$ctrl.optionsOpen.education"
+       uib-popover-template="$ctrl.sectionOptions('education')">
+        <textarea class="editable section-heading-edit"
+                  ng-class="[$ctrl.primaryColor, $ctrl.headingFont]"
+                  placeholder="Education"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.labels.education">
+        </textarea>
+  </div>
+
+  <div class="education"
+       ng-repeat="education in $ctrl.templateData.education"
+       ng-if="education.show">
+
+    <div class="program-details" page-link page-break>
+      <div class="school-item">
+        <textarea ng-click="$ctrl.popoverOpenItem(true, sectionItem.section, $index)"
+                  ng-mouseenter="$ctrl.popoverOpenItem('alt', sectionItem.section, $index)"
+                  ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section, $index)"
+                  popover-trigger="none"
+                  popover-is-open="$ctrl.optionsOpenItem.education[$index]"
+                  uib-popover-template="$ctrl.sectionOptions('itemOptions')"
+                  class="editable school-item-edit"
+                  ng-class="[$ctrl.primaryColor, $ctrl.subHeadingFont]"
+                  placeholder="Degree and Field of Study"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.education[$index].area"
+                  msd-elastic>
+        </textarea>
+      </div>
+
+      <div class="edu-container">
+        <div class="container-one">
+          <div class="study-item">
+        <textarea class="editable study-item-edit"
+                  ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                  placeholder="School or University"
+                  maxlength="100"
+                  spellcheck="false"
+                  autocomplete="off"
+                  rows="1"
+                  ng-change="$ctrl.dirtyValue(true)"
+                  ng-model="$ctrl.templateData.education[$index].institution"
+                  msd-elastic>
+        </textarea>
+          </div>
+          <div class="study-dates">
+            <i class="fa fa-fw date-icon"
+               ng-class="[$ctrl.secondaryColor, $ctrl.templateData.design.style_options.calendar_icon]"
+               ng-click="$ctrl.closeBasicPopover['calEdu' + $index] = true;"
+               popover-trigger="outsideClick"
+               popover-is-open="$ctrl.closeBasicPopover['calEdu'  + $index]"
+               popover-placement="right"
+               uib-popover-template="$ctrl.sectionOptions('calendarIconSelect')"></i>
+            <textarea class="editable study-dates-edit"
+                      ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                      placeholder="Date Period"
+                      maxlength="100"
+                      spellcheck="false"
+                      autocomplete="off"
+                      rows="1"
+                      ng-change="$ctrl.dirtyValue(true)"
+                      ng-model="$ctrl.templateData.education[$index].startDate"
+                      msd-elastic>
+          </textarea>
+          </div>
+        </div>
+        <div class="container-two">
+          <div class="ranking-container">
+            <h4 ng-class="[$ctrl.primaryColor, $ctrl.bodyFont]"
+                ng-if="$ctrl.templateData.education[$index].gpa_show">
+              GPA
+            </h4>
+            <input maxlength="4"
+                   class="editable bold ranking-item-one"
+                   ng-class="[$ctrl.secondaryColor, $ctrl.bodyFont]"
+                   ng-if="$ctrl.templateData.education[$index].gpa_show"
+                   placeholder="6.00"
+                   value=""
+                   autocomplete="off"
+                   ng-change="$ctrl.dirtyValue(true)"
+                   ng-model="$ctrl.templateData.education[$index].gpa">
+            <div class="separator"
+                 ng-if="$ctrl.templateData.education[$index].gpa_show">
+              /
+            </div>
+            <input maxlength="4"
+                   class="editable ranking-item-two" ng-class="$ctrl.bodyFont"
+                   ng-if="$ctrl.templateData.education[$index].gpa_show"
+                   placeholder="6.00"
+                   value=""
+                   autocomplete="off"
+                   ng-change="$ctrl.dirtyValue(true)"
+                   ng-model="$ctrl.templateData.education[$index].gpaScale">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>   <!-- Education Section End-->

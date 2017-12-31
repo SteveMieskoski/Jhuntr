@@ -1,0 +1,10 @@
+<input
+       ng-model-options="{debounce: 100 }"
+       ng-model="$ctrl.placeholderLabel"/>
+<button class="btn btn-sm text-primary"
+        ng-click="$ctrl.savePlaceholder($ctrl.placeholderLabel)">
+  save
+</button>
+<button class="btn btn-sm text-primary"  ng-click="$ctrl.cancelEntry()">
+  cancel
+</button>

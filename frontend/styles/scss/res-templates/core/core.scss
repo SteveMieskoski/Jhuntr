@@ -1,0 +1,304 @@
+@import '_constants.scss';
+@import 'mixins_one.scss';
+@import 'experience_mixin.scss';
+@import 'heading_mixin.scss';
+@import 'education_mixin.scss';
+@import 'projects_mixin.scss';
+@import 'language_mixin.scss';
+@import 'passion_mixin.scss';
+@import 'achievement_mixin.scss';
+@import 'colors_mixin.scss';
+@import 'volunteer_mixin.scss';
+@import 'strengths_mixin.scss';
+@import 'courses_mixin.scss';
+@import 'technologies_mixin.scss';
+@import 'skills_mixin.scss';
+@import 'summary_mixin.scss';
+@import 'fonts_mixin.scss';
+@import 'backgrounds.scss';
+//@import '../../variables/_variables.scss';
+
+//@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+//@include font-face(FontAwesome, '../../../fonts/font-awesome/fonts/fontawesome-webfont', 100, normal);
+
+@include fonts;
+.two-column {
+
+  @media (max-width: 767px) {
+    zoom: 0.72;
+  }
+  @media (max-width: 360px) {
+    zoom: 0.40;
+  }
+  @media (min-width: 768px) {
+    width: $fullWidth !important;
+    height: $fullHeight !important;
+  }
+
+  @include backgrounds;
+
+
+  #core-template {
+    position: relative;
+    width: $fullWidth !important;
+    height: $fullHeight+30px !important;
+    font-size: 15px;
+    line-height: 1.6;
+   // margin-bottom: $fullWidth*.10;
+   // padding-bottom: $fullWidth*.10px;
+    //border: 1px solid black; //Dev border
+    border: 1px solid white;
+    //border-bottom: 2px solid black;
+    //background-image: url(./bkgrnd.design.png); //works as svg too but strong coloring
+   // background-size: cover; //works with above but the strong coloring
+    @include editable-fields;
+    @include colors;
+    @include fonts;
+
+    &{
+
+     // background-image: url(../../../backgrounds/background-design.svg);
+     // background-size: cover;
+     // color: #b3b3b3;
+    }
+
+    #header-section {
+      @include header-section;
+    }
+
+    .two-column-left {
+      display: block;
+      padding-right: 2.5%;
+      padding-left: 5%;
+      width: 60%;
+      float: left;
+
+      @include editable-fields;
+
+      #education-section {
+        @include education-section;
+      }
+
+      #language-section {
+        @include language-section;
+      }
+
+      #passion-section {
+        @include passion-section;
+      }
+
+      #achievement-section {
+        @include achievement-section;
+      }
+
+      #experience-section {
+        @include experience-section;
+      }
+
+      #projects-section {
+        @include projects-section;
+      }
+
+      #strengths-section {
+        @include strength-section;
+      }
+
+      #volunteer-section {
+        @include volunteer-section;
+      }
+
+      #course-section {
+        @include course-section;
+      }
+
+      #summary-section {
+        @include summary-section;
+      }
+
+      #technologies-section {
+        @include technologies-section;
+        @include technology-field;
+      }
+
+      #skills-section {
+        @include skills-section;
+      }
+    }
+
+    .two-column-right {
+      display: block;
+      padding-right: 5%;
+      padding-left: 2.5%;
+      width: 40%;
+      float: right;
+
+      @include editable-fields;
+
+      #experience-section {
+        @include experience-section;
+      }
+
+      #projects-section {
+        @include projects-section;
+      }
+
+      #education-section {
+        @include education-section;
+      }
+
+      #language-section {
+        @include language-section;
+      }
+
+      #passion-section {
+        @include passion-section;
+      }
+
+      #achievement-section {
+        @include achievement-section;
+      }
+
+      #strengths-section {
+        @include strength-section;
+      }
+
+      #volunteer-section {
+        @include volunteer-section;
+      }
+
+      #course-section {
+        @include course-section;
+      }
+
+      #summary-section {
+        @include summary-section;
+      }
+
+      #technologies-section {
+        @include technology-field;
+        @include technologies-section;
+      }
+
+      #skills-section {
+        @include skills-section;
+      }
+    }
+  }
+}
+
+    //=========================================== ONE COLUMN BELOW ========================================
+
+    .one-column {
+      #core-template {
+        // width: 1700px;  // letter paper at 200dpi
+        // height: 2200px; // letter paper at 200dpi
+        position: relative;
+        width: $fullWidth; // 1/2 reduced letter paper at 200dpi
+        height: $fullHeight; // 1/2 reduced letter paper at 200dpi
+        background: #fff;
+        font: 15px Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        margin-left: $fullWidth*.05;
+        margin-right: $fullWidth*.05;
+        margin-bottom: $fullWidth*.10;
+        //  flex-direction: row;
+        border: 1px solid black; //Dev border
+
+        @include editable-fields;
+
+        #header-section {
+          @include header-section;
+        }
+
+        @include editable-fields;
+        #education-section {
+          @include education-section;
+        }
+
+        @include editable-fields;
+        #experience-section {
+          @include experience-section;
+        }
+
+        .editable {
+          padding: 0;
+          border: 0;
+          resize: none;
+          //width: 100%;
+          outline: none;
+          margin: 0;
+          box-shadow: none;
+          display: block;
+          min-height: 10px;
+          background: transparent;
+          overflow-wrap: break-word;
+          white-space: pre-wrap;
+          // text-size-adjust: none;
+          position: relative;
+          z-index: 1;
+        }
+        .editable-wrapper {
+          position: relative;
+          flex-grow: 1;
+        }
+        .editable-wrapper-inline {
+          display: inline-block;
+        }
+
+        .editable-field::placeholder, .editable-field input::placeholder, .date-range-label {
+          color: $second-color !important;
+          opacity: 1 !important;
+        }
+
+        .first-color {
+          color: $first-color !important;
+
+          &::-webkit-input-placeholder,
+          & input::-webkit-input-placeholder {
+            color: $first-color !important;
+          }
+
+          &:-moz-placeholder,
+          & input:-moz-placeholder {
+            color: $first-color !important;
+          }
+
+          &::-moz-placeholder,
+          & input::-moz-placeholder {
+            color: $first-color !important;
+          }
+
+          &:-ms-input-placeholder,
+          & input:-ms-input-placeholder {
+            color: $first-color !important;
+          }
+        }
+
+        .second-color {
+          color: $second-color !important;
+
+          &::-webkit-input-placeholder,
+          & input::-webkit-input-placeholder {
+            color: $second-color !important;
+          }
+
+          &:-moz-placeholder,
+          & input:-moz-placeholder {
+            color: $second-color !important;
+          }
+
+          &::-moz-placeholder,
+          & input::-moz-placeholder {
+            color: $second-color !important;
+          }
+
+          &:-ms-input-placeholder,
+          & input:-ms-input-placeholder {
+            color: $second-color !important;
+          }
+        }
+      }
+    }
+
+
+

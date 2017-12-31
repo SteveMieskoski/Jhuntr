@@ -1,0 +1,56 @@
+
+
+<!-- Summary Section -->
+<div id="summary-section">
+  <div class="section-heading">
+    <div class=" section-heading-edit {{#design.style_options.primary_color}}{{design.style_options.primary_color}}{{/design.style_options.primary_color}} {{#design.style_options.heading_font}}{{design.style_options.heading_font}}{{/design.style_options.heading_font}}">
+      {{#labels.summary}}{{labels.summary}}{{/labels.summary}}
+      {{^labels.summary}}Summary{{/labels.summary}}
+    </div>
+  </div>
+
+  <div class="summary">
+    {{#basics}}
+      <div class="summary-item">
+
+        <div class="summary-content">
+
+          <div class="strength-details">
+            <div class=" strength-details-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.body_font}}{{design.style_options.body_font}}{{/design.style_options.body_font}}">
+              {{#if summary}}
+                {{summary}}
+              {{else}}
+                A bit about yourself
+              {{/if}}
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    {{/basics}}
+    <!-- Below is Placeholders for added but empty section -->
+    {{^basics}}
+      <div class="summary-item">
+
+        <i class="fa fa-diamond icon {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}}"></i>
+
+        <div class="summary-content">
+
+          <div class="summary-details">
+            <div class=" summary-details-edit {{#design.style_options.secondary_color}}{{design.style_options.secondary_color}}{{/design.style_options.secondary_color}} {{#design.style_options.sub_heading_font}}{{design.style_options.sub_heading_font}}{{/design.style_options.sub_heading_font}}">
+              A bit about yourself
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    {{/basics}}
+  </div>
+</div>
+
+
+<!-- Summary Section end -->

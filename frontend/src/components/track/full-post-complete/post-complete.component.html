@@ -1,0 +1,53 @@
+
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-lg-4 col-lg-offset-1">
+
+
+    <h3 >Status: {{$ctrl.allDetails.status}}</h3>
+    <p ng-repeat="task in $ctrl.allDetails.tasks">{{task}}</p>
+
+    <p><span class="detail-topic">Added:</span>{{$ctrl.allDetails.created_at | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+
+    <p><span class="detail-topic">Label: </span>{{$ctrl.allDetails.label}}</p>
+    <p><span class="detail-topic">Company: </span>{{$ctrl.allDetails.company}}</p>
+    <p><span class="detail-topic">Title:</span>{{$ctrl.allDetails.title}}</p>
+    <p ng-if="$ctrl.allDetails.location"><span class="detail-topic">Location:</span>{{$ctrl.allDetails.location}}</p>
+    <p ng-if="$ctrl.allDetails.url"><span class="detail-topic">Url:</span>{{$ctrl.allDetails.url}}</p>
+    <p><span class="detail-topic">Date Applied:</span>{{$ctrl.allDetails.dateApplied | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+    <p ng-if="$ctrl.allDetails.city"><span class="detail-topic">City:</span>{{$ctrl.allDetails.city}}</p>
+    <p ng-if="$ctrl.allDetails.state"><span class="detail-topic">State:</span>{{$ctrl.allDetails.state}}</p>
+    <p ng-if="$ctrl.allDetails.postingTime"><span class="detail-topic">Posted On:</span>{{$ctrl.allDetails.postingTime}}</p>
+    <p ng-if="$ctrl.allDetails.contactLabel"><span class="detail-topic">Contact:</span>{{$ctrl.allDetails.contactLabel}}</p>
+    <p ng-if="$ctrl.allDetails.contactDetail"><span class="detail-topic">Contact Detail:</span>{{$ctrl.allDetails.contactDetail}}</p>
+    <p ng-if="$ctrl.allDetails.address"><span class="detail-topic">Address:</span>{{$ctrl.allDetails.address}}</p>
+    <p ng-if="$ctrl.allDetails.source"><span class="detail-topic">Source:</span>{{$ctrl.allDetails.source}}</p>
+
+
+    <p ng-if="!$ctrl.allDetails.notes">No Notes</p>
+    {{$ctrl.allDetails.notes}}
+
+
+
+
+
+
+  </div>
+  <div class="col-lg-5">
+    <div ng-if="$ctrl.accessGrantedGoogle">
+      <p><span class="detail-topic">Resume:</span>{{$ctrl.allDetails.resume_label}}</p>
+      <a ng-href="$ctrl.this.link" target="_blank">
+        <img ng-src="{{$ctrl.thumbnail}}">
+      </a>
+    </div>
+    <div ng-if="!$ctrl.accessGrantedGoogle">
+    <h5>Please Login to google to view associated files</h5>
+      <button ng-click="$ctrl.googleAuth()">Login</button>
+    </div>
+  </div>
+
+</div>
+
+{{$ctrl.allDetails}}

@@ -1,0 +1,77 @@
+<div class="list-display">
+  <div class="row">
+    <div class="col-lg-12 action-item-container">
+        <span class="action-item" ng-if="!$ctrl.newLabelCreate"
+              ng-click="$ctrl.newLabelCreate = !$ctrl.newLabelCreate">Add New Label</span>
+      <div ng-if="$ctrl.newLabelCreate">
+        <input ng-model="$ctrl.createNewLabel">
+        <button ng-click="$ctrl.newLabelCreate = !$ctrl.newLabelCreate; $ctrl.addAJob(true, $ctrl.createNewLabel)">Add
+        </button>
+        <button ng-if="$ctrl.newLabelCreate" ng-click="$ctrl.newLabelCreate = !$ctrl.newLabelCreate">Cancel</button>
+      </div>
+
+      <span class="action-item" ng-if="!$ctrl.showAddAJob()" ng-click="$ctrl.addAJob(false)">Add A Listing</span>
+      <span class="action-item spacer" ui-sref="cloud">Add A Resume</span>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="col-lg-11">
+      <div class="row status-lists">
+
+
+    <div ng-repeat="(key, posts) in $ctrl.data ">
+      <div class="col-md-3">
+        <div class="target-panel">
+          <div class="target-panel-heading">
+            <h3 class="panel-title pull-left">
+              {{key}}
+            </h3>
+            <div uib-dropdown>
+              <h3 class="panel-title pull-right" style="cursor: pointer;" uib-dropdown-toggle>
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </h3>
+              <ul class="dropdown-menu pull-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li role="menuitem"><a style="cursor: pointer;" ng-click="$ctrl.changeLabel($ctrl.data, key)">Rename
+                  list</a></li>
+                <li role="menuitem"><a ng-click="$ctrl.addAJob(true, key)" style="cursor: pointer;">Add a
+                  job</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--<div class="panel-heading" style="border-radius: 0;">
+          </div>-->
+
+          <div class="target-panel-body"
+               dragula='"targetList"'
+               dragula-model="$ctrl.data[key]"
+               dragula-scope="$parent"
+               id="{{key}}">
+            <div id="{{item._id}}" ng-repeat="item in posts" ng-click="$ctrl.viewPostDetails(item, key, posts.length)"
+                 class="display-item">
+              <div class="label-info target-base">
+                <img class="target-small-logo" ng-src="{{item.logo}}">
+                <h3 ng-if="item.label" class="label label-info">{{item.label}} </h3>
+                <h3 ng-if="!item.label && item.title" class="label label-info">{{item.title}} </h3>
+                <h3 ng-if="!item.label && !item.title" class="label label-info">{{item.company}} </h3>
+
+                <span class="pull-right" ng-if="$ctrl.openTasks(item.tasks) > 0"> Open Tasks: <span class="badge">{{$ctrl.openTasks(item.tasks)}}</span></span>
+                <span ng-if="item.dateApplied"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+          <div ng-if="posts.length === 1 || $ctrl.mouseOverAddJob" class="panel-footer">
+            <div ng-click="$ctrl.addAJob(true, key)" style="cursor: pointer;">
+              <i class="fa fa-plus"></i> Add a Job
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <postdisplay post-array="posts"></postdisplay>-->
+    </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

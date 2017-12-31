@@ -1,0 +1,80 @@
+@import 'mixins_one.scss';
+@import '_constants.scss';
+
+
+@mixin technologies-section {
+
+  @include section-heading;
+
+  .technologies {
+    line-height: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    .technology-item {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 1px;
+      text-align: center;
+      .icon {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: .2em;
+        font-size: 25px;
+      }
+
+      .technology-label {
+        vertical-align: top;
+
+        .technology-label-edit {
+          width: 130px;
+          text-align: center;
+          margin: 0 2px 2px 2px;
+          padding: 10px;
+          border: 2px solid black;
+          border-radius: 10px;
+          font-size: 15px;
+          font-weight: 700;
+          height: 20px;
+        }
+      }
+    }
+
+    .technology-item ~ .technology-item{
+      margin-top: 1px;
+    }
+  }
+
+}
+
+@mixin technology-field{
+
+  .tech-editable {
+    padding: 0;
+    border: 0;
+    outline: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+    min-height: 10px;
+    min-width: 20px;
+    background: transparent;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .editable-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  .editable-wrapper-inline {
+    display: inline-block;
+  }
+
+  .editable-field::placeholder, .editable-field input::placeholder, .date-range-label {
+    color: $second-color !important;
+    opacity: 1 !important;
+  }
+}

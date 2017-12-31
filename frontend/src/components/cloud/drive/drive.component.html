@@ -1,0 +1,30 @@
+<h1>Drive</h1>
+
+<div ng-if="!$ctrl.hideLogin">
+  <br><br>
+  <g-login logged-in="$ctrl.checkLoggedIn(state)"></g-login>
+</div>
+<div ng-if="$ctrl.hideLogin">
+  <button class="btn btn-sm btn-success" ng-click="$ctrl.clearCloudProvider()" ui-sref="cloud">return to cloud select</button>
+<br><br>
+
+ <!--note: Some less than smooth process to re-auth & then the listing did not accurately reflect whether the item was associated as a res or not.-->
+
+  <div class="row">
+    <div class="col-lg-3" style="height: 300px;" ng-repeat="file in $ctrl.fileList">
+      {{file.name}}
+      <img ng-if="file.hasThumbnail" ng-src="{{file.thumbnailLink}}">
+      <div>
+        <button class="btn btn-sm btn-success" ng-click="$ctrl.getAllFileMetaData(file.id)">Details</button>
+        <a class="btn btn-sm btn-success" ng-href="{{file.webViewLink}}" target="_blank">View</a>
+        <button class="btn btn-sm btn-success" ng-if="!file.appProperties.jhuntrSaved" ng-click="$ctrl.addFileRefAsResume(file.id, $index)">Add As Resume</button>
+        <button class="btn btn-sm btn-danger" ng-if="file.appProperties.jhuntrSaved" ng-click="$ctrl.removeFileRefAsResume(file.id, file.appProperties.jhuntrId, $index)">Remove As Resume</button>
+      </div>
+
+    </div>
+  </div>
+  <!--  ng-if="$ctrl.viewing === $index && $ctrl.viewActive" -->
+
+  <pre style="font-size: 10px;">{{$ctrl.allFileDetails}}</pre>
+
+</div>

@@ -1,0 +1,186 @@
+
+
+<script type="text/ng-template" id="iconSelectPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section  + 'icon', $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section  + 'icon', $index)">
+    <span ng-repeat="iconChoice in $ctrl.iconList.misc">
+      |&nbsp;<span class="fa" ng-class="iconChoice"
+                   ng-click="$ctrl.iconSelected('misc', iconChoice, sectionItem.section)">
+    </span>&nbsp;
+    </span>
+    |&nbsp;<span class="fa" ng-click="$ctrl.iconSelected('none', 'none', sectionItem.section)">
+    none
+    </span>&nbsp;
+  </div>
+</script>
+
+<script type="text/ng-template" id="basicIconSelectPopover.html">
+  <div>
+    <span ng-repeat="iconChoice in $ctrl.iconList.basic">
+      |&nbsp;<span class="fa" ng-class="iconChoice" ng-click="$ctrl.iconSelected('basic', iconChoice)">
+    </span>&nbsp;
+    </span>
+  </div>
+</script>
+
+<script type="text/ng-template" id="dateIconSelectPopover.html">
+  <div>
+    <span ng-repeat="iconChoice in $ctrl.iconList.date">
+      |&nbsp;<span class="fa" ng-class="iconChoice" ng-click="$ctrl.iconSelected('date', iconChoice)">
+    </span>&nbsp;
+    </span>
+  </div>
+</script>
+
+<script type="text/ng-template" id="locationIconSelectPopover.html">
+  <div>
+    <span ng-repeat="iconChoice in $ctrl.iconList.map">
+      |&nbsp;<span class="fa" ng-class="iconChoice" ng-click="$ctrl.iconSelected('map', iconChoice)">
+    </span>&nbsp;
+    </span>
+  </div>
+</script>
+
+<script type="text/ng-template" id="sectionPopoverCustom.html">
+  <div ng-mouseenter="$ctrl.popoverOpen(true, sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)">
+    <h3 class="popover-title">{{$ctrl.popupTitle}}</h3>
+    <button class="btn btn-sm  text-primary"
+            ng-click="$ctrl.addRecord(sectionItem.section)">
+      Add Entry
+    </button>
+    <button class="btn btn-sm  text-primary"
+            ng-if="$ctrl.sectionListModal"
+            ng-click="$ctrl.extraAction(sectionItem.section)">
+      List All Entries
+    </button>
+    <button class="btn btn-sm  text-primary"
+            ng-click="$ctrl.removeSection(sectionItem.section)">
+      Remove/Hide Section
+    </button>
+    <br>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="detailPopover.html">
+  <button ng-click="$ctrl.templateData[sectionItem.section][$index].details.push({detail:'', show: true})">
+    Add Detail(s)
+  </button>
+</script>
+
+<script type="text/ng-template" id="experienceDetailPopover.html">
+  <button ng-click="$ctrl.templateData.employment[$index].details.push({detail:'', show: true})">
+    Add Detail(s)
+  </button>
+</script>
+
+
+<script type="text/ng-template" id="skillLevelPopover.html">
+  <div ng-mouseenter="$ctrl.popoverOpenItem(true, sectionItem.section  + 'Level', $index)"
+       ng-mouseleave="$ctrl.popoverOpenItem(false, sectionItem.section  + 'Level', $index)">
+      <span>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-1'">
+        10
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-2'">
+        20
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-3'">
+        30
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-4'">
+        40
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-5'">
+        50
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-6'">
+        60
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-7'">
+        70
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-8'">
+        80
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-9'">
+        90
+      </button>
+      <button class="btn btn-sm  text-primary"
+              ng-click="$ctrl.templateData.skills[$index].level = 'level-10'">
+        100
+      </button>
+        </span>
+  </div>
+
+</script>
+
+<script type="text/ng-template" id="uib/template/tooltip/tooltip-html-popup.html">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner" ng-bind-html="contentExp()"></div>
+</script>
+
+<script type="text/ng-template" id="uib/template/tooltip/tooltip-popup.html">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner" ng-bind="content"></div>
+</script>
+
+<script type="text/ng-template" id="uib/template/tooltip/tooltip-template-popup.html">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner"
+       uib-tooltip-template-transclude="contentExp()"
+       tooltip-template-transclude-scope="originScope()"></div>
+</script>
+
+<!-- <div class="arrow"></div> -->
+<script type="text/ng-template" id="uib/template/popover/popover-html.html">
+  <div class="popover-inner">
+    <h3 class="popover-title" ng-bind="uibTitle" ng-if="uibTitle"></h3>
+    <div class="popover-content" ng-bind-html="contentExp()"></div>
+  </div>
+</script>
+
+<!-- <div class="arrow"></div> -->
+<script type="text/ng-template" id="uib/template/popover/popover-template.html">
+  <div class="popover-inner">
+    <h3 class="popover-title" ng-bind="uibTitle" ng-if="uibTitle"></h3>
+    <div class="popover-content"
+         uib-tooltip-template-transclude="contentExp()"
+         tooltip-template-transclude-scope="originScope()"></div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="uib/template/popover/popover.html">
+  <div class="arrow"></div>
+  <div class="popover-inner">
+    <h3 class="popover-title" ng-bind="uibTitle" ng-if="uibTitle"></h3>
+    <div class="popover-content" ng-bind="content"></div>
+  </div>
+</script>
+
+<!--
+<script type="text/ng-template" id="sectionPopoverCustomOriginal.html">
+  <h3 class="popover-title" >{{$ctrl.popupTitle}}</h3>
+  <div ng-mouseenter="$ctrl.popoverOpen(true, sectionItem.section)"
+       ng-mouseleave="$ctrl.popoverOpen(false, sectionItem.section)">
+    <button ng-click="$ctrl.addRecord(sectionItem.section)">Add Entry</button>
+    <button>button2</button>
+    <button ng-click="$ctrl.removeSection(sectionItem.section)">
+      Remove/Hide Section
+    </button>
+
+    <div class="popover-content"
+         uib-tooltip-template-transclude="contentExp()"></div>
+  </div>
+</script>
+-->

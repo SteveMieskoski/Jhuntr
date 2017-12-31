@@ -1,0 +1,66 @@
+<button ng-click="$ctrl.ok()">Close</button>
+<div class="res-entity-list"
+     ng-class="{'text-muted': !$ctrl.templateData[$ctrl.section][$index].show ,'text-primary': $ctrl.templateData[$ctrl.section][$index].show}"
+     ng-click="$ctrl.forEdit = $index"
+     ng-repeat="thing in $ctrl.templateData[$ctrl.section]">
+    <span ng-if="$ctrl.templateData[$ctrl.section][$index][$ctrl.sectionListItem[$ctrl.section]].length > 0">{{$ctrl.templateData[$ctrl.section][$index][$ctrl.sectionListItem[$ctrl.section]] }}
+      &nbsp;&nbsp;<button class="btn btn-sm btn-link"
+                          ng-click="$ctrl.removeRecord($ctrl.section , $ctrl.templateData[$ctrl.section][$index], $index)">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    </span>
+
+  <span ng-if="$ctrl.templateData[$ctrl.section][$index][$ctrl.sectionListItem[$ctrl.section]].length < 1 ">
+          new entry&nbsp;&nbsp;
+          <button class="btn btn-sm btn-link"
+                  ng-click="$ctrl.removeRecord($ctrl.section , $ctrl.templateData[$ctrl.section][$index], $index)">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+
+    </span>
+
+  <button ng-click="$ctrl.templateData[$index].show = !$ctrl.templateData[$index].show" class="btn btn-sm  text-primary">
+    <i ng-if="!$ctrl.templateData[$index].show" class="fa fa-eye" aria-hidden="true"></i>
+    <span ng-if="!$ctrl.templateData[$index].show">
+    &nbsp;Show
+  </span>
+    <i ng-if="$ctrl.templateData[$index].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+    <span ng-if="$ctrl.templateData[$index].show">
+    &nbsp;Hide
+  </span>
+  </button>
+</div>
+
+<!--
+  <div class="res-entity-list"
+      ng-class="{'text-muted': !$ctrl.templateData[$ctrl.section][$index].show ,'text-primary': $ctrl.templateData[$ctrl.section][$index].show}"
+      ng-click="$ctrl.forEdit = $index"
+      ng-repeat="thing in $ctrl.templateData[$ctrl.section]">
+    <span ng-if="$ctrl.templateData[$ctrl.section][$index][$ctrl.sectionListItem[$ctrl.section]].length > 0">{{$ctrl.templateData[$ctrl.section][$index][$ctrl.sectionListItem[$ctrl.section]] }}
+      &nbsp;&nbsp;<button class="btn btn-sm btn-link"
+                          ng-click="$ctrl.removeRecord($ctrl.section , $ctrl.templateData[$ctrl.section][$index], $index)">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    </span>
+
+    <span ng-if="$ctrl.templateData[$ctrl.section][$index][$ctrl.sectionListItem[$ctrl.section]].length < 1 ">
+          new entry&nbsp;&nbsp;
+          <button class="btn btn-sm btn-link"
+                  ng-click="$ctrl.removeRecord($ctrl.section , $ctrl.templateData[$ctrl.section][$index], $index)">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+
+    </span>
+
+    <button ng-click="$ctrl.existingData[$ctrl.forEdit].show = !$ctrl.existingData[$ctrl.forEdit].show" class="btn btn-sm  text-primary">
+      <i ng-if="!$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye" aria-hidden="true"></i>
+      <span ng-if="!$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Show
+  </span>
+      <i ng-if="$ctrl.existingData[$ctrl.forEdit].show" class="fa fa-eye-slash" aria-hidden="true"></i>
+      <span ng-if="$ctrl.existingData[$ctrl.forEdit].show">
+    &nbsp;Hide
+  </span>
+    </button>
+  </div>
+-->

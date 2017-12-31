@@ -1,0 +1,83 @@
+<div  id="transition-container" ng-class="{'jh-loaded':$ctrl.jhloaded, 'jh-loading': $ctrl.jhloading, 'jh-removing': $ctrl.jhremoving}">
+  <div id="transitionComponent" class="jh-loading-screen" ng-class="{'jh-loaded':$ctrl.jhloadedInner, 'jh-loading': $ctrl.jhloadingInner, 'jh-removing': $ctrl.jhremovingInner}" style="background-color: rgba(10, 211, 255, 1);" ng-if="$ctrl.jhloading">
+   <div class="jh-loading-inner">
+   <div class="jh-loading-center-outer">
+     <div class="jh-loading-center-middle">
+       <h1 class="jh-loading-logo-header">
+         <img class="jh-loading-logo" src="/src/assets/brand/drawing-medium.png">
+         </h1>
+       <div ng-class="['jh-loading-html']">
+         <div>
+           {{$ctrl.signUpMessages}}
+         </div>
+         <div class="sk-wave">
+           <div class="sk-rect sk-rect1"></div>
+           <div class="sk-rect sk-rect2"></div>
+           <div class="sk-rect sk-rect3"></div>
+           <div class="sk-rect sk-rect4"></div>
+           <div class="sk-rect sk-rect5"></div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+  </div>
+
+<div class="row login-boundries">
+  <div class="col-md-5 col-md-offset-4">
+    <div class="login-loading-screen">
+
+      <div class='login-loading-inner'>
+        <div class='login-loading-center-outer'>
+          <div class='login-loading-center-middle'>
+            <h1 class='login-loading-logo-header'>
+              <img class='login-loading-logo' src="/src/assets/brand/drawing-medium.png">
+              <span>Login</span>
+            </h1>
+            <div class='login-loading-html'>
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="row">
+                    <div class="col-md-11 col-md-pull-1">
+                  <div id="login-container">
+                    <form id="login-form" ng-if="$ctrl.loginForm">
+                      <fieldset>
+                        <label for="user">Email</label>
+                        <input class="form-control" id="user" type="text" name="user" ng-model="$ctrl.user"
+                               ng-disabled="$ctrl.loading"/>
+                        <br>
+                        <label for="password">Password</label>
+                        <input class="form-control" id="password" type="password" name="pass" ng-model="$ctrl.pass"
+                               ng-disabled="$ctrl.loading"/>
+                        <br>
+                        <button class="btn btn-primary" type="submit" ng-disabled="$ctrl.loading"
+                                ng-click="$ctrl.login()"
+                                id="login-button">Login
+                        </button>
+                        <a class="btn btn-primary" type="button" ng-disabled="$ctrl.loading"
+                                ui-sref="signuproute"
+                                id="signup-show">Sign Up
+                        </a>
+                      </fieldset>
+                    </form>
+
+                  </div>
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-6 col-md-pull-1" ng-if="$ctrl.loginForm">
+                  <br/>
+                  <a href="javascript:" ng-click="$ctrl.facebookLogin()" class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span>Login with Facebook</a>
+                  <a href="javascript:" ng-click="$ctrl.googleLogin()" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>Login with Google</a>
+                  <a href="javascript:" ng-click="$ctrl.githubLogin()" class="btn btn-block btn-social btn-github"><span class="fa fa-github"></span>Login with Github</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

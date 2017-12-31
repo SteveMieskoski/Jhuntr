@@ -1,0 +1,46 @@
+@import '../../../../common/classes/flex_grid';
+@import '../../../../common/base-styles.main';
+
+.style-modal-show{
+  position: relative;
+  left: 0;
+}
+
+.crop-show{
+  position: absolute;
+  right: 0;
+}
+
+.top-button-container{
+  padding-top: 25px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  .top-button-wrap{
+    display: inline;
+    .editor-top-buttons{
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.67);
+      font-size: 30px;
+
+      &:hover{
+        color: white !important;
+      }
+      &:active, &:focus{
+        color: rgb(244, 109, 59) !important;
+      }
+      // border: 1px solid white;
+      // -webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      // -moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      // box-shadow:0 2px 4px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+  }
+}
+
+
+
+
+.top-button-wrap ~ .top-button-wrap{
+  padding-left: 100px;
+}
+
+

@@ -1,0 +1,11 @@
+<br>
+<br>
+<br>
+<div>
+  <span>This should probably be in a ui-grid to allow for simple sorting</span>
+  <h4>Tasks Complete</h4>
+  <p ng-repeat="task in $ctrl.allPosts">{{task.label}}
+    <i ng-if="task.complete" class="fa fa-check-square-o" aria-hidden="true"></i>
+    <i ng-if="!task.complete" class="fa fa-square-o" aria-hidden="true"></i>
+  </p>
+</div>

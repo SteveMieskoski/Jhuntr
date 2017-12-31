@@ -1,0 +1,188 @@
+<div style="margin: auto 10px;">
+  <uib-tabset>
+    <uib-tab index="0" heading="Details">
+      <div class="form-group">
+        <!-- <button class="btn pull-right" ng-click="$ctrl.close({$value: null})">Close</button>-->
+        <form name="updateform">
+        <br>
+        <label for="LabelText">Label:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+          <input type="text" class="form-control" id="LabelText" name="label" ng-model="$ctrl.postData.label"/>
+        </div>
+        <label for="CompanyText">Company:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-building-o" aria-hidden="true"></i> </span>
+          <input type="text" class="form-control" id="CompanyText" ng-model="$ctrl.postData.company"/>
+        </div>
+        <!--<br>-->
+        <label for="TitleText">Position:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-suitcase" aria-hidden="true"></i> </span>
+          <input type="text" class="form-control" id="TitleText" ng-model="$ctrl.postData.title"/>
+        </div>
+        <label for="LocationText">Location:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i> </span>
+          <input type="text" class="form-control" id="LocationText" ng-model="$ctrl.postData.location" ng-change="$ctrl.locationChange()"/>
+        </div>
+
+        <label for="UrlText">Url:</label>
+        <div class="input-group">
+          <span class="input-group-addon">Url: </span>
+          <input type="text" class="form-control" id="UrlText" ng-model="$ctrl.postData.url"/>
+        </div>
+        <!--<label for="ResText">Resume:</label>
+<div class="input-group">
+  <span class="input-group-addon">Resume: </span>
+  <input type="text" class="form-control" id="ResText" ng-model="$ctrl.postData.resume_label" />
+</div>-->
+        <list-resumes resume-label="$ctrl.postData.resume_label" resume-ref="$ctrl.postData.resume_ref"></list-resumes>
+        <br>
+       <!-- <div>
+           <p class="input-group">
+             <input type="text" class="form-control" uib-datepicker-popup="{{$ctrl.format}}" ng-model="$ctrl.postData.dateApplied" is-open="$ctrl.opened" datepicker-options="$ctrl.dateOptions" ng-required="true" close-text="Close" alt-input-formats="$ctrl.altInputFormats" placeholder="{{$ctrl.postData.dateApplied | date:'fullDate'}}" />
+             <span class="input-group-btn">
+             <button type="button" class="btn btn-default" ng-click="$ctrl.datePickOpen()"><i class="glyphicon glyphicon-calendar"></i></button>
+           </span>
+           </p>
+           <label>Format: <span class="muted-text">(manual alternate <em>{{$ctrl.altInputFormats[0]}}</em>)</span></label>
+           <select class="form-control" ng-model="$ctrl.format" ng-options="f for f in $ctrl.formats">
+             <option></option>
+           </select>
+           {{$ctrl.postData.dateApplied}}
+         </div>-->
+
+        <div>
+         <label for="date">Date Applied:</label>
+       <div class="input-group">
+           <span class="input-group-btn">
+           <button class="btn btn-default" type="button" ng-click="$ctrl.dateSelect()">
+             <i class="fa fa-calendar" aria-hidden="true"></i>
+           </button>
+           </span>
+           <input type="text" class="form-control" id="date" ng-model="$ctrl.postData.dateApplied" ng-bind="$ctrl.postData.dateApplied | amDateFormat:'dddd, MMMM Do YYYY'" />
+           <span class="input-group-btn">
+             <button class="btn btn-default" type="button" ng-click="$ctrl.postData.dateApplied = $ctrl.dt">
+               Use Today
+             </button>
+           </span>
+         </div>
+       </div>
+        <div ng-if="$ctrl.additionalFieldOptions.city.show">
+          <label for="cityText">City:</label>
+          <div class="input-group">
+            <span class="input-group-addon">City: </span>
+            <input type="text" class="form-control" id="cityText" ng-model="$ctrl.postData.city"/>
+          </div>
+        </div>
+        <div ng-if="$ctrl.additionalFieldOptions.state.show">
+          <label for="stateText">State:</label>
+          <div class="input-group">
+            <span class="input-group-addon">State: </span>
+            <input type="text" class="form-control" id="stateText" ng-model="$ctrl.postData.state"/>
+          </div>
+        </div>
+        <div ng-if="$ctrl.additionalFieldOptions.timePosted.show">
+          <label for="timePostedText">Posted On:</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" id="timePostedText" ng-model="$ctrl.postData.postingTime"/>
+          </div>
+        </div>
+        <div ng-if="$ctrl.additionalFieldOptions.contact.show">
+          <label for="contactLabelText">ContactLabel:</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-id-card" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" id="contactLabelText" ng-model="$ctrl.postData.contactLabel"/>
+            <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span>
+            <input type="text" class="form-control" id="contactDetailText" ng-model="$ctrl.postData.contactDetail"/>
+          </div>
+        </div>
+        <div ng-if="$ctrl.additionalFieldOptions.address.show">
+          <label for="company_addressText">Address:</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-map-o" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" id="company_addressText" ng-model="$ctrl.postData.company_address"/>
+          </div>
+        </div>
+        <div ng-if="$ctrl.additionalFieldOptions.source.show">
+          <label for="sourceText">Source:</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-link" aria-hidden="true"></i> </span>
+            <input type="text" class="form-control" id="sourceText" ng-model="$ctrl.postData.source"/>
+          </div>
+        </div>
+        <br>
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+          <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+            Additional Fields <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+           <!-- <li role="menuitem"><a ng-click="$ctrl.additionalFields('city')">City</a></li>
+            <li role="menuitem"><a ng-click="$ctrl.additionalFields('state')">State</a></li>-->
+            <li role="menuitem"><a ng-click="$ctrl.additionalFields('timePosted')">Posting Date</a></li>
+           <!-- <li role="menuitem"><a ng-click="$ctrl.additionalFields('address')">Address</a></li>-->
+            <li role="menuitem"><a ng-click="$ctrl.additionalFields('source')">Source</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a ng-click="$ctrl.additionalFields('contact')">Contact</a></li>
+          </ul>
+        </div>
+        </form>
+      </div>
+    </uib-tab>
+    <uib-tab index="1">
+      <uib-tab-heading>
+        <i class="fa fa-sticky-note-o" aria-hidden="true"></i> Notes
+      </uib-tab-heading>
+      <label for="NotesText">Notes:</label>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-sticky-note-o" aria-hidden="true"></i></span>
+        <textarea rows="10" class="form-control" id="NotesText" ng-model="$ctrl.postData.notes"></textarea>
+      </div>
+    </uib-tab>
+    <uib-tab index="2">
+      <uib-tab-heading>
+        <i class="glyphicon glyphicon-bell"></i> Tasks!
+      </uib-tab-heading>
+      <taskhandler post-data="$ctrl.postData"></taskhandler>
+      <!--<button ng-click="$ctrl.addPostTask(); $ctrl.newTaskForm = true;">New Task</button>
+      <div ng-if="$ctrl.newTaskForm" class="form-group">
+        <br>
+        <label for="LabelTask">Label:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i> </span>
+          <input type="text" class="form-control" id="LabelTask" ng-model="$ctrl.newPostTask.label" />
+        </div>
+      </div>
+      <div ng-repeat="task in $ctrl.postData.tasks">
+        {{task}}
+      </div>-->
+    </uib-tab>
+
+
+    <!--  <uib-tab index="3" select="$ctrl.plainPostFileUpload($ctrl.postData)">-->
+    <uib-tab index="3" select="$ctrl.expandedEdit($ctrl.postData)" >
+      <uib-tab-heading>
+        <i class="fa fa-upload"></i> Expanded Edit
+      </uib-tab-heading>
+      <h3>Ummmmmm</h3>
+      <user-file-upload></user-file-upload>
+
+
+    </uib-tab>
+    <uib-tab index="4" select="$ctrl.submitPostUpdate($ctrl.postData)">
+      <uib-tab-heading>
+        <i class="fa fa-save"></i> Save
+      </uib-tab-heading>
+    </uib-tab>
+  </uib-tabset>
+  <br>
+  <div class="modal-footer">
+    <button class="btn btn-danger pull-left" ng-click="$ctrl.deletePost($ctrl.postData)">Delete</button>
+    <button class="btn" ng-click="$ctrl.submitPostUpdate($ctrl.postData)">Save</button>
+    <button class="btn" ng-click="$ctrl.close()">Cancel</button>
+  </div>
+
+</div>
+

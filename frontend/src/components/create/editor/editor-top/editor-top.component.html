@@ -1,0 +1,44 @@
+<div class="frow around-fcol center-fcol">
+  <div class="fcol-full">
+    <div class="top-button-container">
+      <div class="top-button-wrap">
+          <span class="editor-top-buttons"
+                ui-sref="resselect({post: $ctrl.viewingPost})">
+      Select A Res
+    </span>
+      </div>
+      <div class="top-button-wrap">
+    <span class="editor-top-buttons"
+          ng-click="$ctrl.save()">Save</span>
+      </div>
+      <div class="top-button-wrap">
+    <span class="editor-top-buttons"
+          ng-click="$ctrl.showStyleModal()">
+      Style Options
+    </span>
+      </div>
+      <div class="top-button-wrap">
+    <span class="editor-top-buttons"
+          ng-click="$ctrl.showImportCoreModal()">
+      Import From Master
+    </span>
+      </div>
+      <div class="top-button-wrap">
+    <span class="editor-top-buttons"
+          ng-click="$ctrl.showCrop()"
+          ng-if="$ctrl.crop">
+      Adjust Post View
+    </span>
+        <span class="editor-top-buttons"
+              ng-if="$ctrl.loadingNew">&nbsp;
+      Loading Update&nbsp;
+    </span>
+        <span class="editor-top-buttons"
+              ng-click="$ctrl.hideCrop()"
+              ng-if="$ctrl.applyCrop">&nbsp;
+      Apply New View&nbsp;
+    </span>
+      </div>
+    </div>
+  </div>
+</div>

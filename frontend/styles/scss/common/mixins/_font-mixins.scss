@@ -1,0 +1,181 @@
+@import '../variables/common_internal_var_bundle.scss';
+
+
+/* Mixin's in this file:
+pageOnlyFonts
+muyMuchoFont
+extraLargeFont
+largeFont
+mediumFont
+normalFont
+smallFont
+
+*/
+
+
+
+/*
+// Site Font Sizing
+for $fontFamily ( see variables/fonts )
+
+
+wording based upon the pixel size of the font"
+extra large: 50px
+large: 40px
+medium: 30px
+normal: 20px
+small: 15px
+extra small: 10px
+
+ */
+
+// Extra Large ---------------------
+@mixin muyMuchoFont($type: null, $style: null) {
+  font-size: 50px !important;
+
+  @if $style == secondary {
+    font-family: $secondaryFontFamily;
+  } @else {
+    font-family: $primaryFontFamily;
+  }
+
+  @if $type == bold {
+    font-weight: 700 !important;
+  } @else if $type == extraBold {
+    font-weight: 800 !important;
+  } @else {
+    font-weight: 400 !important;
+  }
+}
+
+
+// Large ---------------------
+@mixin extraLargeFont($type: null, $style: null) {
+  font-size: 40px !important;
+
+  @if $style == secondary {
+    font-family: $secondaryFontFamily;
+  } @else {
+    font-family: $primaryFontFamily;
+  }
+
+  @if $type == bold {
+    font-weight: 700 !important;
+  } @else if $type == extraBold {
+    font-weight: 800 !important;
+  } @else {
+    font-weight: 400 !important;
+  }
+}
+
+// Medium ---------------------
+@mixin largeFont($type: null, $style: null) {
+  font-size: 30px !important;
+
+  @if $style == secondary {
+    font-family: $secondaryFontFamily;
+  } @else {
+    font-family: $primaryFontFamily;
+  }
+
+  @if $type == bold {
+    font-weight: 700 !important;
+  } @else if $type == extraBold {
+    font-weight: 800 !important;
+  } @else {
+    font-weight: 400 !important;
+  }
+}
+
+
+// Normal ---------------------
+@mixin mediumFont($type: null, $style: null) {
+  font-size: 20px !important;;
+
+  @if $style == secondary {
+    font-family: $secondaryFontFamily;
+  } @else {
+    font-family: $primaryFontFamily;
+  }
+
+  @if $type == bold {
+    font-weight: 700 !important;
+  } @else if $type == extraBold {
+    font-weight: 800 !important;
+  } @else {
+    font-weight: 400 !important;
+  }
+}
+
+
+// Small ---------------------
+@mixin normalFont($type: null, $style: null) {
+  font-size: 15px !important;
+
+  @if $style == secondary {
+    font-family: $secondaryFontFamily;
+  } @else {
+    font-family: $primaryFontFamily;
+  }
+
+  @if $type == bold {
+    font-weight: 700 !important;
+  } @else if $type == extraBold {
+    font-weight: 800 !important;
+  } @else {
+    font-weight: 400 !important;
+  }
+}
+
+// Extra Small ---------------------
+@mixin smallFont($type: null, $style: null) {
+  font-size: 10px !important;
+
+  @if $style == secondary {
+    font-family: $secondaryFontFamily;
+  } @else {
+    font-family: $primaryFontFamily;
+  }
+
+  @if $type == bold {
+    font-weight: 700 !important;
+  } @else if $type == extraBold {
+    font-weight: 800 !important;
+  } @else {
+    font-weight: 400 !important;
+  }
+}
+
+
+@mixin pageOnlyFonts{
+
+
+  @font-face {
+    font-family: 'Architects Daughter';
+    src: url('/styles/fonts/All_Fonts/ArchitectsDaughter.eot');
+    src: local('Architects Daughter'), local('ArchitectsDaughter'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.eot?#iefix') format('embedded-opentype'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.woff2') format('woff2'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.woff') format('woff'),
+    url('/styles/fonts/All_Fonts/ArchitectsDaughter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+  /*
+    @font-face {
+      font-family: 'Nothing You Could Do';
+      src: url('/styles/fonts/All_Fonts/NothingYouCouldDo.eot');
+      src: local('Nothing You Could Do'), local('NothingYouCouldDo'),
+      url('/styles/fonts/All_Fonts/NothingYouCouldDo.eot?#iefix') format('embedded-opentype'),
+      url('/styles/fonts/All_Fonts/NothingYouCouldDo.woff2') format('woff2'),
+      url('/styles/fonts/All_Fonts/NothingYouCouldDo.woff') format('woff'),
+      url('/styles/fonts/All_Fonts/NothingYouCouldDo.ttf') format('truetype'),
+      url('/styles/fonts/All_Fonts/NothingYouCouldDo.svg#NothingYouCouldDo') format('svg');
+      font-weight: 100;
+      font-style: normal;
+    }
+    */
+}

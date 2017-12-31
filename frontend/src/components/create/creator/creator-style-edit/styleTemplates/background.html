@@ -1,0 +1,16 @@
+<h4  class="norm-cursor"> Choose Background</h4>
+<div >
+  <div ng-repeat="background in $ctrl.featureConstants.backgrounds">
+
+
+    <button ng-click="$ctrl.changeBackground(background)"
+            ng-class="[background.selectable]">
+    </button>
+    <span ng-if="$ctrl.background_display == background.background_display">
+    <i class="fa fa-check"  aria-hidden="true">
+    </i>
+    </span>
+    <p class="background-label">{{background.name}}</p>
+  </div>
+</div>
+

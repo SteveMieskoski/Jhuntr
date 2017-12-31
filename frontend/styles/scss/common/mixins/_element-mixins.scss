@@ -1,0 +1,56 @@
+
+
+
+@mixin box7($opacity: 0.75, $height: 45px, $width: 200px, $radius: 7px){
+  // $height: 45px !default;
+  // $width: 200px !default;
+  // $opacity: 0.75 !default;
+  color: white;
+  background-color: #949e9e;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  opacity: $opacity;
+}
+
+@mixin grayBox-medium($opacity: 0.75, $height: 100px, $width: 300px){
+ // $height: 100px !default;
+ // $width: 300px !default;
+ // $opacity: 0.75 !default;
+  color: white;
+  background-color: #949e9e;
+  height: $height;
+  width: $width;
+  border-radius: 7px;
+  opacity: $opacity;
+}
+
+@mixin grayBox-small($opacity: 0.75, $height: 45px, $width: 200px){
+ // $height: 45px !default;
+ // $width: 200px !default;
+ // $opacity: 0.75 !default;
+  color: white;
+  background-color: #949e9e;
+  height: $height;
+  width: $width;
+  border-radius: 7px;
+  opacity: $opacity;
+}
+
+
+/*
+
+  .text {
+    font-family: 'Merriweather', serif !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    opacity: 1;
+  }
+
+    .text {
+    font-family: 'Merriweather', serif !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    opacity: 1;
+  }
+ */
